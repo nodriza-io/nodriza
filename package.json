@@ -1,0 +1,25 @@
+{
+  "name": "nodriza",
+  "version": "1.0.0",
+  "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodriza-io/nodriza.git"
+  },
+  "keywords": [
+    "nodriza",
+    "nodriza.io",
+    "sdk",
+    "api"
+  ],
+  "author": "Juan Carlos Prieto <jprieto@nodriza.io> (http://nodriza.io)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nodriza-io/nodriza/issues"
+  },
+  "homepage": "https://github.com/nodriza-io/nodriza#readme"
+}
