@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/nodriza-io/nodriza#readme",
   "dependencies": {
-    "axios": "^0.16.2",
     "lodash": "^4.17.4",
     "query-string": "^5.0.0"
   }
