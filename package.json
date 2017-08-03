@@ -4,8 +4,8 @@
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
+    "test": "nodemon test/index.js --exec babel-node --presets es2015,stage-2"
   },
   "repository": {
     "type": "git",
