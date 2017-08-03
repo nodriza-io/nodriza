@@ -4,7 +4,8 @@
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,14 @@
     "url": "https://github.com/nodriza-io/nodriza/issues"
   },
   "homepage": "https://github.com/nodriza-io/nodriza#readme",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "query-string": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
 }
