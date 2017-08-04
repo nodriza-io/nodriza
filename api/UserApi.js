@@ -122,7 +122,7 @@ export class User extends Req {
   }
 
   /**
-  * DELETE /v1/user/logout [PRIVATE]
+  * DELETE /v1/user/logout [PUBLIC]
   *
   * User logout
   *
