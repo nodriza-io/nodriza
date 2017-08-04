@@ -7,6 +7,7 @@ const params = {
   hostname: 'bp.nodriza.io',
   localStorage
 }
+
 const nodriza = new Nodriza(params)
 
 nodriza.api.user.login({username: 'jprieto@nodriza.io', password: 'xxx'}, (err, user) => {
