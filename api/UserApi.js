@@ -124,7 +124,7 @@ export class User extends Req {
   /**
   * DELETE /v1/user/logout [PUBLIC]
   *
-  * User logout
+  * User session logout
   *
   * @param  {Function} callback
   * @return {Code} 200, 401

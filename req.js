@@ -32,7 +32,6 @@ export class Req {
     if (_.isString(params)) params = {url: params}
     const url = this.hostname ? this.hostname + params.url : params.url
     const body = params.body
-    console.log('->>> params:', params)
     let headers = params.headers || {}
     if (this.session) headers = Object.assign(headers, this.authorizationHeader())
     if (!_.isEmpty(headers)) this.axios.defaults.headers = headers

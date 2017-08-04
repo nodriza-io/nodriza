@@ -1,7 +1,5 @@
 'use strict'
 
-// import _ from 'lodash'
-
 export class LocalStorage {
   /**
    * Save new key in localStroge
@@ -22,5 +20,16 @@ export class LocalStorage {
   load (key) {
     let obj = localStorage.getItem(key)
     return obj ? JSON.parse(obj) : null
+  }
+  /**
+   * Remove key
+   * 
+   * @param  {Sring} key
+   * @return {Object} -> Deleted item or if nothing was deleted
+   */
+  remove (key) {
+    let obj = localStorage.getItem(key)
+    localStorage.removeItem(key)
+    return obj
   }
 }
