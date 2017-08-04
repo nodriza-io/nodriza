@@ -3,7 +3,7 @@
 export class LocalStorage {
   constructor (NodelocalStorage) {
     if (typeof window === 'undefined') {
-      if (!NodelocalStorage) throw new Error('Cannot run node version without localstorage')
+      if (!NodelocalStorage) throw new Error('Cannot run node version without a localstorage transporter')
       this.localstorage = NodelocalStorage
     } else {
       this.localStorage = localStorage
