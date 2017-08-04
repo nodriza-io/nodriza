@@ -1,4 +1,6 @@
+*.log
 ._*
 node_modules
 .tmp
-
+yarn.lock
+package-lock.json
