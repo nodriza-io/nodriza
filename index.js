@@ -9,7 +9,7 @@ export class Nodriza {
     this.hostname = params.hostname
     if (!this.hostname) throw new Error('Please define a hostname -> e.g acme.nodriza.io')
     this.api = new Api(this.hostname)
-    this.storage = new LocalStorage()
+    this.storage = new LocalStorage(params.localStorage)
     this.session = new Session(this.storage)
   }
 }

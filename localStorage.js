@@ -1,6 +1,14 @@
 'use strict'
 
 export class LocalStorage {
+  constructor (NodelocalStorage) {
+    if (typeof window === 'undefined') {
+      if (!NodelocalStorage) throw new Error('Cannot run node version without localstorage')
+      this.localstorage = NodelocalStorage
+    } else {
+      this.localStorage = localStorage
+    }
+  }
   /**
    * Save new key in localStroge
    * 
@@ -9,7 +17,7 @@ export class LocalStorage {
    * @return {Null}
    */
   save (key, value) {
-    localStorage.setItem(key, JSON.stringify(value))
+    this.localStorage.setItem(key, JSON.stringify(value))
   }
   /**
    * Load saved key
@@ -18,7 +26,7 @@ export class LocalStorage {
    * @return {Object}
    */
   load (key) {
-    let obj = localStorage.getItem(key)
+    let obj = this.localStorage.getItem(key)
     return obj ? JSON.parse(obj) : null
   }
   /**
@@ -28,8 +36,8 @@ export class LocalStorage {
    * @return {Object} -> Deleted item or if nothing was deleted
    */
   remove (key) {
-    let obj = localStorage.getItem(key)
-    localStorage.removeItem(key)
+    let obj = this.localStorage.getItem(key)
+    this.localStorage.removeItem(key)
     return obj
   }
 }
