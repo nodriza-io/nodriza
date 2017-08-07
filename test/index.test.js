@@ -22,7 +22,7 @@ for (let i in nodriza) {
   // }
 }
 console.log('->>> nodriza.api.user:', nodriza.api.user.get)
-nodriza.api.user.login({username: 'jprieto@nodriza.io', password: 'xxx'}, (err, user) => {
+nodriza.api.user.login({username: 'jprieto@nodriza.io', password: 'Shox009_'}, (err, user) => {
   if (err) return console.log('->>> err:', err)
   console.log('->>> user:', user)
   nodriza.session.set(user)
