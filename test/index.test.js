@@ -3,22 +3,39 @@
 import { Nodriza } from '../lib/index'
 // import { expect } from 'chai'
 // import _ from 'lodash'
+
 const params = {
   hostname: 'bp.nodriza.io',
   accessToken: '-56a69869-bf0a-4650-98e9-fcd9680b31d5'
 }
+
 const nodriza = new Nodriza(params)
 
+/*
 nodriza.api.user.me((err, profile) => {
   if (err) return console.log('->>> err:', err)
   console.log('->>> profile:', profile)
 })
+*/
 
-// describe('When user try to login with wrong password', function(){
-//   it('should return an array', function() {
-//  nodriza.api.user.login({username: 'jprieto@nodriza.io', password: 'xxx'}, (err, user) => {
-//    expect(err, 'User can login with wrong password').to.exist()
-//  })
-//   })
-// })
+nodriza.addListener('init', (url) => {
+  console.log('--> Connecting to ' + url)
+}, false)
 
+nodriza.addListener('connect', (socketId) => {
+  console.log('--> Connected...')
+}, false)
+
+nodriza.addListener('authenticated', (socketId) => {
+  console.log('--> Socket authenticated > ' + socketId)
+}, false)
+
+nodriza.addListener('disconnect', () => {
+  console.log('--> Disconnected on ' + new Date())
+}, false)
+
+nodriza.addListener('exec', (event) => {
+  console.log('exec')
+}, false)
+
+nodriza.connect()
