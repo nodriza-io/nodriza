@@ -1,6 +1,6 @@
 {
   "name": "nodriza",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "main": "index.js",
   "scripts": {
