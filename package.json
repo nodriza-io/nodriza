@@ -8,9 +8,6 @@
     "prepublish": "babel --presets es2015,stage-2 src --out-dir lib",
     "lint": "nodemon test/index.test.js --exec 'clear && eslint lib/*'"
   },
-"babel": {
-   "presets": ["es2015","stage-2"]
- },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nodriza-io/nodriza.git"
