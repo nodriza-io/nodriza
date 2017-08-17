@@ -5,7 +5,7 @@ import { User } from './api/UserApi'
 import { Company } from './api/CompanyApi'
 
 import { Socket } from './socket'
-import { LocalStorage } from '../lib/localStorage'
+import { LocalStorage } from './localStorage'
 
 export class Api extends Socket {
   constructor (params) {

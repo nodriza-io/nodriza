@@ -9,11 +9,6 @@
     "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "lint": "nodemon test/index.test.js --exec 'clear && eslint lib/*'"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nodriza-io/nodriza.git"
