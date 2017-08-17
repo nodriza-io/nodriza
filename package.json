@@ -9,7 +9,7 @@
     "lint": "nodemon test/index.test.js --exec 'clear && eslint lib/*'"
   },
 "babel": {
-   "presets": ["es2015"]
+   "presets": ["es2015","stage-2"]
  },
   "repository": {
     "type": "git",
