@@ -5,7 +5,7 @@ import { Session } from './session'
 import { Storage } from './storage'
 import { Utils } from './utils'
 
-export default class Nodriza extends Api {
+class Nodriza extends Api {
   constructor (params) {
     super(params)
     if (!params || !params.hostname) throw new Error('Please define hostname -> e.g acme.nodriza.io')
@@ -15,3 +15,5 @@ export default class Nodriza extends Api {
     this.u = new Utils()
   }
 }
+
+export default Nodriza
