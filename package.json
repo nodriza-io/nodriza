@@ -1,8 +1,8 @@
 {
   "name": "nodriza",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
     "test": "nodemon test/index.test.js --exec babel-node --presets es2015,stage-2",
