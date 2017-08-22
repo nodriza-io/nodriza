@@ -11,7 +11,6 @@ export class User extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * PUT /v1/user/addAllRoles [PRIVATE]
   *
@@ -29,7 +28,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * PUT /v1/user/addPermissions [PRIVATE]
   *
@@ -48,7 +46,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * PUT /v1/user/addRoles [PRIVATE]
   *
@@ -67,7 +64,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/user/getPermissions/{userId} [PRIVATE]
   *
@@ -84,7 +80,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/user/getRoles/{userId} [PRIVATE]
   *
@@ -101,7 +96,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * POST /v1/user/login [PUBLIC]
   *
@@ -121,7 +115,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/logout [PUBLIC]
   *
@@ -136,7 +129,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/logoutAllDevices [PRIVATE]
   *
@@ -151,7 +143,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/user/me [PRIVATE]
   *
@@ -166,7 +157,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/user/profile [PRIVATE]
   *
@@ -186,7 +176,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/removeAllPermissions [PRIVATE]
   *
@@ -204,7 +193,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/removeAllRoles [PRIVATE]
   *
@@ -222,7 +210,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/removePermissions [PRIVATE]
   *
@@ -241,7 +228,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/user/removeRoles [PRIVATE]
   *
@@ -260,7 +246,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * PUT /v1/user/requestResetPassword [PUBLIC]
   *
@@ -278,7 +263,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * PUT /v1/user/resetPassword [PUBLIC]
   *
@@ -298,7 +282,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * POST /v1/user/uploadAvatar [PRIVATE]
   *
@@ -317,7 +300,6 @@ export class User extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/user/validatePassword [PUBLIC]
   *

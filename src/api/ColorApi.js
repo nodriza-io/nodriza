@@ -11,7 +11,26 @@ export class Color extends Request {
     params.model = model
     super(params)
   }
-
+  /**
+  * GET /v1/color/getColorsFromImage [PRIVATE]
+  *
+  * Return an array of color taken from an online image
+  *
+  * @param  {Object} params
+  * - @param  {String} url  -> (In query) url of image to extract colors
+  * - @param  {String} colorsNumber  -> (In query) The number of colors to generate
+  * - @param  {String} sortBy  -> (In query) Sort colors by...
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getColorsFromImage (params, callback) {
+    let url = '/v1/color/getColorsFromImage'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
   /**
   * GET /v1/color/randomPalettes [PRIVATE]
   *
@@ -31,7 +50,6 @@ export class Color extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/color/topPalettes [PRIVATE]
   *

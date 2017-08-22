@@ -1,5 +1,5 @@
 'use strict'
-import { Color } from './api/ColorApi'
+import { Apparience } from './api/ApparienceApi'
 import { Config } from './api/ConfigApi'
 import { User } from './api/UserApi'
 import { Company } from './api/CompanyApi'
@@ -18,7 +18,7 @@ export class Api extends Socket {
     }
     super(hostname)
     this.api = {
-      color: new Color(params),
+      apparience: new Apparience(params),
       config: new Config(params),
       user: new User(params),
       company: new Company(params)

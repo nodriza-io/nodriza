@@ -11,7 +11,6 @@ export class Service extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * POST /v1/service/genRandomDoc [PRIVATE]
   *
@@ -30,7 +29,6 @@ export class Service extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/service/generateAvatar [PRIVATE]
   *
@@ -45,27 +43,6 @@ export class Service extends Request {
   */
   generateAvatar (params, callback) {
     let url = '/v1/service/generateAvatar'
-    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
-    this.get(url, (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-
-  /**
-  * GET /v1/service/generateColors [PRIVATE]
-  *
-  * Return an array of color taken from an online image
-  *
-  * @param  {Object} params
-  * - @param  {String} url  -> (In query) url of image to extract colors
-  * - @param  {String} colorsNumber  -> (In query) The number of colors to generate
-  * - @param  {String} sortBy  -> (In query) Sort colors by...
-  * @param  {Function} callback
-  * @return {Code} 200, 403
-  */
-  generateColors (params, callback) {
-    let url = '/v1/service/generateColors'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
       if (err) return callback(err)

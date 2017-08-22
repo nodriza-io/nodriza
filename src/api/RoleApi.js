@@ -11,7 +11,6 @@ export class Role extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * PUT /v1/role/addPermissions [PRIVATE]
   *
@@ -30,7 +29,6 @@ export class Role extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/role/getPermissions/{roleKeyname} [PRIVATE]
   *
@@ -47,7 +45,6 @@ export class Role extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/role/removeAllPermissions [PRIVATE]
   *
@@ -65,7 +62,6 @@ export class Role extends Request {
       callback(null, data)
     })
   }
-
   /**
   * DELETE /v1/role/removePermissions [PRIVATE]
   *

@@ -11,7 +11,6 @@ export class Config extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * GET /v1/config/getFactorySettings/{group} [PRIVATE]
   *
@@ -28,7 +27,6 @@ export class Config extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/config/getGroup/{group} [PRIVATE]
   *
@@ -45,7 +43,6 @@ export class Config extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/config/public [PUBLIC]
   *
@@ -60,7 +57,6 @@ export class Config extends Request {
       callback(null, data)
     })
   }
-
   /**
   * PUT /v1/config/updateGroup [PRIVATE]
   *

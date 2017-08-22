@@ -11,7 +11,6 @@ export class App extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * PUT /v1/app/activate [PRIVATE]
   *
@@ -30,7 +29,6 @@ export class App extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/app/getActiveApps [PRIVATE]
   *
@@ -49,7 +47,6 @@ export class App extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/app/getLoginApps [PUBLIC]
   *
@@ -68,7 +65,6 @@ export class App extends Request {
       callback(null, data)
     })
   }
-
   /**
   * POST /v1/app/uploadLogo [PRIVATE]
   *

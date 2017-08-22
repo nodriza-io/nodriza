@@ -11,7 +11,6 @@ export class Company extends Request {
     params.model = model
     super(params)
   }
-
   /**
   * GET /v1/company/industry [PRIVATE]
   *
@@ -26,7 +25,6 @@ export class Company extends Request {
       callback(null, data)
     })
   }
-
   /**
   * GET /v1/company/size [PRIVATE]
   *
@@ -41,7 +39,6 @@ export class Company extends Request {
       callback(null, data)
     })
   }
-
   /**
   * POST /v1/company/uploadLogo [PRIVATE]
   *
