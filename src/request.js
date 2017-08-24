@@ -54,6 +54,7 @@ export class Request {
       if (error) {
         callback(error)
       } else {
+        console.log('->>> err:', err)
         throw new Error(err)
       }
       // callback(error || 'Unknown error ' + err.response.status)

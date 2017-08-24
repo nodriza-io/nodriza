@@ -177,6 +177,25 @@ export class User extends Request {
     })
   }
   /**
+  * GET /v1/user/publicProfile [PUBLIC]
+  *
+  * Return an object with user public profile and oauth provider details if exist
+  *
+  * @param  {Object} params
+  * - @param  {String} username * -> (In query) User Id e.g jprieto@nodriza.io
+  * - @param  {String} successUrl  -> (In query) Overwrite OAuth success default url e.g: https://acme.nodriza.io/app/home
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  publicProfile (params, callback) {
+    let url = '/v1/user/publicProfile'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * DELETE /v1/user/removeAllPermissions [PRIVATE]
   *
   * Remove all assigned user permissions

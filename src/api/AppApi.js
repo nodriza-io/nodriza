@@ -35,7 +35,7 @@ export class App extends Request {
   * Return an array of all active apps, with their respective authentication URL
   *
   * @param  {Object} params
-  * - @param  {String} sucessUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
+  * - @param  {String} successUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
   * @param  {Function} callback
   * @return {Code} 200, 401, 403
   */
@@ -53,7 +53,7 @@ export class App extends Request {
   * Return an array of user login apps allowed to login, with their respective authentication URL
   *
   * @param  {Object} params
-  * - @param  {String} sucessUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
+  * - @param  {String} successUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
   * @param  {Function} callback
   * @return {Code} 200, 401
   */
