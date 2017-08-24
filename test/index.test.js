@@ -1,6 +1,6 @@
 'use strict'
 
-import { Nodriza } from '../lib/index'
+import Nodriza from '../src'
 // import { expect } from 'chai'
 // import _ from 'lodash'
 
@@ -12,10 +12,10 @@ const params = {
 const nodriza = new Nodriza(params)
 
 /*
-nodriza.api.user.me((err, profile) => {
-  if (err) return console.log('->>> err:', err)
-  console.log('->>> profile:', profile)
-})
+	nodriza.api.user.me((err, profile) => {
+	  if (err) return console.log('->>> err:', err)
+	  console.log('->>> profile:', profile)
+	})
 */
 
 nodriza.addListener('init', (url) => {

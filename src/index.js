@@ -5,7 +5,6 @@ import { Session } from './session'
 import { Storage } from './storage'
 import { Utils } from './utils'
 
-
 export default class Nodriza extends Api {
   constructor (params) {
     super(params)
