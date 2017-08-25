@@ -13,5 +13,6 @@ export default class Nodriza extends Api {
     this.session = new Session()
     this.storage = new Storage()
     this.u = new Utils()
+    console.log('+++u:', this.u)
   }
 }

@@ -17,50 +17,14 @@ export class App extends Request {
   * Set app active or inactive
   *
   * @param  {Object} params
-  * - @param  {String} appId  -> (In Body)  e.g 594d4b5970abb08100bf5b71
-  * - @param  {String} active  -> (In Body)  e.g true
+  * - @param  {String} appId * -> (In Body)  e.g 594d4b5970abb08100bf5b71
+  * - @param  {String} active * -> (In Body)  e.g true
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */
   activate (body, callback) {
     let params = {url: '/v1/app/activate', body}
     this.put(params, (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-  /**
-  * GET /v1/app/getActiveApps [PRIVATE]
-  *
-  * Return an array of all active apps, with their respective authentication URL
-  *
-  * @param  {Object} params
-  * - @param  {String} successUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
-  * @param  {Function} callback
-  * @return {Code} 200, 401, 403
-  */
-  getActiveApps (params, callback) {
-    let url = '/v1/app/getActiveApps'
-    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
-    this.get(url, (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-  /**
-  * GET /v1/app/getLoginApps [PUBLIC]
-  *
-  * Return an array of user login apps allowed to login, with their respective authentication URL
-  *
-  * @param  {Object} params
-  * - @param  {String} successUrl * -> (In query) Redirect to this URL after successful OAuth Authentication
-  * @param  {Function} callback
-  * @return {Code} 200, 401
-  */
-  getLoginApps (params, callback) {
-    let url = '/v1/app/getLoginApps'
-    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
-    this.get(url, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
