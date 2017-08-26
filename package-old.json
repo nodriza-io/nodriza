@@ -1,0 +1,45 @@
+{
+  "name": "nodriza",
+  "version": "1.0.12",
+  "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
+    "test": "nodemon test/index.test.js --exec babel-node --presets es2015,stage-2",
+    "test-lib": "nodemon test/lib.test.js --exec babel-node --presets es2015,stage-2",
+    "prepublish": "babel --presets es2015,stage-2 src --out-dir lib",
+    "lint": "nodemon test/index.test.js --exec 'clear && eslint src/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodriza-io/nodriza.git"
+  },
+  "keywords": [
+    "nodriza",
+    "nodriza.io",
+    "sdk",
+    "api"
+  ],
+  "author": "Juan Carlos Prieto <jprieto@nodriza.io> (http://nodriza.io)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nodriza-io/nodriza/issues"
+  },
+  "homepage": "https://github.com/nodriza-io/nodriza#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "numeral": "^2.0.6",
+    "query-string": "^5.0.0",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.1",
+    "eslint": "^4.4.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0"
+  }
+}
