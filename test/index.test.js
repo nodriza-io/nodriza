@@ -22,7 +22,7 @@ nodriza.addListener('init', (url) => {
   console.log('--> Connecting to ' + url)
 }, false)
 
-nodriza.addListener('connect', (socketId) => {
+nodriza.addListener('connect', () => {
   console.log('--> Connected...')
 }, false)
 
@@ -35,7 +35,7 @@ nodriza.addListener('disconnect', () => {
 }, false)
 
 nodriza.addListener('exec', (event) => {
-  console.log('exec')
+  console.log(event)
 }, false)
 
 nodriza.connect()
