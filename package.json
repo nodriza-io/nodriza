@@ -1,6 +1,6 @@
 {
   "name": "nodriza",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodriza-io/nodriza.git"
+    "url": "git+https://github.com/nodriza-io/nodriza-sdk.git"
   },
   "keywords": [
     "nodriza",
@@ -22,9 +22,9 @@
   "author": "Juan Carlos Prieto <jprieto@nodriza.io> (http://nodriza.io)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/nodriza-io/nodriza/issues"
+    "url": "https://github.com/nodriza-io/nodriza-sdk/issues"
   },
-  "homepage": "https://github.com/nodriza-io/nodriza#readme",
+  "homepage": "https://github.com/nodriza-io/nodriza-sdk#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "lodash": "^4.17.4",
