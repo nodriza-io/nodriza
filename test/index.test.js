@@ -6,7 +6,7 @@ import Nodriza from '../src'
 
 const params = {
   hostname: 'bp.nodriza.io',
-  accessToken: '56a69869-bf0a-4650-98e9-fcd9680b31d5'
+  accessToken: '-56a69869-bf0a-4650-98e9-fcd9680b31d5'
 }
 
 const nodriza = new Nodriza(params)
