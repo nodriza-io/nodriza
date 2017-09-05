@@ -32,6 +32,7 @@ export class Request {
   * @return {Object} -> Error message or anything
   */
   req (method, params, callback) {
+    console.log('>>++--> params delete:', params, 'method:', method)
     if (_.isString(params)) params = {url: params}
     const url = this.hostname ? this.hostname + params.url : params.url
     const body = params.body
@@ -51,6 +52,13 @@ export class Request {
       callback(null, res.data)
     }).catch((err) => {
       const error = _.get(err, 'response.data.error')
+      const status = _.get(err, 'response.status')
+      if (status === 401 && error === 'Unauthorized, invalid token.') {
+        this.session.destroy()
+        if (window) window.location.reload()
+      }
+      // console.log('______->>> JSON.stringify(err, null, 4:)', JSON.stringify(err, null, 4))
+      // console.log('___->>> error:', error)
       if (error) {
         callback(error)
       } else {
