@@ -32,23 +32,21 @@ export class Request {
   * @return {Object} -> Error message or anything
   */
   req (method, params, callback) {
-    console.log('>>++--> params delete:', params, 'method:', method)
     if (_.isString(params)) params = {url: params}
     const url = this.hostname ? this.hostname + params.url : params.url
     const body = params.body
     let headers = params.headers || {}
     if (this.session.get()) headers = Object.assign(headers, this.session.authHeader())
     if (!_.isEmpty(headers)) this.axios.defaults.headers = headers
-    if (_.isEmpty(url)) return callback(new Error('Missing required \'method\' param'))
+    if (_.isEmpty(method)) return callback(new Error('Missing required \'method\' param'))
     if (_.isEmpty(url)) return callback(new Error('Missing required key \'url\' in params'))
     if (method === 'get' && !_.isEmpty(body)) return callback(new Error('\'get\' method does not support body'))
-    let fn
-    if (!body) {
-      fn = this.axios[method](url)
-    } else {
-      fn = this.axios[method](url, body)
+    let opt = {
+      method,
+      url
     }
-    fn.then((res) => {
+    if (body) opt.data = body
+    this.axios(opt).then((res) => {
       callback(null, res.data)
     }).catch((err) => {
       const error = _.get(err, 'response.data.error')
@@ -57,8 +55,6 @@ export class Request {
         this.session.destroy()
         if (window) window.location.reload()
       }
-      // console.log('______->>> JSON.stringify(err, null, 4:)', JSON.stringify(err, null, 4))
-      // console.log('___->>> error:', error)
       if (error) {
         callback(error)
       } else {
@@ -140,7 +136,6 @@ export class Request {
    * @return {Any} -> Error or any type of data in response
    */
   delete (params, callback) {
-    console.log('--> params delte:', params)
     this.req('delete', params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
