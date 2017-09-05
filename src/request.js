@@ -132,6 +132,7 @@ export class Request {
    * @return {Any} -> Error or any type of data in response
    */
   delete (params, callback) {
+    console.log('--> params delte:', params)
     this.req('delete', params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
