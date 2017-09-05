@@ -45,4 +45,21 @@ export class App extends Request {
       callback(null, data)
     })
   }
+  /**
+  * DELETE /v1/app/revoke [PRIVATE]
+  *
+  * Revoke app authorization
+  *
+  * @param  {Object} params
+  * - @param  {String} keyname * -> (In Body)  e.g google
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  revoke (body, callback) {
+    let params = {url: '/v1/app/revoke', body}
+    this.delete(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
