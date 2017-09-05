@@ -31,4 +31,18 @@ export class App extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/app/list [PRIVATE]
+  *
+  * Get platform apps
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  list (callback) {
+    this.get('/v1/app/list', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
