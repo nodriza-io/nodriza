@@ -9,6 +9,11 @@ export class Utils {
     return null
   }
 
+  getClientUrl () {
+    if (!window) throw new Error('Function only available for browser version')
+    return location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '')
+  }
+
   objectToAscii (obj) {
     let str
     try {

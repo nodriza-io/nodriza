@@ -57,7 +57,6 @@ export class App extends Request {
   */
   revoke (body, callback) {
     let params = {url: '/v1/app/revoke', body}
-    console.log('--> revokeeee:', params)
     this.delete(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
