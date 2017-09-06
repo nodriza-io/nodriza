@@ -32,6 +32,26 @@ export class App extends Request {
     })
   }
   /**
+  * GET /v1/app/getOauthUrl [PRIVATE]
+  *
+  * Return OAuth2 URL of requested provider
+  *
+  * @param  {Object} params
+  * - @param  {String} keyname * -> (In query) OAuth 2 provider keyname e.g google
+  * - @param  {String} successUrl * -> (In query) The URL where client should be redirected after successful login
+  * - @param  {String} login  -> (In query) True if OAuth authentication implicate create user or generate session
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getOauthUrl (params, callback) {
+    let url = '/v1/app/getOauthUrl'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/app/list [PRIVATE]
   *
   * Get platform apps
