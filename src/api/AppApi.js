@@ -82,4 +82,22 @@ export class App extends Request {
       callback(null, data)
     })
   }
+  /**
+  * PUT /v1/app/setAccessToken [PRIVATE]
+  *
+  * Set or update app access token
+  *
+  * @param  {Object} params
+  * - @param  {String} keyname * -> (In Body)  e.g google
+  * - @param  {String} accessToken * -> (In Body)  e.g xxx-xxx-xxx-xxxx
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  setAccessToken (body, callback) {
+    let params = {url: '/v1/app/setAccessToken', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
