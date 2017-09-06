@@ -123,9 +123,8 @@ export class User extends Request {
   * @param  {Function} callback
   * @return {Code} 200, 401
   */
-  logout (body, callback) {
-    let params = {url: '/v1/user/logout', body}
-    this.delete(params, (err, data) => {
+  logout (callback) {
+    this.delete('/v1/user/logout', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
@@ -138,9 +137,8 @@ export class User extends Request {
   * @param  {Function} callback
   * @return {Code} 200, 401
   */
-  logoutAllDevices (body, callback) {
-    let params = {url: '/v1/user/logoutAllDevices', body}
-    this.delete(params, (err, data) => {
+  logoutAllDevices (callback) {
+    this.delete('/v1/user/logoutAllDevices', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
