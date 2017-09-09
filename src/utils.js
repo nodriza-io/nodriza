@@ -18,10 +18,12 @@ export class Utils {
 
   // Filters
 
-  unCammel (str) {
-    return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3').replace(/^./, function(str) {
-      return str.toUpperCase()
-    })
+  upper (s) {
+    return s.toUpperCase()
+  }
+
+  lower (s) {
+    return s.toLowerCase()
   }
 
   upperFirst (string) {
@@ -40,6 +42,12 @@ export class Utils {
     return arr.join(' ').trim()
   }
 
+  unCammel (str) {
+    return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3').replace(/^./, function(str) {
+      return str.toUpperCase()
+    })
+  }
+
   textToKebab (str) {
     return str.split(' ').join('-').toLowerCase()
   }
@@ -53,6 +61,14 @@ export class Utils {
     result = result.replace(/[^-a-z0-9]+/g, '-')
     result = result.replace(/^-+/, '').replace(/-$/, '')
     return result
+  }
+
+  req (opt, callback) {
+    axios(opt).then((res) => {
+      callback(null, res.data)
+    }).catch((err) => {
+      callback(err)
+    })
   }
 
   maxFileSize (size, maxFileSize) {
