@@ -32,7 +32,7 @@ export class App extends Request {
     })
   }
   /**
-  * GET /v1/app/getOauthUrl [PRIVATE]
+  * GET /v1/app/getOauthUrl [PUBLIC]
   *
   * Return OAuth2 URL of requested provider
   *
