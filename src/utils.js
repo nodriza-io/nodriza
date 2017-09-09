@@ -2,6 +2,20 @@
 import numeral from 'numeral'
 
 export class Utils {
+  trimParagraph (str, maxLength, more) {
+    if (!maxLength) throw Error('Missing required key maxLength in params')
+    more = more || '...'
+    const exceeds = (str.length > maxLength) || false
+    let trimed
+    if (exceeds) {
+      trimed = str.substr(0, maxLength)
+      trimed = trimed.substr(0, Math.min(trimed.length, trimed.lastIndexOf(' ')))
+      trimed += more
+      console.log('->>> str:', str)
+    }
+    return exceeds ? trimed : str
+  }
+
   maxFileSize (size, maxFileSize) {
     if (size > maxFileSize) {
       return 'Sorry, file has ' + numeral(size).format('0b') + ' and exeeded the max file size ' + numeral(maxFileSize).format('0b')
