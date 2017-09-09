@@ -1,5 +1,6 @@
 'use strict'
 import numeral from 'numeral'
+import axios from 'axios'
 
 export class Utils {
   trimParagraph (str, maxLength, more) {
@@ -11,9 +12,23 @@ export class Utils {
       trimed = str.substr(0, maxLength)
       trimed = trimed.substr(0, Math.min(trimed.length, trimed.lastIndexOf(' ')))
       trimed += more
-      console.log('->>> str:', str)
     }
     return exceeds ? trimed : str
+  }
+
+  req (opt, callback) {
+    // axios = axios.create()
+    axios(opt).then((res) => {
+      callback(null, res.data)
+    }).catch((err) => {
+      callback(err)
+    })
+  }
+
+  unCammel (str) {
+    return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3').replace(/^./, function(str) {
+      return str.toUpperCase()
+    })
   }
 
   maxFileSize (size, maxFileSize) {
