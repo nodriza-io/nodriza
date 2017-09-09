@@ -16,19 +16,43 @@ export class Utils {
     return exceeds ? trimed : str
   }
 
-  req (opt, callback) {
-    // axios = axios.create()
-    axios(opt).then((res) => {
-      callback(null, res.data)
-    }).catch((err) => {
-      callback(err)
-    })
-  }
+  // Filters
 
   unCammel (str) {
     return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3').replace(/^./, function(str) {
       return str.toUpperCase()
     })
+  }
+
+  upperFirst (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  lowerFirst (string) {
+    return string.charAt(0).toLowerCase() + string.slice(1);
+  }
+
+  kebabToText (str) {
+    let arr = str.split('-')
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = this.upperFirst(arr[i])
+    }
+    return arr.join(' ').trim()
+  }
+
+  textToKebab (str) {
+    return str.split(' ').join('-').toLowerCase()
+  }
+
+  camelToKebab (str) {
+    var result = string;
+    result = result.replace(/([a-z][A-Z])/g, function(match) {
+      return match.substr(0, 1) + '-' + match.substr(1, 1).toLowerCase();
+    })
+    result = result.toLowerCase()
+    result = result.replace(/[^-a-z0-9]+/g, '-')
+    result = result.replace(/^-+/, '').replace(/-$/, '')
+    return result
   }
 
   maxFileSize (size, maxFileSize) {

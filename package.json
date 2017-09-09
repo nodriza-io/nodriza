@@ -1,6 +1,6 @@
 {
   "name": "nodriza",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
