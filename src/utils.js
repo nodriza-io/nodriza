@@ -16,6 +16,16 @@ export class Utils {
     return exceeds ? trimed : str
   }
 
+  trimWord (str, maxLength, more) {
+    if (!maxLength) throw Error('Missing required key maxLength in params')
+    more = more || '...'
+    const exceeds = (str.length > maxLength) || false
+    let trimed
+    if (exceeds) {
+      trimed = str.substr(0, maxLength) + more
+    }
+    return exceeds ? trimed : str
+  }
   // Filters
 
   upper (s) {
