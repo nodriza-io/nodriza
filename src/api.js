@@ -4,6 +4,7 @@ import { Config } from './api/ConfigApi'
 import { User } from './api/UserApi'
 import { Company } from './api/CompanyApi'
 import { App } from './api/AppApi'
+import { AccessPolicy } from './api/AccessPolicyApi'
 
 import { Socket } from './socket'
 import { LocalStorage } from './localStorage'
@@ -22,7 +23,8 @@ export class Api extends Socket {
       config: new Config(params),
       app: new App(params),
       user: new User(params),
-      company: new Company(params)
+      company: new Company(params),
+      accessPolicy: new AccessPolicy(params)
     }
   }
 }
