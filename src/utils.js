@@ -4,6 +4,7 @@ import axios from 'axios'
 
 export class Utils {
   trimParagraph (str, maxLength, more) {
+    if (typeof str !== 'string') return ''
     if (!maxLength) throw Error('Missing required key maxLength in params')
     more = more || '...'
     const exceeds = (str.length > maxLength) || false
