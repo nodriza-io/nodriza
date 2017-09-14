@@ -46,19 +46,5 @@ module.exports = {
     "example": false,
     "type": "boolean",
     "skipUpdate": true
-  },
-  "id": {
-    "type": "string",
-    "autoIncrement": true,
-    "primaryKey": true,
-    "unique": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "default": "NOW"
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "default": "NOW"
   }
 }

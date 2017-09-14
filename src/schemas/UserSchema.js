@@ -1,14 +1,4 @@
 module.exports = {
-  "createdBy": {
-    "description": "User who created the resource",
-    "model": "user",
-    "skipAll": true
-  },
-  "updatedBy": {
-    "description": "Last user who updated the resource",
-    "model": "user",
-    "skipAll": true
-  },
   "firstName": {
     "description": "User first name",
     "example": "Juan",
@@ -137,19 +127,5 @@ module.exports = {
     "example": "/dashboard",
     "skipCreate": true,
     "type": "string"
-  },
-  "id": {
-    "type": "string",
-    "autoIncrement": true,
-    "primaryKey": true,
-    "unique": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "default": "NOW"
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "default": "NOW"
   }
 }

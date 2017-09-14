@@ -38,19 +38,5 @@ module.exports = {
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
     "defaultsTo": "0",
     "required": true
-  },
-  "id": {
-    "type": "string",
-    "autoIncrement": true,
-    "primaryKey": true,
-    "unique": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "default": "NOW"
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "default": "NOW"
   }
 }

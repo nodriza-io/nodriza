@@ -106,19 +106,5 @@ module.exports = {
     "example": "#4285F4",
     "type": "string",
     "required": true
-  },
-  "id": {
-    "type": "string",
-    "autoIncrement": true,
-    "primaryKey": true,
-    "unique": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "default": "NOW"
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "default": "NOW"
   }
 }

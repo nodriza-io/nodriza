@@ -54,13 +54,5 @@ module.exports = {
     "example": "/dashboard",
     "defaultsTo": "/dashboard",
     "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime",
-    "default": "NOW"
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "default": "NOW"
   }
 }
