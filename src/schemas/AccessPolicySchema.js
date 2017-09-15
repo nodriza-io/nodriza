@@ -22,7 +22,7 @@ module.exports = {
     "unique": true
   },
   "ip": {
-    "description": "Restrict user access by IP or IP Range",
+    "description": "Restrict access by IP or IP Range",
     "example": [
       "192.168.0.10-192.168.0.100",
       "192.168.0.101"
@@ -30,7 +30,7 @@ module.exports = {
     "type": "array",
     "ip": true
   },
-  "accessTimeStart": {
+  "startingHour": {
     "description": "Access permitted after this hour of the day",
     "example": 9,
     "type": "integer",
@@ -62,7 +62,7 @@ module.exports = {
       24
     ]
   },
-  "accessTimeEnd": {
+  "endingHour": {
     "description": "Access denied after this hour of the day",
     "example": 19,
     "type": "integer",
