@@ -75,7 +75,7 @@ module.exports = {
     "description": "Scopes let you specify exactly how the app needs to access.",
     "example": [
       "email",
-      " profile"
+      "profile"
     ],
     "type": "array",
     "defaultsTo": []
