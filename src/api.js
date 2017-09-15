@@ -1,4 +1,7 @@
 'use strict'
+/**
+ * Load apis & models schema libraries
+ */
 import { Apis } from './api/'
 import { Schemas } from './schemas/'
 
