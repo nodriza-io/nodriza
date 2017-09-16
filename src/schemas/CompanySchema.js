@@ -15,6 +15,7 @@ module.exports = {
     "description": "Company friendly name",
     "example": "Acme",
     "type": "string",
+    "displayName": true,
     "required": true
   },
   "shortname": {
@@ -26,6 +27,7 @@ module.exports = {
     "regex": "/^([a-z0-9_-]+)$/",
     "maxLength": 16,
     "skipUpdate": true,
+    "displayName": true,
     "existCheck": true
   },
   "legalName": {

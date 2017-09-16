@@ -11,6 +11,7 @@ module.exports = {
     "description": "Friendly application name identifier",
     "example": "Google Apps",
     "type": "string",
+    "displayName": true,
     "required": true
   },
   "keyname": {

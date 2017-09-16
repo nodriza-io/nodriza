@@ -5,6 +5,7 @@ module.exports = {
     "type": "string",
     "required": true,
     "unique": true,
+    "displayName": true,
     "existCheck": true
   },
   "description": {

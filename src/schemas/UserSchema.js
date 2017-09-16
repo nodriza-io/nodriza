@@ -3,11 +3,13 @@ module.exports = {
     "description": "User first name",
     "example": "Juan",
     "type": "string",
+    "displayName": true,
     "notEmpty": true
   },
   "lastName": {
     "description": "User last name",
     "example": "Prieto",
+    "displayName": true,
     "type": "string"
   },
   "email": {
