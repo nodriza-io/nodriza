@@ -15,7 +15,7 @@ module.exports = {
   },
   "policy": {
     "description": "Domain or email access policy rule",
-    "example": "acme.com or jdoe@acme.inc",
+    "example": "acme.com (Full Domain) or jdoe@acme.inc (Single user)",
     "type": "string",
     "required": true,
     "existCheck": true,
