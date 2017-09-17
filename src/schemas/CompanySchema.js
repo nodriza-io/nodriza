@@ -27,7 +27,6 @@ module.exports = {
     "regex": "/^([a-z0-9_-]+)$/",
     "maxLength": 16,
     "skipUpdate": true,
-    "displayName": true,
     "existCheck": true
   },
   "legalName": {
