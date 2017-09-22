@@ -7,7 +7,7 @@ module.exports = {
     "defaultsTo": true,
     "skipUpdate": true
   },
-  "displayName": {
+  "name": {
     "description": "Friendly application name identifier",
     "example": "Google Apps",
     "type": "string",

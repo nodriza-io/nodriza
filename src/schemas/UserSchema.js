@@ -16,7 +16,7 @@ module.exports = {
     "description": "User email",
     "example": "jprieto@nodriza.io",
     "type": "string",
-    "regex": "/[\\w-\\-+.]{3,}@([\\w-]{2,}\\.)*([\\w-]{2,}\\.)[\\w-]{2,4}/",
+    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "required": true,
     "unique": true,
     "existCheck": true
