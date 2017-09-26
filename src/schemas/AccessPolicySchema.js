@@ -7,7 +7,7 @@ module.exports = {
     "mustExist": true
   },
   "company": {
-    "description": "Every user that match this policy will be associated with this company and heritage the company type/role",
+    "description": "Logged users that match the email/domain policy will be associated with this company and heritage the company type/role",
     "example": "59418bcd105605cc2693a981",
     "model": "company",
     "mustExist": true,
