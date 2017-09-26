@@ -7,14 +7,14 @@ module.exports = {
     "mustExist": true
   },
   "company": {
-    "description": "Every user that match this policy will be associated with this company and heritage the company type",
+    "description": "Every user that match this policy will be associated with this company and heritage the company type/role",
     "example": "59418bcd105605cc2693a981",
     "model": "company",
     "mustExist": true,
     "required": true
   },
   "policy": {
-    "description": "Domain or email access policy rule",
+    "description": "Allow access from this domain/email",
     "example": "acme.com (Full Domain) or jdoe@acme.inc (Single user)",
     "displayName": true,
     "emailOrDomain": true,
@@ -33,13 +33,13 @@ module.exports = {
     "ip": true
   },
   "startingHour": {
-    "description": "Access permitted after this hour of the day",
+    "description": "Allow access after this hour of the day",
     "example": "9:00",
     "type": "string",
     "hour": true
   },
   "endingHour": {
-    "description": "Access denied after this hour of the day",
+    "description": "Deny access after this hour of the day",
     "example": "19:00",
     "type": "string",
     "hour": true
