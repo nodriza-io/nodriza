@@ -1,4 +1,14 @@
 module.exports = {
+  "createdBy": {
+    "description": "User who created the resource",
+    "model": "user",
+    "skipAll": true
+  },
+  "updatedBy": {
+    "description": "Last user who updated the resource",
+    "model": "user",
+    "skipAll": true
+  },
   "firstName": {
     "description": "User first name",
     "example": "Juan",
@@ -129,5 +139,11 @@ module.exports = {
     "example": "/dashboard",
     "skipCreate": true,
     "type": "string"
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

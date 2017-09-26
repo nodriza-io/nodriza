@@ -38,5 +38,11 @@ module.exports = {
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
     "defaultsTo": "0",
     "required": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

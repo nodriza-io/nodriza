@@ -32,5 +32,11 @@ module.exports = {
   },
   "notifyTo": {
     "type": "string"
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

@@ -6,6 +6,16 @@ module.exports = {
     "required": true,
     "defaultsTo": true
   },
+  "createdBy": {
+    "description": "User who created the resource",
+    "model": "user",
+    "skipAll": true
+  },
+  "updatedBy": {
+    "description": "Last user who updated the resource",
+    "model": "user",
+    "skipAll": true
+  },
   "keyname": {
     "description": "Unique name identifier",
     "type": "string",
@@ -28,5 +38,11 @@ module.exports = {
       "quotes",
       "system"
     ]
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

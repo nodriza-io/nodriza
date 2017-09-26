@@ -46,5 +46,11 @@ module.exports = {
     "example": false,
     "type": "boolean",
     "skipUpdate": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

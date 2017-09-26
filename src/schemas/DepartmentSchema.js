@@ -12,5 +12,11 @@ module.exports = {
     "description": "Department description",
     "example": "People in charge of a certain group",
     "type": "string"
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

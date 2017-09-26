@@ -13,5 +13,11 @@ module.exports = {
     "type": "string",
     "required": true,
     "skipAll": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

@@ -43,5 +43,11 @@ module.exports = {
     "example": "19:00",
     "type": "string",
     "hour": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }

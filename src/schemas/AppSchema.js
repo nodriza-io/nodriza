@@ -107,5 +107,11 @@ module.exports = {
     "example": "#4285F4",
     "type": "string",
     "required": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }
