@@ -16,9 +16,9 @@ export class Utils {
     }
     return exceeds ? trimed : str
   }
-
   trimWord (str, maxLength, more) {
     if (!maxLength) throw Error('Missing required key maxLength in params')
+    if (typeof str != 'string') return ''
     more = more || '...'
     const exceeds = (str.length > maxLength) || false
     let trimed
@@ -28,23 +28,18 @@ export class Utils {
     return exceeds ? trimed : str
   }
   // Filters
-
   upper (s) {
     return s.toUpperCase()
   }
-
   lower (s) {
     return s.toLowerCase()
   }
-
   upperFirst (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
   lowerFirst (string) {
     return string.charAt(0).toLowerCase() + string.slice(1);
   }
-
   kebabToText (str) {
     let arr = str.split('-')
     for (var i = 0; i < arr.length; i++) {
@@ -52,18 +47,15 @@ export class Utils {
     }
     return arr.join(' ').trim()
   }
-
   unCammel (str) {
     if (typeof str !== 'string') return ''
     return str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\b([A-Z]+)([A-Z])([a-z])/, '$1 $2$3').replace(/^./, function(str) {
       return str.toUpperCase()
     })
   }
-
   textToKebab (str) {
     return str.split(' ').join('-').toLowerCase()
   }
-
   camelToKebab (str) {
     var result = string;
     result = result.replace(/([a-z][A-Z])/g, function(match) {
@@ -74,7 +66,6 @@ export class Utils {
     result = result.replace(/^-+/, '').replace(/-$/, '')
     return result
   }
-
   req (opt, callback) {
     axios(opt).then((res) => {
       callback(null, res.data)
@@ -82,19 +73,16 @@ export class Utils {
       callback(err)
     })
   }
-
   maxFileSize (size, maxFileSize) {
     if (size > maxFileSize) {
       return 'Sorry, file has ' + numeral(size).format('0b') + ' and exeeded the max file size ' + numeral(maxFileSize).format('0b')
     }
     return null
   }
-
   getClientUrl () {
     if (!window) throw new Error('Function only available for browser version')
     return location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '')
   }
-
   objectToAscii (obj) {
     let str
     try {
@@ -104,7 +92,6 @@ export class Utils {
     }
     return str
   }
-
   asciiToObject (str) {
     let obj
     try {
