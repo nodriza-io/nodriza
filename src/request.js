@@ -190,7 +190,6 @@ export class Request {
       str += key + '=' + (typeof query[key] == 'object' ? JSON.stringify(query[key]) : query[key]) + '&'
     }
     if (str.slice(str.length - 1, str.length) === '&') str = str.slice(0, -1)
-    console.log('***->>> obj:', str.slice(0, -1))
     if (!_.isEmpty(str)) url += '?' + str
     this.get(url, (err, data) => {
       if (err) return callback(err)
