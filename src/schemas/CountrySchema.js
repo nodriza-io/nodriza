@@ -9,6 +9,7 @@ module.exports = {
   },
   "name": {
     "description": "Country name",
+    "displayName": true,
     "example": "Canada",
     "type": "string",
     "required": true,

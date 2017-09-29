@@ -36,6 +36,11 @@ module.exports = {
     "displayName": true,
     "required": true
   },
+  "legalName": {
+    "description": "Full company name used for legal and accounting issues",
+    "example": "Acme Inc.",
+    "type": "string"
+  },
   "shortname": {
     "description": "Unique shortname identifier",
     "example": "acme-inc",
@@ -46,11 +51,6 @@ module.exports = {
     "maxLength": 16,
     "skipUpdate": true,
     "existCheck": true
-  },
-  "legalName": {
-    "description": "Full company name used for legal and accounting issues",
-    "example": "Acme Inc.",
-    "type": "string"
   },
   "size": {
     "description": "Number of company employees, this enumeration is available at the company controller",
@@ -244,23 +244,7 @@ module.exports = {
     "description": "Phone number",
     "type": "string"
   },
-  "lat": {
-    "description": "Used for geolocation at GoogleMaps",
-    "type": "float"
-  },
-  "lng": {
-    "description": "Used for geolocation at GoogleMaps",
-    "type": "float"
-  },
   "postal": {
-    "type": "string"
-  },
-  "website": {
-    "description": "Company website",
-    "type": "string"
-  },
-  "linkedIn": {
-    "description": "Company linkedIn profile",
     "type": "string"
   },
   "referedBy": {
@@ -272,6 +256,10 @@ module.exports = {
     "description": "Company logo in different sizes",
     "type": "json",
     "skipAll": true
+  },
+  "website": {
+    "description": "Company website",
+    "type": "string"
   },
   "description": {
     "description": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
