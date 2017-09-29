@@ -265,6 +265,14 @@ module.exports = {
     "description": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
     "type": "string"
   },
+  "lat": {
+    "description": "Used for geolocation at GoogleMaps",
+    "type": "float"
+  },
+  "lng": {
+    "description": "Used for geolocation at GoogleMaps",
+    "type": "float"
+  },
   "tags": {
     "description": "Tags could be used for multiple purposes",
     "type": "array"
