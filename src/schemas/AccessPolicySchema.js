@@ -1,4 +1,12 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "app": {
     "description": "Authentication provider",
     "example": "594d4b5970abb08100bf5b71",
@@ -34,20 +42,14 @@ module.exports = {
   },
   "startingHour": {
     "description": "Allow access after this hour of the day",
-    "example": "9:00",
+    "example": "9:00:00",
     "type": "string",
     "hour": true
   },
   "endingHour": {
     "description": "Deny access after this hour of the day",
-    "example": "19:00",
+    "example": "19:00:00",
     "type": "string",
     "hour": true
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }
