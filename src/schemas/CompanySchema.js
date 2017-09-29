@@ -9,6 +9,14 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "type": {
     "description": "Company type",
     "example": "host",
@@ -272,11 +280,5 @@ module.exports = {
   "tags": {
     "description": "Tags could be used for multiple purposes",
     "type": "array"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }

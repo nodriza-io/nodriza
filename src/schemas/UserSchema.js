@@ -9,6 +9,14 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "firstName": {
     "description": "User first name",
     "example": "Juan",
@@ -139,11 +147,5 @@ module.exports = {
     "example": "/dashboard",
     "skipCreate": true,
     "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }

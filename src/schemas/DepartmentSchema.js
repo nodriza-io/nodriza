@@ -1,4 +1,12 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "name": {
     "description": "Department name",
     "example": "Management",
@@ -12,11 +20,5 @@ module.exports = {
     "description": "Department description",
     "example": "People in charge of a certain group",
     "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }
