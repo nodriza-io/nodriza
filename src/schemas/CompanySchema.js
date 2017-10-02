@@ -1,4 +1,12 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -7,14 +15,6 @@ module.exports = {
   "updatedBy": {
     "description": "Last user who updated the resource",
     "model": "user",
-    "skipAll": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
-  "updatedAt": {
-    "type": "datetime",
     "skipAll": true
   },
   "type": {
@@ -48,12 +48,54 @@ module.exports = {
     "required": true,
     "unique": true,
     "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
     "maxLength": 16,
     "skipUpdate": true,
     "existCheck": true
   },
+  "website": {
+    "description": "Full company website url",
+    "example": "http://acme-inc.com",
+    "type": "string",
+    "maxLength": 253
+  },
+  "phone": {
+    "description": "Phone number",
+    "type": "string",
+    "example": "+1 508-695-1212"
+  },
+  "country": {
+    "description": "Country name",
+    "model": "country",
+    "mustExist": true
+  },
+  "city": {
+    "description": "City name",
+    "example": "Los Angeles",
+    "type": "string"
+  },
+  "street": {
+    "description": "Street name",
+    "example": "2719 Hyperion Ave",
+    "type": "string"
+  },
+  "state": {
+    "description": "State name",
+    "example": "CA",
+    "type": "string"
+  },
+  "postal": {
+    "description": "Postal Code",
+    "type": "string",
+    "example": "90027"
+  },
+  "referedBy": {
+    "description": "The user who refered this company as client",
+    "model": "user",
+    "mustExist": true
+  },
   "size": {
-    "description": "Number of company employees, this enumeration is available at the company controller",
+    "description": "Number of company employees",
     "example": "51-200",
     "type": "string",
     "enum": [
@@ -68,7 +110,7 @@ module.exports = {
     ]
   },
   "industry": {
-    "description": "Company industry type, this enumeration is available at the company controller",
+    "description": "Company industry type",
     "example": "Computer Networking",
     "type": "string",
     "enum": [
@@ -220,58 +262,20 @@ module.exports = {
       "Militar"
     ]
   },
-  "street": {
-    "description": "Street name",
-    "example": "100 North Washington St",
-    "type": "string"
-  },
-  "city": {
-    "description": "City name",
-    "example": "Boston",
-    "type": "string"
-  },
-  "state": {
-    "description": "State name",
-    "example": "MA",
-    "type": "string"
-  },
-  "country": {
-    "description": "Country name",
-    "model": "country",
-    "mustExist": true
-  },
-  "phone": {
-    "description": "Phone number",
-    "type": "string"
-  },
-  "postal": {
-    "type": "string"
-  },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
-  },
   "logos": {
-    "description": "Company logo in different sizes",
+    "description": "Company logo",
     "type": "json",
     "skipAll": true
   },
-  "website": {
-    "description": "Company website",
-    "type": "string"
+  "geoLocation": {
+    "description": "Company geo location",
+    "type": "json"
   },
   "description": {
-    "description": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string"
-  },
-  "lat": {
-    "description": "Used for geolocation at GoogleMaps",
-    "type": "float"
-  },
-  "lng": {
-    "description": "Used for geolocation at GoogleMaps",
-    "type": "float"
+    "description": "Company description",
+    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
+    "type": "string",
+    "maxLength": 125000
   },
   "tags": {
     "description": "Tags could be used for multiple purposes",
