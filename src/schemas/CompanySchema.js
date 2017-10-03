@@ -21,6 +21,7 @@ module.exports = {
     "description": "Company type",
     "example": "host",
     "type": "string",
+    "defaultsTo": "client",
     "enum": [
       "host",
       "client",
@@ -88,6 +89,10 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
+  },
+  "Map": {
+    "description": "Map company location",
+    "type": "json"
   },
   "referedBy": {
     "description": "The user who refered this company as client",
@@ -266,10 +271,6 @@ module.exports = {
     "description": "Company logo",
     "type": "json",
     "skipAll": true
-  },
-  "geoLocation": {
-    "description": "Company geo location",
-    "type": "json"
   },
   "description": {
     "description": "Company description",
