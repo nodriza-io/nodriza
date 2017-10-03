@@ -9,6 +9,7 @@ import { Service } from './ServiceApi'
 import { User } from './UserApi'
 import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
+import { Token } from './TokenApi'
 import { Department } from './DepartmentApi'
 import { Cron } from './CronApi'
 import { CronLog } from './CronLogApi'
@@ -26,6 +27,7 @@ export class Apis {
     this.user = new User(params)
     this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
+    this.token = new Token(params)
     this.department = new Department(params)
     this.cron = new Cron(params)
     this.cronLog = new CronLog(params)

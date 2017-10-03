@@ -9,6 +9,7 @@ import Service from './ServiceSchema'
 import User from './UserSchema'
 import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
+import Token from './TokenSchema'
 import Department from './DepartmentSchema'
 import Cron from './CronSchema'
 import CronLog from './CronLogSchema'
@@ -26,6 +27,7 @@ export class Schemas {
     this.user = User
     this.template = Template
     this.accessPolicy = AccessPolicy
+    this.token = Token
     this.department = Department
     this.cron = Cron
     this.cronLog = CronLog
