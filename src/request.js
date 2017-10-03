@@ -38,19 +38,23 @@ export class Request {
     let headers = params.headers || {}
     if (this.session.get()) headers = Object.assign(headers, this.session.authHeader())
     if (!_.isEmpty(headers)) this.axios.defaults.headers = headers
-    if (_.isEmpty(url)) return callback(new Error('Missing required \'method\' param'))
+    if (_.isEmpty(method)) return callback(new Error('Missing required \'method\' param'))
     if (_.isEmpty(url)) return callback(new Error('Missing required key \'url\' in params'))
     if (method === 'get' && !_.isEmpty(body)) return callback(new Error('\'get\' method does not support body'))
-    let fn
-    if (!body) {
-      fn = this.axios[method](url)
-    } else {
-      fn = this.axios[method](url, body)
+    let opt = {
+      method,
+      url
     }
-    fn.then((res) => {
+    if (body) opt.data = body
+    this.axios(opt).then((res) => {
       callback(null, res.data)
     }).catch((err) => {
       const error = _.get(err, 'response.data.error')
+      const status = _.get(err, 'response.status')
+      if (status === 401 && error === 'Unauthorized, invalid token.') {
+        this.session.destroy()
+        if (window) window.location.reload()
+      }
       if (error) {
         callback(error)
       } else {
@@ -181,7 +185,12 @@ export class Request {
   */
   find (query, callback) {
     let url = this.path
-    if (!_.isEmpty(query)) url += '?' + queryString.stringify(query)
+    let str = ''
+    for (let key in query) {
+      str += key + '=' + (typeof query[key] == 'object' ? JSON.stringify(query[key]) : query[key]) + '&'
+    }
+    if (str.slice(str.length - 1, str.length) === '&') str = str.slice(0, -1)
+    if (!_.isEmpty(str)) url += '?' + str
     this.get(url, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
