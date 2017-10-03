@@ -1,15 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
-=======
-  "createdAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -20,7 +9,6 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
-<<<<<<< HEAD
   "createdAt": {
     "type": "datetime",
     "skipAll": true
@@ -29,8 +17,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-=======
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
   "type": {
     "description": "Company type",
     "example": "host",
@@ -62,62 +48,12 @@ module.exports = {
     "required": true,
     "unique": true,
     "regex": "/^([a-z0-9_-]+)$/",
-<<<<<<< HEAD
-=======
-    "minLength": 2,
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
     "maxLength": 16,
     "skipUpdate": true,
     "existCheck": true
   },
-<<<<<<< HEAD
   "size": {
     "description": "Number of company employees, this enumeration is available at the company controller",
-=======
-  "website": {
-    "description": "Full company website url",
-    "example": "http://acme-inc.com",
-    "type": "string",
-    "maxLength": 253
-  },
-  "phone": {
-    "description": "Phone number",
-    "type": "string",
-    "example": "+1 508-695-1212"
-  },
-  "country": {
-    "description": "Country name",
-    "model": "country",
-    "mustExist": true
-  },
-  "city": {
-    "description": "City name",
-    "example": "Los Angeles",
-    "type": "string"
-  },
-  "street": {
-    "description": "Street name",
-    "example": "2719 Hyperion Ave",
-    "type": "string"
-  },
-  "state": {
-    "description": "State name",
-    "example": "CA",
-    "type": "string"
-  },
-  "postal": {
-    "description": "Postal Code",
-    "type": "string",
-    "example": "90027"
-  },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
-  },
-  "size": {
-    "description": "Number of company employees",
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
     "example": "51-200",
     "type": "string",
     "enum": [
@@ -132,11 +68,7 @@ module.exports = {
     ]
   },
   "industry": {
-<<<<<<< HEAD
     "description": "Company industry type, this enumeration is available at the company controller",
-=======
-    "description": "Company industry type",
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
     "example": "Computer Networking",
     "type": "string",
     "enum": [
@@ -288,7 +220,6 @@ module.exports = {
       "Militar"
     ]
   },
-<<<<<<< HEAD
   "street": {
     "description": "Street name",
     "example": "100 North Washington St",
@@ -341,22 +272,6 @@ module.exports = {
   "lng": {
     "description": "Used for geolocation at GoogleMaps",
     "type": "float"
-=======
-  "logos": {
-    "description": "Company logo",
-    "type": "json",
-    "skipAll": true
-  },
-  "geoLocation": {
-    "description": "Company geo location",
-    "type": "json"
-  },
-  "description": {
-    "description": "Company description",
-    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string",
-    "maxLength": 125000
->>>>>>> 02cc83f91195a26965f2d54750fc37966451081d
   },
   "tags": {
     "description": "Tags could be used for multiple purposes",
