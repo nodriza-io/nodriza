@@ -42,10 +42,12 @@ export class Utils {
     return s.toLowerCase()
   }
   upperFirst (string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    if (typeof string !== 'string') return ''
+    return string.charAt(0).toUpperCase() + string.slice(1)
   }
   lowerFirst (string) {
-    return string.charAt(0).toLowerCase() + string.slice(1);
+    if (typeof string !== 'string') return ''
+    return string.charAt(0).toLowerCase() + string.slice(1)
   }
   kebabToText (str) {
     let arr = str.split('-')
