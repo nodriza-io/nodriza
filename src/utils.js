@@ -5,7 +5,7 @@ import moment from 'moment'
 
 export class Utils {
   dateFormat (time, format) {
-    if (!format) format = 'DD/MM/YYYY HH:mm:ss'
+    if (!format) format = 'YYYY/DD/MM'
     let date = moment(time)
     let isToday = date.isSame(moment(), 'day')
     return isToday ? date.fromNow() : date.format(format)
