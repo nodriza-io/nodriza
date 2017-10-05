@@ -38,6 +38,16 @@ module.exports = {
     "example": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2)",
     "type": "json"
   },
+  "browser": {
+    "description": "Browser detected when is send the headers",
+    "example": "Chrome",
+    "type": "string"
+  },
+  "os": {
+    "description": "System operator detected when is send the headers",
+    "example": "Linux",
+    "type": "string"
+  },
   "ip": {
     "description": "The device used in the request",
     "example": "192.168.0.234",
