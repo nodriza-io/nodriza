@@ -1,8 +1,15 @@
 'use strict'
 import numeral from 'numeral'
 import axios from 'axios'
+import moment from 'moment'
 
 export class Utils {
+  dateFormat (time, format) {
+    if (!format) format = 'DD/MM/YYYY HH:mm:ss'
+    let date = moment(time)
+    let isToday = date.isSame(moment(), 'day')
+    return isToday ? date.fromNow() : date.format(format)
+  }
   trimParagraph (str, maxLength, more) {
     if (typeof str !== 'string') return ''
     if (!maxLength) throw Error('Missing required key maxLength in params')
