@@ -1,5 +1,5 @@
 'use strict'
-
+import
 import Nodriza from '../src'
 // import { expect } from 'chai'
 // import _ from 'lodash'

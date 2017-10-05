@@ -185,7 +185,12 @@ export class Request {
   */
   find (query, callback) {
     let url = this.path
-    if (!_.isEmpty(query)) url += '?' + queryString.stringify(query)
+    let str = ''
+    for (let key in query) {
+      str += key + '=' + (typeof query[key] == 'object' ? JSON.stringify(query[key]) : query[key]) + '&'
+    }
+    if (str.slice(str.length - 1, str.length) === '&') str = str.slice(0, -1)
+    if (!_.isEmpty(str)) url += '?' + str
     this.get(url, (err, data) => {
       if (err) return callback(err)
       callback(null, data)

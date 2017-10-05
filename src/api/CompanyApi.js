@@ -26,6 +26,20 @@ export class Company extends Request {
     })
   }
   /**
+  * GET /v1/company/publicProfile [PUBLIC]
+  *
+  * Return the company name and logo
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  publicProfile (callback) {
+    this.get('/v1/company/publicProfile', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/company/size [PRIVATE]
   *
   * Return an array of company sizes
