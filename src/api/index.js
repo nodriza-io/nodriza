@@ -4,6 +4,7 @@ import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
+import { Lead } from './LeadApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { User } from './UserApi'
@@ -22,6 +23,7 @@ export class Apis {
     this.apparience = new Apparience(params)
     this.company = new Company(params)
     this.config = new Config(params)
+    this.lead = new Lead(params)
     this.role = new Role(params)
     this.service = new Service(params)
     this.user = new User(params)

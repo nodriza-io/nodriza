@@ -4,6 +4,7 @@ import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
+import Lead from './LeadSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import User from './UserSchema'
@@ -22,6 +23,7 @@ export class Schemas {
     this.apparience = Apparience
     this.company = Company
     this.config = Config
+    this.lead = Lead
     this.role = Role
     this.service = Service
     this.user = User
