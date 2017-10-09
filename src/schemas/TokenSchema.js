@@ -9,6 +9,14 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "provider": {
     "description": "Authentication provider",
     "example": "google",
@@ -53,10 +61,9 @@ module.exports = {
     "example": "192.168.0.234",
     "type": "string"
   },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
+  "description": {
+    "description": "Token description",
+    "example": "Api key from app",
+    "type": "string"
   }
 }
