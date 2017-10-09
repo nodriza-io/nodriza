@@ -1,11 +1,4 @@
 module.exports = {
-  "oem": {
-    "description": "Essential data required by platform",
-    "example": false,
-    "type": "boolean",
-    "required": true,
-    "defaultsTo": true
-  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -15,6 +8,13 @@ module.exports = {
     "description": "Last user who updated the resource",
     "model": "user",
     "skipAll": true
+  },
+  "oem": {
+    "description": "Essential data required by platform",
+    "example": false,
+    "type": "boolean",
+    "required": true,
+    "defaultsTo": true
   },
   "keyname": {
     "description": "Unique name identifier",

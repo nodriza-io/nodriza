@@ -16,6 +16,7 @@ import Cron from './CronSchema'
 import CronLog from './CronLogSchema'
 import CronPreset from './CronPresetSchema'
 import Country from './CountrySchema'
+import Currency from './CurrencySchema'
 
 export class Schemas {
   constructor (params) {
@@ -35,5 +36,6 @@ export class Schemas {
     this.cronLog = CronLog
     this.cronPreset = CronPreset
     this.country = Country
+    this.currency = Currency
   }
 }

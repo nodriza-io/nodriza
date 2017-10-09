@@ -16,6 +16,7 @@ import { Cron } from './CronApi'
 import { CronLog } from './CronLogApi'
 import { CronPreset } from './CronPresetApi'
 import { Country } from './CountryApi'
+import { Currency } from './CurrencyApi'
 
 export class Apis {
   constructor (params) {
@@ -35,5 +36,6 @@ export class Apis {
     this.cronLog = new CronLog(params)
     this.cronPreset = new CronPreset(params)
     this.country = new Country(params)
+    this.currency = new Currency(params)
   }
 }
