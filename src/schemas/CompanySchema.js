@@ -54,6 +54,11 @@ module.exports = {
     "skipUpdate": true,
     "existCheck": true
   },
+  "currency": {
+    "description": "Currency code",
+    "model": "currency",
+    "mustExist": true
+  },
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",

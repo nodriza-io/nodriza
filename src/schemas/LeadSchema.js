@@ -139,6 +139,11 @@ module.exports = {
     "maxLength": 16,
     "existCheck": true
   },
+  "currency": {
+    "description": "Currency code",
+    "model": "currency",
+    "mustExist": true
+  },
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
