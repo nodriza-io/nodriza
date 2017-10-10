@@ -69,4 +69,18 @@ export class Service extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/service/getRouteControllers [PRIVATE]
+  *
+  * Return an array with route controllers
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getRouteControllers (callback) {
+    this.get('/v1/service/getRouteControllers', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
