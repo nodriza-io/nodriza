@@ -1,15 +1,17 @@
 module.exports = {
-  "name": {
-    "type": "string",
-    "primaryKey": true,
-    "required": true,
-    "skipAll": true
-  },
   "code": {
     "type": "string",
     "primaryKey": true,
     "required": true,
-    "skipAll": true
+    "skipAll": true,
+    "displayName": true
+  },
+  "name": {
+    "type": "string",
+    "primaryKey": true,
+    "required": true,
+    "skipAll": true,
+    "displayName": true
   },
   "createdAt": {
     "type": "datetime"
