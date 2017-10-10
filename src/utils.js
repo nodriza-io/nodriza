@@ -2,8 +2,17 @@
 import numeral from 'numeral'
 import axios from 'axios'
 import moment from 'moment'
+import pako from 'pako'
 
 export class Utils {
+  deflate (str) {
+    if (typeof str !== 'string') throw ('Expecting string to deflate, but got an ' + typeof str)
+    return pako.deflate(str, { to: 'string' })
+  }
+  inflate (str) {
+    if (typeof str !== 'string') throw ('Expecting string to inflate, but got an ' + typeof str)
+    return pako.inflate(str, { to: 'string' })
+  }  
   dateFormat (time, format) {
     if (!format) format = 'YYYY/DD/MM'
     let date = moment(time)
