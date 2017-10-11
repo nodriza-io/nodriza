@@ -7,11 +7,11 @@ import Config from './ConfigSchema'
 import Lead from './LeadSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
+import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
 import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
-import Token from './TokenSchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 
@@ -24,11 +24,11 @@ export class Schemas {
     this.lead = Lead
     this.role = Role
     this.service = Service
+    this.token = Token
     this.user = User
     this.department = Department
     this.template = Template
     this.accessPolicy = AccessPolicy
-    this.token = Token
     this.country = Country
     this.currency = Currency
   }

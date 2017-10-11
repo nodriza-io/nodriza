@@ -34,13 +34,15 @@ module.exports = {
     "description": "User where the lead belongs",
     "example": "59418bcd105605cc2693a981",
     "model": "user",
-    "mustExist": true
+    "mustExist": true,
+    "skipAll": true
   },
   "company": {
     "description": "Company where the lead belongs",
     "example": "59418bcd105605cc2693a981",
     "model": "company",
-    "mustExist": true
+    "mustExist": true,
+    "skipAll": true
   },
   "firstName": {
     "description": "User first name",
