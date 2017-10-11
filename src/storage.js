@@ -1,4 +1,5 @@
 'use strict'
+import _ from 'lodash'
 
 export class Storage {
   /**
@@ -13,13 +14,21 @@ export class Storage {
   }
   /**
    * Load saved key
+   * Support deep search e.g load('key.key.key') | load('key')
    * 
    * @param  {Sring} key
    * @return {Object}
    */
   load (key) {
-    let obj = localStorage.getItem(key)
-    return obj ? JSON.parse(obj) : null
+    if (!_.isString(key)) return
+    const firstKey = key.indexOf('.') !== -1 ? key.split('.')[0] : false
+    let obj = localStorage.getItem(firstKey || key)
+    obj = obj ? JSON.parse(obj) : null
+    if (firstKey && !_.isEmpty(obj)) {
+      const index = key.indexOf('.')
+      obj = _.get(obj, key.slice(index + 1, key.length))
+    }
+    return obj
   }
   /**
    * Remove key

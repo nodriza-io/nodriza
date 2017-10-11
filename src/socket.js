@@ -8,41 +8,36 @@ export class Socket extends EventEmitter {
     super()
     this.url = 'https://' + hostname
     this.status = 'offline'
-  }
-
-  connect () {
-    if (this.status === 'online') return console.log('--> User already online')
-    this.socketio = socketio(this.url)
-    // console.log('--> Socket connect init...')
-    this.emit('init', this.url)
-    let socketId
-    this.socketio.on('connect', () => {
-      this.status = 'online'
-      this.emit('connect')
-      this.socketio.on('authenticated', (_socketId) => {
-        if (socketId) this.socketio.removeAllListeners(socketId) // <-- Avoid fire multiple events
-        this.socketio.removeAllListeners('everybody') // <-- Avoid fire multiple events
-        socketId = _socketId
-        this.emit('authenticated', socketId)
-        this.socketio.on(socketId, (event) => {
-          let action = _.get(event, 'action')
-          let data = _.get(event, 'data')
-          if (_.isString(event)) action = event
-          if (!_.isString(action)) throw new Error('Event has no action')
-          this.emit('exec', {action, data})
+    this.connect = () => {
+      if (this.status === 'online') return console.log('--> User already online')
+      this.socketio = socketio(this.url)
+      // console.log('--> Socket connect init...')
+      this.emit('init', this.url)
+      let socketId
+      this.socketio.on('connect', () => {
+        this.status = 'online'
+        this.emit('connect')
+        this.socketio.on('authenticated', (_socketId) => {
+          if (socketId) this.socketio.removeAllListeners(socketId) // <-- Avoid fire multiple events
+          this.socketio.removeAllListeners('everybody') // <-- Avoid fire multiple events
+          socketId = _socketId
+          this.emit('authenticated', socketId)
+          this.socketio.on(socketId, (event) => {
+            let action = _.get(event, 'action')
+            let data = _.get(event, 'data')
+            if (_.isString(event)) action = event
+            if (!_.isString(action)) throw new Error('Event has no action')
+            this.emit('exec', {action, data})
+          })
         })
+        let session = this.session.get()
+        let accessToken = _.get(session, 'token.accessToken')
+        if (accessToken) this.socketio.emit('authenticate', {accessToken: session.token.accessToken})
       })
-      let session = this.session.get()
-      let accessToken = _.get(session, 'token.accessToken')
-      if (accessToken) this.socketio.emit('authenticate', {accessToken: session.token.accessToken})
-    })
-    this.socketio.on('disconnect', () => {
-      this.status = 'offline'
-      this.emit('disconnect')
-    })
-
-    // this.socketio.on('disconnectMessage', (msg) => {
-    //   this.emit('info', 'Disconnected: ' + msg)
-    // })
+      this.socketio.on('disconnect', () => {
+        this.status = 'offline'
+        this.emit('disconnect')
+      })
+    }
   }
 }

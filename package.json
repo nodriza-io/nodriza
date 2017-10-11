@@ -1,13 +1,13 @@
 {
   "name": "nodriza",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
     "test": "nodemon test/index.test.js --exec babel-node --presets es2015,stage-2",
     "test-lib": "nodemon test/lib.test.js --exec babel-node --presets es2015,stage-2",
     "prepublish": "babel --presets es2015,stage-2 src --out-dir lib",
-    "lint": "nodemon test/index.test.js --exec 'clear && eslint lib/*'"
+    "lint": "nodemon test/index.test.js --exec 'clear && eslint src/*'"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "numeral": "^2.0.6",
     "query-string": "^5.0.0",
     "socket.io-client": "^2.0.3"

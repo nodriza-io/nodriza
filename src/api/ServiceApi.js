@@ -12,6 +12,26 @@ export class Service extends Request {
     super(params)
   }
   /**
+  * GET /v1/service/elasticSearch [PRIVATE]
+  *
+  * Ami search
+  *
+  * @param  {Object} params
+  * - @param  {String} db * -> (In query) Database search
+  * - @param  {String} collection * -> (In query) Collection search
+  * - @param  {String} criterial * -> (In query) Criterial search
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  elasticSearch (params, callback) {
+    let url = '/v1/service/elasticSearch'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/service/genRandomDoc [PRIVATE]
   *
   * Generate a document with random data for testing proposes
@@ -45,6 +65,20 @@ export class Service extends Request {
     let url = '/v1/service/generateAvatar'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/getRouteControllers [PRIVATE]
+  *
+  * Return an array with route controllers
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getRouteControllers (callback) {
+    this.get('/v1/service/getRouteControllers', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
