@@ -5,18 +5,18 @@ import Nodriza from '../src'
 // import _ from 'lodash'
 
 const params = {
-  hostname: 'bp.nodriza.io',
-  accessToken: '-56a69869-bf0a-4650-98e9-fcd9680b31d5'
+  hostname: 'dev.nodriza.io',
+  accessToken: '45881fa9-6e76-4e6d-b3f5-d12758308376'
 }
 
 const nodriza = new Nodriza(params)
 
-/*
+
 	nodriza.api.user.me((err, profile) => {
 	  if (err) return console.log('->>> err:', err)
 	  console.log('->>> profile:', profile)
 	})
-*/
+
 
 nodriza.addListener('init', (url) => {
   console.log('--> Connecting to ' + url)
@@ -39,3 +39,4 @@ nodriza.addListener('exec', (event) => {
 }, false)
 
 nodriza.connect()
+
