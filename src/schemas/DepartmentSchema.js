@@ -10,8 +10,8 @@ module.exports = {
   "name": {
     "description": "Department name",
     "example": "Management",
-    "type": "string",
     "required": true,
+    "type": "string",
     "unique": true,
     "displayName": true,
     "existCheck": true

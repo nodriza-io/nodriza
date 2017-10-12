@@ -12,22 +12,22 @@ module.exports = {
   "oem": {
     "description": "Essential data required by platform",
     "example": false,
-    "type": "boolean",
     "required": true,
+    "type": "boolean",
     "defaultsTo": true
   },
   "displayName": {
     "description": "Friendly role name identifier",
     "example": "Support",
-    "type": "string",
-    "required": true
+    "required": true,
+    "type": "string"
   },
   "keyname": {
     "description": "Unique keyname identifier",
     "example": "support",
+    "required": true,
     "type": "string",
     "alphalowerDash": true,
-    "required": true,
     "unique": true,
     "primaryKey": true,
     "existCheck": true
@@ -50,14 +50,14 @@ module.exports = {
   "type": {
     "description": "Role type",
     "example": "department",
+    "required": true,
     "type": "string",
     "enum": [
       "system",
       "company",
       "department",
       "custom"
-    ],
-    "required": true
+    ]
   },
   "home": {
     "description": "View route that will be inherited by the user only if not set",

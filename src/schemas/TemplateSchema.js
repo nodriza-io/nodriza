@@ -12,16 +12,16 @@ module.exports = {
   "oem": {
     "description": "Essential data required by platform",
     "example": false,
-    "type": "boolean",
     "required": true,
+    "type": "boolean",
     "defaultsTo": true
   },
   "keyname": {
     "description": "Unique name identifier",
     "type": "string",
+    "required": true,
     "alphanumeric": true,
-    "primaryKey": true,
-    "required": true
+    "primaryKey": true
   },
   "body": {
     "description": "Body template",
@@ -29,8 +29,8 @@ module.exports = {
     "required": true
   },
   "type": {
-    "type": "string",
     "required": true,
+    "type": "string",
     "enum": [
       "email",
       "contract",

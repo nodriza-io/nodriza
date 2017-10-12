@@ -8,26 +8,26 @@ module.exports = {
     "skipAll": true
   },
   "app": {
+    "required": "true",
     "description": "Authentication provider",
     "example": "594d4b5970abb08100bf5b71",
     "model": "app",
-    "required": "true",
     "mustExist": true
   },
   "company": {
     "description": "Logged users that match the email/domain policy will be associated with this company and heritage the company type/role",
     "example": "59418bcd105605cc2693a981",
     "model": "company",
-    "mustExist": true,
-    "required": true
+    "required": true,
+    "mustExist": true
   },
   "policy": {
     "description": "Allow access from this domain/email",
     "example": "acme.com (Full Domain) or jdoe@acme.inc (Single user)",
     "displayName": true,
+    "required": true,
     "emailOrDomain": true,
     "type": "string",
-    "required": true,
     "existCheck": true,
     "unique": true
   },

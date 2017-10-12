@@ -3,16 +3,16 @@ module.exports = {
     "description": "Universal country code",
     "example": "CA",
     "primaryKey": true,
-    "type": "string",
     "required": true,
+    "type": "string",
     "skipAll": true
   },
   "name": {
     "description": "Country name",
-    "displayName": true,
     "example": "Canada",
-    "type": "string",
+    "displayName": true,
     "required": true,
+    "type": "string",
     "skipAll": true
   },
   "createdAt": {
