@@ -46,20 +46,20 @@ module.exports = {
   },
   "firstName": {
     "description": "User first name",
-    "example": "Juan",
+    "example": "John",
     "type": "string",
     "displayName": true,
     "notEmpty": true
   },
   "lastName": {
     "description": "User last name",
-    "example": "Prieto",
+    "example": "Doe",
     "displayName": true,
     "type": "string"
   },
   "email": {
     "description": "User email",
-    "example": "jprieto@nodriza.io",
+    "example": "jdoe@acme.com",
     "type": "string",
     "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "existCheck": true
@@ -74,15 +74,8 @@ module.exports = {
     "example": "Mr.",
     "type": "string"
   },
-  "gender": {
-    "example": "male",
-    "type": "string",
-    "enum": [
-      "male",
-      "female"
-    ]
-  },
   "mobile": {
+    "description": "User mobile number",
     "example": "57 311 521 3448",
     "type": "string"
   },
@@ -91,41 +84,11 @@ module.exports = {
     "type": "string",
     "example": "+1 508-695-1212"
   },
-  "ext": {
-    "description": "Phone extention",
-    "example": "103",
-    "type": "string"
-  },
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
     "type": "string",
     "maxLength": 253
-  },
-  "country": {
-    "description": "Country name",
-    "model": "country",
-    "mustExist": true
-  },
-  "city": {
-    "description": "City name",
-    "example": "Los Angeles",
-    "type": "string"
-  },
-  "street": {
-    "description": "Street name",
-    "example": "2719 Hyperion Ave",
-    "type": "string"
-  },
-  "state": {
-    "description": "State name",
-    "example": "CA",
-    "type": "string"
-  },
-  "postal": {
-    "description": "Postal Code",
-    "type": "string",
-    "example": "90027"
   },
   "size": {
     "description": "Number of company employees",
@@ -303,22 +266,39 @@ module.exports = {
   "source": {
     "description": "Company where the lead belongs",
     "type": "string",
-    "example": "LinkedIn"
-  },
-  "description": {
-    "description": "Lead description",
-    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string",
-    "maxLength": 125000
-  },
-  "tags": {
-    "description": "Tags could be used for multiple purposes",
-    "type": "array"
+    "enum": [
+      "Advertisement",
+      "Customer Event",
+      "Employee Referral",
+      "Google AdWords",
+      "LinkedIn",
+      "Other",
+      "Partner",
+      "Purchased List",
+      "Trade Show",
+      "Webinar",
+      "Website"
+    ]
   },
   "referedBy": {
     "description": "The user who refered this company as client",
     "model": "user",
     "mustExist": true
+  },
+  "description": {
+    "description": "Description about lead",
+    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
+    "type": "string",
+    "maxLength": 125000
+  },
+  "rating": {
+    "description": "Rate how close is this lead to become a client",
+    "type": "string",
+    "enum": [
+      "hot",
+      "warm",
+      "cold"
+    ]
   },
   "avatars": {
     "description": "User avatar in different sizes",
@@ -343,5 +323,41 @@ module.exports = {
     "model": "company",
     "mustExist": true,
     "skipAll": true
+  },
+  "map": {
+    "description": "Google Maps Geo Location",
+    "type": "json",
+    "map": true,
+    "example": {}
+  },
+  "address": {
+    "description": "Google Maps address location",
+    "type": "string",
+    "address": true
+  },
+  "country": {
+    "description": "Country name",
+    "model": "country",
+    "mustExist": true
+  },
+  "city": {
+    "description": "City name",
+    "example": "Los Angeles",
+    "type": "string"
+  },
+  "street": {
+    "description": "Street name",
+    "example": "2719 Hyperion Ave",
+    "type": "string"
+  },
+  "state": {
+    "description": "State name",
+    "example": "CA",
+    "type": "string"
+  },
+  "postal": {
+    "description": "Postal Code",
+    "type": "string",
+    "example": "90027"
   }
 }

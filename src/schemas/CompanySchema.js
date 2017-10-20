@@ -43,7 +43,7 @@ module.exports = {
     "type": "string"
   },
   "shortname": {
-    "description": "Unique shortname identifier",
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
     "example": "acme-inc",
     "required": true,
     "unique": true,
@@ -69,6 +69,11 @@ module.exports = {
     "description": "Phone number",
     "type": "string",
     "example": "+1 508-695-1212"
+  },
+  "address": {
+    "description": "Google Maps address location",
+    "type": "string",
+    "address": true
   },
   "country": {
     "description": "Country name",
@@ -96,8 +101,10 @@ module.exports = {
     "example": "90027"
   },
   "map": {
-    "description": "Map company location",
-    "type": "json"
+    "description": "Google Maps Geo Location",
+    "type": "json",
+    "map": true,
+    "example": {}
   },
   "referedBy": {
     "description": "The user who refered this company as client",
@@ -282,7 +289,7 @@ module.exports = {
     "type": "string"
   },
   "tags": {
-    "description": "Tags could be used for multiple purposes",
+    "description": "Tags are a keywords that you create to make search more effective",
     "type": "array"
   }
 }

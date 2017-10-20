@@ -14,6 +14,7 @@ import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
+import { Activity } from './ActivityApi'
 
 export class Apis {
   constructor (params) {
@@ -31,5 +32,6 @@ export class Apis {
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
+    this.activity = new Activity(params)
   }
 }
