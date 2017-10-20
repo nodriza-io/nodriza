@@ -3,8 +3,15 @@ import numeral from 'numeral'
 import axios from 'axios'
 import moment from 'moment'
 import pako from 'pako'
+import _ from 'lodash'
 
 export class Utils {
+  getValidUrl (str) {
+    if (typeof str !== 'string' || _.isEmpty(str)) return
+    if (str.indexOf('//') === -1) str = 'http://' + str
+    console.log('->>> str:', str)
+    return str
+  }
   deflate (str) {
     if (typeof str !== 'string') throw ('Expecting string to deflate, but got an ' + typeof str)
     return pako.deflate(str, { to: 'string' })

@@ -19,20 +19,24 @@ module.exports = {
   },
   "firstName": {
     "description": "User first name",
-    "example": "Juan",
+    "example": "John",
     "type": "string",
     "displayName": true,
     "notEmpty": true
   },
   "lastName": {
     "description": "User last name",
-    "example": "Prieto",
+    "example": "Doe",
     "displayName": true,
     "type": "string"
   },
   "email": {
     "description": "User email",
+<<<<<<< HEAD
     "example": "jprieto@nodriza.io",
+=======
+    "example": "jdoe@acme.com",
+>>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
     "required": true,
     "unique": true,
     "type": "string",
@@ -86,15 +90,17 @@ module.exports = {
     "mustExist": true
   },
   "mobile": {
+    "description": "User mobile number",
     "example": "57 311 521 3448",
     "type": "string"
   },
   "phone": {
+    "description": "Company phone number",
     "example": "57 1 673 9407",
     "type": "string"
   },
   "ext": {
-    "description": "Phone extention",
+    "description": "Company phone extention number",
     "example": "103",
     "type": "string"
   },
