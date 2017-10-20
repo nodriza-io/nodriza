@@ -7,13 +7,14 @@ import { Config } from './ConfigApi'
 import { Lead } from './LeadApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
+import { Token } from './TokenApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
 import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
-import { Token } from './TokenApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
+import { Activity } from './ActivityApi'
 
 export class Apis {
   constructor (params) {
@@ -24,12 +25,13 @@ export class Apis {
     this.lead = new Lead(params)
     this.role = new Role(params)
     this.service = new Service(params)
+    this.token = new Token(params)
     this.user = new User(params)
     this.department = new Department(params)
     this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
-    this.token = new Token(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
+    this.activity = new Activity(params)
   }
 }

@@ -19,40 +19,41 @@ module.exports = {
   },
   "status": {
     "description": "Status of lead",
-    "example": "new",
-    "type": "string",
+    "example": "open",
     "required": true,
+    "type": "string",
     "enum": [
-      "new",
-      "working",
-      "unconverted",
-      "converted"
+      "open",
+      "contacted",
+      "qualified",
+      "unqualified"
     ],
-    "defaultsTo": "new"
+    "defaultsTo": "open"
   },
-  "user": {
-    "description": "User where the lead belongs",
-    "example": "59418bcd105605cc2693a981",
-    "model": "user",
-    "mustExist": true
+  "companyName": {
+    "description": "Company friendly name",
+    "example": "Acme",
+    "required": true,
+    "type": "string",
+    "displayName": true
   },
-  "company": {
-    "description": "Company where the lead belongs",
-    "example": "59418bcd105605cc2693a981",
-    "model": "company",
-    "mustExist": true
+  "companyShortname": {
+    "description": "Unique shortname identifier",
+    "example": "acme-inc",
+    "type": "string",
+    "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
+    "maxLength": 16
   },
   "firstName": {
     "description": "User first name",
     "example": "Juan",
     "type": "string",
-    "displayName": true,
     "notEmpty": true
   },
   "lastName": {
     "description": "User last name",
     "example": "Prieto",
-    "displayName": true,
     "type": "string"
   },
   "email": {
@@ -60,8 +61,13 @@ module.exports = {
     "example": "jprieto@nodriza.io",
     "type": "string",
     "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
-    "unique": true,
     "existCheck": true
+  },
+  "department": {
+    "description": "Company department where the user belongs",
+    "example": "5940200e93e326e90c636826",
+    "model": "department",
+    "mustExist": true
   },
   "title": {
     "example": "Mr.",
@@ -74,17 +80,6 @@ module.exports = {
       "male",
       "female"
     ]
-  },
-  "locale": {
-    "description": "Default user language",
-    "example": "en",
-    "type": "string"
-  },
-  "department": {
-    "description": "Company department where the user belongs",
-    "example": "5940200e93e326e90c636826",
-    "model": "department",
-    "mustExist": true
   },
   "mobile": {
     "example": "57 311 521 3448",
@@ -99,50 +94,6 @@ module.exports = {
     "description": "Phone extention",
     "example": "103",
     "type": "string"
-  },
-  "avatars": {
-    "description": "User avatar in different sizes",
-    "type": "json",
-    "skipAll": true
-  },
-  "type": {
-    "description": "Company type",
-    "example": "host",
-    "type": "string",
-    "defaultsTo": "client",
-    "enum": [
-      "host",
-      "client",
-      "partner",
-      "provider"
-    ]
-  },
-  "name": {
-    "description": "Company friendly name",
-    "example": "Acme",
-    "type": "string",
-    "displayName": true,
-    "required": true
-  },
-  "legalName": {
-    "description": "Full company name used for legal and accounting issues",
-    "example": "Acme Inc.",
-    "type": "string"
-  },
-  "shortname": {
-    "description": "Unique shortname identifier",
-    "example": "acme-inc",
-    "type": "string",
-    "unique": true,
-    "regex": "/^([a-z0-9_-]+)$/",
-    "minLength": 2,
-    "maxLength": 16,
-    "existCheck": true
-  },
-  "currency": {
-    "description": "Currency code",
-    "model": "currency",
-    "mustExist": true
   },
   "website": {
     "description": "Full company website url",
@@ -174,15 +125,6 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
-  },
-  "Map": {
-    "description": "Map company location",
-    "type": "json"
-  },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
   },
   "size": {
     "description": "Number of company employees",
@@ -352,13 +294,18 @@ module.exports = {
       "Militar"
     ]
   },
-  "logos": {
-    "description": "Company logo",
-    "type": "json",
-    "skipAll": true
+  "legalName": {
+    "description": "Full company name used for legal and accounting issues",
+    "example": "Acme Inc.",
+    "type": "string"
+  },
+  "source": {
+    "description": "Company where the lead belongs",
+    "type": "string",
+    "example": "LinkedIn"
   },
   "description": {
-    "description": "Company description",
+    "description": "Description about lead",
     "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
     "type": "string",
     "maxLength": 125000
@@ -366,5 +313,34 @@ module.exports = {
   "tags": {
     "description": "Tags could be used for multiple purposes",
     "type": "array"
+  },
+  "referedBy": {
+    "description": "The user who refered this company as client",
+    "model": "user",
+    "mustExist": true
+  },
+  "avatars": {
+    "description": "User avatar in different sizes",
+    "type": "json",
+    "skipAll": true
+  },
+  "logos": {
+    "description": "Company logo",
+    "type": "json",
+    "skipAll": true
+  },
+  "user": {
+    "description": "User where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "user",
+    "mustExist": true,
+    "skipAll": true
+  },
+  "company": {
+    "description": "Company where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "company",
+    "mustExist": true,
+    "skipAll": true
   }
 }

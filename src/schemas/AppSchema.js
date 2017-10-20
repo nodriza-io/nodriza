@@ -2,24 +2,24 @@ module.exports = {
   "oem": {
     "description": "Essential data required by platform",
     "example": false,
-    "type": "boolean",
     "required": true,
+    "type": "boolean",
     "defaultsTo": true,
     "skipUpdate": true
   },
   "name": {
     "description": "Friendly application name identifier",
     "example": "Google Apps",
+    "required": true,
     "type": "string",
-    "displayName": true,
-    "required": true
+    "displayName": true
   },
   "keyname": {
     "description": "Unique keyname identifier",
     "example": "google",
     "type": "string",
-    "alphalowerDash": true,
     "required": true,
+    "alphalowerDash": true,
     "unique": true,
     "skipUpdate": true,
     "existCheck": true
@@ -27,8 +27,8 @@ module.exports = {
   "description": {
     "description": "Application description",
     "example": "Enable authentication through Google",
-    "type": "string",
-    "required": true
+    "required": true,
+    "type": "string"
   },
   "createAppUrl": {
     "description": "URL to open an account and get the client ID",
@@ -64,8 +64,8 @@ module.exports = {
   "authorizationUri": {
     "description": "Url to redirect for Oauth2 authentication",
     "example": "https://accounts.google.com/o/oauth2/v2/auth",
-    "type": "url",
-    "required": true
+    "required": true,
+    "type": "url"
   },
   "userInfoUri": {
     "description": "Some Oauth2 services offers a URL where the user profile information can be requested",
@@ -99,14 +99,14 @@ module.exports = {
   "iconFont": {
     "description": "App icon font",
     "example": "nf nf-plugin",
-    "type": "string",
-    "required": true
+    "required": true,
+    "type": "string"
   },
   "color": {
     "description": "App color",
     "example": "#4285F4",
-    "type": "string",
-    "required": true
+    "required": true,
+    "type": "string"
   },
   "createdAt": {
     "type": "datetime"

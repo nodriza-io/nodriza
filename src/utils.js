@@ -13,8 +13,8 @@ export class Utils {
     if (typeof str !== 'string') throw ('Expecting string to inflate, but got an ' + typeof str)
     return pako.inflate(str, { to: 'string' })
   }  
-  dateFormat (time, format) {
-    if (!format) format = 'YYYY/DD/MM'
+  dateTimeFormat (time, format) {
+    if (!format) format = 'YYYY-DD-MM HH:mm:ss'
     let date = moment(time)
     let isToday = date.isSame(moment(), 'day')
     return isToday ? date.fromNow() : date.format(format)

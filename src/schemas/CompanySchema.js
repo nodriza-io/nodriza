@@ -20,6 +20,7 @@ module.exports = {
   "type": {
     "description": "Company type",
     "example": "host",
+    "required": true,
     "type": "string",
     "defaultsTo": "client",
     "enum": [
@@ -27,15 +28,14 @@ module.exports = {
       "client",
       "partner",
       "provider"
-    ],
-    "required": true
+    ]
   },
   "name": {
     "description": "Company friendly name",
     "example": "Acme",
+    "required": true,
     "type": "string",
-    "displayName": true,
-    "required": true
+    "displayName": true
   },
   "legalName": {
     "description": "Full company name used for legal and accounting issues",
@@ -45,9 +45,9 @@ module.exports = {
   "shortname": {
     "description": "Unique shortname identifier",
     "example": "acme-inc",
-    "type": "string",
     "required": true,
     "unique": true,
+    "type": "string",
     "regex": "/^([a-z0-9_-]+)$/",
     "minLength": 2,
     "maxLength": 16,
@@ -95,7 +95,7 @@ module.exports = {
     "type": "string",
     "example": "90027"
   },
-  "Map": {
+  "map": {
     "description": "Map company location",
     "type": "json"
   },
@@ -277,11 +277,9 @@ module.exports = {
     "type": "json",
     "skipAll": true
   },
-  "description": {
-    "description": "Company description",
-    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string",
-    "maxLength": 125000
+  "taxIdentification": {
+    "description": "Identifying number used for tax purposes",
+    "type": "string"
   },
   "tags": {
     "description": "Tags could be used for multiple purposes",

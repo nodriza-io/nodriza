@@ -28,4 +28,22 @@ export class Lead extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/lead/linkedinSearch [PRIVATE]
+  *
+  * Search to company in linkedin
+  *
+  * @param  {Object} params
+  * - @param  {String} criteria  -> (In query) Criteria of search
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  linkedinSearch (params, callback) {
+    let url = '/v1/lead/linkedinSearch'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

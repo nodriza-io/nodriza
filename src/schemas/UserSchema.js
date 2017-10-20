@@ -33,10 +33,10 @@ module.exports = {
   "email": {
     "description": "User email",
     "example": "jprieto@nodriza.io",
-    "type": "string",
-    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "required": true,
     "unique": true,
+    "type": "string",
+    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "existCheck": true
   },
   "password": {
@@ -75,9 +75,9 @@ module.exports = {
   "company": {
     "description": "Company where the user belongs",
     "example": "59418bcd105605cc2693a981",
+    "required": true,
     "model": "company",
-    "mustExist": true,
-    "required": true
+    "mustExist": true
   },
   "department": {
     "description": "Company department where the user belongs",
@@ -139,13 +139,13 @@ module.exports = {
       }
     },
     "defaultsTo": {},
-    "skipAll": true,
-    "type": "json"
+    "type": "json",
+    "skipAll": true
   },
   "home": {
     "description": "View route to redirect user after successful login, this route is inherited from first role assigned",
     "example": "/dashboard",
-    "skipCreate": true,
-    "type": "string"
+    "type": "string",
+    "skipCreate": true
   }
 }

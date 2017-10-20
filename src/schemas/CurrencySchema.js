@@ -1,15 +1,15 @@
 module.exports = {
   "code": {
+    "required": true,
     "type": "string",
     "primaryKey": true,
-    "required": true,
+    "mustExist": true,
     "skipAll": true,
     "displayName": true
   },
   "name": {
-    "type": "string",
-    "primaryKey": true,
     "required": true,
+    "type": "string",
     "skipAll": true,
     "displayName": true
   },

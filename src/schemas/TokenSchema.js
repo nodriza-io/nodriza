@@ -24,14 +24,14 @@ module.exports = {
   },
   "user": {
     "description": "User who own token",
-    "model": "user",
     "required": true,
+    "model": "user",
     "skipDependency": true
   },
   "accessToken": {
     "description": "Token in uuid format",
-    "type": "string",
-    "required": true
+    "required": true,
+    "type": "string"
   },
   "lastTimeAccessed": {
     "description": "Last time when the token where requested",

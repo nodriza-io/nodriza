@@ -2,9 +2,9 @@ module.exports = {
   "group": {
     "description": "You can set different config groups, by default everything goes to general",
     "example": "general",
+    "required": true,
     "type": "string",
     "defaultsTo": "general",
-    "required": true,
     "skipUpdate": true
   },
   "description": {
@@ -16,8 +16,8 @@ module.exports = {
   "key": {
     "description": "Config key",
     "example": "fistName",
-    "type": "string",
     "required": true,
+    "type": "string",
     "skipUpdate": true
   },
   "value": {
