@@ -34,12 +34,8 @@ module.exports = {
     "description": "Company friendly name",
     "example": "Acme",
     "required": true,
-<<<<<<< HEAD
     "type": "string",
     "displayName": true
-=======
-    "type": "string"
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
   },
   "companyShortname": {
     "description": "Unique shortname identifier",
@@ -57,12 +53,7 @@ module.exports = {
   },
   "lastName": {
     "description": "User last name",
-<<<<<<< HEAD
-    "example": "Prieto",
-=======
     "example": "Doe",
-    "displayName": true,
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
     "type": "string"
   },
   "email": {
@@ -82,17 +73,6 @@ module.exports = {
     "example": "Mr.",
     "type": "string"
   },
-<<<<<<< HEAD
-  "gender": {
-    "example": "male",
-    "type": "string",
-    "enum": [
-      "male",
-      "female"
-    ]
-  },
-=======
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
   "mobile": {
     "description": "User mobile number",
     "example": "57 311 521 3448",
@@ -103,48 +83,12 @@ module.exports = {
     "type": "string",
     "example": "+1 508-695-1212"
   },
-<<<<<<< HEAD
-  "ext": {
-    "description": "Phone extention",
-    "example": "103",
-    "type": "string"
-  },
-=======
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
     "type": "string",
     "maxLength": 253
   },
-<<<<<<< HEAD
-  "country": {
-    "description": "Country name",
-    "model": "country",
-    "mustExist": true
-  },
-  "city": {
-    "description": "City name",
-    "example": "Los Angeles",
-    "type": "string"
-  },
-  "street": {
-    "description": "Street name",
-    "example": "2719 Hyperion Ave",
-    "type": "string"
-  },
-  "state": {
-    "description": "State name",
-    "example": "CA",
-    "type": "string"
-  },
-  "postal": {
-    "description": "Postal Code",
-    "type": "string",
-    "example": "90027"
-  },
-=======
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
   "size": {
     "description": "Number of company employees",
     "example": "51-200",
@@ -321,13 +265,6 @@ module.exports = {
   "source": {
     "description": "Company where the lead belongs",
     "type": "string",
-<<<<<<< HEAD
-    "example": "LinkedIn"
-  },
-  "description": {
-    "description": "Description about lead",
-    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-=======
     "enum": [
       "Advertisement",
       "Customer Event",
@@ -394,44 +331,9 @@ module.exports = {
   },
   "address": {
     "description": "Google Maps address location",
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
     "type": "string",
     "address": true
   },
-<<<<<<< HEAD
-  "tags": {
-    "description": "Tags could be used for multiple purposes",
-    "type": "array"
-  },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
-  },
-  "avatars": {
-    "description": "User avatar in different sizes",
-    "type": "json",
-    "skipAll": true
-  },
-  "logos": {
-    "description": "Company logo",
-    "type": "json",
-    "skipAll": true
-  },
-  "user": {
-    "description": "User where the lead belongs",
-    "example": "59418bcd105605cc2693a981",
-    "model": "user",
-    "mustExist": true,
-    "skipAll": true
-  },
-  "company": {
-    "description": "Company where the lead belongs",
-    "example": "59418bcd105605cc2693a981",
-    "model": "company",
-    "mustExist": true,
-    "skipAll": true
-=======
   "country": {
     "description": "Country name",
     "model": "country",
@@ -456,6 +358,5 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
   }
 }

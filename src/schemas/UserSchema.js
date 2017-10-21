@@ -32,11 +32,7 @@ module.exports = {
   },
   "email": {
     "description": "User email",
-<<<<<<< HEAD
-    "example": "jprieto@nodriza.io",
-=======
     "example": "jdoe@acme.com",
->>>>>>> c9eb10ee3fd9ba03d37e7cc6524f95c3c44d16e8
     "required": true,
     "unique": true,
     "type": "string",
