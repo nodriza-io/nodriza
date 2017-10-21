@@ -70,11 +70,6 @@ module.exports = {
     "type": "string",
     "example": "+1 508-695-1212"
   },
-  "address": {
-    "description": "Google Maps address location",
-    "type": "string",
-    "address": true
-  },
   "country": {
     "description": "Country name",
     "model": "country",
@@ -105,6 +100,11 @@ module.exports = {
     "type": "json",
     "map": true,
     "example": {}
+  },
+  "address": {
+    "description": "Google Maps address location",
+    "type": "string",
+    "address": true
   },
   "referedBy": {
     "description": "The user who refered this company as client",

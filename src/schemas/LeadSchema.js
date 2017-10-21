@@ -34,7 +34,8 @@ module.exports = {
     "description": "Company friendly name",
     "example": "Acme",
     "required": true,
-    "type": "string"
+    "type": "string",
+    "displayName": true
   },
   "companyShortname": {
     "description": "Unique shortname identifier",
@@ -48,13 +49,11 @@ module.exports = {
     "description": "User first name",
     "example": "John",
     "type": "string",
-    "displayName": true,
     "notEmpty": true
   },
   "lastName": {
     "description": "User last name",
     "example": "Doe",
-    "displayName": true,
     "type": "string"
   },
   "email": {

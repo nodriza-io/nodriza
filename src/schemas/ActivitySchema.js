@@ -17,8 +17,15 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "assignedTo": {
+    "description": "User where the activity belongs",
+    "required": true,
+    "model": "user",
+    "mustExist": true
+  },
   "lead": {
     "description": "Lead where the activity belongs",
+    "required": true,
     "model": "lead",
     "mustExist": true
   },
@@ -29,22 +36,30 @@ module.exports = {
       "call",
       "task",
       "event",
-      "mail"
+      "email"
     ]
   },
   "title": {
     "description": "Title about activity",
-    "type": "string",
-    "datetimerange": true
+    "required": true,
+    "type": "string"
   },
   "description": {
     "description": "Description about activity",
     "type": "string",
     "maxLength": 125000
   },
-  "dateTimeRange": {
-    "description": "Range date about activity",
+  "address": {
+    "description": "Google Maps address location",
     "type": "string",
-    "datetimerange": true
+    "address": true
+  },
+  "startingDate": {
+    "description": "Starting hour about activity",
+    "type": "datetime"
+  },
+  "endingDate": {
+    "description": "Ending hour about activity",
+    "type": "datetime"
   }
 }
