@@ -50,7 +50,7 @@ module.exports = {
     "type": "string",
     "regex": "/^([a-z0-9_-]+)$/",
     "minLength": 2,
-    "maxLength": 16,
+    "maxLength": 32,
     "skipUpdate": true,
     "existCheck": true
   },
@@ -62,8 +62,7 @@ module.exports = {
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
-    "type": "string",
-    "maxLength": 253
+    "type": "string"
   },
   "phone": {
     "description": "Phone number",

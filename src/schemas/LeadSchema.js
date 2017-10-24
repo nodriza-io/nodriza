@@ -38,12 +38,12 @@ module.exports = {
     "displayName": true
   },
   "companyShortname": {
-    "description": "Unique shortname identifier",
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
     "example": "acme-inc",
     "type": "string",
     "regex": "/^([a-z0-9_-]+)$/",
     "minLength": 2,
-    "maxLength": 16
+    "maxLength": 32
   },
   "firstName": {
     "description": "User first name",
@@ -86,8 +86,7 @@ module.exports = {
   "website": {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
-    "type": "string",
-    "maxLength": 253
+    "type": "string"
   },
   "size": {
     "description": "Number of company employees",
@@ -287,8 +286,7 @@ module.exports = {
   "description": {
     "description": "Description about lead",
     "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string",
-    "maxLength": 125000
+    "type": "string"
   },
   "rating": {
     "description": "Rate how close is this lead to become a client",
