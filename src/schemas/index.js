@@ -15,6 +15,7 @@ import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import Activity from './ActivitySchema'
+import Quote from './QuoteSchema'
 
 export class Schemas {
   constructor (params) {
@@ -33,5 +34,6 @@ export class Schemas {
     this.country = Country
     this.currency = Currency
     this.activity = Activity
+    this.quote = Quote
   }
 }

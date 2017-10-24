@@ -17,15 +17,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "assignedTo": {
-    "description": "User where the activity belongs",
-    "required": true,
-    "model": "user",
-    "mustExist": true
+  "relatedTo": {
+    "description": "What kind of relation the activity has",
+    "type": "string",
+    "enum": [
+      "lead",
+      "quote"
+    ]
   },
   "lead": {
-    "description": "Lead where the activity belongs",
-    "required": true,
+    "description": "Select the lead that is related with this activity",
     "model": "lead",
     "mustExist": true
   },
@@ -33,21 +34,34 @@ module.exports = {
     "required": true,
     "type": "string",
     "enum": [
-      "call",
-      "task",
-      "event",
-      "email"
-    ]
+      "Call",
+      "Task",
+      "Event",
+      "Email"
+    ],
+    "defaultsTo": "Call"
   },
-  "title": {
-    "description": "Title about activity",
+  "subject": {
     "required": true,
     "type": "string"
   },
-  "description": {
-    "description": "Description about activity",
+  "comment": {
+    "type": "string"
+  },
+  "assignedTo": {
+    "description": "User where the activity belongs",
+    "model": "user",
+    "mustExist": true
+  },
+  "status": {
+    "description": "Task has been completed or not",
     "type": "string",
-    "maxLength": 125000
+    "defaultsTo": "Pending",
+    "enum": [
+      "Pending",
+      "In Progress",
+      "Completed"
+    ]
   },
   "address": {
     "description": "Google Maps address location",
@@ -55,11 +69,20 @@ module.exports = {
     "address": true
   },
   "startingDate": {
-    "description": "Starting hour about activity",
+    "description": "Starting hour of activity",
     "type": "datetime"
   },
   "endingDate": {
-    "description": "Ending hour about activity",
+    "description": "Ending hour of activity",
     "type": "datetime"
+  },
+  "dueDate": {
+    "description": "Date at which the task is expected to be finished.",
+    "type": "datetime"
+  },
+  "emailContent": {
+    "description": "Date at which the task is expected to be finished.",
+    "type": "string",
+    "html": true
   }
 }
