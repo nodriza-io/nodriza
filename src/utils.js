@@ -21,7 +21,7 @@ export class Utils {
     return pako.inflate(str, { to: 'string' })
   }  
   dateTimeFormat (time, format) {
-    if (!format) format = 'YYYY/DD/MM'
+    if (!format) format = 'YYYY/DD/MM HH:mm'
     let date = moment(time)
     let isToday = date.isSame(moment(), 'day')
     return isToday ? date.fromNow() : date.format(format)
