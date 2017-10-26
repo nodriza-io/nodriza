@@ -17,18 +17,39 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "title": {
-    "description": "Title about quote",
+  "subject": {
     "required": true,
+    "displayName": true,
     "type": "string"
   },
-  "description": {
-    "description": "Description about quote",
-    "type": "string"
+  "proposal": {
+    "description": "Detailed quote proposal.",
+    "type": "string",
+    "html": true
   },
-  "fecha": {
-    "description": "Description about quote",
+  "status": {
     "required": true,
+    "type": "string",
+    "enum": [
+      "Draft",
+      "In Review",
+      "Presented",
+      "Acepted",
+      "Denied"
+    ]
+  },
+  "expirationDate": {
+    "description": "Expiration date determines when the quote expires",
     "type": "datetime"
+  },
+  "relatedLead": {
+    "description": "Select the lead that is related with this quote",
+    "model": "lead",
+    "mustExist": true
+  },
+  "relatedUser": {
+    "description": "Select the user that is related with this quote",
+    "model": "user",
+    "mustExist": true
   }
 }
