@@ -9,7 +9,6 @@ export class Utils {
   getValidUrl (str) {
     if (typeof str !== 'string' || _.isEmpty(str)) return
     if (str.indexOf('//') === -1) str = 'http://' + str
-    console.log('->>> str:', str)
     return str
   }
   deflate (str) {
@@ -21,6 +20,7 @@ export class Utils {
     return pako.inflate(str, { to: 'string' })
   }  
   dateTimeFormat (time, format) {
+    if (typeof time !== 'string' || _.isEmpty(time)) return
     if (!format) format = 'YYYY/DD/MM HH:mm'
     let date = moment(time)
     let isToday = date.isSame(moment(), 'day')
