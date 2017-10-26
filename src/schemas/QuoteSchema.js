@@ -24,7 +24,16 @@ module.exports = {
   },
   "description": {
     "description": "Description about quote",
-    "type": "string",
-    "maxLength": 125000
+    "type": "string"
+  },
+  "fecha": {
+    "description": "Description about quote",
+    "required": true,
+    "type": "datetime"
+  },
+  "destinatary": {
+    "description": "Destinatary by quote",
+    "model": "user",
+    "required": true
   }
 }

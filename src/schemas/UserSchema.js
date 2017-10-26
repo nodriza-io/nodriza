@@ -17,6 +17,10 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "title": {
+    "example": "Mr.",
+    "type": "string"
+  },
   "firstName": {
     "description": "User first name",
     "example": "John",
@@ -39,11 +43,6 @@ module.exports = {
     "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "existCheck": true
   },
-  "password": {
-    "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",
-    "example": "Shox009_",
-    "type": "string"
-  },
   "status": {
     "description": "Activate or deactivate user",
     "example": "active",
@@ -54,23 +53,6 @@ module.exports = {
       "inactive",
       "deleted"
     ]
-  },
-  "title": {
-    "example": "Mr.",
-    "type": "string"
-  },
-  "gender": {
-    "example": "male",
-    "type": "string",
-    "enum": [
-      "male",
-      "female"
-    ]
-  },
-  "locale": {
-    "description": "Default user language",
-    "example": "en",
-    "type": "string"
   },
   "company": {
     "description": "Company where the user belongs",
@@ -93,11 +75,6 @@ module.exports = {
   "phone": {
     "description": "Company phone number",
     "example": "57 1 673 9407",
-    "type": "string"
-  },
-  "ext": {
-    "description": "Company phone extention number",
-    "example": "103",
     "type": "string"
   },
   "avatars": {
@@ -149,5 +126,10 @@ module.exports = {
     "example": "/dashboard",
     "type": "string",
     "skipCreate": true
+  },
+  "password": {
+    "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",
+    "example": "Shox009_",
+    "type": "string"
   }
 }
