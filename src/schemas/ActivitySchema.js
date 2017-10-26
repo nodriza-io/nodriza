@@ -17,17 +17,14 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "relatedTo": {
-    "description": "What kind of relation the activity has",
-    "type": "string",
-    "enum": [
-      "lead",
-      "quote"
-    ]
-  },
-  "lead": {
+  "relatedLead": {
     "description": "Select the lead that is related with this activity",
     "model": "lead",
+    "mustExist": true
+  },
+  "relatedQuote": {
+    "description": "Select the quote that is related with this activity",
+    "model": "quote",
     "mustExist": true
   },
   "type": {
