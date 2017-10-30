@@ -5,7 +5,8 @@ module.exports = {
     "displayName": true,
     "type": "string",
     "required": true,
-    "unique": true
+    "unique": true,
+    "skipAll": true
   },
   "regionName": {
     "description": "Region code name",
@@ -14,7 +15,8 @@ module.exports = {
     "type": "string",
     "displayName": true,
     "required": true,
-    "unique": true
+    "unique": true,
+    "skipAll": true
   },
   "country": {
     "description": "Region country code",
