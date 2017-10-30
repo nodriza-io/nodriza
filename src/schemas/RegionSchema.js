@@ -7,19 +7,14 @@ module.exports = {
     "required": true,
     "unique": true
   },
-  "code": {
+  "regionName": {
     "description": "Region code name",
     "example": "us-east-1",
+    "primaryKey": true,
     "type": "string",
     "displayName": true,
     "required": true,
     "unique": true
-  },
-  "GMT": {
-    "description": "Region GMT offset",
-    "example": -5,
-    "type": "integer",
-    "required": true
   },
   "country": {
     "description": "Region country code",
@@ -27,6 +22,12 @@ module.exports = {
     "type": "string",
     "model": "country",
     "mustExist": true,
+    "required": true
+  },
+  "GMT": {
+    "description": "Region GMT offset",
+    "example": -5,
+    "type": "integer",
     "required": true
   },
   "createdAt": {

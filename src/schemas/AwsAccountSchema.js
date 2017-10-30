@@ -11,6 +11,14 @@ module.exports = {
     "required": true,
     "skipAll": true
   },
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "accountName": {
     "required": true,
     "type": "string"
@@ -52,11 +60,5 @@ module.exports = {
   },
   "x509key": {
     "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }
