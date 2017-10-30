@@ -74,14 +74,9 @@ module.exports = {
     "type": "json",
     "skipAll": true
   },
-  "taxIdentification": {
-    "description": "Identifying number used for tax purposes",
+  "taxId": {
+    "description": "Identification number used for tax purposes",
     "type": "string"
-  },
-  "currency": {
-    "description": "Currency code",
-    "model": "currency",
-    "mustExist": true
   },
   "map": {
     "description": "Google Maps Geo Location",
@@ -118,5 +113,11 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
+  },
+  "description": {
+    "description": "Short company description",
+    "type": "string",
+    "longtext": true,
+    "example": "Acme Inc. is a fully-funded start-up that provides cloud-based management of product data to retailers."
   }
 }

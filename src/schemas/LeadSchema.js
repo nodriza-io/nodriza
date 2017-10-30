@@ -69,10 +69,6 @@ module.exports = {
     "model": "department",
     "mustExist": true
   },
-  "title": {
-    "example": "Mr.",
-    "type": "string"
-  },
   "mobile": {
     "description": "User mobile number",
     "example": "57 311 521 3448",
@@ -284,9 +280,10 @@ module.exports = {
     "mustExist": true
   },
   "description": {
-    "description": "Description about lead",
-    "example": "Acmen Inc. is a new company that will provide high quality technical and environmental engineering services to it's clients.",
-    "type": "string"
+    "description": "Short company description",
+    "type": "string",
+    "longtext": true,
+    "example": "Acme Inc. is a fully-funded start-up that provides cloud-based management of product data to retailers."
   },
   "rating": {
     "description": "Rate how close is this lead to become a client",

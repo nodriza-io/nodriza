@@ -17,10 +17,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "title": {
-    "example": "Mr.",
-    "type": "string"
-  },
   "firstName": {
     "description": "User first name",
     "example": "John",

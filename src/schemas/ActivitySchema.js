@@ -33,7 +33,8 @@ module.exports = {
     "type": "string"
   },
   "comment": {
-    "type": "string"
+    "type": "string",
+    "longtext": true
   },
   "assignedTo": {
     "description": "User where the activity belongs",
@@ -49,6 +50,11 @@ module.exports = {
       "In Progress",
       "Completed"
     ]
+  },
+  "emailContent": {
+    "description": "Date at which the task is expected to be finished.",
+    "type": "string",
+    "html": true
   },
   "address": {
     "description": "Google Maps address location",
@@ -66,11 +72,6 @@ module.exports = {
   "dueDate": {
     "description": "Date at which the task is expected to be finished.",
     "type": "datetime"
-  },
-  "emailContent": {
-    "description": "Date at which the task is expected to be finished.",
-    "type": "string",
-    "html": true
   },
   "relatedLead": {
     "description": "Select the lead that is related with this activity",

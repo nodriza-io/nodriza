@@ -7,6 +7,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "policy": {
+    "description": "Allow access from this domain/email",
+    "example": "acme.com (Full Domain) or jdoe@acme.inc (Single user)",
+    "displayName": true,
+    "required": true,
+    "emailOrDomain": true,
+    "type": "string",
+    "existCheck": true,
+    "unique": true
+  },
   "app": {
     "required": "true",
     "description": "Authentication provider",
@@ -20,16 +30,6 @@ module.exports = {
     "model": "company",
     "required": true,
     "mustExist": true
-  },
-  "policy": {
-    "description": "Allow access from this domain/email",
-    "example": "acme.com (Full Domain) or jdoe@acme.inc (Single user)",
-    "displayName": true,
-    "required": true,
-    "emailOrDomain": true,
-    "type": "string",
-    "existCheck": true,
-    "unique": true
   },
   "ip": {
     "description": "Restrict access by IP or IP Range",
