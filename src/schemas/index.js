@@ -16,6 +16,9 @@ import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
+import Region from './RegionSchema'
+import AwsAccount from './AwsAccountSchema'
+import AvailabilityZone from './AvailabilityZoneSchema'
 
 export class Schemas {
   constructor (params) {
@@ -35,5 +38,8 @@ export class Schemas {
     this.currency = Currency
     this.activity = Activity
     this.quote = Quote
+    this.region = Region
+    this.awsAccount = AwsAccount
+    this.availabilityZone = AvailabilityZone
   }
 }

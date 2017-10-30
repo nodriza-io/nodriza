@@ -16,6 +16,9 @@ import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
+import { Region } from './RegionApi'
+import { AwsAccount } from './AwsAccountApi'
+import { AvailabilityZone } from './AvailabilityZoneApi'
 
 export class Apis {
   constructor (params) {
@@ -35,5 +38,8 @@ export class Apis {
     this.currency = new Currency(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
+    this.region = new Region(params)
+    this.awsAccount = new AwsAccount(params)
+    this.availabilityZone = new AvailabilityZone(params)
   }
 }
