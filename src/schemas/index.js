@@ -21,6 +21,7 @@ import AwsAccount from './AwsAccountSchema'
 import AvailabilityZone from './AvailabilityZoneSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
+import Product from './ProductSchema'
 
 export class Schemas {
   constructor (params) {
@@ -45,5 +46,6 @@ export class Schemas {
     this.availabilityZone = AvailabilityZone
     this.tax = Tax
     this.category = Category
+    this.product = Product
   }
 }

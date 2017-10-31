@@ -21,6 +21,7 @@ import { AwsAccount } from './AwsAccountApi'
 import { AvailabilityZone } from './AvailabilityZoneApi'
 import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
+import { Product } from './ProductApi'
 
 export class Apis {
   constructor (params) {
@@ -45,5 +46,6 @@ export class Apis {
     this.availabilityZone = new AvailabilityZone(params)
     this.tax = new Tax(params)
     this.category = new Category(params)
+    this.product = new Product(params)
   }
 }
