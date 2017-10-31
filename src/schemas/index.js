@@ -22,6 +22,9 @@ import AvailabilityZone from './AvailabilityZoneSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
+import PeriodicityPreset from './PeriodicityPresetSchema'
+import Ami from './AmiSchema'
+import CommunityAmi from './CommunityAmiSchema'
 
 export class Schemas {
   constructor (params) {
@@ -47,5 +50,8 @@ export class Schemas {
     this.tax = Tax
     this.category = Category
     this.product = Product
+    this.periodicityPreset = PeriodicityPreset
+    this.ami = Ami
+    this.communityAmi = CommunityAmi
   }
 }

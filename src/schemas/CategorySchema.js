@@ -25,14 +25,5 @@ module.exports = {
     "required": true,
     "type": "string",
     "displayName": true
-  },
-  "slug": {
-    "description": "Unique slug identifier for URL. Only alphanumeric, dash and underscore allowed",
-    "example": "amis",
-    "required": true,
-    "primaryKey": true,
-    "unique": true,
-    "type": "string",
-    "regex": "/^([a-z0-9_-]+)$/"
   }
 }
