@@ -21,7 +21,7 @@ module.exports = {
   },
   "accountName": {
     "description": "AWS account friendly identifier",
-    "example": "Acme",
+    "example": "Acme account",
     "required": true,
     "type": "string"
   },
@@ -35,6 +35,7 @@ module.exports = {
   "awsAccessKey": {
     "description": "Access key to sign programmatic requests to AWS",
     "example": "123160232530",
+    "defaultsTo": "AKIAJMFEE72J63DECOEA",
     "required": true,
     "unique": true,
     "type": "string"
@@ -42,25 +43,39 @@ module.exports = {
   "awsSecretAccessKey": {
     "description": "Secret Access key to sign programmatic requests to AWS",
     "example": "I1SxeZrMZnNecQWL9SoodBboAb3eQJ0SPXkAnC99",
+    "defaultsTo": "agoQXn/jqBgmvTimx9CNAGZoYlPhZTqjWfBixFk6",
     "required": true,
     "type": "string"
   },
+  "iamUser": {
+    "description": "User assigned to perform Nodriza operations",
+    "example": "nodrizaUser",
+    "required": true,
+    "type": "string"
+  },
+  "billingReportBucket": {
+    "description": "Bucket for AWS billing reports",
+    "required": true,
+    "regex": "/^([a-z0-9-.]+)$/",
+    "minLength": 3,
+    "maxLength": 63,
+    "type": "string",
+    "skipUpdate": true
+  },
   "defaultRegion": {
-    "description": "Set a default region for this account",
+    "description": "Prefered region for deployments",
     "required": true,
     "mustExist": true,
+    "defaultsTo": {
+      "id": "58f39b53bea9698030a88686",
+      "regionName": "us-east-1",
+      "location": "US East (N. Virginia)"
+    },
     "type": "string",
     "model": "region"
   },
-  "defaultAvailabilityZone": {
-    "description": "Set a default availability zone for this account",
-    "required": true,
-    "mustExist": true,
-    "type": "string",
-    "model": "availabilityZone"
-  },
-  "payerAwsAccount": {
-    "description": "Select a payer account if this account is a linked account",
+  "payerAccount": {
+    "description": "Specify a payer account",
     "model": "awsAccount",
     "mustExist": true
   }

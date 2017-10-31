@@ -19,6 +19,8 @@ import { Quote } from './QuoteApi'
 import { Region } from './RegionApi'
 import { AwsAccount } from './AwsAccountApi'
 import { AvailabilityZone } from './AvailabilityZoneApi'
+import { Tax } from './TaxApi'
+import { Category } from './CategoryApi'
 
 export class Apis {
   constructor (params) {
@@ -41,5 +43,7 @@ export class Apis {
     this.region = new Region(params)
     this.awsAccount = new AwsAccount(params)
     this.availabilityZone = new AvailabilityZone(params)
+    this.tax = new Tax(params)
+    this.category = new Category(params)
   }
 }
