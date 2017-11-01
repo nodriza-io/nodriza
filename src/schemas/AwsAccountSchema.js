@@ -21,49 +21,54 @@ module.exports = {
   },
   "accountName": {
     "description": "AWS account friendly identifier",
-    "example": "Acme account",
+    "example": "Acme Account Name",
+    "displayName": true,
     "required": true,
-    "type": "string"
+    "type": "string",
+    "defaultsTo": "Acme Account"
   },
   "awsAccountNumber": {
     "description": "To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, and then choose Support Center",
     "example": "123160232530",
     "skipCreate": true,
+    "displayName": true,
     "unique": true,
     "type": "string"
   },
   "awsAccessKey": {
     "description": "Access key to sign programmatic requests to AWS",
-    "example": "123160232530",
-    "defaultsTo": "AKIAJMFEE72J63DECOEA",
+    "example": "AKIAJAANEDJGCJF3EV5Q",
     "required": true,
     "unique": true,
-    "type": "string"
+    "type": "string",
+    "defaultsTo": "AKIAJAANEDJGCJF3EV5Q"
   },
   "awsSecretAccessKey": {
     "description": "Secret Access key to sign programmatic requests to AWS",
-    "example": "I1SxeZrMZnNecQWL9SoodBboAb3eQJ0SPXkAnC99",
-    "defaultsTo": "agoQXn/jqBgmvTimx9CNAGZoYlPhZTqjWfBixFk6",
+    "example": "DvUYrhGpLah4WK4GSzl4O6WUXN8iW37duHlvdqYH",
     "required": true,
-    "type": "string"
+    "type": "string",
+    "defaultsTo": "DvUYrhGpLah4WK4GSzl4O6WUXN8iW37duHlvdqYH"
   },
   "iamUser": {
     "description": "User assigned to perform Nodriza operations",
     "example": "nodrizaUser",
     "required": true,
-    "type": "string"
+    "type": "string",
+    "defaultsTo": "nodrizaUser"
   },
   "billingReportBucket": {
     "description": "Bucket for AWS billing reports",
-    "required": true,
+    "example": "billing-reports-bucket",
+    "skipCreate": true,
     "regex": "/^([a-z0-9-.]+)$/",
-    "minLength": 3,
-    "maxLength": 63,
     "type": "string",
-    "skipUpdate": true
+    "skipUpdate": true,
+    "defaultsTo": "nodriza-billing-bucket"
   },
   "defaultRegion": {
     "description": "Prefered region for deployments",
+    "example": "us-east-1",
     "required": true,
     "mustExist": true,
     "defaultsTo": {
@@ -74,9 +79,20 @@ module.exports = {
     "type": "string",
     "model": "region"
   },
-  "payerAccount": {
-    "description": "Specify a payer account",
+  "isLinked": {
+    "description": "This account is linked to another payer account",
+    "defaultsTo": false,
+    "type": "boolean"
+  },
+  "payerAwsAccount": {
+    "description": "Specify a payer account for linked accounts",
     "model": "awsAccount",
     "mustExist": true
+  },
+  "enableDetailedBilling": {
+    "description": "Enable detailed billing reports",
+    "example": true,
+    "defaultsTo": true,
+    "type": "boolean"
   }
 }

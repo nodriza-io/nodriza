@@ -12,20 +12,6 @@ export class Company extends Request {
     super(params)
   }
   /**
-  * GET /v1/company/industry [PRIVATE]
-  *
-  * Return an array of company industry types
-  *
-  * @param  {Function} callback
-  * @return {Code} 200, 401
-  */
-  industry (callback) {
-    this.get('/v1/company/industry', (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-  /**
   * GET /v1/company/publicProfile [PUBLIC]
   *
   * Return the company name and logo
@@ -35,20 +21,6 @@ export class Company extends Request {
   */
   publicProfile (callback) {
     this.get('/v1/company/publicProfile', (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-  /**
-  * GET /v1/company/size [PRIVATE]
-  *
-  * Return an array of company sizes
-  *
-  * @param  {Function} callback
-  * @return {Code} 200, 401
-  */
-  size (callback) {
-    this.get('/v1/company/size', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

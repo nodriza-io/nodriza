@@ -353,5 +353,12 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
+  },
+  "converted": {
+    "description": "True or False if lead has been converted",
+    "example": "false",
+    "type": "boolean",
+    "defaultsTo": false,
+    "skipAll": true
   }
 }

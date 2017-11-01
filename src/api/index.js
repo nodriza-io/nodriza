@@ -1,5 +1,6 @@
 'use strict'
 
+import { Ami } from './AmiApi'
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Company } from './CompanyApi'
@@ -23,11 +24,11 @@ import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
-import { Ami } from './AmiApi'
 import { CommunityAmi } from './CommunityAmiApi'
 
 export class Apis {
   constructor (params) {
+    this.ami = new Ami(params)
     this.app = new App(params)
     this.apparience = new Apparience(params)
     this.company = new Company(params)
@@ -51,7 +52,6 @@ export class Apis {
     this.category = new Category(params)
     this.product = new Product(params)
     this.periodicityPreset = new PeriodicityPreset(params)
-    this.ami = new Ami(params)
     this.communityAmi = new CommunityAmi(params)
   }
 }

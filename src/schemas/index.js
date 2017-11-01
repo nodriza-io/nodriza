@@ -1,5 +1,6 @@
 'use strict'
 
+import Ami from './AmiSchema'
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Company from './CompanySchema'
@@ -23,11 +24,11 @@ import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
-import Ami from './AmiSchema'
 import CommunityAmi from './CommunityAmiSchema'
 
 export class Schemas {
   constructor (params) {
+    this.ami = Ami
     this.app = App
     this.apparience = Apparience
     this.company = Company
@@ -51,7 +52,6 @@ export class Schemas {
     this.category = Category
     this.product = Product
     this.periodicityPreset = PeriodicityPreset
-    this.ami = Ami
     this.communityAmi = CommunityAmi
   }
 }
