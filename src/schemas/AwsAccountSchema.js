@@ -24,8 +24,7 @@ module.exports = {
     "example": "Acme Account Name",
     "displayName": true,
     "required": true,
-    "type": "string",
-    "defaultsTo": "Acme Account"
+    "type": "string"
   },
   "awsAccountNumber": {
     "description": "To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, and then choose Support Center",
@@ -57,15 +56,6 @@ module.exports = {
     "type": "string",
     "defaultsTo": "nodrizaUser"
   },
-  "billingReportBucket": {
-    "description": "Bucket for AWS billing reports",
-    "example": "billing-reports-bucket",
-    "skipCreate": true,
-    "regex": "/^([a-z0-9-.]+)$/",
-    "type": "string",
-    "skipUpdate": true,
-    "defaultsTo": "nodriza-billing-bucket"
-  },
   "defaultRegion": {
     "description": "Prefered region for deployments",
     "example": "us-east-1",
@@ -79,7 +69,19 @@ module.exports = {
     "type": "string",
     "model": "region"
   },
-  "isLinked": {
+  "generateBillingReports": {
+    "description": "Enable detailed billing reports",
+    "example": true,
+    "defaultsTo": true,
+    "type": "boolean"
+  },
+  "billingReportBucket": {
+    "description": "Bucket for AWS billing reports",
+    "example": "billing-reports-bucket",
+    "regex": "/^([a-z0-9-.]+)$/",
+    "type": "string"
+  },
+  "linkToPayerAccount": {
     "description": "This account is linked to another payer account",
     "defaultsTo": false,
     "type": "boolean"
@@ -88,11 +90,5 @@ module.exports = {
     "description": "Specify a payer account for linked accounts",
     "model": "awsAccount",
     "mustExist": true
-  },
-  "enableDetailedBilling": {
-    "description": "Enable detailed billing reports",
-    "example": true,
-    "defaultsTo": true,
-    "type": "boolean"
   }
 }
