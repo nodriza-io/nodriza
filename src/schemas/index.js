@@ -18,6 +18,7 @@ import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import CommunityAmi from './CommunityAmiSchema'
 import AwsInstance from './AwsInstanceSchema'
+import AwsVolume from './AwsVolumeSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import Region from './RegionSchema'
@@ -48,6 +49,7 @@ export class Schemas {
     this.currency = Currency
     this.communityAmi = CommunityAmi
     this.awsInstance = AwsInstance
+    this.awsVolume = AwsVolume
     this.activity = Activity
     this.quote = Quote
     this.region = Region

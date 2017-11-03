@@ -18,6 +18,7 @@ import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
 import { CommunityAmi } from './CommunityAmiApi'
 import { AwsInstance } from './AwsInstanceApi'
+import { AwsVolume } from './AwsVolumeApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
 import { Region } from './RegionApi'
@@ -48,6 +49,7 @@ export class Apis {
     this.currency = new Currency(params)
     this.communityAmi = new CommunityAmi(params)
     this.awsInstance = new AwsInstance(params)
+    this.awsVolume = new AwsVolume(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
     this.region = new Region(params)
