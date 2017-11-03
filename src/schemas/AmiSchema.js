@@ -37,6 +37,7 @@ module.exports = {
     "required": true,
     "type": "string",
     "enum": [
+      "Unknown",
       "Red Hat",
       "Ubuntu",
       "Windows",
@@ -96,7 +97,7 @@ module.exports = {
   "ownerId": {
     "example": "099720109477",
     "required": true,
-    "type": "string"
+    "model": "awsAccount"
   },
   "productCodes": {
     "example": [],
@@ -134,7 +135,7 @@ module.exports = {
     ]
   },
   "blockDeviceMappings": {
-    "type": "object",
+    "type": "json",
     "example": [
       {
         "DeviceName": "/dev/sda1",
@@ -167,6 +168,14 @@ module.exports = {
     "type": "string"
   },
   "tags": {
-    "type": "object"
+    "type": "json"
+  },
+  "communityAmi": {
+    "description": "Image loaded from community AMIs Database or not",
+    "example": true,
+    "required": true,
+    "defaultsTo": false,
+    "skipAll": true,
+    "type": "boolean"
   }
 }

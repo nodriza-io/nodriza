@@ -5,6 +5,7 @@ import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
+import { Exchange } from './ExchangeApi'
 import { Lead } from './LeadApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
@@ -15,6 +16,8 @@ import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
+import { CommunityAmi } from './CommunityAmiApi'
+import { AwsInstance } from './AwsInstanceApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
 import { Region } from './RegionApi'
@@ -24,8 +27,6 @@ import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
-import { CommunityAmi } from './CommunityAmiApi'
-import { AwsInstance } from './AwsInstanceApi'
 
 export class Apis {
   constructor (params) {
@@ -34,6 +35,7 @@ export class Apis {
     this.apparience = new Apparience(params)
     this.company = new Company(params)
     this.config = new Config(params)
+    this.exchange = new Exchange(params)
     this.lead = new Lead(params)
     this.role = new Role(params)
     this.service = new Service(params)
@@ -44,6 +46,8 @@ export class Apis {
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
+    this.communityAmi = new CommunityAmi(params)
+    this.awsInstance = new AwsInstance(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
     this.region = new Region(params)
@@ -53,7 +57,5 @@ export class Apis {
     this.category = new Category(params)
     this.product = new Product(params)
     this.periodicityPreset = new PeriodicityPreset(params)
-    this.communityAmi = new CommunityAmi(params)
-    this.awsInstance = new AwsInstance(params)
   }
 }

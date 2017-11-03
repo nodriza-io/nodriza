@@ -29,6 +29,7 @@ module.exports = {
   "awsAccountNumber": {
     "description": "To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, and then choose Support Center",
     "example": "123160232530",
+    "primaryKey": true,
     "skipCreate": true,
     "displayName": true,
     "unique": true,

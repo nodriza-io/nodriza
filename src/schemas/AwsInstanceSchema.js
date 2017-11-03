@@ -31,6 +31,7 @@ module.exports = {
   "instanceId": {
     "required": true,
     "type": "string",
+    "unique": true,
     "skipAll": true
   },
   "instanceType": {
@@ -168,5 +169,10 @@ module.exports = {
     "required": true,
     "type": "string",
     "skipAll": true
+  },
+  "regionName": {
+    "required": true,
+    "skipAll": true,
+    "model": "region"
   }
 }

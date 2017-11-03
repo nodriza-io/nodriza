@@ -5,6 +5,7 @@ import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
+import Exchange from './ExchangeSchema'
 import Lead from './LeadSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
@@ -15,6 +16,8 @@ import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
+import CommunityAmi from './CommunityAmiSchema'
+import AwsInstance from './AwsInstanceSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import Region from './RegionSchema'
@@ -24,8 +27,6 @@ import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
-import CommunityAmi from './CommunityAmiSchema'
-import AwsInstance from './AwsInstanceSchema'
 
 export class Schemas {
   constructor (params) {
@@ -34,6 +35,7 @@ export class Schemas {
     this.apparience = Apparience
     this.company = Company
     this.config = Config
+    this.exchange = Exchange
     this.lead = Lead
     this.role = Role
     this.service = Service
@@ -44,6 +46,8 @@ export class Schemas {
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency
+    this.communityAmi = CommunityAmi
+    this.awsInstance = AwsInstance
     this.activity = Activity
     this.quote = Quote
     this.region = Region
@@ -53,7 +57,5 @@ export class Schemas {
     this.category = Category
     this.product = Product
     this.periodicityPreset = PeriodicityPreset
-    this.communityAmi = CommunityAmi
-    this.awsInstance = AwsInstance
   }
 }
