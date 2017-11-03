@@ -34,29 +34,27 @@ module.exports = {
     "unique": true,
     "type": "string"
   },
-  "awsAccessKey": {
-    "description": "Access key to sign programmatic requests to AWS",
-    "example": "AKIAJAANEDJGCJF3EV5Q",
-    "required": true,
-    "unique": true,
-    "type": "string",
-    "defaultsTo": "AKIAJAANEDJGCJF3EV5Q"
-  },
-  "awsSecretAccessKey": {
-    "description": "Secret Access key to sign programmatic requests to AWS",
-    "example": "DvUYrhGpLah4WK4GSzl4O6WUXN8iW37duHlvdqYH",
-    "required": true,
-    "type": "string",
-    "defaultsTo": "DvUYrhGpLah4WK4GSzl4O6WUXN8iW37duHlvdqYH"
-  },
   "iamUser": {
     "description": "User assigned to perform Nodriza operations",
     "example": "nodrizaUser",
     "required": true,
     "type": "string",
-    "defaultsTo": "nodrizaUser"
+    "defaultsTo": "NodrizaUser"
   },
-  "defaultRegion": {
+  "awsAccessKey": {
+    "description": "Access key to sign programmatic requests to AWS",
+    "example": "BKIAJAANEDJGCJF3EV5Q",
+    "required": true,
+    "unique": true,
+    "type": "string"
+  },
+  "awsSecretAccessKey": {
+    "description": "Secret Access key to sign programmatic requests to AWS",
+    "example": "DvUYrhGpLahKWK4GSzl4O6WUXN8iW37duHlvdqYu",
+    "required": true,
+    "type": "string"
+  },
+  "region": {
     "description": "Prefered region for deployments",
     "example": "us-east-1",
     "required": true,

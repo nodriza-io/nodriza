@@ -133,6 +133,21 @@ module.exports = {
       "instance-store"
     ]
   },
+  "blockDeviceMappings": {
+    "type": "object",
+    "example": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "Encrypted": false,
+          "DeleteOnTermination": true,
+          "SnapshotId": "snap-01fdb5ec992d35b91",
+          "VolumeSize": 10,
+          "VolumeType": "gp2"
+        }
+      }
+    ]
+  },
   "virtualizationType": {
     "example": "hvm",
     "required": true,
@@ -141,5 +156,17 @@ module.exports = {
       "hvm",
       "paravirtual"
     ]
+  },
+  "description": {
+    "type": "string"
+  },
+  "enaSupport": {
+    "type": "boolean"
+  },
+  "sriovNetSupport": {
+    "type": "string"
+  },
+  "tags": {
+    "type": "object"
   }
 }

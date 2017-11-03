@@ -25,6 +25,7 @@ import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
 import { CommunityAmi } from './CommunityAmiApi'
+import { AwsInstance } from './AwsInstanceApi'
 
 export class Apis {
   constructor (params) {
@@ -53,5 +54,6 @@ export class Apis {
     this.product = new Product(params)
     this.periodicityPreset = new PeriodicityPreset(params)
     this.communityAmi = new CommunityAmi(params)
+    this.awsInstance = new AwsInstance(params)
   }
 }

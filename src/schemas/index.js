@@ -25,6 +25,7 @@ import Category from './CategorySchema'
 import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
 import CommunityAmi from './CommunityAmiSchema'
+import AwsInstance from './AwsInstanceSchema'
 
 export class Schemas {
   constructor (params) {
@@ -53,5 +54,6 @@ export class Schemas {
     this.product = Product
     this.periodicityPreset = PeriodicityPreset
     this.communityAmi = CommunityAmi
+    this.awsInstance = AwsInstance
   }
 }
