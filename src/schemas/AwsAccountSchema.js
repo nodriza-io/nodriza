@@ -66,7 +66,7 @@ module.exports = {
       "location": "US East (N. Virginia)"
     },
     "type": "string",
-    "model": "region"
+    "model": "awsRegion"
   },
   "generateBillingReports": {
     "description": "Enable detailed billing reports",

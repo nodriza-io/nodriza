@@ -1,6 +1,5 @@
 'use strict'
 
-import Ami from './AmiSchema'
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Company from './CompanySchema'
@@ -16,14 +15,15 @@ import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
-import CommunityAmi from './CommunityAmiSchema'
+import AwsCommunityAmi from './AwsCommunityAmiSchema'
 import AwsInstance from './AwsInstanceSchema'
 import AwsVolume from './AwsVolumeSchema'
+import AwsAmi from './AwsAmiSchema'
+import AwsRegion from './AwsRegionSchema'
+import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
-import Region from './RegionSchema'
 import AwsAccount from './AwsAccountSchema'
-import AvailabilityZone from './AvailabilityZoneSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
@@ -31,7 +31,6 @@ import PeriodicityPreset from './PeriodicityPresetSchema'
 
 export class Schemas {
   constructor (params) {
-    this.ami = Ami
     this.app = App
     this.apparience = Apparience
     this.company = Company
@@ -47,14 +46,15 @@ export class Schemas {
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency
-    this.communityAmi = CommunityAmi
+    this.awsCommunityAmi = AwsCommunityAmi
     this.awsInstance = AwsInstance
     this.awsVolume = AwsVolume
+    this.awsAmi = AwsAmi
+    this.awsRegion = AwsRegion
+    this.awsAvailabilityZone = AwsAvailabilityZone
     this.activity = Activity
     this.quote = Quote
-    this.region = Region
     this.awsAccount = AwsAccount
-    this.availabilityZone = AvailabilityZone
     this.tax = Tax
     this.category = Category
     this.product = Product

@@ -173,6 +173,6 @@ module.exports = {
   "regionName": {
     "required": true,
     "skipAll": true,
-    "model": "region"
+    "model": "awsRegion"
   }
 }

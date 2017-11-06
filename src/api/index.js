@@ -1,6 +1,5 @@
 'use strict'
 
-import { Ami } from './AmiApi'
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Company } from './CompanyApi'
@@ -16,14 +15,15 @@ import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
-import { CommunityAmi } from './CommunityAmiApi'
+import { AwsCommunityAmi } from './AwsCommunityAmiApi'
 import { AwsInstance } from './AwsInstanceApi'
 import { AwsVolume } from './AwsVolumeApi'
+import { AwsAmi } from './AwsAmiApi'
+import { AwsRegion } from './AwsRegionApi'
+import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
-import { Region } from './RegionApi'
 import { AwsAccount } from './AwsAccountApi'
-import { AvailabilityZone } from './AvailabilityZoneApi'
 import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
@@ -31,7 +31,6 @@ import { PeriodicityPreset } from './PeriodicityPresetApi'
 
 export class Apis {
   constructor (params) {
-    this.ami = new Ami(params)
     this.app = new App(params)
     this.apparience = new Apparience(params)
     this.company = new Company(params)
@@ -47,14 +46,15 @@ export class Apis {
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
-    this.communityAmi = new CommunityAmi(params)
+    this.awsCommunityAmi = new AwsCommunityAmi(params)
     this.awsInstance = new AwsInstance(params)
     this.awsVolume = new AwsVolume(params)
+    this.awsAmi = new AwsAmi(params)
+    this.awsRegion = new AwsRegion(params)
+    this.awsAvailabilityZone = new AwsAvailabilityZone(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
-    this.region = new Region(params)
     this.awsAccount = new AwsAccount(params)
-    this.availabilityZone = new AvailabilityZone(params)
     this.tax = new Tax(params)
     this.category = new Category(params)
     this.product = new Product(params)
