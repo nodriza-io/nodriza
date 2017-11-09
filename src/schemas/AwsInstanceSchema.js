@@ -30,6 +30,7 @@ module.exports = {
   },
   "instanceId": {
     "required": true,
+    "primaryKey": true,
     "type": "string",
     "unique": true,
     "skipAll": true
@@ -47,6 +48,14 @@ module.exports = {
   "launchTime": {
     "required": true,
     "type": "json",
+    "skipAll": true
+  },
+  "lastStart": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "lastStop": {
+    "type": "datetime",
     "skipAll": true
   },
   "monitoring": {
@@ -174,5 +183,11 @@ module.exports = {
     "required": true,
     "skipAll": true,
     "model": "awsRegion"
+  },
+  "awsAccountNumber": {
+    "example": "099721109479",
+    "required": true,
+    "model": "awsAccount",
+    "skipAll": true
   }
 }

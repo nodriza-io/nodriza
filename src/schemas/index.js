@@ -8,6 +8,7 @@ import Exchange from './ExchangeSchema'
 import Lead from './LeadSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
+import System from './SystemSchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
@@ -15,6 +16,7 @@ import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
+import TimeZone from './TimeZoneSchema'
 import AwsCommunityAmi from './AwsCommunityAmiSchema'
 import AwsInstance from './AwsInstanceSchema'
 import AwsVolume from './AwsVolumeSchema'
@@ -39,6 +41,7 @@ export class Schemas {
     this.lead = Lead
     this.role = Role
     this.service = Service
+    this.system = System
     this.token = Token
     this.user = User
     this.department = Department
@@ -46,6 +49,7 @@ export class Schemas {
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency
+    this.timeZone = TimeZone
     this.awsCommunityAmi = AwsCommunityAmi
     this.awsInstance = AwsInstance
     this.awsVolume = AwsVolume

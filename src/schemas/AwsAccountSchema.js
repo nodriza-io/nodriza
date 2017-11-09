@@ -24,7 +24,8 @@ module.exports = {
     "example": "Acme Account Name",
     "displayName": true,
     "required": true,
-    "type": "string"
+    "type": "string",
+    "unique": true
   },
   "awsAccountNumber": {
     "description": "To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, and then choose Support Center",

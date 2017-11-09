@@ -8,6 +8,7 @@ import { Exchange } from './ExchangeApi'
 import { Lead } from './LeadApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
+import { System } from './SystemApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
@@ -15,6 +16,7 @@ import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
+import { TimeZone } from './TimeZoneApi'
 import { AwsCommunityAmi } from './AwsCommunityAmiApi'
 import { AwsInstance } from './AwsInstanceApi'
 import { AwsVolume } from './AwsVolumeApi'
@@ -39,6 +41,7 @@ export class Apis {
     this.lead = new Lead(params)
     this.role = new Role(params)
     this.service = new Service(params)
+    this.system = new System(params)
     this.token = new Token(params)
     this.user = new User(params)
     this.department = new Department(params)
@@ -46,6 +49,7 @@ export class Apis {
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
+    this.timeZone = new TimeZone(params)
     this.awsCommunityAmi = new AwsCommunityAmi(params)
     this.awsInstance = new AwsInstance(params)
     this.awsVolume = new AwsVolume(params)
