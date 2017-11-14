@@ -1,6 +1,6 @@
 module.exports = {
   "readOnly": {
-    "defaultsTo": false,
+    "defaultsTo": true,
     "required": true,
     "skipAll": true,
     "type": "boolean"

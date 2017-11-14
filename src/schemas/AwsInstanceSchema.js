@@ -8,15 +8,9 @@ module.exports = {
     "skipAll": true
   },
   "awsAccount": {
-    "model": "awsAccount",
     "required": true,
+    "model": "awsAccount",
     "skipAll": true
-  },
-  "runRule": {
-    "model": "periodicityPreset"
-  },
-  "stopRule": {
-    "model": "periodicityPreset"
   },
   "amiLaunchIndex": {
     "required": true,
@@ -87,7 +81,6 @@ module.exports = {
     "skipAll": true
   },
   "publicIpAddress": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -179,15 +172,62 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
+  "platform": {
+    "example": "Windows",
+    "skipAll": true
+  },
   "regionName": {
     "required": true,
     "skipAll": true,
     "model": "awsRegion"
   },
-  "awsAccountNumber": {
-    "example": "099721109479",
+  "hasEbsExtraCharge": {
     "required": true,
-    "model": "awsAccount",
+    "type": "boolean",
     "skipAll": true
+  },
+  "operatingSystem": {
+    "required": true,
+    "type": "string",
+    "enum": [
+      "Linux",
+      "SUSE",
+      "Red Hat",
+      "Windows Base",
+      "Windows SQL Web",
+      "Windows SQL Std",
+      "Windows SQL Server Enterprise"
+    ]
+  },
+  "termType": {
+    "required": true,
+    "type": "string",
+    "defaultsTo": "OnDemand",
+    "enum": [
+      "OnDemand",
+      "Reserved"
+    ]
+  },
+  "purchaseOption": {
+    "type": "string",
+    "enum": [
+      "No Upfront",
+      "Partial Upfront",
+      "All Upfront"
+    ]
+  },
+  "leaseContractLength": {
+    "type": "string",
+    "enum": [
+      "1yr",
+      "3yr"
+    ]
+  },
+  "offeringClass": {
+    "type": "string",
+    "enum": [
+      "standard",
+      "convertible"
+    ]
   }
 }

@@ -8,7 +8,6 @@ import { Exchange } from './ExchangeApi'
 import { Lead } from './LeadApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
-import { System } from './SystemApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
@@ -41,7 +40,6 @@ export class Apis {
     this.lead = new Lead(params)
     this.role = new Role(params)
     this.service = new Service(params)
-    this.system = new System(params)
     this.token = new Token(params)
     this.user = new User(params)
     this.department = new Department(params)

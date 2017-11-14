@@ -1,4 +1,8 @@
 module.exports = {
+  "readOnly": {
+    "skipAll": true,
+    "type": "boolean"
+  },
   "createdAt": {
     "type": "datetime",
     "skipAll": true

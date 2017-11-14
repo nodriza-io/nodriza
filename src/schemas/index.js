@@ -8,7 +8,6 @@ import Exchange from './ExchangeSchema'
 import Lead from './LeadSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
-import System from './SystemSchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
@@ -41,7 +40,6 @@ export class Schemas {
     this.lead = Lead
     this.role = Role
     this.service = Service
-    this.system = System
     this.token = Token
     this.user = User
     this.department = Department
