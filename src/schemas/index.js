@@ -15,6 +15,7 @@ import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
+import TimeZone from './TimeZoneSchema'
 import AwsCommunityAmi from './AwsCommunityAmiSchema'
 import AwsInstance from './AwsInstanceSchema'
 import AwsVolume from './AwsVolumeSchema'
@@ -46,6 +47,7 @@ export class Schemas {
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency
+    this.timeZone = TimeZone
     this.awsCommunityAmi = AwsCommunityAmi
     this.awsInstance = AwsInstance
     this.awsVolume = AwsVolume

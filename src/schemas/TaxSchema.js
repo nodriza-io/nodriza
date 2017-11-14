@@ -1,4 +1,8 @@
 module.exports = {
+  "readOnly": {
+    "skipAll": true,
+    "type": "boolean"
+  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -22,19 +26,23 @@ module.exports = {
   "taxName": {
     "description": "Tax name identifier",
     "example": "Tax-Free",
+    "required": true,
     "type": "string",
     "unique": true,
-    "required": true
+    "displayName": true
   },
   "description": {
     "description": "Tax description",
     "example": "Free tax item",
-    "type": "string"
+    "type": "string",
+    "longtext": true
   },
   "percent": {
     "description": "Tax percent",
     "example": 0,
-    "type": "float",
-    "required": true
+    "required": true,
+    "min": 0,
+    "max": 100,
+    "type": "float"
   }
 }

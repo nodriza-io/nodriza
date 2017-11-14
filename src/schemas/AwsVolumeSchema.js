@@ -17,6 +17,7 @@ module.exports = {
   },
   "volumeId": {
     "required": true,
+    "primaryKey": true,
     "type": "string"
   },
   "state": {
@@ -38,6 +39,11 @@ module.exports = {
   "size": {
     "required": true,
     "type": "integer"
+  },
+  "awsAccountNumber": {
+    "example": "099721109479",
+    "required": true,
+    "model": "awsAccount"
   },
   "createdAt": {
     "type": "datetime"

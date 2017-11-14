@@ -15,6 +15,7 @@ import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
+import { TimeZone } from './TimeZoneApi'
 import { AwsCommunityAmi } from './AwsCommunityAmiApi'
 import { AwsInstance } from './AwsInstanceApi'
 import { AwsVolume } from './AwsVolumeApi'
@@ -46,6 +47,7 @@ export class Apis {
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
+    this.timeZone = new TimeZone(params)
     this.awsCommunityAmi = new AwsCommunityAmi(params)
     this.awsInstance = new AwsInstance(params)
     this.awsVolume = new AwsVolume(params)
