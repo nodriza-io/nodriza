@@ -6,6 +6,13 @@ import pako from 'pako'
 import _ from 'lodash'
 
 export class Utils {
+  currency (val, format) {
+    format = format || '$0,0.00'
+    const sym = format.slice(0, 1)
+    if (_.isUndefined(val) || _.isNull(val)) return 0
+    let formatted = numeral(val).format(format)
+    return sym === '$' ? formatted : sym + formatted
+  }
   getValidUrl (str) {
     if (typeof str !== 'string' || _.isEmpty(str)) return
     if (str.indexOf('//') === -1) str = 'http://' + str
