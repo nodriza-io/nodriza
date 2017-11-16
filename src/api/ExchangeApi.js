@@ -30,4 +30,18 @@ export class Exchange extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/exchange/getRates [PRIVATE]
+  *
+  * Get latest exchange rates
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getRates (callback) {
+    this.get('/v1/exchange/getRates', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

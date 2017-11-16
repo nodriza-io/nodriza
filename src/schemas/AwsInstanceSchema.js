@@ -7,11 +7,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "awsAccount": {
-    "required": true,
-    "model": "awsAccount",
-    "skipAll": true
-  },
   "amiLaunchIndex": {
     "required": true,
     "type": "integer",
@@ -173,7 +168,7 @@ module.exports = {
     "skipAll": true
   },
   "platform": {
-    "example": "Windows",
+    "example": "windows",
     "skipAll": true
   },
   "regionName": {
@@ -184,6 +179,21 @@ module.exports = {
   "hasEbsExtraCharge": {
     "required": true,
     "type": "boolean",
+    "skipAll": true
+  },
+  "product": {
+    "model": "product",
+    "skipAll": true
+  },
+  "awsAccount": {
+    "required": true,
+    "model": "awsAccount",
+    "skipAll": true
+  },
+  "awsVolume": {
+    "description": "Instance Volumes",
+    "collection": "awsvolume",
+    "via": "awsInstance",
     "skipAll": true
   },
   "operatingSystem": {

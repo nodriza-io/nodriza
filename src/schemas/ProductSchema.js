@@ -80,10 +80,8 @@ module.exports = {
     "model": "tax",
     "required": true
   },
-  "requirements": {
-    "type": "json"
-  },
   "meta": {
-    "type": "json"
+    "type": "json",
+    "skipAll": true
   }
 }
