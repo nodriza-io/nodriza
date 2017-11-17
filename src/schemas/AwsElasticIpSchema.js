@@ -61,5 +61,9 @@ module.exports = {
     "required": true,
     "skipAll": true,
     "model": "awsRegion"
+  },
+  "product": {
+    "model": "product",
+    "skipAll": true
   }
 }
