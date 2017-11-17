@@ -62,7 +62,8 @@ module.exports = {
     "description": "Price multiplier multiplies the gross product price as many times as you choose",
     "required": true,
     "type": "float",
-    "min": 0
+    "min": 1,
+    "defaultsTo": 1
   },
   "price": {
     "description": "Product price is the results of multiply gross price and multiplier",

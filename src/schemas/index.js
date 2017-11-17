@@ -22,6 +22,7 @@ import AwsVolume from './AwsVolumeSchema'
 import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
+import AwsElasticIp from './AwsElasticIpSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
@@ -54,6 +55,7 @@ export class Schemas {
     this.awsAmi = AwsAmi
     this.awsRegion = AwsRegion
     this.awsAvailabilityZone = AwsAvailabilityZone
+    this.awsElasticIp = AwsElasticIp
     this.activity = Activity
     this.quote = Quote
     this.awsAccount = AwsAccount

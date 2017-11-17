@@ -39,12 +39,10 @@ module.exports = {
     "type": "string"
   },
   "iops": {
-    "required": true,
     "skipAll": true,
     "type": "integer"
   },
   "snapshotId": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
@@ -71,5 +69,10 @@ module.exports = {
     "description": "Allow assign specific permission to one role",
     "model": "awsInstance",
     "skipAll": true
+  },
+  "regionName": {
+    "required": true,
+    "skipAll": true,
+    "model": "awsRegion"
   }
 }

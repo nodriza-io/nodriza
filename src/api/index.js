@@ -22,6 +22,7 @@ import { AwsVolume } from './AwsVolumeApi'
 import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
 import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
+import { AwsElasticIp } from './AwsElasticIpApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
 import { AwsAccount } from './AwsAccountApi'
@@ -54,6 +55,7 @@ export class Apis {
     this.awsAmi = new AwsAmi(params)
     this.awsRegion = new AwsRegion(params)
     this.awsAvailabilityZone = new AwsAvailabilityZone(params)
+    this.awsElasticIp = new AwsElasticIp(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
     this.awsAccount = new AwsAccount(params)

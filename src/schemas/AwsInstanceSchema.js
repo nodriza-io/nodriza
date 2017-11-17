@@ -109,7 +109,6 @@ module.exports = {
     "skipAll": true
   },
   "clientToken": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -119,7 +118,6 @@ module.exports = {
     "skipAll": true
   },
   "enaSupport": {
-    "required": true,
     "type": "boolean",
     "skipAll": true
   },
