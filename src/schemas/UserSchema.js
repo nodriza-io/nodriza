@@ -121,7 +121,7 @@ module.exports = {
     "description": "View route to redirect user after successful login, this route is inherited from first role assigned",
     "example": "/dashboard",
     "type": "string",
-    "skipCreate": true
+    "skipAll": true
   },
   "password": {
     "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",

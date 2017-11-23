@@ -9,20 +9,17 @@ module.exports = {
   },
   "allocationId": {
     "example": "eipalloc-12345678",
-    "required": true,
     "type": "string",
-    "skipAll": true,
-    "primaryKey": true
+    "required": true,
+    "skipAll": true
   },
   "associationId": {
     "example": "eipassoc-12345678",
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "domain": {
     "example": "vpc",
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -48,17 +45,15 @@ module.exports = {
   },
   "publicIp": {
     "example": "203.0.113.0",
-    "required": true,
     "type": "string",
+    "primaryKey": true,
     "skipAll": true
   },
   "awsAccount": {
-    "required": true,
     "model": "awsAccount",
     "skipAll": true
   },
   "regionName": {
-    "required": true,
     "skipAll": true,
     "model": "awsRegion"
   },

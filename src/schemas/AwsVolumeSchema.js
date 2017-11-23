@@ -8,33 +8,29 @@ module.exports = {
     "skipAll": true
   },
   "availabilityZone": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "attachments": {
-    "required": true,
     "skipAll": true,
     "type": "json"
   },
   "encrypted": {
-    "required": true,
     "skipAll": true,
     "type": "boolean"
   },
   "volumeType": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "volumeId": {
-    "required": true,
     "skipAll": true,
+    "unique": true,
+    "required": true,
     "primaryKey": true,
     "type": "string"
   },
   "state": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
@@ -47,12 +43,10 @@ module.exports = {
     "type": "string"
   },
   "createTime": {
-    "required": true,
     "skipAll": true,
     "type": "datetime"
   },
   "size": {
-    "required": true,
     "skipAll": true,
     "type": "integer"
   },
@@ -71,7 +65,6 @@ module.exports = {
     "skipAll": true
   },
   "regionName": {
-    "required": true,
     "skipAll": true,
     "model": "awsRegion"
   }

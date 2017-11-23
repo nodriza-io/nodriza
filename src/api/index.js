@@ -30,6 +30,9 @@ import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
+import { AwsServer } from './AwsServerApi'
+import { CostCenter } from './CostCenterApi'
+import { AwsDataTransfer } from './AwsDataTransferApi'
 
 export class Apis {
   constructor (params) {
@@ -63,5 +66,8 @@ export class Apis {
     this.category = new Category(params)
     this.product = new Product(params)
     this.periodicityPreset = new PeriodicityPreset(params)
+    this.awsServer = new AwsServer(params)
+    this.costCenter = new CostCenter(params)
+    this.awsDataTransfer = new AwsDataTransfer(params)
   }
 }
