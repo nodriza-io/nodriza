@@ -30,7 +30,6 @@ import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
-import AwsServer from './AwsServerSchema'
 import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
 
@@ -66,7 +65,6 @@ export class Schemas {
     this.category = Category
     this.product = Product
     this.periodicityPreset = PeriodicityPreset
-    this.awsServer = AwsServer
     this.costCenter = CostCenter
     this.awsDataTransfer = AwsDataTransfer
   }

@@ -7,19 +7,30 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "fromLocation": {
+  "awsAccount": {
     "required": true,
-    "skipAll": true,
-    "type": "string",
-    "example": "US East (N. Virginia)",
-    "description": "Friendly region name"
+    "model": "awsAccount",
+    "skipAll": true
+  },
+  "awsInstance": {
+    "model": "awsInstance",
+    "unique": true,
+    "required": true,
+    "skipAll": true
   },
   "regionName": {
     "required": true,
     "skipAll": true,
     "type": "string",
-    "example": "us-east-1",
-    "primaryKey": "true"
+    "example": "us-east-1"
+  },
+  "quota": {
+    "type": "float",
+    "skipAll": true
+  },
+  "usage": {
+    "type": "float",
+    "skipAll": true
   },
   "product": {
     "model": "product",

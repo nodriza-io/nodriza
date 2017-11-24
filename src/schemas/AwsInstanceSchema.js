@@ -165,7 +165,7 @@ module.exports = {
     "model": "awsAccount",
     "skipAll": true
   },
-  "dataTransferLocation": {
+  "awsDataTransfer": {
     "model": "awsDataTransfer",
     "skipAll": true
   },
