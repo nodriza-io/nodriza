@@ -22,6 +22,7 @@ import AwsVolume from './AwsVolumeSchema'
 import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
+import AwsElasticIp from './AwsElasticIpSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
@@ -29,6 +30,8 @@ import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
+import CostCenter from './CostCenterSchema'
+import AwsDataTransfer from './AwsDataTransferSchema'
 
 export class Schemas {
   constructor (params) {
@@ -54,6 +57,7 @@ export class Schemas {
     this.awsAmi = AwsAmi
     this.awsRegion = AwsRegion
     this.awsAvailabilityZone = AwsAvailabilityZone
+    this.awsElasticIp = AwsElasticIp
     this.activity = Activity
     this.quote = Quote
     this.awsAccount = AwsAccount
@@ -61,5 +65,7 @@ export class Schemas {
     this.category = Category
     this.product = Product
     this.periodicityPreset = PeriodicityPreset
+    this.costCenter = CostCenter
+    this.awsDataTransfer = AwsDataTransfer
   }
 }

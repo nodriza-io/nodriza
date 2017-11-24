@@ -22,6 +22,7 @@ import { AwsVolume } from './AwsVolumeApi'
 import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
 import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
+import { AwsElasticIp } from './AwsElasticIpApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
 import { AwsAccount } from './AwsAccountApi'
@@ -29,6 +30,8 @@ import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
+import { CostCenter } from './CostCenterApi'
+import { AwsDataTransfer } from './AwsDataTransferApi'
 
 export class Apis {
   constructor (params) {
@@ -54,6 +57,7 @@ export class Apis {
     this.awsAmi = new AwsAmi(params)
     this.awsRegion = new AwsRegion(params)
     this.awsAvailabilityZone = new AwsAvailabilityZone(params)
+    this.awsElasticIp = new AwsElasticIp(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
     this.awsAccount = new AwsAccount(params)
@@ -61,5 +65,7 @@ export class Apis {
     this.category = new Category(params)
     this.product = new Product(params)
     this.periodicityPreset = new PeriodicityPreset(params)
+    this.costCenter = new CostCenter(params)
+    this.awsDataTransfer = new AwsDataTransfer(params)
   }
 }

@@ -8,34 +8,29 @@ module.exports = {
     "skipAll": true
   },
   "amiLaunchIndex": {
-    "required": true,
     "type": "integer",
     "skipAll": true
   },
   "imageId": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "instanceId": {
-    "required": true,
     "primaryKey": true,
+    "required": true,
     "type": "string",
     "unique": true,
     "skipAll": true
   },
   "instanceType": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "keyName": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "launchTime": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
@@ -48,22 +43,18 @@ module.exports = {
     "skipAll": true
   },
   "monitoring": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "placement": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "privateDnsName": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "privateIpAddress": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -76,11 +67,12 @@ module.exports = {
     "skipAll": true
   },
   "publicIpAddress": {
-    "type": "string",
+    "description": "Instance Public IPs",
+    "collection": "awselasticip",
+    "via": "instanceId",
     "skipAll": true
   },
   "state": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
@@ -89,42 +81,34 @@ module.exports = {
     "skipAll": true
   },
   "subnetId": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "vpcId": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "architecture": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "blockDeviceMappings": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "clientToken": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "ebsOptimized": {
-    "required": true,
     "type": "boolean",
     "skipAll": true
   },
   "enaSupport": {
-    "required": true,
     "type": "boolean",
     "skipAll": true
   },
   "hypervisor": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -133,37 +117,30 @@ module.exports = {
     "skipAll": true
   },
   "networkInterfaces": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "rootDeviceName": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "rootDeviceType": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
   "securityGroups": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "sourceDestCheck": {
-    "required": true,
     "type": "boolean",
     "skipAll": true
   },
   "tags": {
-    "required": true,
     "type": "json",
     "skipAll": true
   },
   "virtualizationType": {
-    "required": true,
     "type": "string",
     "skipAll": true
   },
@@ -172,12 +149,10 @@ module.exports = {
     "skipAll": true
   },
   "regionName": {
-    "required": true,
     "skipAll": true,
     "model": "awsRegion"
   },
   "hasEbsExtraCharge": {
-    "required": true,
     "type": "boolean",
     "skipAll": true
   },
@@ -190,6 +165,10 @@ module.exports = {
     "model": "awsAccount",
     "skipAll": true
   },
+  "awsDataTransfer": {
+    "model": "awsDataTransfer",
+    "skipAll": true
+  },
   "awsVolume": {
     "description": "Instance Volumes",
     "collection": "awsvolume",
@@ -197,7 +176,6 @@ module.exports = {
     "skipAll": true
   },
   "operatingSystem": {
-    "required": true,
     "type": "string",
     "enum": [
       "Linux",
@@ -210,7 +188,6 @@ module.exports = {
     ]
   },
   "termType": {
-    "required": true,
     "type": "string",
     "defaultsTo": "OnDemand",
     "enum": [

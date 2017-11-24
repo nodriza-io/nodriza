@@ -8,53 +8,45 @@ module.exports = {
     "skipAll": true
   },
   "availabilityZone": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "attachments": {
-    "required": true,
     "skipAll": true,
     "type": "json"
   },
   "encrypted": {
-    "required": true,
     "skipAll": true,
     "type": "boolean"
   },
   "volumeType": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "volumeId": {
-    "required": true,
     "skipAll": true,
+    "unique": true,
+    "required": true,
     "primaryKey": true,
     "type": "string"
   },
   "state": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "iops": {
-    "required": true,
     "skipAll": true,
     "type": "integer"
   },
   "snapshotId": {
-    "required": true,
     "skipAll": true,
     "type": "string"
   },
   "createTime": {
-    "required": true,
     "skipAll": true,
     "type": "datetime"
   },
   "size": {
-    "required": true,
     "skipAll": true,
     "type": "integer"
   },
@@ -71,5 +63,9 @@ module.exports = {
     "description": "Allow assign specific permission to one role",
     "model": "awsInstance",
     "skipAll": true
+  },
+  "regionName": {
+    "skipAll": true,
+    "model": "awsRegion"
   }
 }
