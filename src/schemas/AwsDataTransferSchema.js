@@ -24,12 +24,13 @@ module.exports = {
     "type": "string",
     "example": "us-east-1"
   },
-  "quota": {
-    "type": "float",
-    "skipAll": true
-  },
   "usage": {
     "type": "float",
+    "defaultsTo": 0
+  },
+  "quota": {
+    "type": "float",
+    "defaultsTo": 0,
     "skipAll": true
   },
   "product": {
