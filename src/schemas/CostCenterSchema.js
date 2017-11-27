@@ -32,5 +32,13 @@ module.exports = {
   "description": {
     "type": "string",
     "longtext": true
+  },
+  "supportHours": {
+    "model": "product"
+  },
+  "numberOfSupportHours": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "float"
   }
 }

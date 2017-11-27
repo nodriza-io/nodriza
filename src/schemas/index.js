@@ -32,6 +32,7 @@ import Product from './ProductSchema'
 import PeriodicityPreset from './PeriodicityPresetSchema'
 import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
+import Plan from './PlanSchema'
 
 export class Schemas {
   constructor (params) {
@@ -67,5 +68,6 @@ export class Schemas {
     this.periodicityPreset = PeriodicityPreset
     this.costCenter = CostCenter
     this.awsDataTransfer = AwsDataTransfer
+    this.plan = Plan
   }
 }

@@ -165,10 +165,6 @@ module.exports = {
     "model": "awsAccount",
     "skipAll": true
   },
-  "awsDataTransfer": {
-    "model": "awsDataTransfer",
-    "skipAll": true
-  },
   "awsVolume": {
     "description": "Instance Volumes",
     "collection": "awsvolume",

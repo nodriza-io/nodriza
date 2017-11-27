@@ -32,6 +32,7 @@ import { Product } from './ProductApi'
 import { PeriodicityPreset } from './PeriodicityPresetApi'
 import { CostCenter } from './CostCenterApi'
 import { AwsDataTransfer } from './AwsDataTransferApi'
+import { Plan } from './PlanApi'
 
 export class Apis {
   constructor (params) {
@@ -67,5 +68,6 @@ export class Apis {
     this.periodicityPreset = new PeriodicityPreset(params)
     this.costCenter = new CostCenter(params)
     this.awsDataTransfer = new AwsDataTransfer(params)
+    this.plan = new Plan(params)
   }
 }
