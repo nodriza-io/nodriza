@@ -29,6 +29,12 @@ module.exports = {
   "costCenter": {
     "model": "costCenter"
   },
+  "awsPriceMultiplier": {
+    "required": true,
+    "min": 1,
+    "defaultsTo": 1,
+    "type": "float"
+  },
   "costOverMonth": {
     "type": "float",
     "defaultsTo": 0,
@@ -47,7 +53,8 @@ module.exports = {
   "dataTransferOutUsage": {
     "min": 0,
     "defaultsTo": 0,
-    "type": "float"
+    "type": "float",
+    "skipAll": true
   },
   "dataTransferOutQuota": {
     "min": 0,
@@ -55,12 +62,14 @@ module.exports = {
     "type": "float"
   },
   "dataTransferProduct": {
-    "model": "product"
+    "model": "product",
+    "skipAll": true
   },
   "ioRequestUsage": {
     "min": 0,
     "defaultsTo": 0,
-    "type": "float"
+    "type": "float",
+    "skipAll": true
   },
   "ioRequestQuota": {
     "min": 0,
@@ -68,7 +77,22 @@ module.exports = {
     "type": "float"
   },
   "ioRequestProduct": {
+    "model": "product",
+    "skipAll": true
+  },
+  "autoStartBehavior": {
+    "model": "periodicityPreset"
+  },
+  "autoStopBehavior": {
+    "model": "periodicityPreset"
+  },
+  "license": {
     "model": "product"
+  },
+  "numberOfLicenses": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "integer"
   },
   "notifyHighCpuUsage": {
     "type": "boolean",
@@ -93,25 +117,5 @@ module.exports = {
   "trackAsExternalLocationTransfers": {
     "type": "boolean",
     "defaultsTo": false
-  },
-  "autoStartBehavior": {
-    "model": "periodicityPreset"
-  },
-  "autoStopBehavior": {
-    "model": "periodicityPreset"
-  },
-  "license": {
-    "model": "product"
-  },
-  "numberOfLicenses": {
-    "min": 0,
-    "defaultsTo": 0,
-    "type": "integer"
-  },
-  "awsMultiplier": {
-    "required": true,
-    "min": 1,
-    "defaultsTo": 1,
-    "type": "float"
   }
 }
