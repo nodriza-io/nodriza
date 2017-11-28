@@ -7,7 +7,15 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "awsVolume": {},
+  "awsAccount": {
+    "required": true,
+    "model": "awsAccount",
+    "skipAll": true
+  },
+  "awsVolume": {
+    "model": "awsVolume",
+    "skipAll": true
+  },
   "iops": {
     "type": "integer",
     "skipAll": true
