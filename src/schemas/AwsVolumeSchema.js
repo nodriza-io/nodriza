@@ -67,5 +67,10 @@ module.exports = {
   "regionName": {
     "skipAll": true,
     "model": "awsRegion"
+  },
+  "awsIopsMonthProvisioned": {
+    "collection": "awsiopsmonthprovisioned",
+    "via": "awsVolume",
+    "skipAll": true
   }
 }

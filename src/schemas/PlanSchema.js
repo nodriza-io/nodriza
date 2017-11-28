@@ -18,7 +18,7 @@ module.exports = {
     "model": "awsRegion"
   },
   "awsInstance": {
-    "model": "awsAccount",
+    "model": "awsInstance",
     "required": true,
     "skipAll": true
   },
@@ -44,7 +44,20 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "dataTransferOutUsage": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "float"
+  },
   "dataTransferOutQuota": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "float"
+  },
+  "dataTransferProduct": {
+    "model": "product"
+  },
+  "ioRequestUsage": {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
@@ -53,6 +66,9 @@ module.exports = {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
+  },
+  "ioRequestProduct": {
+    "model": "product"
   },
   "notifyHighCpuUsage": {
     "type": "boolean",

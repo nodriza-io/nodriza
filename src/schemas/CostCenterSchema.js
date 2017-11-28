@@ -26,7 +26,7 @@ module.exports = {
   "name": {
     "required": true,
     "type": "string",
-    "unque": true,
+    "unique": true,
     "displayName": true
   },
   "description": {
@@ -40,5 +40,10 @@ module.exports = {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
+  },
+  "plan": {
+    "collection": "plan",
+    "via": "costCenter",
+    "skipAll": true
   }
 }

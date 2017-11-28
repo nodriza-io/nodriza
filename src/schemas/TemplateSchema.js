@@ -9,6 +9,13 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "oem": {
+    "description": "Essential data required by platform",
+    "example": false,
+    "required": true,
+    "type": "boolean",
+    "defaultsTo": true
+  },
   "keyname": {
     "description": "Unique name identifier",
     "type": "string",
@@ -19,8 +26,7 @@ module.exports = {
   "body": {
     "description": "Body template",
     "type": "string",
-    "required": true,
-    "html": true
+    "required": true
   },
   "type": {
     "required": true,
@@ -34,11 +40,9 @@ module.exports = {
     ]
   },
   "createdAt": {
-    "type": "datetime",
-    "skipAll": true
+    "type": "datetime"
   },
   "updatedAt": {
-    "type": "datetime",
-    "skipAll": true
+    "type": "datetime"
   }
 }

@@ -33,6 +33,7 @@ import { PeriodicityPreset } from './PeriodicityPresetApi'
 import { CostCenter } from './CostCenterApi'
 import { AwsDataTransfer } from './AwsDataTransferApi'
 import { Plan } from './PlanApi'
+import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 
 export class Apis {
   constructor (params) {
@@ -69,5 +70,6 @@ export class Apis {
     this.costCenter = new CostCenter(params)
     this.awsDataTransfer = new AwsDataTransfer(params)
     this.plan = new Plan(params)
+    this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
   }
 }
