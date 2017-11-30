@@ -36,6 +36,7 @@ import Plan from './PlanSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import Schedule from './ScheduleSchema'
+import ScheduleLog from './ScheduleLogSchema'
 
 export class Schemas {
   constructor (params) {
@@ -75,5 +76,6 @@ export class Schemas {
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
     this.systemProcess = SystemProcess
     this.schedule = Schedule
+    this.scheduleLog = ScheduleLog
   }
 }

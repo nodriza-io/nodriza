@@ -36,6 +36,7 @@ import { Plan } from './PlanApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { Schedule } from './ScheduleApi'
+import { ScheduleLog } from './ScheduleLogApi'
 
 export class Apis {
   constructor (params) {
@@ -75,5 +76,6 @@ export class Apis {
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
     this.schedule = new Schedule(params)
+    this.scheduleLog = new ScheduleLog(params)
   }
 }

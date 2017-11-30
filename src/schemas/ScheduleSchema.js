@@ -11,7 +11,9 @@ module.exports = {
     "description": "Unique keyname identifier",
     "required": true,
     "type": "string",
-    "alphalowerDash": true,
+    "regex": "/^([a-zA-Z0-9 _-]+)$/",
+    "minLength": 2,
+    "maxLength": 256,
     "unique": true
   },
   "description": {
@@ -20,7 +22,8 @@ module.exports = {
   },
   "periodicityPreset": {
     "model": "periodicityPreset",
-    "required": true
+    "required": true,
+    "mustExist": true
   },
   "model": {
     "type": "string",
