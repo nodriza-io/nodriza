@@ -26,7 +26,8 @@ module.exports = {
   "body": {
     "description": "Body template",
     "type": "string",
-    "required": true
+    "required": true,
+    "html": true
   },
   "type": {
     "required": true,

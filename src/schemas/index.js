@@ -34,6 +34,7 @@ import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
 import Plan from './PlanSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
+import SystemProcess from './SystemProcessSchema'
 
 export class Schemas {
   constructor (params) {
@@ -71,5 +72,6 @@ export class Schemas {
     this.awsDataTransfer = AwsDataTransfer
     this.plan = Plan
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
+    this.systemProcess = SystemProcess
   }
 }

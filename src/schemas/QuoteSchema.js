@@ -26,7 +26,11 @@ module.exports = {
     "description": "Detailed quote proposal.",
     "required": true,
     "type": "string",
-    "html": true
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "quotes"
+    }
   },
   "status": {
     "required": true,

@@ -40,7 +40,7 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
-  "budget": {
+  "cost": {
     "type": "float",
     "defaultsTo": 0,
     "skipAll": true
@@ -114,8 +114,8 @@ module.exports = {
     "type": "boolean",
     "defaultsTo": false
   },
-  "trackAsExternalLocationTransfers": {
+  "trackAsExternalLocationTransfer": {
     "type": "boolean",
-    "defaultsTo": false
+    "defaultsTo": true
   }
 }

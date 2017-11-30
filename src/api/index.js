@@ -34,6 +34,7 @@ import { CostCenter } from './CostCenterApi'
 import { AwsDataTransfer } from './AwsDataTransferApi'
 import { Plan } from './PlanApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
+import { SystemProcess } from './SystemProcessApi'
 
 export class Apis {
   constructor (params) {
@@ -71,5 +72,6 @@ export class Apis {
     this.awsDataTransfer = new AwsDataTransfer(params)
     this.plan = new Plan(params)
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
+    this.systemProcess = new SystemProcess(params)
   }
 }
