@@ -8,9 +8,11 @@ module.exports = {
     "skipAll": true
   },
   "service": {
-    "type": "string",
     "required": true,
-    "skipAll": true
+    "type": "string",
+    "enum": [
+      "Example"
+    ]
   },
   "step": {
     "type": "string",
