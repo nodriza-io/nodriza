@@ -23,6 +23,7 @@ import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
 import AwsElasticIp from './AwsElasticIpSchema'
+import Cron from './CronSchema'
 import CronLog from './CronLogSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
@@ -35,7 +36,6 @@ import AwsDataTransfer from './AwsDataTransferSchema'
 import Plan from './PlanSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
-import Cron from './CronSchema'
 import CronPreset from './CronPresetSchema'
 
 export class Schemas {
@@ -63,6 +63,7 @@ export class Schemas {
     this.awsRegion = AwsRegion
     this.awsAvailabilityZone = AwsAvailabilityZone
     this.awsElasticIp = AwsElasticIp
+    this.cron = Cron
     this.cronLog = CronLog
     this.activity = Activity
     this.quote = Quote
@@ -75,7 +76,6 @@ export class Schemas {
     this.plan = Plan
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
     this.systemProcess = SystemProcess
-    this.cron = Cron
     this.cronPreset = CronPreset
   }
 }

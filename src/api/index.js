@@ -23,6 +23,7 @@ import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
 import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
 import { AwsElasticIp } from './AwsElasticIpApi'
+import { Cron } from './CronApi'
 import { CronLog } from './CronLogApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
@@ -35,7 +36,6 @@ import { AwsDataTransfer } from './AwsDataTransferApi'
 import { Plan } from './PlanApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
-import { Cron } from './CronApi'
 import { CronPreset } from './CronPresetApi'
 
 export class Apis {
@@ -63,6 +63,7 @@ export class Apis {
     this.awsRegion = new AwsRegion(params)
     this.awsAvailabilityZone = new AwsAvailabilityZone(params)
     this.awsElasticIp = new AwsElasticIp(params)
+    this.cron = new Cron(params)
     this.cronLog = new CronLog(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
@@ -75,7 +76,6 @@ export class Apis {
     this.plan = new Plan(params)
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
-    this.cron = new Cron(params)
     this.cronPreset = new CronPreset(params)
   }
 }

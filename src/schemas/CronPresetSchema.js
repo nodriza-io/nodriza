@@ -3,14 +3,6 @@ module.exports = {
     "skipAll": true,
     "type": "boolean"
   },
-  "createdAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
   "name": {
     "example": "Every 5 Minutes.",
     "required": true,
@@ -59,5 +51,11 @@ module.exports = {
     "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
     "defaultsTo": "0"
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }
