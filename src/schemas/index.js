@@ -23,20 +23,20 @@ import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
 import AwsElasticIp from './AwsElasticIpSchema'
+import CronLog from './CronLogSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
-import PeriodicityPreset from './PeriodicityPresetSchema'
 import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
 import Plan from './PlanSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
-import Schedule from './ScheduleSchema'
-import ScheduleLog from './ScheduleLogSchema'
+import Cron from './CronSchema'
+import CronPreset from './CronPresetSchema'
 
 export class Schemas {
   constructor (params) {
@@ -63,19 +63,19 @@ export class Schemas {
     this.awsRegion = AwsRegion
     this.awsAvailabilityZone = AwsAvailabilityZone
     this.awsElasticIp = AwsElasticIp
+    this.cronLog = CronLog
     this.activity = Activity
     this.quote = Quote
     this.awsAccount = AwsAccount
     this.tax = Tax
     this.category = Category
     this.product = Product
-    this.periodicityPreset = PeriodicityPreset
     this.costCenter = CostCenter
     this.awsDataTransfer = AwsDataTransfer
     this.plan = Plan
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
     this.systemProcess = SystemProcess
-    this.schedule = Schedule
-    this.scheduleLog = ScheduleLog
+    this.cron = Cron
+    this.cronPreset = CronPreset
   }
 }

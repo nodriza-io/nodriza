@@ -23,20 +23,20 @@ import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
 import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
 import { AwsElasticIp } from './AwsElasticIpApi'
+import { CronLog } from './CronLogApi'
 import { Activity } from './ActivityApi'
 import { Quote } from './QuoteApi'
 import { AwsAccount } from './AwsAccountApi'
 import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
-import { PeriodicityPreset } from './PeriodicityPresetApi'
 import { CostCenter } from './CostCenterApi'
 import { AwsDataTransfer } from './AwsDataTransferApi'
 import { Plan } from './PlanApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
-import { Schedule } from './ScheduleApi'
-import { ScheduleLog } from './ScheduleLogApi'
+import { Cron } from './CronApi'
+import { CronPreset } from './CronPresetApi'
 
 export class Apis {
   constructor (params) {
@@ -63,19 +63,19 @@ export class Apis {
     this.awsRegion = new AwsRegion(params)
     this.awsAvailabilityZone = new AwsAvailabilityZone(params)
     this.awsElasticIp = new AwsElasticIp(params)
+    this.cronLog = new CronLog(params)
     this.activity = new Activity(params)
     this.quote = new Quote(params)
     this.awsAccount = new AwsAccount(params)
     this.tax = new Tax(params)
     this.category = new Category(params)
     this.product = new Product(params)
-    this.periodicityPreset = new PeriodicityPreset(params)
     this.costCenter = new CostCenter(params)
     this.awsDataTransfer = new AwsDataTransfer(params)
     this.plan = new Plan(params)
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
-    this.schedule = new Schedule(params)
-    this.scheduleLog = new ScheduleLog(params)
+    this.cron = new Cron(params)
+    this.cronPreset = new CronPreset(params)
   }
 }

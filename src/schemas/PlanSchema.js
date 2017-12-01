@@ -81,10 +81,10 @@ module.exports = {
     "skipAll": true
   },
   "autoStartBehavior": {
-    "model": "periodicityPreset"
+    "model": "cronPreset"
   },
   "autoStopBehavior": {
-    "model": "periodicityPreset"
+    "model": "cronPreset"
   },
   "license": {
     "model": "product"

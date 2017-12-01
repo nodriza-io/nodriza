@@ -1,17 +1,29 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "keyname": {
+    "description": "Unique keyname identifier",
+    "required": true,
     "type": "string",
-    "alphanumeric": true,
-    "notEmpty": true,
-    "required": true
+    "regex": "/^([a-zA-Z0-9 _-]+)$/",
+    "minLength": 2,
+    "maxLength": 256,
+    "unique": true
   },
   "description": {
     "type": "string",
     "required": true
   },
   "cronPreset": {
-    "model": "cronpreset",
-    "required": true
+    "model": "cronPreset",
+    "required": true,
+    "mustExist": true
   },
   "model": {
     "type": "string",
@@ -29,14 +41,5 @@ module.exports = {
   "active": {
     "type": "boolean",
     "defaultsTo": true
-  },
-  "notifyTo": {
-    "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }
