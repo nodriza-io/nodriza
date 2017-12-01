@@ -117,5 +117,9 @@ module.exports = {
   "trackAsExternalLocationTransfer": {
     "type": "boolean",
     "defaultsTo": true
+  },
+  "notifyTo": {
+    "model": "user",
+    "multiple": true
   }
 }
