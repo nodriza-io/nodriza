@@ -118,8 +118,8 @@ module.exports = {
   "autoStopBehavior": {
     "model": "cronPreset"
   },
-  "notifyTo": {
-    "model": "user",
-    "multiple": true
+  "responsables": {
+    "type": "array",
+    "multiple": "user"
   }
 }
