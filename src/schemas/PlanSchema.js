@@ -80,12 +80,6 @@ module.exports = {
     "model": "product",
     "skipAll": true
   },
-  "autoStartBehavior": {
-    "model": "cronPreset"
-  },
-  "autoStopBehavior": {
-    "model": "cronPreset"
-  },
   "license": {
     "model": "product"
   },
@@ -117,6 +111,12 @@ module.exports = {
   "trackAsExternalLocationTransfer": {
     "type": "boolean",
     "defaultsTo": true
+  },
+  "autoStartBehavior": {
+    "model": "cronPreset"
+  },
+  "autoStopBehavior": {
+    "model": "cronPreset"
   },
   "notifyTo": {
     "model": "user",
