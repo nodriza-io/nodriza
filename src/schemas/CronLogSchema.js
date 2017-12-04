@@ -1,12 +1,24 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "cron": {
     "model": "cron",
-    "required": true
+    "skipAll": true
   },
-  "takenTime": {
+  "systemProcess": {
+    "model": "systemProcess",
+    "skipAll": true
+  },
+  "timeTaken": {
     "type": "integer",
     "defaultsTo": 0,
-    "required": true
+    "skipAll": true
   },
   "status": {
     "type": "string",
@@ -16,23 +28,11 @@ module.exports = {
       "error"
     ],
     "defaultsTo": "initialized",
-    "required": true
-  },
-  "model": {
-    "type": "string",
-    "required": true
-  },
-  "method": {
-    "type": "string",
-    "required": true
+    "required": true,
+    "skipAll": true
   },
   "message": {
-    "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
+    "type": "string",
+    "skipAll": true
   }
 }

@@ -27,8 +27,10 @@ module.exports = {
     "required": true,
     "type": "string",
     "html": true,
-    "model": "template",
-    "query": {"type": "quotes"}
+    "target": "template",
+    "query": {
+      "type": "quotes"
+    }
   },
   "status": {
     "required": true,

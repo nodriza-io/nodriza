@@ -1,43 +1,56 @@
 module.exports = {
-  "description": {
-    "type": "string",
-    "required": true
+  "readOnly": {
+    "skipAll": true,
+    "type": "boolean"
+  },
+  "name": {
+    "example": "Every 5 Minutes.",
+    "required": true,
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   },
   "dayOfWeek": {
-    "notEmpty": true,
+    "example": "*",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "*",
-    "required": true
+    "defaultsTo": "*"
   },
   "month": {
-    "notEmpty": true,
+    "example": "*",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "*",
-    "required": true
+    "defaultsTo": "*"
   },
   "dayOfMonth": {
-    "notEmpty": true,
+    "example": "*",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "*",
-    "required": true
+    "defaultsTo": "*"
   },
   "hour": {
-    "notEmpty": true,
+    "example": "*",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "*",
-    "required": true
+    "defaultsTo": "*"
   },
   "minute": {
-    "notEmpty": true,
+    "example": "*/5",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "0",
-    "required": true
+    "defaultsTo": "0"
   },
   "second": {
-    "notEmpty": true,
+    "example": "0",
+    "required": true,
+    "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "0",
-    "required": true
+    "defaultsTo": "0"
   },
   "createdAt": {
     "type": "datetime"

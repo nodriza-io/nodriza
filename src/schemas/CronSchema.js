@@ -1,17 +1,20 @@
 module.exports = {
-  "keyname": {
-    "type": "string",
-    "alphanumeric": true,
-    "notEmpty": true,
-    "required": true
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
   },
   "description": {
     "type": "string",
     "required": true
   },
   "cronPreset": {
-    "model": "cronpreset",
-    "required": true
+    "model": "cronPreset",
+    "required": true,
+    "mustExist": true
   },
   "model": {
     "type": "string",
@@ -25,18 +28,5 @@ module.exports = {
     "type": "json",
     "required": true,
     "defaultsTo": {}
-  },
-  "active": {
-    "type": "boolean",
-    "defaultsTo": true
-  },
-  "notifyTo": {
-    "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }

@@ -18,7 +18,7 @@ module.exports = {
     "model": "awsRegion"
   },
   "awsInstance": {
-    "model": "awsAccount",
+    "model": "awsInstance",
     "required": true,
     "skipAll": true
   },
@@ -29,12 +29,18 @@ module.exports = {
   "costCenter": {
     "model": "costCenter"
   },
+  "awsPriceMultiplier": {
+    "required": true,
+    "min": 1,
+    "defaultsTo": 1,
+    "type": "float"
+  },
   "costOverMonth": {
     "type": "float",
     "defaultsTo": 0,
     "skipAll": true
   },
-  "budget": {
+  "cost": {
     "type": "float",
     "defaultsTo": 0,
     "skipAll": true
@@ -44,15 +50,43 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "dataTransferOutUsage": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "float",
+    "skipAll": true
+  },
   "dataTransferOutQuota": {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
   },
+  "dataTransferProduct": {
+    "model": "product",
+    "skipAll": true
+  },
+  "ioRequestUsage": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "float",
+    "skipAll": true
+  },
   "ioRequestQuota": {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
+  },
+  "ioRequestProduct": {
+    "model": "product",
+    "skipAll": true
+  },
+  "license": {
+    "model": "product"
+  },
+  "numberOfLicenses": {
+    "min": 0,
+    "defaultsTo": 0,
+    "type": "integer"
   },
   "notifyHighCpuUsage": {
     "type": "boolean",
@@ -74,28 +108,18 @@ module.exports = {
     "type": "boolean",
     "defaultsTo": false
   },
-  "trackAsExternalLocationTransfers": {
+  "trackAsExternalLocationTransfer": {
     "type": "boolean",
-    "defaultsTo": false
+    "defaultsTo": true
   },
   "autoStartBehavior": {
-    "model": "periodicityPreset"
+    "model": "cronPreset"
   },
   "autoStopBehavior": {
-    "model": "periodicityPreset"
+    "model": "cronPreset"
   },
-  "license": {
-    "model": "product"
-  },
-  "numberOfLicenses": {
-    "min": 0,
-    "defaultsTo": 0,
-    "type": "integer"
-  },
-  "awsMultiplier": {
-    "required": true,
-    "min": 1,
-    "defaultsTo": 1,
-    "type": "float"
+  "responsables": {
+    "type": "array",
+    "multiple": "user"
   }
 }

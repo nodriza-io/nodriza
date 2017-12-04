@@ -6,6 +6,7 @@ import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Exchange from './ExchangeSchema'
 import Lead from './LeadSchema'
+import Plan from './PlanSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Token from './TokenSchema'
@@ -23,16 +24,19 @@ import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
 import AwsElasticIp from './AwsElasticIpSchema'
+import Cron from './CronSchema'
+import CronLog from './CronLogSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
-import PeriodicityPreset from './PeriodicityPresetSchema'
 import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
-import Plan from './PlanSchema'
+import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
+import SystemProcess from './SystemProcessSchema'
+import CronPreset from './CronPresetSchema'
 
 export class Schemas {
   constructor (params) {
@@ -42,6 +46,7 @@ export class Schemas {
     this.config = Config
     this.exchange = Exchange
     this.lead = Lead
+    this.plan = Plan
     this.role = Role
     this.service = Service
     this.token = Token
@@ -59,15 +64,18 @@ export class Schemas {
     this.awsRegion = AwsRegion
     this.awsAvailabilityZone = AwsAvailabilityZone
     this.awsElasticIp = AwsElasticIp
+    this.cron = Cron
+    this.cronLog = CronLog
     this.activity = Activity
     this.quote = Quote
     this.awsAccount = AwsAccount
     this.tax = Tax
     this.category = Category
     this.product = Product
-    this.periodicityPreset = PeriodicityPreset
     this.costCenter = CostCenter
     this.awsDataTransfer = AwsDataTransfer
-    this.plan = Plan
+    this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
+    this.systemProcess = SystemProcess
+    this.cronPreset = CronPreset
   }
 }
