@@ -1,21 +1,7 @@
 module.exports = {
   "readOnly": {
-    "defaultsTo": true,
-    "required": true,
     "skipAll": true,
     "type": "boolean"
-  },
-  "createdBy": {
-    "description": "User who created the resource",
-    "model": "user",
-    "required": true,
-    "skipAll": true
-  },
-  "updatedBy": {
-    "description": "Last user who updated the resource",
-    "model": "user",
-    "required": true,
-    "skipAll": true
   },
   "createdAt": {
     "type": "datetime",
@@ -25,12 +11,12 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "description": {
-    "description": "Periodicity Preset Description",
+  "name": {
     "example": "Every 5 Minutes.",
-    "type": "string",
+    "required": true,
     "unique": true,
-    "required": true
+    "displayName": true,
+    "type": "string"
   },
   "dayOfWeek": {
     "example": "*",
