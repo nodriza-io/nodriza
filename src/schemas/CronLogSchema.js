@@ -9,12 +9,15 @@ module.exports = {
   },
   "cron": {
     "model": "cron",
-    "required": true
+    "skipAll": true
   },
-  "takenTime": {
+  "systemProcess": {
+    "model": "systemProcess",
+    "skipAll": true
+  },
+  "timeTaken": {
     "type": "integer",
     "defaultsTo": 0,
-    "required": true,
     "skipAll": true
   },
   "status": {
@@ -25,16 +28,6 @@ module.exports = {
       "error"
     ],
     "defaultsTo": "initialized",
-    "required": true,
-    "skipAll": true
-  },
-  "model": {
-    "type": "string",
-    "required": true,
-    "skipAll": true
-  },
-  "method": {
-    "type": "string",
     "required": true,
     "skipAll": true
   },

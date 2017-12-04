@@ -6,6 +6,7 @@ import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Exchange } from './ExchangeApi'
 import { Lead } from './LeadApi'
+import { Plan } from './PlanApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Token } from './TokenApi'
@@ -33,7 +34,6 @@ import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { CostCenter } from './CostCenterApi'
 import { AwsDataTransfer } from './AwsDataTransferApi'
-import { Plan } from './PlanApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
@@ -46,6 +46,7 @@ export class Apis {
     this.config = new Config(params)
     this.exchange = new Exchange(params)
     this.lead = new Lead(params)
+    this.plan = new Plan(params)
     this.role = new Role(params)
     this.service = new Service(params)
     this.token = new Token(params)
@@ -73,7 +74,6 @@ export class Apis {
     this.product = new Product(params)
     this.costCenter = new CostCenter(params)
     this.awsDataTransfer = new AwsDataTransfer(params)
-    this.plan = new Plan(params)
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)

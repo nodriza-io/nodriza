@@ -7,15 +7,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "keyname": {
-    "description": "Unique keyname identifier",
-    "required": true,
-    "type": "string",
-    "regex": "/^([a-zA-Z0-9 _-]+)$/",
-    "minLength": 2,
-    "maxLength": 256,
-    "unique": true
-  },
   "description": {
     "type": "string",
     "required": true
@@ -37,9 +28,5 @@ module.exports = {
     "type": "json",
     "required": true,
     "defaultsTo": {}
-  },
-  "active": {
-    "type": "boolean",
-    "defaultsTo": true
   }
 }

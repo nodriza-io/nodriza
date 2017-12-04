@@ -6,6 +6,7 @@ import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Exchange from './ExchangeSchema'
 import Lead from './LeadSchema'
+import Plan from './PlanSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Token from './TokenSchema'
@@ -33,7 +34,6 @@ import Category from './CategorySchema'
 import Product from './ProductSchema'
 import CostCenter from './CostCenterSchema'
 import AwsDataTransfer from './AwsDataTransferSchema'
-import Plan from './PlanSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
@@ -46,6 +46,7 @@ export class Schemas {
     this.config = Config
     this.exchange = Exchange
     this.lead = Lead
+    this.plan = Plan
     this.role = Role
     this.service = Service
     this.token = Token
@@ -73,7 +74,6 @@ export class Schemas {
     this.product = Product
     this.costCenter = CostCenter
     this.awsDataTransfer = AwsDataTransfer
-    this.plan = Plan
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
     this.systemProcess = SystemProcess
     this.cronPreset = CronPreset
