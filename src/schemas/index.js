@@ -25,7 +25,7 @@ import AwsRegion from './AwsRegionSchema'
 import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
 import AwsElasticIp from './AwsElasticIpSchema'
 import Cron from './CronSchema'
-import CronLog from './CronLogSchema'
+import Log from './LogSchema'
 import Activity from './ActivitySchema'
 import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
@@ -65,7 +65,7 @@ export class Schemas {
     this.awsAvailabilityZone = AwsAvailabilityZone
     this.awsElasticIp = AwsElasticIp
     this.cron = Cron
-    this.cronLog = CronLog
+    this.log = Log
     this.activity = Activity
     this.quote = Quote
     this.awsAccount = AwsAccount

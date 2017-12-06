@@ -41,6 +41,12 @@ module.exports = {
     "defaultsTo": 0,
     "type": "float"
   },
+  "assignPlansWithPrefix": {
+    "description": "Auto-assign plans with this prefix in instance keyName",
+    "example": "dev",
+    "type": "string",
+    "unique": true
+  },
   "plan": {
     "collection": "plan",
     "via": "costCenter",
