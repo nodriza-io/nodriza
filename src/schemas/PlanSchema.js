@@ -113,10 +113,12 @@ module.exports = {
     "defaultsTo": true
   },
   "autoStartBehavior": {
-    "model": "cronPreset"
+    "type": "array",
+    "multiple": "cronPreset"
   },
   "autoStopBehavior": {
-    "model": "cronPreset"
+    "type": "array",
+    "multiple": "cronPreset"
   },
   "responsables": {
     "type": "array",

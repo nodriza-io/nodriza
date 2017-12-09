@@ -2,6 +2,7 @@
 
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
+import AwsInstance from './AwsInstanceSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Exchange from './ExchangeSchema'
@@ -18,7 +19,6 @@ import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import TimeZone from './TimeZoneSchema'
 import AwsCommunityAmi from './AwsCommunityAmiSchema'
-import AwsInstance from './AwsInstanceSchema'
 import AwsVolume from './AwsVolumeSchema'
 import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
@@ -42,6 +42,7 @@ export class Schemas {
   constructor (params) {
     this.app = App
     this.apparience = Apparience
+    this.awsInstance = AwsInstance
     this.company = Company
     this.config = Config
     this.exchange = Exchange
@@ -58,7 +59,6 @@ export class Schemas {
     this.currency = Currency
     this.timeZone = TimeZone
     this.awsCommunityAmi = AwsCommunityAmi
-    this.awsInstance = AwsInstance
     this.awsVolume = AwsVolume
     this.awsAmi = AwsAmi
     this.awsRegion = AwsRegion

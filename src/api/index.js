@@ -2,6 +2,7 @@
 
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
+import { AwsInstance } from './AwsInstanceApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Exchange } from './ExchangeApi'
@@ -18,7 +19,6 @@ import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
 import { TimeZone } from './TimeZoneApi'
 import { AwsCommunityAmi } from './AwsCommunityAmiApi'
-import { AwsInstance } from './AwsInstanceApi'
 import { AwsVolume } from './AwsVolumeApi'
 import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
@@ -42,6 +42,7 @@ export class Apis {
   constructor (params) {
     this.app = new App(params)
     this.apparience = new Apparience(params)
+    this.awsInstance = new AwsInstance(params)
     this.company = new Company(params)
     this.config = new Config(params)
     this.exchange = new Exchange(params)
@@ -58,7 +59,6 @@ export class Apis {
     this.currency = new Currency(params)
     this.timeZone = new TimeZone(params)
     this.awsCommunityAmi = new AwsCommunityAmi(params)
-    this.awsInstance = new AwsInstance(params)
     this.awsVolume = new AwsVolume(params)
     this.awsAmi = new AwsAmi(params)
     this.awsRegion = new AwsRegion(params)

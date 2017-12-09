@@ -1,4 +1,12 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "readOnly": {
     "skipAll": true,
     "type": "boolean"
@@ -10,14 +18,21 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "dayOfWeek": {
-    "example": "*",
+  "second": {
+    "example": "0",
     "required": true,
     "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "*"
+    "defaultsTo": "0"
   },
-  "month": {
+  "minute": {
+    "example": "*/5",
+    "required": true,
+    "type": "string",
+    "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
+    "defaultsTo": "0"
+  },
+  "hour": {
     "example": "*",
     "required": true,
     "type": "string",
@@ -31,31 +46,18 @@ module.exports = {
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
     "defaultsTo": "*"
   },
-  "hour": {
+  "month": {
     "example": "*",
     "required": true,
     "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
     "defaultsTo": "*"
   },
-  "minute": {
-    "example": "*/5",
+  "dayOfWeek": {
+    "example": "*",
     "required": true,
     "type": "string",
     "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "0"
-  },
-  "second": {
-    "example": "0",
-    "required": true,
-    "type": "string",
-    "regex": "/^(?:[1-9]?\\d|\\*)(?:(?:[\\/-][1-9]?\\d)|(?:,[1-9]?\\d)+)?$/",
-    "defaultsTo": "0"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
+    "defaultsTo": "*"
   }
 }
