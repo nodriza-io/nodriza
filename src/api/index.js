@@ -2,6 +2,7 @@
 
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
+import { AwsBillingReport } from './AwsBillingReportApi'
 import { AwsInstance } from './AwsInstanceApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
@@ -37,11 +38,13 @@ import { AwsDataTransfer } from './AwsDataTransferApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
+import { AwsBillingRecord } from './AwsBillingRecordApi'
 
 export class Apis {
   constructor (params) {
     this.app = new App(params)
     this.apparience = new Apparience(params)
+    this.awsBillingReport = new AwsBillingReport(params)
     this.awsInstance = new AwsInstance(params)
     this.company = new Company(params)
     this.config = new Config(params)
@@ -77,5 +80,6 @@ export class Apis {
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)
+    this.awsBillingRecord = new AwsBillingRecord(params)
   }
 }

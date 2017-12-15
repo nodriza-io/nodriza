@@ -35,6 +35,7 @@ module.exports = {
   "status": {
     "required": true,
     "type": "string",
+    "defaultsTo": "In Review",
     "enum": [
       "Draft",
       "In Review",

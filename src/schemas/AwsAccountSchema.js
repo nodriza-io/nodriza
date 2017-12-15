@@ -41,6 +41,7 @@ module.exports = {
     "example": "nodrizaUser",
     "required": true,
     "type": "string",
+    "skipAll": true,
     "defaultsTo": "NodrizaUser"
   },
   "awsAccessKey": {
@@ -57,7 +58,7 @@ module.exports = {
     "type": "string"
   },
   "region": {
-    "description": "Prefered region for deployments",
+    "description": "Prefered region for billing reports",
     "example": "us-east-1",
     "required": true,
     "mustExist": true,
@@ -90,5 +91,10 @@ module.exports = {
     "description": "Specify a payer account for linked accounts",
     "model": "awsAccount",
     "mustExist": true
+  },
+  "responsables": {
+    "description": "Send AWS Account notifications to these users",
+    "type": "array",
+    "multiple": "user"
   }
 }

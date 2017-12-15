@@ -29,6 +29,10 @@ module.exports = {
     "unique": true,
     "displayName": true
   },
+  "awsAccount": {
+    "required": true,
+    "model": "awsAccount"
+  },
   "description": {
     "type": "string",
     "longtext": true
@@ -40,12 +44,6 @@ module.exports = {
     "min": 0,
     "defaultsTo": 0,
     "type": "float"
-  },
-  "assignPlansWithPrefix": {
-    "description": "Auto-assign plans with this prefix in instance keyName",
-    "example": "dev",
-    "type": "string",
-    "unique": true
   },
   "plan": {
     "collection": "plan",
