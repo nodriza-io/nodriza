@@ -7,6 +7,10 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "awsAccount": {
+    "model": "awsAccount",
+    "skipAll": true
+  },
   "reportId": {
     "required": true,
     "type": "string",
@@ -33,9 +37,27 @@ module.exports = {
     "defaultsTo": [],
     "skipAll": true
   },
-  "reportLines": {
+  "recordsImported": {
     "type": "integer",
     "defaultsTo": 0,
+    "skipAll": true
+  },
+  "dataPoints": {
+    "type": "array",
+    "defaultsTo": []
+  },
+  "totalCost": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
+  "assemblyId": {
+    "type": "string",
+    "required": true,
+    "skipAll": true
+  },
+  "invoiceId": {
+    "type": "string",
     "skipAll": true
   }
 }
