@@ -51,10 +51,6 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
-  "dataPoints": {
-    "type": "array",
-    "defaultsTo": []
-  },
   "blendedCost": {
     "type": "float",
     "defaultsTo": 0,
@@ -69,7 +65,7 @@ module.exports = {
     "type": "array",
     "skipAll": true
   },
-  "planCost": {
+  "dayCost": {
     "type": "array",
     "skipAll": true
   }
