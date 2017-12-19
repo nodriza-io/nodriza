@@ -64,5 +64,13 @@ module.exports = {
     "type": "float",
     "defaultsTo": 0,
     "skipAll": true
+  },
+  "productCost": {
+    "type": "array",
+    "skipAll": true
+  },
+  "planCost": {
+    "type": "array",
+    "skipAll": true
   }
 }

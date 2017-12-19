@@ -40,29 +40,19 @@ module.exports = {
   "permission": {
     "description": "Role permissions",
     "collection": "permission",
-    "via": "role"
+    "via": "role",
+    "skipAll": true
   },
   "user": {
     "description": "Users who has this role",
     "collection": "user",
-    "via": "role"
-  },
-  "type": {
-    "description": "Role type",
-    "example": "department",
-    "required": true,
-    "type": "string",
-    "enum": [
-      "system",
-      "company",
-      "department",
-      "custom"
-    ]
+    "via": "role",
+    "skipAll": true
   },
   "home": {
     "description": "View route that will be inherited by the user only if not set",
-    "example": "/dashboard",
-    "defaultsTo": "/dashboard",
+    "example": "/app",
+    "defaultsTo": "/app",
     "type": "string"
   },
   "createdAt": {
