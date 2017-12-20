@@ -37,7 +37,12 @@ module.exports = {
     "defaultsTo": [],
     "skipAll": true
   },
-  "recordsImported": {
+  "totalRecords": {
+    "type": "integer",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
+  "lastImportNo": {
     "type": "integer",
     "defaultsTo": 0,
     "skipAll": true
@@ -62,6 +67,10 @@ module.exports = {
     "skipAll": true
   },
   "productCost": {
+    "type": "array",
+    "skipAll": true
+  },
+  "operationCost": {
     "type": "array",
     "skipAll": true
   },

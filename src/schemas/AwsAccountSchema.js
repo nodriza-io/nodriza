@@ -31,7 +31,7 @@ module.exports = {
     "description": "To find your AWS account ID number on the AWS Management Console, choose Support on the navigation bar on the upper-right, and then choose Support Center",
     "example": "123160232530",
     "primaryKey": true,
-    "skipCreate": true,
+    "skipAll": true,
     "displayName": true,
     "unique": true,
     "type": "string"
@@ -96,5 +96,15 @@ module.exports = {
     "description": "Send AWS Account notifications to these users",
     "type": "array",
     "multiple": "user"
+  },
+  "monthlyBillingLimit": {
+    "description": "Notify responsables as soon as a bill surpasses a defined threshold",
+    "defaultsTo": 0,
+    "type": "float"
+  },
+  "dailyBillingLimit": {
+    "description": "Notify responsables as soon as a bill surpasses a defined threshold",
+    "defaultsTo": 0,
+    "type": "float"
   }
 }
