@@ -42,6 +42,11 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "secondsImporting": {
+    "type": "integer",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
   "lastImportNo": {
     "type": "integer",
     "defaultsTo": 0,

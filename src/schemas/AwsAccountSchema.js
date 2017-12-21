@@ -106,5 +106,10 @@ module.exports = {
     "description": "Notify responsables as soon as a bill surpasses a defined threshold",
     "defaultsTo": 0,
     "type": "float"
+  },
+  "monthlyBudget": {
+    "description": "Set monthly budget to this account",
+    "defaultsTo": 0,
+    "type": "float"
   }
 }
