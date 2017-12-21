@@ -29,4 +29,44 @@ export class AwsBill extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/awsBill/getReportByField [PRIVATE]
+  *
+  * Get bill report by field
+  *
+  * @param  {Object} params
+  * - @param  {String} field * -> (In query) Report field
+  * - @param  {String} timeRange * -> (In query) Time range
+  * - @param  {Object} query * -> (In query) Filter results
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getReportByField (params, callback) {
+    let url = '/v1/awsBill/getReportByField'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/awsBill/getReportByGranularity [PRIVATE]
+  *
+  * Get bill report by granularity
+  *
+  * @param  {Object} params
+  * - @param  {String} granularity * -> (In query) Granularity level
+  * - @param  {String} timeRange * -> (In query) Time range
+  * - @param  {String} query * -> (In query) Filter results
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getReportByGranularity (params, callback) {
+    let url = '/v1/awsBill/getReportByGranularity'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
