@@ -71,14 +71,6 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
-  "costByProduct": {
-    "type": "array",
-    "skipAll": true
-  },
-  "costByOperation": {
-    "type": "array",
-    "skipAll": true
-  },
   "costByDay": {
     "type": "array",
     "skipAll": true

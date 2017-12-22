@@ -37,7 +37,7 @@ export class AwsBill extends Request {
   * @param  {Object} params
   * - @param  {String} field * -> (In query) Report field
   * - @param  {String} timeRange * -> (In query) Time range
-  * - @param  {Object} query * -> (In query) Filter results
+  * - @param  {String} query * -> (In query) Filter results
   * @param  {Function} callback
   * @return {Code} 200, 403
   */
