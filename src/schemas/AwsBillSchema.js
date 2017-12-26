@@ -74,5 +74,10 @@ module.exports = {
   "costByDay": {
     "type": "array",
     "skipAll": true
+  },
+  "awsReport": {
+    "collection": "awsreport",
+    "via": "id",
+    "skipAll": true
   }
 }

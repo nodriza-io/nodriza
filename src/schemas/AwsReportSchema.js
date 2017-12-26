@@ -7,6 +7,11 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "awsBill": {
+    "model": "awsBill",
+    "required": true,
+    "skipAll": true
+  },
   "usageAccount": {
     "model": "awsAccount",
     "required": true,
