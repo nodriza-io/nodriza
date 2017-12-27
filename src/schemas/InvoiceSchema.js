@@ -23,7 +23,7 @@ module.exports = {
   },
   "specialObservation": {
     "type": "string",
-    "longText": true
+    "longtext": true
   },
   "invoiceNumber": {
     "type": "string"
