@@ -20,21 +20,5 @@ module.exports = {
     "description": "Department description",
     "example": "People in charge of a certain group",
     "type": "string"
-  },
-  "active": {
-    "description": "Department description",
-    "example": "People in charge of a certain group",
-    "type": "boolean",
-    "defaultsTo": true
-  },
-  "guest": {
-    "description": "Department description",
-    "example": "People in charge of a certain group",
-    "model": "user"
-  },
-  "expire": {
-    "description": "Department description",
-    "example": "People in charge of a certain group",
-    "type": "datetime"
   }
 }

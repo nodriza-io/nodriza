@@ -33,6 +33,23 @@ module.exports = {
     "description": "Client who has been assigned the AWS account",
     "model": "company"
   },
+  "invoiceCurrency": {
+    "required": true,
+    "type": "string",
+    "model": "currency"
+  },
+  "products": {
+    "description": "Add products to monthly invoice",
+    "productList": true,
+    "type": "array",
+    "defaultsTo": []
+  },
+  "awsPriceMultiplier": {
+    "required": true,
+    "min": 1,
+    "defaultsTo": 1,
+    "type": "float"
+  },
   "iamUser": {
     "description": "User assigned to perform Nodriza operations",
     "example": "nodrizaUser",
@@ -112,17 +129,6 @@ module.exports = {
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
-  },
-  "awsPriceMultiplier": {
-    "required": true,
-    "min": 1,
-    "defaultsTo": 1,
-    "type": "float"
-  },
-  "products": {
-    "description": "Add products to monthly invoice",
-    "productList": true,
-    "type": "array"
   },
   "responsables": {
     "description": "Send AWS Account notifications to these users",

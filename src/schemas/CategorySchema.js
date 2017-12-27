@@ -37,10 +37,5 @@ module.exports = {
     "unique": true,
     "type": "string",
     "regex": "/^([a-z0-9_-]+)$/"
-  },
-  "expire": {
-    "description": "Esta es la fecha en que expira",
-    "required": true,
-    "type": "datetime"
   }
 }
