@@ -7,19 +7,19 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "awsAccount": {
+  "awsBill": {
+    "model": "awsBill",
+    "required": true,
+    "skipAll": true
+  },
+  "usageAccount": {
     "model": "awsAccount",
+    "required": true,
     "skipAll": true
   },
-  "reportId": {
+  "payerAccount": {
+    "model": "awsAccount",
     "required": true,
-    "type": "string",
-    "primaryKey": "true",
-    "skipAll": true
-  },
-  "period": {
-    "required": true,
-    "type": "string",
     "skipAll": true
   },
   "billingPeriodStart": {
@@ -30,31 +30,6 @@ module.exports = {
   "billingPeriodEnd": {
     "required": true,
     "type": "datetime",
-    "skipAll": true
-  },
-  "reportKeys": {
-    "type": "array",
-    "defaultsTo": [],
-    "skipAll": true
-  },
-  "totalRecords": {
-    "type": "integer",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
-  "secondsImporting": {
-    "type": "integer",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
-  "lastImportNo": {
-    "type": "integer",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
-  "assemblyId": {
-    "type": "string",
-    "required": true,
     "skipAll": true
   },
   "invoiceId": {
@@ -73,11 +48,6 @@ module.exports = {
   },
   "costByDay": {
     "type": "array",
-    "skipAll": true
-  },
-  "awsUsageReport": {
-    "collection": "awsusagereport",
-    "via": "id",
     "skipAll": true
   }
 }

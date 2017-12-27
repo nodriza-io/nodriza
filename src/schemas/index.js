@@ -39,7 +39,7 @@ import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
-import AwsReport from './AwsReportSchema'
+import AwsUsageReport from './AwsUsageReportSchema'
 import Invoice from './InvoiceSchema'
 
 export class Schemas {
@@ -83,7 +83,7 @@ export class Schemas {
     this.systemProcess = SystemProcess
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
-    this.awsReport = AwsReport
+    this.awsUsageReport = AwsUsageReport
     this.invoice = Invoice
   }
 }

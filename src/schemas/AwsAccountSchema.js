@@ -107,20 +107,26 @@ module.exports = {
     "defaultsTo": 0,
     "type": "float"
   },
-  "responsables": {
-    "description": "Send AWS Account notifications to these users",
-    "type": "array",
-    "multiple": "user"
-  },
   "linkedAccounts": {
     "description": "Linked AWS Accounts",
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
   },
-  "productList": {
+  "awsPriceMultiplier": {
+    "required": true,
+    "min": 1,
+    "defaultsTo": 1,
+    "type": "float"
+  },
+  "products": {
     "description": "Add products to monthly invoice",
     "productList": true,
     "type": "array"
+  },
+  "responsables": {
+    "description": "Send AWS Account notifications to these users",
+    "type": "array",
+    "multiple": "user"
   }
 }

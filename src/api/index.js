@@ -39,7 +39,7 @@ import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
-import { AwsReport } from './AwsReportApi'
+import { AwsUsageReport } from './AwsUsageReportApi'
 import { Invoice } from './InvoiceApi'
 
 export class Apis {
@@ -83,7 +83,7 @@ export class Apis {
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
-    this.awsReport = new AwsReport(params)
+    this.awsUsageReport = new AwsUsageReport(params)
     this.invoice = new Invoice(params)
   }
 }
