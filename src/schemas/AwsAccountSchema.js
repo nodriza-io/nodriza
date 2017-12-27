@@ -34,7 +34,6 @@ module.exports = {
     "model": "company"
   },
   "invoiceCurrency": {
-    "required": true,
     "type": "string",
     "model": "currency"
   },
@@ -109,29 +108,19 @@ module.exports = {
     "defaultsTo": 0,
     "type": "float"
   },
-  "maxSpendPerMonthAlert": {
-    "description": "Notify responsables as soon as a bill surpasses a defined threshold per day",
-    "defaultsTo": 0,
-    "type": "float"
-  },
-  "maxSpendPerDayAlert": {
-    "description": "Notify responsables as soon as a bill surpasses a defined threshold per month",
-    "defaultsTo": 0,
-    "type": "float"
-  },
-  "maxSpendPerHourAlert": {
-    "description": "Notify responsables as soon as a bill surpasses a defined threshold per hour",
-    "defaultsTo": 0,
-    "type": "float"
-  },
   "linkedAccounts": {
     "description": "Linked AWS Accounts",
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
   },
-  "responsables": {
+  "accountResponsables": {
     "description": "Send AWS Account notifications to these users",
+    "type": "array",
+    "multiple": "user"
+  },
+  "paymentResponsables": {
+    "description": "Send notifications when a new invoice has been approved or on an overdue",
     "type": "array",
     "multiple": "user"
   }
