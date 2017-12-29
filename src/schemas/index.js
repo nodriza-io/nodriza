@@ -34,7 +34,6 @@ import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
 import CostCenter from './CostCenterSchema'
-import AwsDataTransfer from './AwsDataTransferSchema'
 import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
@@ -79,7 +78,6 @@ export class Schemas {
     this.category = Category
     this.product = Product
     this.costCenter = CostCenter
-    this.awsDataTransfer = AwsDataTransfer
     this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
     this.systemProcess = SystemProcess
     this.cronPreset = CronPreset

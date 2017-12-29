@@ -77,6 +77,10 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "exchangeRate": {
+    "type": "float",
+    "skipAll": true
+  },
   "paymentResponsibles": {
     "description": "Send notifications about this AWS Account payments to these users",
     "type": "array",

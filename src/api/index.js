@@ -34,7 +34,6 @@ import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
 import { CostCenter } from './CostCenterApi'
-import { AwsDataTransfer } from './AwsDataTransferApi'
 import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
@@ -79,7 +78,6 @@ export class Apis {
     this.category = new Category(params)
     this.product = new Product(params)
     this.costCenter = new CostCenter(params)
-    this.awsDataTransfer = new AwsDataTransfer(params)
     this.awsIopsMonthProvisioned = new AwsIopsMonthProvisioned(params)
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)

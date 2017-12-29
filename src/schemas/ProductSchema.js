@@ -54,7 +54,8 @@ module.exports = {
   "price": {
     "description": "Product Price",
     "type": "float",
-    "currency": true
+    "currency": true,
+    "defaultsTo": 0
   },
   "currency": {
     "required": true,
