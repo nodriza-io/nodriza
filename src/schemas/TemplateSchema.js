@@ -1,4 +1,12 @@
 module.exports = {
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -9,30 +17,11 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
-  "oem": {
-    "description": "Essential data required by platform",
-    "example": false,
-    "required": true,
-    "type": "boolean",
-    "defaultsTo": true
-  },
-  "keyname": {
-    "description": "Unique name identifier",
-    "type": "string",
-    "required": true,
-    "alphanumeric": true,
-    "primaryKey": true
-  },
-  "body": {
-    "description": "Body template",
-    "type": "string",
-    "required": true,
-    "html": true
-  },
   "type": {
     "required": true,
     "type": "string",
     "enum": [
+      "invoice",
       "email",
       "contract",
       "content",
@@ -40,10 +29,18 @@ module.exports = {
       "system"
     ]
   },
-  "createdAt": {
-    "type": "datetime"
+  "keyname": {
+    "description": "Unique keyname identifier. Only alphanumeric, dash and underscore allowed",
+    "type": "string",
+    "required": true,
+    "primaryKey": true,
+    "unique": true,
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
   },
-  "updatedAt": {
-    "type": "datetime"
+  "body": {
+    "description": "Body template",
+    "type": "string",
+    "required": true,
+    "html": true
   }
 }

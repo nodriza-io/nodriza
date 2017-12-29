@@ -11,10 +11,10 @@ import { Lead } from './LeadApi'
 import { Plan } from './PlanApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
+import { Template } from './TemplateApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
-import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
@@ -41,6 +41,7 @@ import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { AwsUsageReport } from './AwsUsageReportApi'
 import { Invoice } from './InvoiceApi'
+import { Contact } from './ContactApi'
 
 export class Apis {
   constructor (params) {
@@ -55,10 +56,10 @@ export class Apis {
     this.plan = new Plan(params)
     this.role = new Role(params)
     this.service = new Service(params)
+    this.template = new Template(params)
     this.token = new Token(params)
     this.user = new User(params)
     this.department = new Department(params)
-    this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
@@ -85,5 +86,6 @@ export class Apis {
     this.awsRecord = new AwsRecord(params)
     this.awsUsageReport = new AwsUsageReport(params)
     this.invoice = new Invoice(params)
+    this.contact = new Contact(params)
   }
 }

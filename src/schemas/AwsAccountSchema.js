@@ -114,13 +114,13 @@ module.exports = {
     "defaultsTo": [],
     "skipAll": true
   },
-  "UsersInChargeOfOperation": {
-    "description": "Send notifications about this AWS Account operations to these users",
+  "operationResponsibles": {
+    "description": "Send notifications about account operations to these users",
     "type": "array",
     "multiple": "user"
   },
-  "UsersInChargeOfPayment": {
-    "description": "Send notifications about this AWS Account payments to these users",
+  "paymentResponsibles": {
+    "description": "Send notifications about invoice payments to these users",
     "type": "array",
     "multiple": "user"
   }

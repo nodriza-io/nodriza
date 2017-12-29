@@ -11,10 +11,10 @@ import Lead from './LeadSchema'
 import Plan from './PlanSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
+import Template from './TemplateSchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
-import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
@@ -41,6 +41,7 @@ import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import AwsUsageReport from './AwsUsageReportSchema'
 import Invoice from './InvoiceSchema'
+import Contact from './ContactSchema'
 
 export class Schemas {
   constructor (params) {
@@ -55,10 +56,10 @@ export class Schemas {
     this.plan = Plan
     this.role = Role
     this.service = Service
+    this.template = Template
     this.token = Token
     this.user = User
     this.department = Department
-    this.template = Template
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency
@@ -85,5 +86,6 @@ export class Schemas {
     this.awsRecord = AwsRecord
     this.awsUsageReport = AwsUsageReport
     this.invoice = Invoice
+    this.contact = Contact
   }
 }
