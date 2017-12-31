@@ -36,6 +36,10 @@ module.exports = {
       "due"
     ]
   },
+  "host": {
+    "model": "company",
+    "skipAll": true
+  },
   "client": {
     "description": "Client who will receive the invoice",
     "required": true,
