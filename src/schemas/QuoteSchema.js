@@ -22,16 +22,6 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "proposal": {
-    "description": "Detailed quote proposal.",
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "quotes"
-    }
-  },
   "status": {
     "required": true,
     "type": "string",
@@ -48,29 +38,9 @@ module.exports = {
     "description": "Expiration date determines when the quote expires",
     "type": "datetime"
   },
-  "sharing": {
-    "description": "Public quotes can be access by users who has the link",
-    "required": true,
-    "type": "string",
-    "enum": [
-      "Public",
-      "Private"
-    ],
-    "defaultsTo": "Public"
-  },
   "thumb": {
     "description": "Quote thumbnail",
     "type": "string",
-    "skipAll": true
-  },
-  "pdf": {
-    "description": "Quote in PDF Format",
-    "type": "string",
-    "skipAll": true
-  },
-  "views": {
-    "description": "Number of quote views",
-    "type": "array",
     "skipAll": true
   },
   "relatedLead": {
@@ -82,5 +52,31 @@ module.exports = {
     "description": "Select the user that is related with this quote",
     "model": "user",
     "mustExist": true
+  },
+  "exchangeRate": {
+    "type": "float",
+    "skipAll": true
+  },
+  "products": {
+    "description": "Add products to invoice",
+    "productList": true,
+    "type": "json",
+    "defaultsTo": []
+  },
+  "template": {
+    "description": "Detailed quote proposal.",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "quotes"
+    }
+  },
+  "views": {
+    "description": "How many views has the invoice",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }

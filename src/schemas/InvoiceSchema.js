@@ -43,6 +43,7 @@ module.exports = {
   "client": {
     "description": "Client who will receive the invoice",
     "required": true,
+    "mustExist": true,
     "model": "company"
   },
   "currency": {
@@ -90,9 +91,25 @@ module.exports = {
     "type": "array",
     "multiple": "user"
   },
+  "template": {
+    "description": "Detailed quote proposal.",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "invoice"
+    }
+  },
   "specialObservations": {
     "description": "Specify if the invoice has some special observation",
     "type": "string",
     "longtext": true
+  },
+  "views": {
+    "description": "How many views has the invoice",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }
