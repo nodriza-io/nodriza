@@ -7,6 +7,7 @@ import { AwsInstance } from './AwsInstanceApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Exchange } from './ExchangeApi'
+import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { Plan } from './PlanApi'
 import { Role } from './RoleApi'
@@ -39,7 +40,6 @@ import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { AwsUsageReport } from './AwsUsageReportApi'
-import { Invoice } from './InvoiceApi'
 import { Contact } from './ContactApi'
 
 export class Apis {
@@ -51,6 +51,7 @@ export class Apis {
     this.company = new Company(params)
     this.config = new Config(params)
     this.exchange = new Exchange(params)
+    this.invoice = new Invoice(params)
     this.lead = new Lead(params)
     this.plan = new Plan(params)
     this.role = new Role(params)
@@ -83,7 +84,6 @@ export class Apis {
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
     this.awsUsageReport = new AwsUsageReport(params)
-    this.invoice = new Invoice(params)
     this.contact = new Contact(params)
   }
 }

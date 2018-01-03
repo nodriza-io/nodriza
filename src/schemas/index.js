@@ -7,6 +7,7 @@ import AwsInstance from './AwsInstanceSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Exchange from './ExchangeSchema'
+import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import Plan from './PlanSchema'
 import Role from './RoleSchema'
@@ -39,7 +40,6 @@ import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import AwsUsageReport from './AwsUsageReportSchema'
-import Invoice from './InvoiceSchema'
 import Contact from './ContactSchema'
 
 export class Schemas {
@@ -51,6 +51,7 @@ export class Schemas {
     this.company = Company
     this.config = Config
     this.exchange = Exchange
+    this.invoice = Invoice
     this.lead = Lead
     this.plan = Plan
     this.role = Role
@@ -83,7 +84,6 @@ export class Schemas {
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
     this.awsUsageReport = AwsUsageReport
-    this.invoice = Invoice
     this.contact = Contact
   }
 }
