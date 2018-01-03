@@ -74,11 +74,5 @@ module.exports = {
   "exchangeRate": {
     "type": "float",
     "skipAll": true
-  },
-  "views": {
-    "description": "How many views has the invoice",
-    "type": "array",
-    "defaultsTo": [],
-    "skipAll": true
   }
 }

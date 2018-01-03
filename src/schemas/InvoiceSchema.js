@@ -105,11 +105,5 @@ module.exports = {
     "description": "Specify if the invoice has some special observation",
     "type": "string",
     "longtext": true
-  },
-  "views": {
-    "description": "How many views has the invoice",
-    "type": "array",
-    "defaultsTo": [],
-    "skipAll": true
   }
 }

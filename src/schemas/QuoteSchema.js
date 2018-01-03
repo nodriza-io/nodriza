@@ -72,11 +72,5 @@ module.exports = {
     "query": {
       "type": "quotes"
     }
-  },
-  "views": {
-    "description": "How many views has the invoice",
-    "type": "array",
-    "defaultsTo": [],
-    "skipAll": true
   }
 }
