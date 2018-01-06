@@ -41,7 +41,7 @@ import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { AwsUsageReport } from './AwsUsageReportApi'
-import { Contact } from './ContactApi'
+import { Contract } from './ContractApi'
 
 export class Apis {
   constructor (params) {
@@ -86,6 +86,6 @@ export class Apis {
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
     this.awsUsageReport = new AwsUsageReport(params)
-    this.contact = new Contact(params)
+    this.contract = new Contract(params)
   }
 }

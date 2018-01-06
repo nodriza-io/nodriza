@@ -41,7 +41,7 @@ import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import AwsUsageReport from './AwsUsageReportSchema'
-import Contact from './ContactSchema'
+import Contract from './ContractSchema'
 
 export class Schemas {
   constructor (params) {
@@ -86,6 +86,6 @@ export class Schemas {
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
     this.awsUsageReport = AwsUsageReport
-    this.contact = Contact
+    this.contract = Contract
   }
 }
