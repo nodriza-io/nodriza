@@ -22,6 +22,8 @@ module.exports = {
   "contractNumber": {
     "description": "Unique contract idetification number",
     "unique": true,
+    "defaultsTo": "lzMpHqlu",
+    "displayName": true,
     "type": "string"
   },
   "title": {
@@ -29,20 +31,24 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "startDate": {
+  "status": {
+    "required": true,
+    "type": "string",
+    "defaultsTo": "Draft",
+    "enum": [
+      "Draft",
+      "Approved",
+      "Canceled"
+    ]
+  },
+  "effectiveDate": {
     "type": "datetime"
   },
-  "endDate": {
+  "expirationDate": {
     "type": "datetime"
-  },
-  "products": {
-    "description": "Add products to invoice",
-    "productList": true,
-    "type": "json",
-    "defaultsTo": []
   },
   "template": {
-    "description": "Detailed quote proposal.",
+    "description": "Contract template",
     "required": true,
     "type": "string",
     "html": true,
@@ -66,13 +72,10 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
-  "contractResponsibles": {
-    "description": "Users in charge of this contract",
-    "type": "array",
-    "multiple": "user"
+  "firstProfile": {
+    "model": "user"
   },
-  "exchangeRate": {
-    "type": "float",
-    "skipAll": true
+  "secondProfile": {
+    "model": "user"
   }
 }

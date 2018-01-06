@@ -20,6 +20,12 @@ module.exports = {
   "invoiceNumber": {
     "description": "Unique invoice idetification number",
     "unique": true,
+    "displayName": true,
+    "type": "string"
+  },
+  "title": {
+    "required": true,
+    "displayName": true,
     "type": "string"
   },
   "status": {
@@ -29,7 +35,6 @@ module.exports = {
     "enum": [
       "draft",
       "approved",
-      "delivered",
       "partial",
       "paid",
       "cancelled",
@@ -105,5 +110,9 @@ module.exports = {
     "description": "Specify if the invoice has some special observation",
     "type": "string",
     "longtext": true
+  },
+  "deliveredOn": {
+    "type": "datetime",
+    "skipAll": true
   }
 }

@@ -12,23 +12,19 @@ export class Template extends Request {
     super(params)
   }
   /**
-  * GET /v1/template/view [PUBLIC]
+  * GET /v1/template/view/{type}/{id}/{ext} [PUBLIC]
   *
-  * Calculate live currency and foreign exchange rates
+  * Render templates
   *
   * @param  {Object} params
-  * - @param  {String} type  -> (In query) Invoice ID
-  * - @param  {String} keyname  -> (In query) Invoice unique keyname
-  * - @param  {String} id  -> (In query) Resource ID
-  * - @param  {String} format  -> (In query) PDF canvas size
-  * - @param  {String} ext  -> (In query) Desired extension, pdf or html format
+  * - @param  {String} type * -> (In path) Type of template
+  * - @param  {String} id * -> (In path) Resource ID
+  * - @param  {String} ext * -> (In path) Invoice extention
   * @param  {Function} callback
-  * @return {Code} 200, 403
+  * @return {Code} 200, 403, 404
   */
   view (params, callback) {
-    let url = '/v1/template/view'
-    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
-    this.get(url, (err, data) => {
+    this.get('/v1/template/view/{type}/{id}/' + params['ext'], (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

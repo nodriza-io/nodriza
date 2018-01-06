@@ -12,6 +12,7 @@ import Lead from './LeadSchema'
 import Plan from './PlanSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
+import Signature from './SignatureSchema'
 import Template from './TemplateSchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
@@ -56,6 +57,7 @@ export class Schemas {
     this.plan = Plan
     this.role = Role
     this.service = Service
+    this.signature = Signature
     this.template = Template
     this.token = Token
     this.user = User

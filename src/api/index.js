@@ -12,6 +12,7 @@ import { Lead } from './LeadApi'
 import { Plan } from './PlanApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
+import { Signature } from './SignatureApi'
 import { Template } from './TemplateApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
@@ -56,6 +57,7 @@ export class Apis {
     this.plan = new Plan(params)
     this.role = new Role(params)
     this.service = new Service(params)
+    this.signature = new Signature(params)
     this.template = new Template(params)
     this.token = new Token(params)
     this.user = new User(params)

@@ -17,7 +17,7 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "subject": {
+  "title": {
     "required": true,
     "displayName": true,
     "type": "string"
@@ -33,6 +33,16 @@ module.exports = {
       "Acepted",
       "Denied"
     ]
+  },
+  "template": {
+    "description": "Detailed quote proposal.",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "quotes"
+    }
   },
   "expirationDate": {
     "description": "Expiration date determines when the quote expires",
@@ -63,14 +73,11 @@ module.exports = {
     "type": "json",
     "defaultsTo": []
   },
-  "template": {
-    "description": "Detailed quote proposal.",
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "quotes"
-    }
+  "quoteNumber": {
+    "description": "Unique quote idetification number",
+    "unique": true,
+    "defaultsTo": "9iC6gKfk",
+    "displayName": true,
+    "type": "string"
   }
 }

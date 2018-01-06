@@ -83,4 +83,22 @@ export class Service extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/service/qr [PUBLIC]
+  *
+  * Return SVG Qr Code
+  *
+  * @param  {Object} params
+  * - @param  {String} url  -> (In query) Url string
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  qr (params, callback) {
+    let url = '/v1/service/qr'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
