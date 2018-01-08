@@ -44,6 +44,16 @@ module.exports = {
       "type": "quotes"
     }
   },
+  "content": {
+    "description": "Quote content.",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "content"
+    }
+  },
   "expirationDate": {
     "description": "Expiration date determines when the quote expires",
     "type": "datetime"
@@ -76,7 +86,7 @@ module.exports = {
   "quoteNumber": {
     "description": "Unique quote idetification number",
     "unique": true,
-    "defaultsTo": "H5ji2Ytw",
+    "defaultsTo": "22z9sjLe",
     "displayName": true,
     "type": "string"
   }

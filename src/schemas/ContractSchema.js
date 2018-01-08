@@ -22,12 +22,7 @@ module.exports = {
   "contractNumber": {
     "description": "Unique contract idetification number",
     "unique": true,
-    "defaultsTo": "f7AU36Tc",
-    "displayName": true,
-    "type": "string"
-  },
-  "title": {
-    "required": true,
+    "defaultsTo": "Vso0mxNn",
     "displayName": true,
     "type": "string"
   },
@@ -40,6 +35,11 @@ module.exports = {
       "Approved",
       "Canceled"
     ]
+  },
+  "title": {
+    "required": true,
+    "displayName": true,
+    "type": "string"
   },
   "effectiveDate": {
     "type": "datetime"
@@ -57,25 +57,16 @@ module.exports = {
       "type": "contract"
     }
   },
-  "amount": {
-    "type": "float",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
-  "tax": {
-    "type": "float",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
-  "total": {
-    "type": "float",
-    "defaultsTo": 0,
-    "skipAll": true
-  },
   "firstProfile": {
     "model": "user"
   },
   "secondProfile": {
+    "model": "user"
+  },
+  "thirdProfile": {
+    "model": "user"
+  },
+  "fourthProfile": {
     "model": "user"
   }
 }

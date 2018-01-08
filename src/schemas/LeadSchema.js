@@ -30,12 +30,24 @@ module.exports = {
     ],
     "defaultsTo": "open"
   },
+  "firstName": {
+    "required": true,
+    "description": "User first name",
+    "example": "John",
+    "type": "string",
+    "displayName": true,
+    "notEmpty": true
+  },
+  "lastName": {
+    "description": "User last name",
+    "example": "Doe",
+    "displayName": true,
+    "type": "string"
+  },
   "companyName": {
     "description": "Company friendly name",
     "example": "Acme",
-    "required": true,
-    "type": "string",
-    "displayName": true
+    "type": "string"
   },
   "companyShortname": {
     "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
@@ -44,17 +56,6 @@ module.exports = {
     "regex": "/^([a-z0-9_-]+)$/",
     "minLength": 2,
     "maxLength": 32
-  },
-  "firstName": {
-    "description": "User first name",
-    "example": "John",
-    "type": "string",
-    "notEmpty": true
-  },
-  "lastName": {
-    "description": "User last name",
-    "example": "Doe",
-    "type": "string"
   },
   "email": {
     "description": "User email",

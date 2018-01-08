@@ -63,6 +63,11 @@ module.exports = {
     "model": "department",
     "mustExist": true
   },
+  "identificationNumber": {
+    "description": "User identificationNumber number",
+    "example": "80103085",
+    "type": "string"
+  },
   "mobile": {
     "description": "User mobile number",
     "example": "57 311 521 3448",
