@@ -290,9 +290,9 @@ module.exports = {
     "description": "Rate how close is this lead to become a client",
     "type": "string",
     "enum": [
-      "hot",
-      "warm",
-      "cold"
+      "Hot",
+      "Warm",
+      "Cold"
     ]
   },
   "avatars": {

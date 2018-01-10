@@ -17,6 +17,13 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "quoteNumber": {
+    "description": "Unique quote idetification number",
+    "unique": true,
+    "defaultsTo": "v4kMDNX8",
+    "displayName": true,
+    "type": "string"
+  },
   "title": {
     "required": true,
     "displayName": true,
@@ -25,12 +32,12 @@ module.exports = {
   "status": {
     "required": true,
     "type": "string",
-    "defaultsTo": "In Review",
+    "defaultsTo": "Draft",
     "enum": [
       "Draft",
-      "In Review",
+      "Ready",
       "Presented",
-      "Acepted",
+      "Accepted",
       "Denied"
     ]
   },
@@ -54,14 +61,18 @@ module.exports = {
       "type": "content"
     }
   },
+  "products": {
+    "description": "Add products to invoice",
+    "productList": true,
+    "type": "json",
+    "defaultsTo": []
+  },
+  "currency": {
+    "model": "currency"
+  },
   "expirationDate": {
     "description": "Expiration date determines when the quote expires",
     "type": "datetime"
-  },
-  "thumb": {
-    "description": "Quote thumbnail",
-    "type": "string",
-    "skipAll": true
   },
   "relatedLead": {
     "description": "Select the lead that is related with this quote",
@@ -73,21 +84,32 @@ module.exports = {
     "model": "user",
     "mustExist": true
   },
+  "amount": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
+  "tax": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
+  "total": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
   "exchangeRate": {
     "type": "float",
     "skipAll": true
   },
-  "products": {
-    "description": "Add products to invoice",
-    "productList": true,
-    "type": "json",
-    "defaultsTo": []
-  },
-  "quoteNumber": {
-    "description": "Unique quote idetification number",
-    "unique": true,
-    "defaultsTo": "22z9sjLe",
-    "displayName": true,
-    "type": "string"
+  "rating": {
+    "description": "Quote scoring status",
+    "type": "string",
+    "enum": [
+      "Hot",
+      "Warm",
+      "Cold"
+    ]
   }
 }

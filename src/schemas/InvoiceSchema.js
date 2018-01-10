@@ -59,12 +59,6 @@ module.exports = {
   "dueDate": {
     "type": "datetime"
   },
-  "products": {
-    "description": "Add products to invoice",
-    "productList": true,
-    "type": "json",
-    "defaultsTo": []
-  },
   "amount": {
     "type": "float",
     "defaultsTo": 0,
@@ -94,21 +88,27 @@ module.exports = {
       "type": "invoice"
     }
   },
-  "paymentResponsibles": {
-    "description": "Send notifications about this AWS Account payments to these users",
-    "type": "array",
-    "multiple": "user"
+  "specialObservations": {
+    "description": "Specify if the invoice has some special observation",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "content"
+    }
+  },
+  "products": {
+    "description": "Add products to invoice",
+    "productList": true,
+    "type": "json",
+    "defaultsTo": []
   },
   "currency": {
     "model": "currency"
   },
-  "specialObservations": {
-    "description": "Specify if the invoice has some special observation",
-    "type": "string",
-    "longtext": true
-  },
-  "deliveredOn": {
-    "type": "datetime",
-    "skipAll": true
+  "paymentResponsibles": {
+    "description": "Send notifications about this AWS Account payments to these users",
+    "type": "array",
+    "multiple": "user"
   }
 }
