@@ -53,6 +53,25 @@ module.exports = {
     "model": "awsUsageReport",
     "skipAll": true
   },
+  "template": {
+    "description": "Detailed quote proposal.",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "invoice"
+    }
+  },
+  "specialObservations": {
+    "description": "Specify if the invoice has some special observation",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "content"
+    }
+  },
   "issueDate": {
     "type": "datetime"
   },
@@ -77,25 +96,6 @@ module.exports = {
   "exchangeRate": {
     "type": "float",
     "skipAll": true
-  },
-  "template": {
-    "description": "Detailed quote proposal.",
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "invoice"
-    }
-  },
-  "specialObservations": {
-    "description": "Specify if the invoice has some special observation",
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "content"
-    }
   },
   "products": {
     "description": "Add products to invoice",

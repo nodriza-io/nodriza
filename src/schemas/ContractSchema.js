@@ -42,12 +42,6 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "effectiveDate": {
-    "type": "datetime"
-  },
-  "expirationDate": {
-    "type": "datetime"
-  },
   "template": {
     "description": "Contract template",
     "required": true,
@@ -67,6 +61,12 @@ module.exports = {
     "query": {
       "type": "content"
     }
+  },
+  "effectiveDate": {
+    "type": "datetime"
+  },
+  "expirationDate": {
+    "type": "datetime"
   },
   "firstProfile": {
     "model": "user"

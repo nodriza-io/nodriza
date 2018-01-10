@@ -17,6 +17,21 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "title": {
+    "description": "Template friendly name",
+    "required": true,
+    "type": "string",
+    "displayName": true
+  },
+  "keyname": {
+    "description": "Unique keyname identifier. Only alphanumeric, dash and underscore allowed",
+    "required": true,
+    "type": "string",
+    "primaryKey": true,
+    "unique": true,
+    "maxLength": 256,
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
+  },
   "type": {
     "required": true,
     "type": "string",
@@ -28,14 +43,6 @@ module.exports = {
       "quotes",
       "system"
     ]
-  },
-  "keyname": {
-    "description": "Unique keyname identifier. Only alphanumeric, dash and underscore allowed",
-    "type": "string",
-    "required": true,
-    "primaryKey": true,
-    "unique": true,
-    "regex": "/^([a-zA-Z0-9_-]+)$/"
   },
   "body": {
     "description": "Body template",
