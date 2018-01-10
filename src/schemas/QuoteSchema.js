@@ -20,7 +20,7 @@ module.exports = {
   "quoteNumber": {
     "description": "Unique quote idetification number",
     "unique": true,
-    "defaultsTo": "ia22owBz",
+    "defaultsTo": "3rOHe2bO",
     "displayName": true,
     "type": "string"
   },
@@ -31,6 +31,7 @@ module.exports = {
   },
   "status": {
     "required": true,
+    "skipAll": true,
     "type": "string",
     "defaultsTo": "Draft",
     "enum": [
