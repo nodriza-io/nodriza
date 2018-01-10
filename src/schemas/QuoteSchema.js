@@ -20,7 +20,7 @@ module.exports = {
   "quoteNumber": {
     "description": "Unique quote idetification number",
     "unique": true,
-    "defaultsTo": "3rOHe2bO",
+    "random": 8,
     "displayName": true,
     "type": "string"
   },
@@ -71,6 +71,15 @@ module.exports = {
   "currency": {
     "model": "currency"
   },
+  "rating": {
+    "description": "Quote scoring status",
+    "type": "string",
+    "enum": [
+      "Hot",
+      "Warm",
+      "Cold"
+    ]
+  },
   "expirationDate": {
     "description": "Expiration date determines when the quote expires",
     "type": "datetime"
@@ -103,14 +112,5 @@ module.exports = {
   "exchangeRate": {
     "type": "float",
     "skipAll": true
-  },
-  "rating": {
-    "description": "Quote scoring status",
-    "type": "string",
-    "enum": [
-      "Hot",
-      "Warm",
-      "Cold"
-    ]
   }
 }

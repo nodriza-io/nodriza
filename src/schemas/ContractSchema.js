@@ -22,7 +22,7 @@ module.exports = {
   "contractNumber": {
     "description": "Unique contract idetification number",
     "unique": true,
-    "defaultsTo": "gmh1uegu",
+    "random": 8,
     "displayName": true,
     "type": "string"
   },
@@ -55,6 +55,16 @@ module.exports = {
     "target": "template",
     "query": {
       "type": "contract"
+    }
+  },
+  "content": {
+    "description": "Contract content",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "content"
     }
   },
   "firstProfile": {
