@@ -20,7 +20,7 @@ module.exports = {
   "quoteNumber": {
     "description": "Unique quote idetification number",
     "unique": true,
-    "defaultsTo": "v4kMDNX8",
+    "defaultsTo": "ia22owBz",
     "displayName": true,
     "type": "string"
   },

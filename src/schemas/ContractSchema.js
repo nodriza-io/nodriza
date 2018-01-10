@@ -22,7 +22,7 @@ module.exports = {
   "contractNumber": {
     "description": "Unique contract idetification number",
     "unique": true,
-    "defaultsTo": "odmUzlgL",
+    "defaultsTo": "1EF7RQ0K",
     "displayName": true,
     "type": "string"
   },

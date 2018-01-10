@@ -10,6 +10,7 @@ import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { Plan } from './PlanApi'
+import { Quote } from './QuoteApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Signature } from './SignatureApi'
@@ -30,7 +31,6 @@ import { AwsElasticIp } from './AwsElasticIpApi'
 import { Cron } from './CronApi'
 import { Log } from './LogApi'
 import { Activity } from './ActivityApi'
-import { Quote } from './QuoteApi'
 import { AwsAccount } from './AwsAccountApi'
 import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
@@ -55,6 +55,7 @@ export class Apis {
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
     this.plan = new Plan(params)
+    this.quote = new Quote(params)
     this.role = new Role(params)
     this.service = new Service(params)
     this.signature = new Signature(params)
@@ -75,7 +76,6 @@ export class Apis {
     this.cron = new Cron(params)
     this.log = new Log(params)
     this.activity = new Activity(params)
-    this.quote = new Quote(params)
     this.awsAccount = new AwsAccount(params)
     this.tax = new Tax(params)
     this.category = new Category(params)

@@ -10,6 +10,7 @@ import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import Plan from './PlanSchema'
+import Quote from './QuoteSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
@@ -30,7 +31,6 @@ import AwsElasticIp from './AwsElasticIpSchema'
 import Cron from './CronSchema'
 import Log from './LogSchema'
 import Activity from './ActivitySchema'
-import Quote from './QuoteSchema'
 import AwsAccount from './AwsAccountSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
@@ -55,6 +55,7 @@ export class Schemas {
     this.invoice = Invoice
     this.lead = Lead
     this.plan = Plan
+    this.quote = Quote
     this.role = Role
     this.service = Service
     this.signature = Signature
@@ -75,7 +76,6 @@ export class Schemas {
     this.cron = Cron
     this.log = Log
     this.activity = Activity
-    this.quote = Quote
     this.awsAccount = AwsAccount
     this.tax = Tax
     this.category = Category
