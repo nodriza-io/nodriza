@@ -42,7 +42,7 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "template": {
+  "layout": {
     "description": "Contract template",
     "required": true,
     "type": "string",
@@ -59,7 +59,7 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "content"
+      "type": "contract"
     }
   },
   "effectiveDate": {

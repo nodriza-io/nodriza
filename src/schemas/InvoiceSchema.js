@@ -53,7 +53,7 @@ module.exports = {
     "model": "awsUsageReport",
     "skipAll": true
   },
-  "template": {
+  "layout": {
     "description": "Detailed quote proposal.",
     "required": true,
     "type": "string",
@@ -69,7 +69,7 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "content"
+      "type": "invoice"
     }
   },
   "issueDate": {

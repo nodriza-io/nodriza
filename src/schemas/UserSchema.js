@@ -57,6 +57,11 @@ module.exports = {
     "model": "company",
     "mustExist": true
   },
+  "position": {
+    "description": "Company user position",
+    "example": "Manager",
+    "type": "string"
+  },
   "department": {
     "description": "Company department where the user belongs",
     "example": "5940200e93e326e90c636826",
