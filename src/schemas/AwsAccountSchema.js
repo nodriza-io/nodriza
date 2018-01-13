@@ -33,29 +33,6 @@ module.exports = {
     "description": "Client who has been assigned the AWS account",
     "model": "company"
   },
-  "invoiceCurrency": {
-    "type": "string",
-    "model": "currency"
-  },
-  "products": {
-    "description": "Add products to monthly invoice",
-    "productList": true,
-    "type": "array",
-    "defaultsTo": []
-  },
-  "awsPriceMultiplier": {
-    "required": true,
-    "min": 1,
-    "defaultsTo": 1,
-    "type": "float"
-  },
-  "iamUser": {
-    "description": "User assigned to perform Nodriza operations",
-    "example": "nodrizaUser",
-    "type": "string",
-    "skipAll": true,
-    "defaultsTo": "NodrizaUser"
-  },
   "awsAccessKey": {
     "description": "Access key to sign programmatic requests to AWS",
     "example": "BKIAJAANEDJGCJF3EV5Q",
@@ -66,6 +43,13 @@ module.exports = {
     "description": "Secret Access key to sign programmatic requests to AWS",
     "example": "DvUYrhGpLahKWK4GSzl4O6WUXN8iW37duHlvdqYu",
     "type": "string"
+  },
+  "iamUser": {
+    "description": "User assigned to perform Nodriza operations",
+    "example": "nodrizaUser",
+    "type": "string",
+    "skipAll": true,
+    "defaultsTo": "NodrizaUser"
   },
   "enableAutoTag": {
     "description": "Automatically create tags for detailed usage tracking (Required to generate plans)",
@@ -78,35 +62,62 @@ module.exports = {
     "defaultsTo": false,
     "type": "boolean"
   },
+  "region": {
+    "description": "Prefered region for this AWS account",
+    "example": "us-east-1",
+    "required": true,
+    "skipAll": true,
+    "defaultsTo": "us-east-1",
+    "type": "string",
+    "model": "awsRegion"
+  },
   "billingReportBucket": {
     "description": "Bucket for AWS billing reports",
     "example": "billing-reports-bucket",
     "regex": "/^([a-z0-9-.]+)$/",
     "type": "string"
   },
-  "region": {
-    "description": "Prefered region for this AWS account",
-    "example": "us-east-1",
-    "required": true,
-    "mustExist": true,
-    "defaultsTo": {
-      "id": "58f39b53bea9698030a88686",
-      "regionName": "us-east-1",
-      "location": "US East (N. Virginia)"
-    },
-    "type": "string",
-    "model": "awsRegion"
-  },
-  "payerAwsAccount": {
-    "description": "Specify a payer account for linked accounts",
-    "model": "awsAccount",
-    "mustExist": true,
-    "skipAll": true
-  },
   "monthlyBudget": {
     "description": "Set a monthly billing budget",
     "defaultsTo": 0,
     "type": "float"
+  },
+  "invoiceTitle": {
+    "required": true,
+    "type": "string",
+    "defaultsTo": "Monthly Invoice"
+  },
+  "invoiceTemplate": {
+    "model": "template",
+    "type": "string"
+  },
+  "invoiceCurrency": {
+    "type": "string",
+    "model": "currency"
+  },
+  "invoiceDaysOutstanding": {
+    "type": "integer",
+    "defaultsTo": 30
+  },
+  "awsCommisionMultiplier": {
+    "required": true,
+    "min": 1,
+    "defaultsTo": 1,
+    "type": "float"
+  },
+  "additionalProducts": {
+    "description": "Add products to monthly invoice",
+    "productList": true,
+    "type": "array",
+    "defaultsTo": []
+  },
+  "awsProductTax": {
+    "model": "tax",
+    "required": true,
+    "defaultsTo": {
+      "id": "59f8a10999a8b600610f74ef",
+      "taxName": "No Tax"
+    }
   },
   "linkedAccounts": {
     "description": "Linked AWS Accounts",
@@ -123,5 +134,11 @@ module.exports = {
     "description": "Send notifications about invoice payments to these users",
     "type": "array",
     "multiple": "user"
+  },
+  "payerAwsAccount": {
+    "description": "Specify a payer account for linked accounts",
+    "model": "awsAccount",
+    "mustExist": true,
+    "skipAll": true
   }
 }
