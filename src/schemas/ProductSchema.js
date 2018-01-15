@@ -17,6 +17,14 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "name": {
+    "type": "string",
+    "displayName": true,
+    "required": true
+  },
+  "description": {
+    "type": "string"
+  },
   "provider": {
     "description": "Company who provide this product",
     "model": "company",
@@ -26,14 +34,6 @@ module.exports = {
     "model": "category",
     "mustExist": true,
     "required": true
-  },
-  "name": {
-    "type": "string",
-    "displayName": true,
-    "required": true
-  },
-  "description": {
-    "type": "string"
   },
   "unit": {
     "description": "Product unit of measure",
@@ -65,6 +65,14 @@ module.exports = {
   "tax": {
     "model": "tax",
     "required": true
+  },
+  "SKU": {
+    "description": "Unique Stock Keeping Unit Number",
+    "unique": true,
+    "random": 8,
+    "required": true,
+    "displayName": true,
+    "type": "string"
   },
   "meta": {
     "type": "json",

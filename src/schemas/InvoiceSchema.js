@@ -88,6 +88,11 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "discount": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
   "total": {
     "type": "float",
     "defaultsTo": 0,

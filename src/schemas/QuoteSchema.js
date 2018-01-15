@@ -110,6 +110,11 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "discount": {
+    "type": "float",
+    "defaultsTo": 0,
+    "skipAll": true
+  },
   "exchangeRate": {
     "type": "float",
     "skipAll": true
