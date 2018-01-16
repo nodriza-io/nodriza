@@ -30,6 +30,24 @@ export class AwsBill extends Request {
     })
   }
   /**
+  * PUT /v1/awsBill/collect [PRIVATE]
+  *
+  * Collect billing report
+  *
+  * @param  {Object} params
+  * - @param  {String} awsAccountNumber * -> (In Body)  e.g 433535721478
+  * - @param  {String} period * -> (In Body)  e.g currentMonth
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  collect (body, callback) {
+    let params = {url: '/v1/awsBill/collect', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/awsBill/getReportByField [PRIVATE]
   *
   * Get bill report by field
