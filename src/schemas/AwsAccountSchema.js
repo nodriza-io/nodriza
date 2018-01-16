@@ -87,7 +87,11 @@ module.exports = {
     "type": "string",
     "defaultsTo": "Monthly Invoice"
   },
-  "invoiceTemplate": {
+  "invoiceLayout": {
+    "model": "template",
+    "type": "string"
+  },
+  "reportLayout": {
     "model": "template",
     "type": "string"
   },
@@ -105,7 +109,7 @@ module.exports = {
     "defaultsTo": 1,
     "type": "float"
   },
-  "additionalProducts": {
+  "products": {
     "description": "Add products to monthly invoice",
     "productList": true,
     "type": "array",

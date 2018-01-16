@@ -32,6 +32,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "layout": {
+    "description": "AWS Usage Report Template",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "report"
+    }
+  },
   "invoiceId": {
     "type": "string",
     "skipAll": true

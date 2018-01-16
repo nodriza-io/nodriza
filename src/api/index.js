@@ -4,6 +4,7 @@ import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { AwsBill } from './AwsBillApi'
 import { AwsInstance } from './AwsInstanceApi'
+import { AwsUsageReport } from './AwsUsageReportApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Exchange } from './ExchangeApi'
@@ -40,7 +41,6 @@ import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
-import { AwsUsageReport } from './AwsUsageReportApi'
 import { Contract } from './ContractApi'
 
 export class Apis {
@@ -49,6 +49,7 @@ export class Apis {
     this.apparience = new Apparience(params)
     this.awsBill = new AwsBill(params)
     this.awsInstance = new AwsInstance(params)
+    this.awsUsageReport = new AwsUsageReport(params)
     this.company = new Company(params)
     this.config = new Config(params)
     this.exchange = new Exchange(params)
@@ -85,7 +86,6 @@ export class Apis {
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
-    this.awsUsageReport = new AwsUsageReport(params)
     this.contract = new Contract(params)
   }
 }

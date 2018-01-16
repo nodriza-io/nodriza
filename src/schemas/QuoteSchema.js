@@ -37,8 +37,8 @@ module.exports = {
     "defaultsTo": "Draft",
     "enum": [
       "Draft",
-      "Ready",
       "Presented",
+      "Negotiation",
       "Accepted",
       "Denied"
     ]

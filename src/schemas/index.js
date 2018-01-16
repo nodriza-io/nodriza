@@ -4,6 +4,7 @@ import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import AwsBill from './AwsBillSchema'
 import AwsInstance from './AwsInstanceSchema'
+import AwsUsageReport from './AwsUsageReportSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Exchange from './ExchangeSchema'
@@ -40,7 +41,6 @@ import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
-import AwsUsageReport from './AwsUsageReportSchema'
 import Contract from './ContractSchema'
 
 export class Schemas {
@@ -49,6 +49,7 @@ export class Schemas {
     this.apparience = Apparience
     this.awsBill = AwsBill
     this.awsInstance = AwsInstance
+    this.awsUsageReport = AwsUsageReport
     this.company = Company
     this.config = Config
     this.exchange = Exchange
@@ -85,7 +86,6 @@ export class Schemas {
     this.systemProcess = SystemProcess
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
-    this.awsUsageReport = AwsUsageReport
     this.contract = Contract
   }
 }

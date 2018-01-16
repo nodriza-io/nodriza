@@ -37,10 +37,12 @@ module.exports = {
     "type": "string",
     "enum": [
       "invoice",
-      "email",
       "contract",
-      "content",
       "quotes",
+      "report",
+      "article",
+      "content",
+      "email",
       "system"
     ]
   },
