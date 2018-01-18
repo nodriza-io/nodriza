@@ -28,11 +28,24 @@ module.exports = {
     "type": "string"
   },
   "status": {
-    "required": true,
-    "type": "string"
+    "type": "string",
+    "enum": [
+      "Open",
+      "Pending Help Desk Action",
+      "Pending Client Action",
+      "Resolved",
+      "Closed"
+    ],
+    "defaultsTo": "unassigned"
   },
-  "severity": {
-    "required": true,
-    "type": "string"
+  "priority": {
+    "type": "string",
+    "enum": [
+      "Low",
+      "Medium",
+      "High",
+      "Critical"
+    ],
+    "defaultsTo": "Low"
   }
 }
