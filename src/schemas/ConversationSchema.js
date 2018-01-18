@@ -19,20 +19,19 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "displayId": {
-    "primaryKey": true,
+  "type": {
+    "required": true,
+    "type": "string"
+  },
+  "message": {
+    "description": "Case Messages",
+    "collection": "message",
+    "via": "id",
     "skipAll": true
   },
-  "subject": {
-    "required": true,
-    "type": "string"
-  },
-  "status": {
-    "required": true,
-    "type": "string"
-  },
-  "severity": {
-    "required": true,
-    "type": "string"
+  "attachment": {
+    "collection": "filedata",
+    "via": "id",
+    "skipAll": true
   }
 }

@@ -49,6 +49,7 @@ import { Case } from './CaseApi'
 import { Message } from './MessageApi'
 import { FileData } from './FileDataApi'
 import { Article } from './ArticleApi'
+import { Conversation } from './ConversationApi'
 
 export class Apis {
   constructor (params) {
@@ -101,5 +102,6 @@ export class Apis {
     this.message = new Message(params)
     this.fileData = new FileData(params)
     this.article = new Article(params)
+    this.conversation = new Conversation(params)
   }
 }

@@ -49,6 +49,7 @@ import Case from './CaseSchema'
 import Message from './MessageSchema'
 import FileData from './FileDataSchema'
 import Article from './ArticleSchema'
+import Conversation from './ConversationSchema'
 
 export class Schemas {
   constructor (params) {
@@ -101,5 +102,6 @@ export class Schemas {
     this.message = Message
     this.fileData = FileData
     this.article = Article
+    this.conversation = Conversation
   }
 }
