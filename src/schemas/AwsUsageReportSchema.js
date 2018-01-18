@@ -59,5 +59,9 @@ module.exports = {
   "costByDay": {
     "type": "array",
     "skipAll": true
+  },
+  "invoice": {
+    "model": "invoice",
+    "skipAll": true
   }
 }

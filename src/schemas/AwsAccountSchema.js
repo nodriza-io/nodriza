@@ -83,9 +83,7 @@ module.exports = {
     "type": "float"
   },
   "invoiceTitle": {
-    "required": true,
-    "type": "string",
-    "defaultsTo": "Monthly Invoice"
+    "type": "string"
   },
   "invoiceLayout": {
     "model": "template",

@@ -39,6 +39,7 @@ module.exports = {
       "invoice",
       "contract",
       "quotes",
+      "purchaseOrder",
       "report",
       "article",
       "content",

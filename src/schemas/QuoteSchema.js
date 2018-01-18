@@ -118,5 +118,9 @@ module.exports = {
   "exchangeRate": {
     "type": "float",
     "skipAll": true
+  },
+  "invoice": {
+    "model": "invoice",
+    "skipAll": true
   }
 }

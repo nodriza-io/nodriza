@@ -42,6 +42,13 @@ import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { Contract } from './ContractApi'
+import { InvoiceModel } from './InvoiceModelApi'
+import { Commission } from './CommissionApi'
+import { PurchaseOrder } from './PurchaseOrderApi'
+import { Case } from './CaseApi'
+import { Message } from './MessageApi'
+import { FileData } from './FileDataApi'
+import { Article } from './ArticleApi'
 
 export class Apis {
   constructor (params) {
@@ -87,5 +94,12 @@ export class Apis {
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
     this.contract = new Contract(params)
+    this.invoiceModel = new InvoiceModel(params)
+    this.commission = new Commission(params)
+    this.purchaseOrder = new PurchaseOrder(params)
+    this.case = new Case(params)
+    this.message = new Message(params)
+    this.fileData = new FileData(params)
+    this.article = new Article(params)
   }
 }
