@@ -23,10 +23,19 @@ module.exports = {
     "required": true,
     "type": "string"
   },
+  "shortDescription": {
+    "required": true,
+    "type": "string",
+    "longtext": true
+  },
   "category": {
     "model": "category",
     "mustExist": true,
-    "required": true
+    "required": true,
+    "defaultsTo": {
+      "slug": "general",
+      "name": "General"
+    }
   },
   "layout": {
     "description": "Article layout",
