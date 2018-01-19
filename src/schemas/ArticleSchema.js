@@ -19,6 +19,13 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "articleNumber": {
+    "description": "Unique article idetification number",
+    "unique": true,
+    "random": 8,
+    "displayName": true,
+    "type": "string"
+  },
   "title": {
     "required": true,
     "type": "string"
