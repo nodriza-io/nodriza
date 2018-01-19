@@ -11,6 +11,7 @@ import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import Plan from './PlanSchema'
+import PurchaseOrder from './PurchaseOrderSchema'
 import Quote from './QuoteSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
@@ -44,7 +45,6 @@ import AwsRecord from './AwsRecordSchema'
 import Contract from './ContractSchema'
 import InvoiceModel from './InvoiceModelSchema'
 import Commission from './CommissionSchema'
-import PurchaseOrder from './PurchaseOrderSchema'
 import Case from './CaseSchema'
 import Message from './MessageSchema'
 import FileData from './FileDataSchema'
@@ -64,6 +64,7 @@ export class Schemas {
     this.invoice = Invoice
     this.lead = Lead
     this.plan = Plan
+    this.purchaseOrder = PurchaseOrder
     this.quote = Quote
     this.role = Role
     this.service = Service
@@ -97,7 +98,6 @@ export class Schemas {
     this.contract = Contract
     this.invoiceModel = InvoiceModel
     this.commission = Commission
-    this.purchaseOrder = PurchaseOrder
     this.case = Case
     this.message = Message
     this.fileData = FileData
