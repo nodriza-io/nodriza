@@ -30,16 +30,16 @@ module.exports = {
   },
   "status": {
     "type": "string",
-    "defaultsTo": "draft",
+    "defaultsTo": "Draft",
     "skipAll": true,
     "enum": [
-      "draft",
-      "approved",
-      "partial",
-      "paid",
-      "cancelled",
-      "refunded",
-      "due"
+      "Draft",
+      "Approved",
+      "Partial",
+      "Paid",
+      "Cancelled",
+      "Refunded",
+      "Due"
     ]
   },
   "client": {
@@ -129,6 +129,16 @@ module.exports = {
   },
   "commisionTax": {
     "model": "tax"
+  },
+  "commisionPoLayout": {
+    "description": "Layout for commission purchase order",
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "purchaseOrder"
+    }
   },
   "commissionPoOrder": {
     "model": "purchaseOrder",

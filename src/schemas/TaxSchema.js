@@ -37,8 +37,8 @@ module.exports = {
     "type": "string",
     "longtext": true
   },
-  "percent": {
-    "description": "Tax percent",
+  "rate": {
+    "description": "Tax Rate",
     "example": 0,
     "required": true,
     "min": -100,
