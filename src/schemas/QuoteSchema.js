@@ -49,7 +49,7 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "quotes"
+      "type": "quote"
     }
   },
   "content": {
@@ -59,7 +59,7 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "quotes"
+      "type": "quote"
     }
   },
   "products": {

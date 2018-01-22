@@ -44,7 +44,8 @@ module.exports = {
       "article",
       "content",
       "email",
-      "system"
+      "system",
+      "xxx"
     ]
   },
   "body": {
