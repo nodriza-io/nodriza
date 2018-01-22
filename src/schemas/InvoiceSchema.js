@@ -127,12 +127,11 @@ module.exports = {
     "type": "float",
     "defaultsTo": 0
   },
-  "commisionTax": {
+  "commissionTax": {
     "model": "tax"
   },
-  "commisionPoLayout": {
+  "commissionPoLayout": {
     "description": "Layout for commission purchase order",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",

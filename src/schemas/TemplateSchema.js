@@ -38,7 +38,7 @@ module.exports = {
     "enum": [
       "invoice",
       "contract",
-      "quotes",
+      "quote",
       "purchaseOrder",
       "report",
       "article",
