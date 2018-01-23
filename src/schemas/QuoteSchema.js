@@ -121,5 +121,13 @@ module.exports = {
   "invoice": {
     "model": "invoice",
     "skipAll": true
+  },
+  "passwordProtected": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "password": {
+    "type": "string",
+    "password": true
   }
 }

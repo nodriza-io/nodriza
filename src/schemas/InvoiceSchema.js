@@ -139,8 +139,16 @@ module.exports = {
       "type": "purchaseOrder"
     }
   },
-  "commissionPoOrder": {
+  "commissionPo": {
     "model": "purchaseOrder",
     "skipAll": true
+  },
+  "passwordProtected": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "password": {
+    "type": "string",
+    "password": true
   }
 }

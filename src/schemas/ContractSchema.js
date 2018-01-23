@@ -78,5 +78,13 @@ module.exports = {
   },
   "fourthProfile": {
     "model": "user"
+  },
+  "passwordProtected": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "password": {
+    "type": "string",
+    "password": true
   }
 }
