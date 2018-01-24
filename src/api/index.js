@@ -43,7 +43,6 @@ import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { Contract } from './ContractApi'
-import { InvoiceModel } from './InvoiceModelApi'
 import { Commission } from './CommissionApi'
 import { Case } from './CaseApi'
 import { Message } from './MessageApi'
@@ -96,7 +95,6 @@ export class Apis {
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
     this.contract = new Contract(params)
-    this.invoiceModel = new InvoiceModel(params)
     this.commission = new Commission(params)
     this.case = new Case(params)
     this.message = new Message(params)

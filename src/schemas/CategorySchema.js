@@ -37,5 +37,8 @@ module.exports = {
     "unique": true,
     "type": "string",
     "regex": "/^([a-z0-9_-]+)$/"
+  },
+  "parent": {
+    "model": "category"
   }
 }

@@ -43,7 +43,6 @@ import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import Contract from './ContractSchema'
-import InvoiceModel from './InvoiceModelSchema'
 import Commission from './CommissionSchema'
 import Case from './CaseSchema'
 import Message from './MessageSchema'
@@ -96,7 +95,6 @@ export class Schemas {
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
     this.contract = Contract
-    this.invoiceModel = InvoiceModel
     this.commission = Commission
     this.case = Case
     this.message = Message

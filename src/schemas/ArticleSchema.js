@@ -63,5 +63,13 @@ module.exports = {
     "query": {
       "type": "article"
     }
+  },
+  "passwordProtected": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "password": {
+    "type": "string",
+    "password": true
   }
 }
