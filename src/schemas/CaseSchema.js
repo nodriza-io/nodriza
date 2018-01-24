@@ -31,6 +31,7 @@ module.exports = {
     "type": "string",
     "enum": [
       "Open",
+      "On Hold",
       "Pending Help Desk Action",
       "Pending Client Action",
       "Resolved",
