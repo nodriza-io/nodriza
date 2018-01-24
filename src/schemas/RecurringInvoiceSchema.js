@@ -37,7 +37,7 @@ module.exports = {
       "type": "invoice"
     }
   },
-  "daysOutstanding": {
+  "invoiceDaysOutstanding": {
     "type": "integer",
     "defaultsTo": 30
   },
@@ -89,9 +89,6 @@ module.exports = {
     "type": "float",
     "defaultsTo": 0
   },
-  "commisionTax": {
-    "model": "tax"
-  },
   "commissionTax": {
     "model": "tax"
   },
@@ -103,5 +100,13 @@ module.exports = {
     "query": {
       "type": "purchaseOrder"
     }
+  },
+  "passwordProtected": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "password": {
+    "type": "string",
+    "password": true
   }
 }
