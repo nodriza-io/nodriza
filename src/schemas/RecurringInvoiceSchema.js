@@ -37,7 +37,7 @@ module.exports = {
       "type": "invoice"
     }
   },
-  "invoiceDaysOutstanding": {
+  "invoiceDueDays": {
     "type": "integer",
     "defaultsTo": 30
   },

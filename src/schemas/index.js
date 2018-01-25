@@ -13,6 +13,7 @@ import Lead from './LeadSchema'
 import Plan from './PlanSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import Quote from './QuoteSchema'
+import RecurringInvoice from './RecurringInvoiceSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
@@ -43,7 +44,6 @@ import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import Contract from './ContractSchema'
-import RecurringInvoice from './RecurringInvoiceSchema'
 import Commission from './CommissionSchema'
 import Case from './CaseSchema'
 import Message from './MessageSchema'
@@ -66,6 +66,7 @@ export class Schemas {
     this.plan = Plan
     this.purchaseOrder = PurchaseOrder
     this.quote = Quote
+    this.recurringInvoice = RecurringInvoice
     this.role = Role
     this.service = Service
     this.signature = Signature
@@ -96,7 +97,6 @@ export class Schemas {
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
     this.contract = Contract
-    this.recurringInvoice = RecurringInvoice
     this.commission = Commission
     this.case = Case
     this.message = Message
