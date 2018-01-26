@@ -130,7 +130,7 @@ module.exports = {
   "commissionTax": {
     "model": "tax"
   },
-  "commissionPoLayout": {
+  "layoutCommissionPo": {
     "description": "Layout for commission purchase order",
     "type": "string",
     "html": true,

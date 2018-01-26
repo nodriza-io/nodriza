@@ -36,7 +36,7 @@ module.exports = {
       "Hold",
       "Approved",
       "Canceled",
-      "Paid"
+      "Billed"
     ]
   },
   "vendor": {

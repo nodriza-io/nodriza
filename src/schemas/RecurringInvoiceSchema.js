@@ -80,7 +80,12 @@ module.exports = {
     "multiple": "user"
   },
   "recurrence": {
-    "model": "cronPreset"
+    "type": "array",
+    "multiple": "cronPreset"
+  },
+  "crons": {
+    "type": "json",
+    "skipAll": true
   },
   "commissionAgent": {
     "model": "user"

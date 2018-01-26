@@ -12,10 +12,15 @@ module.exports = {
     "type": "boolean"
   },
   "name": {
-    "example": "Every 5 Minutes.",
+    "example": "@5minutes",
     "required": true,
     "unique": true,
     "displayName": true,
+    "type": "string"
+  },
+  "description": {
+    "example": "Every 5 Minutes.",
+    "longtext": true,
     "type": "string"
   },
   "second": {

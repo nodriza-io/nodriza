@@ -45,7 +45,7 @@ import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
 import Contract from './ContractSchema'
 import Commission from './CommissionSchema'
-import Case from './CaseSchema'
+import SupportCase from './SupportCaseSchema'
 import Message from './MessageSchema'
 import FileData from './FileDataSchema'
 import Article from './ArticleSchema'
@@ -98,7 +98,7 @@ export class Schemas {
     this.awsRecord = AwsRecord
     this.contract = Contract
     this.commission = Commission
-    this.case = Case
+    this.supportCase = SupportCase
     this.message = Message
     this.fileData = FileData
     this.article = Article

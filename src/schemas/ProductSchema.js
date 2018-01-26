@@ -25,11 +25,6 @@ module.exports = {
   "description": {
     "type": "string"
   },
-  "provider": {
-    "description": "Company who provide this product",
-    "model": "company",
-    "required": true
-  },
   "category": {
     "model": "category",
     "mustExist": true,
@@ -74,8 +69,8 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "meta": {
-    "type": "json",
-    "skipAll": true
+  "provider": {
+    "description": "Company who provide this product",
+    "model": "company"
   }
 }

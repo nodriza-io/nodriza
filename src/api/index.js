@@ -45,7 +45,7 @@ import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
 import { Contract } from './ContractApi'
 import { Commission } from './CommissionApi'
-import { Case } from './CaseApi'
+import { SupportCase } from './SupportCaseApi'
 import { Message } from './MessageApi'
 import { FileData } from './FileDataApi'
 import { Article } from './ArticleApi'
@@ -98,7 +98,7 @@ export class Apis {
     this.awsRecord = new AwsRecord(params)
     this.contract = new Contract(params)
     this.commission = new Commission(params)
-    this.case = new Case(params)
+    this.supportCase = new SupportCase(params)
     this.message = new Message(params)
     this.fileData = new FileData(params)
     this.article = new Article(params)
