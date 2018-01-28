@@ -86,5 +86,9 @@ module.exports = {
   "password": {
     "type": "string",
     "password": true
+  },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
   }
 }

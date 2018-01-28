@@ -38,8 +38,7 @@ module.exports = {
       "Partial",
       "Paid",
       "Cancelled",
-      "Refunded",
-      "Due"
+      "Refunded"
     ]
   },
   "client": {
@@ -116,7 +115,6 @@ module.exports = {
     "skipAll": true
   },
   "paymentResponsibles": {
-    "description": "Send notifications about this AWS Account payments to these users",
     "type": "array",
     "multiple": "user"
   },
@@ -150,5 +148,13 @@ module.exports = {
   "password": {
     "type": "string",
     "password": true
+  },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
+  },
+  "paymentsReceived": {
+    "skipAll": true,
+    "type": "array"
   }
 }

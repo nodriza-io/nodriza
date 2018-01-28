@@ -61,7 +61,7 @@ module.exports = {
     "model": "tax",
     "required": true
   },
-  "SKU": {
+  "sku": {
     "description": "Unique Stock Keeping Unit Number",
     "unique": true,
     "random": 8,

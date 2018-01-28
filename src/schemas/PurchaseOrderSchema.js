@@ -17,7 +17,7 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "PoNumber": {
+  "poNumber": {
     "description": "Unique PO idetification number",
     "unique": true,
     "displayName": true,
@@ -111,5 +111,9 @@ module.exports = {
   "password": {
     "type": "string",
     "password": true
+  },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
   }
 }

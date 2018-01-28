@@ -2,11 +2,13 @@
 
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
+import { Article } from './ArticleApi'
 import { AwsBill } from './AwsBillApi'
 import { AwsInstance } from './AwsInstanceApi'
 import { AwsUsageReport } from './AwsUsageReportApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
+import { Contract } from './ContractApi'
 import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
@@ -43,23 +45,25 @@ import { AwsIopsMonthProvisioned } from './AwsIopsMonthProvisionedApi'
 import { SystemProcess } from './SystemProcessApi'
 import { CronPreset } from './CronPresetApi'
 import { AwsRecord } from './AwsRecordApi'
-import { Contract } from './ContractApi'
 import { Commission } from './CommissionApi'
 import { SupportCase } from './SupportCaseApi'
 import { Message } from './MessageApi'
 import { FileData } from './FileDataApi'
-import { Article } from './ArticleApi'
 import { Conversation } from './ConversationApi'
+import { PaymentMode } from './PaymentModeApi'
+import { PaymentReceived } from './PaymentReceivedApi'
 
 export class Apis {
   constructor (params) {
     this.app = new App(params)
     this.apparience = new Apparience(params)
+    this.article = new Article(params)
     this.awsBill = new AwsBill(params)
     this.awsInstance = new AwsInstance(params)
     this.awsUsageReport = new AwsUsageReport(params)
     this.company = new Company(params)
     this.config = new Config(params)
+    this.contract = new Contract(params)
     this.exchange = new Exchange(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
@@ -96,12 +100,12 @@ export class Apis {
     this.systemProcess = new SystemProcess(params)
     this.cronPreset = new CronPreset(params)
     this.awsRecord = new AwsRecord(params)
-    this.contract = new Contract(params)
     this.commission = new Commission(params)
     this.supportCase = new SupportCase(params)
     this.message = new Message(params)
     this.fileData = new FileData(params)
-    this.article = new Article(params)
     this.conversation = new Conversation(params)
+    this.paymentMode = new PaymentMode(params)
+    this.paymentReceived = new PaymentReceived(params)
   }
 }

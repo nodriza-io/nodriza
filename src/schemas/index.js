@@ -2,11 +2,13 @@
 
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
+import Article from './ArticleSchema'
 import AwsBill from './AwsBillSchema'
 import AwsInstance from './AwsInstanceSchema'
 import AwsUsageReport from './AwsUsageReportSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
+import Contract from './ContractSchema'
 import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
@@ -43,23 +45,25 @@ import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
 import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
 import AwsRecord from './AwsRecordSchema'
-import Contract from './ContractSchema'
 import Commission from './CommissionSchema'
 import SupportCase from './SupportCaseSchema'
 import Message from './MessageSchema'
 import FileData from './FileDataSchema'
-import Article from './ArticleSchema'
 import Conversation from './ConversationSchema'
+import PaymentMode from './PaymentModeSchema'
+import PaymentReceived from './PaymentReceivedSchema'
 
 export class Schemas {
   constructor (params) {
     this.app = App
     this.apparience = Apparience
+    this.article = Article
     this.awsBill = AwsBill
     this.awsInstance = AwsInstance
     this.awsUsageReport = AwsUsageReport
     this.company = Company
     this.config = Config
+    this.contract = Contract
     this.exchange = Exchange
     this.invoice = Invoice
     this.lead = Lead
@@ -96,12 +100,12 @@ export class Schemas {
     this.systemProcess = SystemProcess
     this.cronPreset = CronPreset
     this.awsRecord = AwsRecord
-    this.contract = Contract
     this.commission = Commission
     this.supportCase = SupportCase
     this.message = Message
     this.fileData = FileData
-    this.article = Article
     this.conversation = Conversation
+    this.paymentMode = PaymentMode
+    this.paymentReceived = PaymentReceived
   }
 }
