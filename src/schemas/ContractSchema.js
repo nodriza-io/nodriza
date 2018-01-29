@@ -34,7 +34,8 @@ module.exports = {
       "Draft",
       "Approved",
       "Canceled"
-    ]
+    ],
+    "skipAll": true
   },
   "title": {
     "required": true,

@@ -68,5 +68,9 @@ module.exports = {
   },
   "meta": {
     "type": "json"
+  },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
   }
 }

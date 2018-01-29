@@ -12,6 +12,7 @@ import Contract from './ContractSchema'
 import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
+import PaymentReceived from './PaymentReceivedSchema'
 import Plan from './PlanSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import Quote from './QuoteSchema'
@@ -51,7 +52,6 @@ import Message from './MessageSchema'
 import FileData from './FileDataSchema'
 import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
-import PaymentReceived from './PaymentReceivedSchema'
 
 export class Schemas {
   constructor (params) {
@@ -67,6 +67,7 @@ export class Schemas {
     this.exchange = Exchange
     this.invoice = Invoice
     this.lead = Lead
+    this.paymentReceived = PaymentReceived
     this.plan = Plan
     this.purchaseOrder = PurchaseOrder
     this.quote = Quote
@@ -106,6 +107,5 @@ export class Schemas {
     this.fileData = FileData
     this.conversation = Conversation
     this.paymentMode = PaymentMode
-    this.paymentReceived = PaymentReceived
   }
 }

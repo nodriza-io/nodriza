@@ -295,6 +295,10 @@ module.exports = {
       "Cold"
     ]
   },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
+  },
   "avatars": {
     "description": "User avatar in different sizes",
     "type": "json",

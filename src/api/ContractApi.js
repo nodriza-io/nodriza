@@ -12,6 +12,24 @@ export class Contract extends Request {
     super(params)
   }
   /**
+  * PUT /v1/contract/changeStatus [PRIVATE]
+  *
+  * Change contract status
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} status * -> (In Body)  e.g Approved
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  changeStatus (body, callback) {
+    let params = {url: '/v1/contract/changeStatus', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/contract/starred [PRIVATE]
   *
   * Change starred status

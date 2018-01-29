@@ -12,6 +12,7 @@ import { Contract } from './ContractApi'
 import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
+import { PaymentReceived } from './PaymentReceivedApi'
 import { Plan } from './PlanApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { Quote } from './QuoteApi'
@@ -51,7 +52,6 @@ import { Message } from './MessageApi'
 import { FileData } from './FileDataApi'
 import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
-import { PaymentReceived } from './PaymentReceivedApi'
 
 export class Apis {
   constructor (params) {
@@ -67,6 +67,7 @@ export class Apis {
     this.exchange = new Exchange(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
+    this.paymentReceived = new PaymentReceived(params)
     this.plan = new Plan(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.quote = new Quote(params)
@@ -106,6 +107,5 @@ export class Apis {
     this.fileData = new FileData(params)
     this.conversation = new Conversation(params)
     this.paymentMode = new PaymentMode(params)
-    this.paymentReceived = new PaymentReceived(params)
   }
 }
