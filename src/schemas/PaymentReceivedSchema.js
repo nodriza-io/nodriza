@@ -17,6 +17,10 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
+  },
   "title": {
     "required": true,
     "displayName": true,
@@ -30,7 +34,19 @@ module.exports = {
     "model": "paymentMode",
     "required": true
   },
-  "invoicesPaid": {
+  "issueDate": {
+    "type": "datetime"
+  },
+  "layout": {
+    "required": true,
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "paymentReceived"
+    }
+  },
+  "paidInvoices": {
     "type": "array",
     "multiple": "invoice"
   },
@@ -51,26 +67,25 @@ module.exports = {
     "defaultsTo": 0,
     "skipAll": true
   },
+  "paymentResponsibles": {
+    "type": "array",
+    "multiple": "user"
+  },
   "paymentNumber": {
     "description": "Unique quote idetification number",
     "unique": true,
     "random": 8,
     "displayName": true,
-    "type": "string"
-  },
-  "paymentResponsibles": {
-    "type": "array",
-    "multiple": "user"
+    "type": "string",
+    "regex": "/^([a-z-A-Z-0-9_-]+)$/"
   },
   "transactionId": {
     "displayName": true,
     "type": "string"
   },
-  "meta": {
-    "type": "json"
-  },
-  "starred": {
-    "skipAll": true,
-    "type": "array"
+  "specialObservations": {
+    "description": "Specify if the payment received has some special observation",
+    "type": "string",
+    "longtext": true
   }
 }

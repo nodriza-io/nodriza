@@ -24,6 +24,7 @@ module.exports = {
     "unique": true,
     "random": 8,
     "displayName": true,
+    "regex": "/^([a-z-A-Z-0-9_-]+)$/",
     "type": "string"
   },
   "status": {

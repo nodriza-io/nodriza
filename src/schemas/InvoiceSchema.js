@@ -21,7 +21,8 @@ module.exports = {
     "description": "Unique invoice idetification number",
     "unique": true,
     "displayName": true,
-    "type": "string"
+    "type": "string",
+    "regex": "/^([a-z-A-Z-0-9_-]+)$/"
   },
   "title": {
     "required": true,

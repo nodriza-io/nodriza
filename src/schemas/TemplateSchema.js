@@ -40,6 +40,7 @@ module.exports = {
       "contract",
       "quote",
       "purchaseOrder",
+      "paymentReceived",
       "report",
       "article",
       "content",

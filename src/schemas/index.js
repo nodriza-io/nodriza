@@ -9,10 +9,12 @@ import AwsUsageReport from './AwsUsageReportSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Contract from './ContractSchema'
+import Document from './DocumentSchema'
 import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import PaymentReceived from './PaymentReceivedSchema'
+import Payu from './PayuSchema'
 import Plan from './PlanSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import Quote from './QuoteSchema'
@@ -20,10 +22,10 @@ import RecurringInvoice from './RecurringInvoiceSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
-import Template from './TemplateSchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
+import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
@@ -64,10 +66,12 @@ export class Schemas {
     this.company = Company
     this.config = Config
     this.contract = Contract
+    this.document = Document
     this.exchange = Exchange
     this.invoice = Invoice
     this.lead = Lead
     this.paymentReceived = PaymentReceived
+    this.payu = Payu
     this.plan = Plan
     this.purchaseOrder = PurchaseOrder
     this.quote = Quote
@@ -75,10 +79,10 @@ export class Schemas {
     this.role = Role
     this.service = Service
     this.signature = Signature
-    this.template = Template
     this.token = Token
     this.user = User
     this.department = Department
+    this.template = Template
     this.accessPolicy = AccessPolicy
     this.country = Country
     this.currency = Currency

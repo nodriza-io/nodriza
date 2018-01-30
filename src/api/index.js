@@ -9,10 +9,12 @@ import { AwsUsageReport } from './AwsUsageReportApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Contract } from './ContractApi'
+import { Document } from './DocumentApi'
 import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { PaymentReceived } from './PaymentReceivedApi'
+import { Payu } from './PayuApi'
 import { Plan } from './PlanApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { Quote } from './QuoteApi'
@@ -20,10 +22,10 @@ import { RecurringInvoice } from './RecurringInvoiceApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Signature } from './SignatureApi'
-import { Template } from './TemplateApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
+import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
@@ -64,10 +66,12 @@ export class Apis {
     this.company = new Company(params)
     this.config = new Config(params)
     this.contract = new Contract(params)
+    this.document = new Document(params)
     this.exchange = new Exchange(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
     this.paymentReceived = new PaymentReceived(params)
+    this.payu = new Payu(params)
     this.plan = new Plan(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.quote = new Quote(params)
@@ -75,10 +79,10 @@ export class Apis {
     this.role = new Role(params)
     this.service = new Service(params)
     this.signature = new Signature(params)
-    this.template = new Template(params)
     this.token = new Token(params)
     this.user = new User(params)
     this.department = new Department(params)
+    this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
