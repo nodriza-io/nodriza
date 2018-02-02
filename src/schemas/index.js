@@ -10,6 +10,7 @@ import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Contract from './ContractSchema'
 import Document from './DocumentSchema'
+import Email from './EmailSchema'
 import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
@@ -67,6 +68,7 @@ export class Schemas {
     this.config = Config
     this.contract = Contract
     this.document = Document
+    this.email = Email
     this.exchange = Exchange
     this.invoice = Invoice
     this.lead = Lead

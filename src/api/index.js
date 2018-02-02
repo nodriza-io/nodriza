@@ -10,6 +10,7 @@ import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Contract } from './ContractApi'
 import { Document } from './DocumentApi'
+import { Email } from './EmailApi'
 import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
@@ -67,6 +68,7 @@ export class Apis {
     this.config = new Config(params)
     this.contract = new Contract(params)
     this.document = new Document(params)
+    this.email = new Email(params)
     this.exchange = new Exchange(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)

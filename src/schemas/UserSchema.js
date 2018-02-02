@@ -39,17 +39,6 @@ module.exports = {
     "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "existCheck": true
   },
-  "status": {
-    "description": "Activate or deactivate user",
-    "example": "active",
-    "type": "string",
-    "defaultsTo": "active",
-    "enum": [
-      "active",
-      "inactive",
-      "deleted"
-    ]
-  },
   "company": {
     "description": "Company where the user belongs",
     "example": "59418bcd105605cc2693a981",
@@ -136,6 +125,18 @@ module.exports = {
   "password": {
     "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",
     "example": "Shox009_",
-    "type": "string"
+    "type": "string",
+    "skipUpdate": true
+  },
+  "status": {
+    "description": "Activate or deactivate user",
+    "example": "active",
+    "type": "string",
+    "defaultsTo": "active",
+    "enum": [
+      "active",
+      "inactive",
+      "deleted"
+    ]
   }
 }
