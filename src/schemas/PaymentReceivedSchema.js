@@ -83,6 +83,10 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
+  "meta": {
+    "type": "json",
+    "skipAll": true
+  },
   "specialObservations": {
     "description": "Specify if the payment received has some special observation",
     "type": "string",

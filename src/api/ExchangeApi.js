@@ -31,7 +31,7 @@ export class Exchange extends Request {
     })
   }
   /**
-  * GET /v1/exchange/getRates [PRIVATE]
+  * GET /v1/exchange/getRates [PUBLIC]
   *
   * Get latest exchange rates
   *
