@@ -69,8 +69,15 @@ module.exports = {
     "type": "json",
     "defaultsTo": []
   },
+  "numberOfPayments": {
+    "required": true,
+    "type": "integer",
+    "defaultsTo": 1,
+    "min": 1
+  },
   "currency": {
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "rating": {
     "description": "Quote scoring status",
@@ -119,9 +126,10 @@ module.exports = {
     "type": "float",
     "skipAll": true
   },
-  "invoice": {
-    "model": "invoice",
-    "skipAll": true
+  "invoices": {
+    "skipAll": true,
+    "type": "array",
+    "defaultsTo": []
   },
   "passwordProtected": {
     "type": "boolean",

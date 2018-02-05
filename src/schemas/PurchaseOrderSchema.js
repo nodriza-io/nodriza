@@ -99,7 +99,8 @@ module.exports = {
     "defaultsTo": []
   },
   "currency": {
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "invoiceCommission": {
     "model": "invoice",

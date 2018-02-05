@@ -69,7 +69,8 @@ module.exports = {
     "skipAll": true,
     "defaultsTo": "us-east-1",
     "type": "string",
-    "model": "awsRegion"
+    "model": "awsRegion",
+    "noCreate": true
   },
   "billingReportBucket": {
     "description": "Bucket for AWS billing reports",
@@ -95,7 +96,8 @@ module.exports = {
   },
   "invoiceCurrency": {
     "type": "string",
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "invoiceDaysOutstanding": {
     "type": "integer",

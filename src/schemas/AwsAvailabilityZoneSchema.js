@@ -29,7 +29,8 @@ module.exports = {
     "example": "us-east-1",
     "required": true,
     "mustExist": true,
-    "model": "awsRegion"
+    "model": "awsRegion",
+    "noCreate": true
   },
   "createdAt": {
     "type": "datetime"

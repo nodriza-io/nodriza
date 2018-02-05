@@ -50,12 +50,13 @@ module.exports = {
     "description": "Product Price",
     "type": "float",
     "currency": true,
-    "defaultsTo": 0
+    "required": true
   },
   "currency": {
     "required": true,
     "type": "string",
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "tax": {
     "model": "tax",

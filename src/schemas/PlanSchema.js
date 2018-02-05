@@ -15,7 +15,8 @@ module.exports = {
   "regionName": {
     "skipAll": true,
     "required": true,
-    "model": "awsRegion"
+    "model": "awsRegion",
+    "noCreate": true
   },
   "awsInstance": {
     "model": "awsInstance",

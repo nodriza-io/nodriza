@@ -280,12 +280,6 @@ module.exports = {
     "model": "user",
     "mustExist": true
   },
-  "description": {
-    "description": "Short company description",
-    "type": "string",
-    "longtext": true,
-    "example": "Acme Inc. is a fully-funded start-up that provides cloud-based management of product data to retailers."
-  },
   "rating": {
     "description": "Rate how close is this lead to become a client",
     "type": "string",
@@ -337,7 +331,8 @@ module.exports = {
   "country": {
     "description": "Country name",
     "model": "country",
-    "mustExist": true
+    "mustExist": true,
+    "noCreate": true
   },
   "city": {
     "description": "City name",

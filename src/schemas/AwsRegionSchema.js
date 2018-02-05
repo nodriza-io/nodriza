@@ -24,7 +24,8 @@ module.exports = {
     "type": "string",
     "model": "country",
     "mustExist": true,
-    "required": true
+    "required": true,
+    "noCreate": true
   },
   "GMT": {
     "description": "Region GMT offset",

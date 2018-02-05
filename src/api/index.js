@@ -31,7 +31,6 @@ import { AccessPolicy } from './AccessPolicyApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
 import { TimeZone } from './TimeZoneApi'
-import { AwsCommunityAmi } from './AwsCommunityAmiApi'
 import { AwsVolume } from './AwsVolumeApi'
 import { AwsAmi } from './AwsAmiApi'
 import { AwsRegion } from './AwsRegionApi'
@@ -89,7 +88,6 @@ export class Apis {
     this.country = new Country(params)
     this.currency = new Currency(params)
     this.timeZone = new TimeZone(params)
-    this.awsCommunityAmi = new AwsCommunityAmi(params)
     this.awsVolume = new AwsVolume(params)
     this.awsAmi = new AwsAmi(params)
     this.awsRegion = new AwsRegion(params)

@@ -150,7 +150,8 @@ module.exports = {
   },
   "regionName": {
     "skipAll": true,
-    "model": "awsRegion"
+    "model": "awsRegion",
+    "noCreate": true
   },
   "hasEbsExtraCharge": {
     "type": "boolean",

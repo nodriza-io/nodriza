@@ -54,8 +54,7 @@ module.exports = {
     "skipAll": true
   },
   "layout": {
-    "description": "Detailed quote proposal.",
-    "required": true,
+    "description": "Quote template layout",
     "type": "string",
     "html": true,
     "target": "template",
@@ -109,7 +108,8 @@ module.exports = {
     "defaultsTo": []
   },
   "currency": {
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "quote": {
     "model": "quote",
@@ -156,6 +156,12 @@ module.exports = {
   },
   "paymentsReceived": {
     "skipAll": true,
-    "type": "array"
+    "type": "array",
+    "defaultsTo": [],
+    "sync": "paymentReceived.paidInvoices"
+  },
+  "reminders": {
+    "type": "array",
+    "skipAll": true
   }
 }

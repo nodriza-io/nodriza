@@ -23,7 +23,7 @@ module.exports = {
   },
   "name": {
     "description": "Category name",
-    "example": "AWS EC2",
+    "example": "Pets",
     "required": true,
     "type": "string",
     "unique": true,
@@ -31,7 +31,7 @@ module.exports = {
   },
   "slug": {
     "description": "Unique slug identifier for URL. Only alphanumeric, dash and underscore allowed",
-    "example": "aws-ec2",
+    "example": "pets",
     "required": true,
     "primaryKey": true,
     "unique": true,

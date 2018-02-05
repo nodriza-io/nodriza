@@ -22,7 +22,8 @@ module.exports = {
     "required": true,
     "mustExist": true,
     "type": "string",
-    "model": "awsRegion"
+    "model": "awsRegion",
+    "noCreate": true
   },
   "imageId": {
     "example": "ami-f4cc1de2",

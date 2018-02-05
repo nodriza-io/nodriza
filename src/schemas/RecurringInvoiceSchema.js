@@ -72,7 +72,8 @@ module.exports = {
     "defaultsTo": []
   },
   "currency": {
-    "model": "currency"
+    "model": "currency",
+    "noCreate": true
   },
   "paymentResponsibles": {
     "description": "Send notifications about this AWS Account payments to these users",

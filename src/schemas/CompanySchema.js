@@ -96,7 +96,8 @@ module.exports = {
   "country": {
     "description": "Country name",
     "model": "country",
-    "mustExist": true
+    "mustExist": true,
+    "noCreate": true
   },
   "city": {
     "description": "City name",
@@ -118,10 +119,8 @@ module.exports = {
     "type": "string",
     "example": "90027"
   },
-  "description": {
-    "description": "Short company description",
-    "type": "string",
-    "longtext": true,
-    "example": "Acme Inc. is a fully-funded start-up that provides cloud-based management of product data to retailers."
+  "paymentResponsibles": {
+    "type": "array",
+    "multiple": "user"
   }
 }

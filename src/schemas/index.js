@@ -31,7 +31,6 @@ import AccessPolicy from './AccessPolicySchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import TimeZone from './TimeZoneSchema'
-import AwsCommunityAmi from './AwsCommunityAmiSchema'
 import AwsVolume from './AwsVolumeSchema'
 import AwsAmi from './AwsAmiSchema'
 import AwsRegion from './AwsRegionSchema'
@@ -89,7 +88,6 @@ export class Schemas {
     this.country = Country
     this.currency = Currency
     this.timeZone = TimeZone
-    this.awsCommunityAmi = AwsCommunityAmi
     this.awsVolume = AwsVolume
     this.awsAmi = AwsAmi
     this.awsRegion = AwsRegion

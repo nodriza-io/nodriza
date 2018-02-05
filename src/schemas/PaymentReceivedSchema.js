@@ -48,11 +48,13 @@ module.exports = {
   },
   "paidInvoices": {
     "type": "array",
-    "multiple": "invoice"
+    "multiple": "invoice",
+    "sync": "invoice.paymentsReceived"
   },
   "currency": {
     "model": "currency",
-    "required": true
+    "required": true,
+    "noCreate": true
   },
   "amount": {
     "type": "float",
