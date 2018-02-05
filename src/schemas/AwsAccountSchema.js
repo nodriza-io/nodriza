@@ -69,7 +69,7 @@ module.exports = {
     "skipAll": true,
     "defaultsTo": "us-east-1",
     "type": "string",
-    "model": "awsRegion",
+    "model": "awsregion",
     "noCreate": true
   },
   "billingReportBucket": {

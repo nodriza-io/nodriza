@@ -11,7 +11,7 @@ module.exports = {
     "required": true,
     "type": "string",
     "enum": [
-      "quote",
+      "proposal",
       "contract",
       "invoice"
     ]

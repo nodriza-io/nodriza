@@ -55,7 +55,8 @@ module.exports = {
     "description": "Company department where the user belongs",
     "example": "5940200e93e326e90c636826",
     "model": "department",
-    "mustExist": true
+    "mustExist": true,
+    "skipAll": true
   },
   "identificationNumber": {
     "description": "User identificationNumber number",

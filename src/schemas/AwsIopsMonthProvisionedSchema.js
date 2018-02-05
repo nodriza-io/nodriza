@@ -13,7 +13,7 @@ module.exports = {
     "skipAll": true
   },
   "awsVolume": {
-    "model": "awsVolume",
+    "model": "awsvolume",
     "skipAll": true
   },
   "iops": {
@@ -22,7 +22,7 @@ module.exports = {
   },
   "regionName": {
     "skipAll": true,
-    "model": "awsRegion",
+    "model": "awsregion",
     "noCreate": true
   },
   "product": {

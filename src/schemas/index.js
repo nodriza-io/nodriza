@@ -17,8 +17,8 @@ import Lead from './LeadSchema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
 import Plan from './PlanSchema'
+import Proposal from './ProposalSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
-import Quote from './QuoteSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
@@ -28,18 +28,13 @@ import User from './UserSchema'
 import Department from './DepartmentSchema'
 import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
+import AwsAccount from './AwsAccountSchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import TimeZone from './TimeZoneSchema'
-import AwsVolume from './AwsVolumeSchema'
-import AwsAmi from './AwsAmiSchema'
-import AwsRegion from './AwsRegionSchema'
-import AwsAvailabilityZone from './AwsAvailabilityZoneSchema'
-import AwsElasticIp from './AwsElasticIpSchema'
 import Cron from './CronSchema'
 import Log from './LogSchema'
 import Activity from './ActivitySchema'
-import AwsAccount from './AwsAccountSchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
@@ -74,8 +69,8 @@ export class Schemas {
     this.paymentReceived = PaymentReceived
     this.payu = Payu
     this.plan = Plan
+    this.proposal = Proposal
     this.purchaseOrder = PurchaseOrder
-    this.quote = Quote
     this.recurringInvoice = RecurringInvoice
     this.role = Role
     this.service = Service
@@ -85,18 +80,13 @@ export class Schemas {
     this.department = Department
     this.template = Template
     this.accessPolicy = AccessPolicy
+    this.awsAccount = AwsAccount
     this.country = Country
     this.currency = Currency
     this.timeZone = TimeZone
-    this.awsVolume = AwsVolume
-    this.awsAmi = AwsAmi
-    this.awsRegion = AwsRegion
-    this.awsAvailabilityZone = AwsAvailabilityZone
-    this.awsElasticIp = AwsElasticIp
     this.cron = Cron
     this.log = Log
     this.activity = Activity
-    this.awsAccount = AwsAccount
     this.tax = Tax
     this.category = Category
     this.product = Product

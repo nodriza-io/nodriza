@@ -54,7 +54,7 @@ module.exports = {
     "skipAll": true
   },
   "layout": {
-    "description": "Quote template layout",
+    "description": "Proposal template layout",
     "type": "string",
     "html": true,
     "target": "template",
@@ -111,8 +111,8 @@ module.exports = {
     "model": "currency",
     "noCreate": true
   },
-  "quote": {
-    "model": "quote",
+  "proposal": {
+    "model": "proposal",
     "skipAll": true
   },
   "paymentResponsibles": {
@@ -128,15 +128,6 @@ module.exports = {
   },
   "commissionTax": {
     "model": "tax"
-  },
-  "layoutCommissionPo": {
-    "description": "Layout for commission purchase order",
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "purchaseOrder"
-    }
   },
   "commissionPo": {
     "model": "purchaseOrder",

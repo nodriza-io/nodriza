@@ -79,8 +79,8 @@ module.exports = {
     "mustExist": true
   },
   "relatedQuote": {
-    "description": "Select the quote that is related with this activity",
-    "model": "quote",
+    "description": "Select the proposal that is related with this activity",
+    "model": "proposal",
     "mustExist": true
   }
 }

@@ -17,8 +17,8 @@ import { Lead } from './LeadApi'
 import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
 import { Plan } from './PlanApi'
+import { Proposal } from './ProposalApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
-import { Quote } from './QuoteApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
@@ -28,18 +28,13 @@ import { User } from './UserApi'
 import { Department } from './DepartmentApi'
 import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
+import { AwsAccount } from './AwsAccountApi'
 import { Country } from './CountryApi'
 import { Currency } from './CurrencyApi'
 import { TimeZone } from './TimeZoneApi'
-import { AwsVolume } from './AwsVolumeApi'
-import { AwsAmi } from './AwsAmiApi'
-import { AwsRegion } from './AwsRegionApi'
-import { AwsAvailabilityZone } from './AwsAvailabilityZoneApi'
-import { AwsElasticIp } from './AwsElasticIpApi'
 import { Cron } from './CronApi'
 import { Log } from './LogApi'
 import { Activity } from './ActivityApi'
-import { AwsAccount } from './AwsAccountApi'
 import { Tax } from './TaxApi'
 import { Category } from './CategoryApi'
 import { Product } from './ProductApi'
@@ -74,8 +69,8 @@ export class Apis {
     this.paymentReceived = new PaymentReceived(params)
     this.payu = new Payu(params)
     this.plan = new Plan(params)
+    this.proposal = new Proposal(params)
     this.purchaseOrder = new PurchaseOrder(params)
-    this.quote = new Quote(params)
     this.recurringInvoice = new RecurringInvoice(params)
     this.role = new Role(params)
     this.service = new Service(params)
@@ -85,18 +80,13 @@ export class Apis {
     this.department = new Department(params)
     this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
+    this.awsAccount = new AwsAccount(params)
     this.country = new Country(params)
     this.currency = new Currency(params)
     this.timeZone = new TimeZone(params)
-    this.awsVolume = new AwsVolume(params)
-    this.awsAmi = new AwsAmi(params)
-    this.awsRegion = new AwsRegion(params)
-    this.awsAvailabilityZone = new AwsAvailabilityZone(params)
-    this.awsElasticIp = new AwsElasticIp(params)
     this.cron = new Cron(params)
     this.log = new Log(params)
     this.activity = new Activity(params)
-    this.awsAccount = new AwsAccount(params)
     this.tax = new Tax(params)
     this.category = new Category(params)
     this.product = new Product(params)

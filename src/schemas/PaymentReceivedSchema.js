@@ -74,7 +74,7 @@ module.exports = {
     "multiple": "user"
   },
   "paymentNumber": {
-    "description": "Unique quote idetification number",
+    "description": "Unique proposal idetification number",
     "unique": true,
     "random": 8,
     "displayName": true,

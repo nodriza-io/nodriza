@@ -19,7 +19,6 @@ module.exports = {
     "model": "company"
   },
   "layout": {
-    "description": "Detailed quote proposal.",
     "required": true,
     "type": "string",
     "html": true,
