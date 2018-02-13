@@ -12,7 +12,7 @@ module.exports = {
     "skipAll": true
   },
   "systemProcess": {
-    "model": "systemProcess",
+    "model": "systemprocess",
     "skipAll": true
   },
   "timeTaken": {

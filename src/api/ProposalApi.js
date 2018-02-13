@@ -47,6 +47,23 @@ export class Proposal extends Request {
     })
   }
   /**
+  * POST /v1/proposal/send [PRIVATE]
+  *
+  * Send proposal to client or lead
+  *
+  * @param  {Object} params
+  * - @param  {String} proposalId * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  send (body, callback) {
+    let params = {url: '/v1/proposal/send', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/proposal/starred [PRIVATE]
   *
   * Change starred status

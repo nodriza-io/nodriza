@@ -3,9 +3,6 @@
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Article from './ArticleSchema'
-import AwsBill from './AwsBillSchema'
-import AwsInstance from './AwsInstanceSchema'
-import AwsUsageReport from './AwsUsageReportSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Contract from './ContractSchema'
@@ -16,19 +13,18 @@ import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
-import Plan from './PlanSchema'
 import Proposal from './ProposalSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
+import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
 import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
-import AwsAccount from './AwsAccountSchema'
 import Country from './CountrySchema'
 import Currency from './CurrencySchema'
 import TimeZone from './TimeZoneSchema'
@@ -38,11 +34,7 @@ import Activity from './ActivitySchema'
 import Tax from './TaxSchema'
 import Category from './CategorySchema'
 import Product from './ProductSchema'
-import CostCenter from './CostCenterSchema'
-import AwsIopsMonthProvisioned from './AwsIopsMonthProvisionedSchema'
-import SystemProcess from './SystemProcessSchema'
 import CronPreset from './CronPresetSchema'
-import AwsRecord from './AwsRecordSchema'
 import Commission from './CommissionSchema'
 import SupportCase from './SupportCaseSchema'
 import Message from './MessageSchema'
@@ -55,9 +47,6 @@ export class Schemas {
     this.app = App
     this.apparience = Apparience
     this.article = Article
-    this.awsBill = AwsBill
-    this.awsInstance = AwsInstance
-    this.awsUsageReport = AwsUsageReport
     this.company = Company
     this.config = Config
     this.contract = Contract
@@ -68,19 +57,18 @@ export class Schemas {
     this.lead = Lead
     this.paymentReceived = PaymentReceived
     this.payu = Payu
-    this.plan = Plan
     this.proposal = Proposal
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
     this.role = Role
     this.service = Service
     this.signature = Signature
+    this.templateGallery = TemplateGallery
     this.token = Token
     this.user = User
     this.department = Department
     this.template = Template
     this.accessPolicy = AccessPolicy
-    this.awsAccount = AwsAccount
     this.country = Country
     this.currency = Currency
     this.timeZone = TimeZone
@@ -90,11 +78,7 @@ export class Schemas {
     this.tax = Tax
     this.category = Category
     this.product = Product
-    this.costCenter = CostCenter
-    this.awsIopsMonthProvisioned = AwsIopsMonthProvisioned
-    this.systemProcess = SystemProcess
     this.cronPreset = CronPreset
-    this.awsRecord = AwsRecord
     this.commission = Commission
     this.supportCase = SupportCase
     this.message = Message

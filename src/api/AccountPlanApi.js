@@ -4,9 +4,9 @@ import { Request } from '../request'
 import queryString from 'query-string'
 import _ from 'lodash'
 
-const model = 'plan'
+const model = 'accountPlan'
 
-export class Plan extends Request {
+export class AccountPlan extends Request {
   constructor (params) {
     params.model = model
     super(params)

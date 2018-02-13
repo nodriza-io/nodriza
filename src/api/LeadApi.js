@@ -12,17 +12,18 @@ export class Lead extends Request {
     super(params)
   }
   /**
-  * PUT /v1/lead/convert [PRIVATE]
+  * PUT /v1/lead/changeStatus [PRIVATE]
   *
-  * Convert lead to company and user
+  * Change lead status
   *
   * @param  {Object} params
-  * - @param  {String} leadId * -> (In Body)  e.g 5941abf8e304bac92a6b521c
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} status * -> (In Body)  e.g Converted
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */
-  convert (body, callback) {
-    let params = {url: '/v1/lead/convert', body}
+  changeStatus (body, callback) {
+    let params = {url: '/v1/lead/changeStatus', body}
     this.put(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)

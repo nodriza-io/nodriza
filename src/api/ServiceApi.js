@@ -12,6 +12,24 @@ export class Service extends Request {
     super(params)
   }
   /**
+  * GET /v1/service/base64Image [PRIVATE]
+  *
+  * Return SVG Qr Code
+  *
+  * @param  {Object} params
+  * - @param  {String} url  -> (In query) Url to convert to base64
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  base64Image (params, callback) {
+    let url = '/v1/service/base64Image'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/service/elasticSearch [PRIVATE]
   *
   * Ami search
@@ -79,6 +97,63 @@ export class Service extends Request {
   */
   getRouteControllers (callback) {
     this.get('/v1/service/getRouteControllers', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/iconSearch [PRIVATE]
+  *
+  * Return search results
+  *
+  * @param  {Object} params
+  * - @param  {String} keyword  -> (In query) keyword
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  iconSearch (params, callback) {
+    let url = '/v1/service/iconSearch'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/pdf [PUBLIC]
+  *
+  * Return URL converted into PDF
+  *
+  * @param  {Object} params
+  * - @param  {String} token  -> (In query) Access Token
+  * - @param  {String} url  -> (In query) Url to capture
+  * - @param  {String} delay  -> (In query) Url to capture
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  pdf (params, callback) {
+    let url = '/v1/service/pdf'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/service/pdfPreview [PUBLIC]
+  *
+  * Return HTML converted into PDF
+  *
+  * @param  {Object} params
+  * - @param  {String} token  -> (In query) Access Token
+  * - @param  {String} html  -> (In query) Url to capture
+  * - @param  {String} delay  -> (In query) Url to capture
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  pdfPreview (body, callback) {
+    let params = {url: '/v1/service/pdfPreview', body}
+    this.post(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

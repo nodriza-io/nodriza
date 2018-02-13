@@ -7,16 +7,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "createdBy": {
-    "description": "User who created the resource",
-    "model": "user",
-    "skipAll": true
-  },
-  "updatedBy": {
-    "description": "Last user who updated the resource",
-    "model": "user",
-    "skipAll": true
-  },
   "title": {
     "description": "Template friendly name",
     "required": true,
@@ -31,6 +21,20 @@ module.exports = {
     "unique": true,
     "maxLength": 256,
     "regex": "/^([a-zA-Z0-9_-]+)$/"
+  },
+  "description": {
+    "description": "Template friendly name",
+    "required": true,
+    "type": "string",
+    "displayName": true
+  },
+  "country": {
+    "required": true,
+    "type": "string"
+  },
+  "language": {
+    "required": true,
+    "type": "string"
   },
   "type": {
     "required": true,
@@ -53,5 +57,25 @@ module.exports = {
     "type": "string",
     "required": true,
     "html": true
+  },
+  "html": {
+    "description": "Rendered template example",
+    "type": "string",
+    "required": true,
+    "html": true
+  },
+  "thumb": {
+    "description": "Rendered template example",
+    "type": "string",
+    "required": true
+  },
+  "pdf": {
+    "description": "Rendered PDF example",
+    "type": "string",
+    "required": true
+  },
+  "businessType": {
+    "type": "string",
+    "required": true
   }
 }

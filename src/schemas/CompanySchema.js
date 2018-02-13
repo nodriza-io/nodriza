@@ -44,13 +44,12 @@ module.exports = {
   "shortname": {
     "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
     "example": "acme-inc",
-    "required": true,
     "unique": true,
     "type": "string",
     "regex": "/^([a-z0-9_-]+)$/",
     "minLength": 2,
     "maxLength": 32,
-    "skipUpdate": true,
+    "skipAll": true,
     "existCheck": true
   },
   "legalName": {
@@ -67,11 +66,6 @@ module.exports = {
     "description": "Phone number",
     "type": "string",
     "example": "+1 508-695-1212"
-  },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
   },
   "logos": {
     "description": "Company logo",
@@ -118,6 +112,10 @@ module.exports = {
     "description": "Postal Code",
     "type": "string",
     "example": "90027"
+  },
+  "referedBy": {
+    "description": "The user who refered this company as client",
+    "model": "user"
   },
   "paymentResponsibles": {
     "type": "array",

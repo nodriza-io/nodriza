@@ -19,16 +19,17 @@ module.exports = {
   },
   "status": {
     "description": "Status of lead",
-    "example": "open",
-    "required": true,
+    "example": "Open",
     "type": "string",
     "enum": [
-      "open",
-      "contacted",
-      "qualified",
-      "unqualified"
+      "Open",
+      "Attempting",
+      "Working",
+      "Converted",
+      "Disqualified"
     ],
-    "defaultsTo": "open"
+    "defaultsTo": "Open",
+    "skipAll": true
   },
   "firstName": {
     "required": true,
@@ -44,25 +45,17 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "companyName": {
-    "description": "Company friendly name",
-    "example": "Acme",
-    "type": "string"
-  },
-  "companyShortname": {
-    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
-    "example": "acme-inc",
-    "type": "string",
-    "regex": "/^([a-z0-9_-]+)$/",
-    "minLength": 2,
-    "maxLength": 32
-  },
   "email": {
     "description": "User email",
     "example": "jdoe@acme.com",
     "type": "string",
-    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
+    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
     "existCheck": true
+  },
+  "companyName": {
+    "description": "Company friendly name",
+    "example": "Acme",
+    "type": "string"
   },
   "department": {
     "description": "Company department where the user belongs",
@@ -85,6 +78,62 @@ module.exports = {
     "description": "Full company website url",
     "example": "http://acme-inc.com",
     "type": "string"
+  },
+  "position": {
+    "description": "Company user position",
+    "example": "Sales Manager",
+    "type": "string"
+  },
+  "starred": {
+    "skipAll": true,
+    "type": "array"
+  },
+  "avatars": {
+    "description": "User avatar in different sizes",
+    "type": "json",
+    "skipAll": true
+  },
+  "logos": {
+    "description": "Company logo",
+    "type": "json",
+    "skipAll": true
+  },
+  "map": {
+    "description": "Google Maps Geo Location",
+    "type": "json",
+    "map": true,
+    "example": {}
+  },
+  "address": {
+    "description": "Google Maps address location",
+    "type": "string",
+    "address": true
+  },
+  "country": {
+    "description": "Country name",
+    "model": "country",
+    "mustExist": true,
+    "noCreate": true
+  },
+  "city": {
+    "description": "City name",
+    "example": "Los Angeles",
+    "type": "string"
+  },
+  "street": {
+    "description": "Street name",
+    "example": "2719 Hyperion Ave",
+    "type": "string"
+  },
+  "state": {
+    "description": "State name",
+    "example": "CA",
+    "type": "string"
+  },
+  "postal": {
+    "description": "Postal Code",
+    "type": "string",
+    "example": "90027"
   },
   "size": {
     "description": "Number of company employees",
@@ -254,11 +303,6 @@ module.exports = {
       "Militar"
     ]
   },
-  "legalName": {
-    "description": "Full company name used for legal and accounting issues",
-    "example": "Acme Inc.",
-    "type": "string"
-  },
   "source": {
     "description": "Company where the lead belongs",
     "type": "string",
@@ -276,90 +320,23 @@ module.exports = {
       "Website"
     ]
   },
-  "referedBy": {
-    "description": "The user who refered this company as client",
-    "model": "user",
-    "mustExist": true
-  },
   "rating": {
     "description": "Rate how close is this lead to become a client",
-    "type": "string",
-    "enum": [
-      "Hot",
-      "Warm",
-      "Cold"
-    ]
+    "type": "float"
   },
-  "starred": {
-    "skipAll": true,
-    "type": "array"
+  "referedBy": {
+    "description": "The user who refered this company as client",
+    "model": "user"
   },
-  "avatars": {
-    "description": "User avatar in different sizes",
-    "type": "json",
-    "skipAll": true
-  },
-  "logos": {
-    "description": "Company logo",
-    "type": "json",
-    "skipAll": true
-  },
-  "user": {
-    "description": "User where the lead belongs",
+  "assignedTo": {
+    "description": "Assign record to a user",
     "example": "59418bcd105605cc2693a981",
-    "model": "user",
-    "mustExist": true,
-    "skipAll": true
+    "model": "user"
   },
-  "company": {
-    "description": "Company where the lead belongs",
-    "example": "59418bcd105605cc2693a981",
-    "model": "company",
-    "mustExist": true,
-    "skipAll": true
+  "convertedUser": {
+    "model": "user"
   },
-  "map": {
-    "description": "Google Maps Geo Location",
-    "type": "json",
-    "map": true,
-    "example": {}
-  },
-  "address": {
-    "description": "Google Maps address location",
-    "type": "string",
-    "address": true
-  },
-  "country": {
-    "description": "Country name",
-    "model": "country",
-    "mustExist": true,
-    "noCreate": true
-  },
-  "city": {
-    "description": "City name",
-    "example": "Los Angeles",
-    "type": "string"
-  },
-  "street": {
-    "description": "Street name",
-    "example": "2719 Hyperion Ave",
-    "type": "string"
-  },
-  "state": {
-    "description": "State name",
-    "example": "CA",
-    "type": "string"
-  },
-  "postal": {
-    "description": "Postal Code",
-    "type": "string",
-    "example": "90027"
-  },
-  "converted": {
-    "description": "True or False if lead has been converted",
-    "example": "false",
-    "type": "boolean",
-    "defaultsTo": false,
-    "skipAll": true
+  "convertedCompany": {
+    "model": "company"
   }
 }

@@ -92,5 +92,8 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "amount": {
+    "type": "integer"
   }
 }
