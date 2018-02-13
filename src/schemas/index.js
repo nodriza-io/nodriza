@@ -38,7 +38,6 @@ import CronPreset from './CronPresetSchema'
 import Commission from './CommissionSchema'
 import SupportCase from './SupportCaseSchema'
 import Message from './MessageSchema'
-import FileData from './FileDataSchema'
 import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
 
@@ -82,7 +81,6 @@ export class Schemas {
     this.commission = Commission
     this.supportCase = SupportCase
     this.message = Message
-    this.fileData = FileData
     this.conversation = Conversation
     this.paymentMode = PaymentMode
   }

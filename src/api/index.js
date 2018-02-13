@@ -38,7 +38,6 @@ import { CronPreset } from './CronPresetApi'
 import { Commission } from './CommissionApi'
 import { SupportCase } from './SupportCaseApi'
 import { Message } from './MessageApi'
-import { FileData } from './FileDataApi'
 import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
 
@@ -82,7 +81,6 @@ export class Apis {
     this.commission = new Commission(params)
     this.supportCase = new SupportCase(params)
     this.message = new Message(params)
-    this.fileData = new FileData(params)
     this.conversation = new Conversation(params)
     this.paymentMode = new PaymentMode(params)
   }
