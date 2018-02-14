@@ -321,8 +321,13 @@ module.exports = {
     ]
   },
   "rating": {
-    "description": "Rate how close is this lead to become a client",
-    "type": "float"
+    "description": "Proposal scoring status",
+    "type": "string",
+    "enum": [
+      "Hot",
+      "Warm",
+      "Cold"
+    ]
   },
   "referedBy": {
     "description": "The user who refered this company as client",

@@ -21,8 +21,12 @@ module.exports = {
     "description": "Unique invoice idetification number",
     "unique": true,
     "displayName": true,
-    "type": "string",
-    "regex": "/^([a-z-A-Z-0-9_-]+)$/"
+    "type": "string"
+  },
+  "orderNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   },
   "title": {
     "required": true,
@@ -60,11 +64,7 @@ module.exports = {
   "specialObservations": {
     "description": "Specify if the invoice has some special observation",
     "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "invoice"
-    }
+    "longtext": "true"
   },
   "issueDate": {
     "type": "datetime"

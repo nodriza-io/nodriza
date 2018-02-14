@@ -17,51 +17,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "name": {
-    "type": "string",
-    "displayName": true,
-    "required": true
-  },
-  "description": {
-    "type": "string"
-  },
-  "category": {
-    "model": "category",
-    "mustExist": true,
-    "required": true
-  },
-  "unit": {
-    "description": "Product unit of measure",
-    "required": true,
-    "type": "string",
-    "enum": [
-      "Hrs",
-      "Quantity",
-      "GB",
-      "GB-Mo",
-      "IOPS-Mo",
-      "IOs",
-      "LCU-Hrs",
-      "Count",
-      "Gbps-hrs"
-    ]
-  },
-  "price": {
-    "description": "Product Price",
-    "type": "float",
-    "currency": true,
-    "required": true
-  },
-  "currency": {
-    "required": true,
-    "type": "string",
-    "model": "currency",
-    "noCreate": true
-  },
-  "tax": {
-    "model": "tax",
-    "required": true
-  },
   "sku": {
     "description": "Unique Stock Keeping Unit Number",
     "unique": true,
@@ -70,7 +25,50 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "provider": {
+  "name": {
+    "type": "string",
+    "displayName": true,
+    "required": true
+  },
+  "description": {
+    "type": "string",
+    "longtext": "true"
+  },
+  "price": {
+    "description": "Product Price",
+    "type": "float",
+    "currency": true,
+    "required": true
+  },
+  "currency": {
+    "type": "string",
+    "model": "currency",
+    "noCreate": true
+  },
+  "tax": {
+    "model": "tax"
+  },
+  "unit": {
+    "description": "Product unit of measure",
+    "type": "string",
+    "defaultsTo": "Each",
+    "enum": [
+      "Each",
+      "Package",
+      "Dozen",
+      "Hr",
+      "Day",
+      "Mnt",
+      "Mb",
+      "Gb",
+      "Kg",
+      "Lb"
+    ]
+  },
+  "category": {
+    "model": "category"
+  },
+  "vendor": {
     "description": "Company who provide this product",
     "model": "company"
   }

@@ -76,7 +76,7 @@ module.exports = {
   "paymentNumber": {
     "description": "Unique proposal idetification number",
     "unique": true,
-    "random": 8,
+    "random": 6,
     "displayName": true,
     "type": "string",
     "regex": "/^([a-z-A-Z-0-9_-]+)$/"
