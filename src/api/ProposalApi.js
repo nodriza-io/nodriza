@@ -64,6 +64,24 @@ export class Proposal extends Request {
     })
   }
   /**
+  * POST /v1/proposal/share [PRIVATE]
+  *
+  * Send proposal to anybody else
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
+  * - @param  {String} email * -> (In Body)  e.g jdoen@acmeinc.com
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  share (body, callback) {
+    let params = {url: '/v1/proposal/share', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/proposal/starred [PRIVATE]
   *
   * Change starred status

@@ -18,27 +18,27 @@ module.exports = {
     "skipAll": true
   },
   "sku": {
+    "required": true,
     "description": "Unique Stock Keeping Unit Number",
     "unique": true,
     "random": 8,
-    "required": true,
     "displayName": true,
     "type": "string"
   },
   "name": {
+    "required": true,
     "type": "string",
-    "displayName": true,
-    "required": true
+    "displayName": true
   },
   "description": {
     "type": "string",
     "longtext": "true"
   },
   "price": {
+    "required": true,
     "description": "Product Price",
     "type": "float",
-    "currency": true,
-    "required": true
+    "currency": true
   },
   "currency": {
     "type": "string",

@@ -39,7 +39,7 @@ module.exports = {
       "Draft",
       "Ready",
       "Negotiation",
-      "Accepted",
+      "Approved",
       "Denied"
     ]
   },
@@ -92,14 +92,14 @@ module.exports = {
     "description": "Expiration date determines when the proposal expires",
     "type": "datetime"
   },
-  "relatedLead": {
-    "description": "Select the lead that is related with this proposal",
-    "model": "lead",
-    "mustExist": true
-  },
   "relatedUser": {
     "description": "Select the user that is related with this proposal",
     "model": "user",
+    "mustExist": true
+  },
+  "relatedLead": {
+    "description": "Select the lead that is related with this proposal",
+    "model": "lead",
     "mustExist": true
   },
   "amount": {
@@ -142,5 +142,11 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "opened": {
+    "description": "How many views has the document has been opened",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }
