@@ -50,14 +50,13 @@ module.exports = {
     "defaultsTo": false
   },
   "clientId": {
-    "description": "After registering every app, you will receive a client ID and is considered public information, and is used to build login URLs, or included in Javascript source code on a page",
-    "example": "467332518934-hf9q0e5q8qb5hvcs3f4d3hfpetrbpi9s.apps.googleusercontent.com",
+    "example": "367332518934-hf9q0e5q8qb5hvcs3f4d3hfpetrbpi9s.apps.googleusercontent.com",
     "type": "string"
   },
   "clientSecret": {
-    "description": "After registering every app, you will receive a client secret ID and should not be exposed, be careful!",
     "example": "FqbCusgZgrMQspMQS3FWl5ue",
-    "type": "string"
+    "type": "string",
+    "password": true
   },
   "accessTokenUri": {
     "description": "Url to redirect for Oauth2 authentication",
