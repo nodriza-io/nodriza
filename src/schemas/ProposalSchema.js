@@ -22,7 +22,11 @@ module.exports = {
     "unique": true,
     "random": 6,
     "displayName": true,
-    "regex": "/^([a-z-A-Z-0-9_-]+)$/",
+    "type": "string"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
     "type": "string"
   },
   "title": {

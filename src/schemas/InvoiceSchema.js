@@ -23,7 +23,7 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "orderNumber": {
+  "referenceNumber": {
     "unique": true,
     "displayName": true,
     "type": "string"

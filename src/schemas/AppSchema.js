@@ -1,18 +1,19 @@
 module.exports = {
-  "oem": {
-    "description": "Essential data required by platform",
-    "example": false,
-    "required": true,
-    "type": "boolean",
-    "defaultsTo": true,
-    "skipUpdate": true
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
   },
   "name": {
     "description": "Friendly application name identifier",
     "example": "Google Apps",
     "required": true,
     "type": "string",
-    "displayName": true
+    "displayName": true,
+    "skipAll": true
   },
   "keyname": {
     "description": "Unique keyname identifier",
@@ -21,29 +22,31 @@ module.exports = {
     "required": true,
     "alphalowerDash": true,
     "unique": true,
-    "skipUpdate": true,
+    "skipAll": true,
     "existCheck": true
   },
   "description": {
     "description": "Application description",
     "example": "Enable authentication through Google",
     "required": true,
+    "skipAll": true,
     "type": "string"
   },
   "createAppUrl": {
     "description": "URL to open an account and get the client ID",
     "example": "https://console.developers.google.com/apis/credentials",
-    "type": "url"
+    "type": "url",
+    "skipAll": true
   },
   "apiDocUrl": {
     "description": "Official application API documentation",
     "example": "https://developers.google.com/identity/protocols/OAuth2",
-    "type": "url"
+    "type": "url",
+    "skipAll": true
   },
   "active": {
     "description": "Set app status",
     "type": "boolean",
-    "skipAll": true,
     "defaultsTo": false
   },
   "clientId": {
@@ -59,18 +62,21 @@ module.exports = {
   "accessTokenUri": {
     "description": "Url to redirect for Oauth2 authentication",
     "example": "https://www.googleapis.com/oauth2/v4/token",
-    "type": "url"
+    "type": "url",
+    "skipAll": true
   },
   "authorizationUri": {
     "description": "Url to redirect for Oauth2 authentication",
     "example": "https://accounts.google.com/o/oauth2/v2/auth",
     "required": true,
-    "type": "url"
+    "type": "url",
+    "skipAll": true
   },
   "userInfoUri": {
     "description": "Some Oauth2 services offers a URL where the user profile information can be requested",
     "example": "https://www.googleapis.com/oauth2/v1/userinfo?access_token=",
-    "type": "url"
+    "type": "url",
+    "skipAll": true
   },
   "scopes": {
     "description": "Scopes let you specify exactly how the app needs to access.",
@@ -79,7 +85,8 @@ module.exports = {
       "profile"
     ],
     "type": "array",
-    "defaultsTo": []
+    "defaultsTo": [],
+    "skipAll": true
   },
   "dataMap": {
     "description": "JSON Object to map user profile data from different OAuth2 Providers",
@@ -88,30 +95,28 @@ module.exports = {
       "firstName": "given_name",
       "lastName": "family_name"
     },
-    "type": "json"
+    "type": "json",
+    "skipAll": true
   },
   "allowUserLogin": {
     "description": "Allow users login using OAuth App",
     "example": false,
     "type": "boolean",
-    "defaultsTo": false
+    "defaultsTo": false,
+    "skipAll": true
   },
   "iconFont": {
     "description": "App icon font",
     "example": "nf nf-plugin",
     "required": true,
-    "type": "string"
+    "type": "string",
+    "skipAll": true
   },
   "color": {
     "description": "App color",
     "example": "#4285F4",
     "required": true,
-    "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
+    "type": "string",
+    "skipAll": true
   }
 }

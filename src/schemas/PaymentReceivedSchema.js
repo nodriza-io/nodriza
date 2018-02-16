@@ -21,6 +21,11 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
+  },
   "title": {
     "required": true,
     "displayName": true,
@@ -72,14 +77,6 @@ module.exports = {
   "paymentResponsibles": {
     "type": "array",
     "multiple": "user"
-  },
-  "paymentNumber": {
-    "description": "Unique proposal idetification number",
-    "unique": true,
-    "random": 6,
-    "displayName": true,
-    "type": "string",
-    "regex": "/^([a-z-A-Z-0-9_-]+)$/"
   },
   "transactionId": {
     "displayName": true,
