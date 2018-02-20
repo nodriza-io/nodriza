@@ -13,6 +13,7 @@ import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
+import { Permission } from './PermissionApi'
 import { Proposal } from './ProposalApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
@@ -56,6 +57,7 @@ export class Apis {
     this.lead = new Lead(params)
     this.paymentReceived = new PaymentReceived(params)
     this.payu = new Payu(params)
+    this.permission = new Permission(params)
     this.proposal = new Proposal(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)

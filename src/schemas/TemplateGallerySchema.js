@@ -74,7 +74,11 @@ module.exports = {
     "type": "string",
     "required": true
   },
-  "businessType": {
+  "business": {
+    "type": "string",
+    "required": true
+  },
+  "category": {
     "type": "string",
     "required": true
   }

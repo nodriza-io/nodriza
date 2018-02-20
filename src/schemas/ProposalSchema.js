@@ -54,7 +54,8 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "proposal"
+      "type": "proposal",
+      "category": "layout"
     }
   },
   "content": {
@@ -64,7 +65,8 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "proposal"
+      "type": "proposal",
+      "category": "content"
     }
   },
   "products": {

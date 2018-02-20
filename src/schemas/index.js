@@ -13,6 +13,7 @@ import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
+import Permission from './PermissionSchema'
 import Proposal from './ProposalSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
@@ -56,6 +57,7 @@ export class Schemas {
     this.lead = Lead
     this.paymentReceived = PaymentReceived
     this.payu = Payu
+    this.permission = Permission
     this.proposal = Proposal
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice

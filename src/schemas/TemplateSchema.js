@@ -53,5 +53,9 @@ module.exports = {
     "type": "string",
     "required": true,
     "html": true
+  },
+  "category": {
+    "type": "string",
+    "required": true
   }
 }
