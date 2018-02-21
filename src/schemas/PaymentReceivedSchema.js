@@ -21,6 +21,15 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "layout": {
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "paymentReceived",
+      "category": "layout"
+    }
+  },
   "referenceNumber": {
     "unique": true,
     "displayName": true,
@@ -37,19 +46,14 @@ module.exports = {
   },
   "paymentMode": {
     "model": "paymentMode",
+    "defaultsTo": {
+      "keyname": "cash",
+      "displayName": "Cash"
+    },
     "required": true
   },
-  "issueDate": {
+  "paymentDate": {
     "type": "datetime"
-  },
-  "layout": {
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "paymentReceived"
-    }
   },
   "paidInvoices": {
     "type": "array",
@@ -58,10 +62,13 @@ module.exports = {
   },
   "currency": {
     "model": "currency",
-    "required": true,
     "noCreate": true
   },
   "amount": {
+    "type": "float",
+    "defaultsTo": 0
+  },
+  "tax": {
     "type": "float",
     "defaultsTo": 0
   },

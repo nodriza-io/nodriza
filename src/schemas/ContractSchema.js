@@ -19,6 +19,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "layout": {
+    "description": "Contract template",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "contract",
+      "category": "layout"
+    }
+  },
   "contractNumber": {
     "description": "Unique contract idetification number",
     "unique": true,
@@ -41,17 +51,6 @@ module.exports = {
     "required": true,
     "displayName": true,
     "type": "string"
-  },
-  "layout": {
-    "description": "Contract template",
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "contract",
-      "category": "layout"
-    }
   },
   "content": {
     "description": "Contract content",

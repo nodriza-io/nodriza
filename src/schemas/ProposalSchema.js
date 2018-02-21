@@ -17,6 +17,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "layout": {
+    "description": "Detailed proposal proposal.",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "proposal",
+      "category": "layout"
+    }
+  },
   "proposalNumber": {
     "description": "Unique proposal idetification number",
     "unique": true,
@@ -46,17 +56,6 @@ module.exports = {
       "Approved",
       "Denied"
     ]
-  },
-  "layout": {
-    "description": "Detailed proposal proposal.",
-    "required": true,
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "proposal",
-      "category": "layout"
-    }
   },
   "content": {
     "description": "Proposal content.",

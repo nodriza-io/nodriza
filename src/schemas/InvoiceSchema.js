@@ -17,6 +17,16 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "layout": {
+    "description": "Proposal template layout",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "invoice",
+      "category": "layout"
+    }
+  },
   "invoiceNumber": {
     "description": "Unique invoice idetification number",
     "unique": true,
@@ -51,16 +61,6 @@ module.exports = {
     "required": true,
     "mustExist": true,
     "model": "company"
-  },
-  "layout": {
-    "description": "Proposal template layout",
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "invoice",
-      "category": "layout"
-    }
   },
   "specialObservations": {
     "description": "Specify if the invoice has some special observation",
