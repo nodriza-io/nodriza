@@ -49,7 +49,8 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "contract"
+      "type": "contract",
+      "category": "layout"
     }
   },
   "content": {
@@ -59,7 +60,8 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "contract"
+      "type": "contract",
+      "category": "content"
     }
   },
   "effectiveDate": {

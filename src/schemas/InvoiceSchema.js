@@ -58,7 +58,8 @@ module.exports = {
     "html": true,
     "target": "template",
     "query": {
-      "type": "invoice"
+      "type": "invoice",
+      "category": "layout"
     }
   },
   "specialObservations": {
