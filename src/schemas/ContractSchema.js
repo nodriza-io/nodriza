@@ -36,6 +36,11 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
+  },
   "status": {
     "required": true,
     "type": "string",
