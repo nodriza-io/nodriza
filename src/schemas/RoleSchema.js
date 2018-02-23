@@ -20,7 +20,8 @@ module.exports = {
     "description": "Friendly role name identifier",
     "example": "Support",
     "required": true,
-    "type": "string"
+    "type": "string",
+    "displayName": true
   },
   "keyname": {
     "description": "Unique keyname identifier",

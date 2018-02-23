@@ -48,7 +48,7 @@ module.exports = {
     "enum": [
       "Draft",
       "Approved",
-      "Canceled"
+      "Cancelled"
     ],
     "skipAll": true
   },
@@ -74,6 +74,9 @@ module.exports = {
   "expirationDate": {
     "type": "datetime"
   },
+  "amount": {
+    "type": "float"
+  },
   "firstProfile": {
     "model": "user"
   },
@@ -97,8 +100,5 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
-  },
-  "amount": {
-    "type": "integer"
   }
 }
