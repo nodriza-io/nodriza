@@ -12,6 +12,24 @@ export class PaymentReceived extends Request {
     super(params)
   }
   /**
+  * POST /v1/paymentReceived/share [PRIVATE]
+  *
+  * Share payment received with any email
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email * -> (In Body)  e.g john@acme.com
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  share (body, callback) {
+    let params = {url: '/v1/paymentReceived/share', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/paymentReceived/starred [PRIVATE]
   *
   * Change starred status

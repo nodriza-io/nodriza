@@ -47,6 +47,20 @@ export class Invoice extends Request {
     })
   }
   /**
+  * GET /v1/invoice/getNextNumber [PRIVATE]
+  *
+  * Return next invoice number
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getNextNumber (callback) {
+    this.get('/v1/invoice/getNextNumber', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/invoice/notifyStatus [PRIVATE]
   *
   * Send payment reminder
@@ -75,6 +89,24 @@ export class Invoice extends Request {
   */
   sendReminder (body, callback) {
     let params = {url: '/v1/invoice/sendReminder', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/invoice/share [PRIVATE]
+  *
+  * Share invoice with any email
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email * -> (In Body)  e.g john@acme.com
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  share (body, callback) {
+    let params = {url: '/v1/invoice/share', body}
     this.post(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)

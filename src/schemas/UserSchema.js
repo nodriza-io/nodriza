@@ -139,5 +139,10 @@ module.exports = {
       "inactive",
       "deleted"
     ]
+  },
+  "skype": {
+    "description": "Skype username",
+    "example": "jdoe",
+    "type": "string"
   }
 }

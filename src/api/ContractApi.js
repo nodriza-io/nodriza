@@ -30,6 +30,41 @@ export class Contract extends Request {
     })
   }
   /**
+  * POST /v1/contract/sendToProfiles [PRIVATE]
+  *
+  * Share contract with related profiles
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  sendToProfiles (body, callback) {
+    let params = {url: '/v1/contract/sendToProfiles', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/contract/share [PRIVATE]
+  *
+  * Share contract with any email
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email * -> (In Body)  e.g john@acme.com
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  share (body, callback) {
+    let params = {url: '/v1/contract/share', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/contract/starred [PRIVATE]
   *
   * Change starred status

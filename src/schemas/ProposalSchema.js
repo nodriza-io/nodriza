@@ -75,7 +75,6 @@ module.exports = {
     "defaultsTo": []
   },
   "numberOfPayments": {
-    "required": true,
     "type": "integer",
     "defaultsTo": 1,
     "min": 1
@@ -144,6 +143,14 @@ module.exports = {
     "type": "string",
     "password": true
   },
+  "conferenceUrl": {
+    "type": "string",
+    "example": "https://hangouts.google.com/call/-x8KF7XdoUnTJDsDkaJgABEE",
+    "labelAction": {
+      "url": "https://hangouts.google.com/start",
+      "text": "CREATE HANGOUTS"
+    }
+  },
   "starred": {
     "skipAll": true,
     "type": "array"
@@ -153,5 +160,12 @@ module.exports = {
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
+  },
+  "viewsAlerts": {
+    "description": "Number of alerts when client open the proposal",
+    "type": "integer",
+    "defaultsTo": 1,
+    "min": 0,
+    "max": 10
   }
 }

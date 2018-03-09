@@ -115,20 +115,6 @@ module.exports = {
     "type": "array",
     "multiple": "user"
   },
-  "commissionAgent": {
-    "model": "user"
-  },
-  "commissionRate": {
-    "type": "float",
-    "defaultsTo": 0
-  },
-  "commissionTax": {
-    "model": "tax"
-  },
-  "commissionPo": {
-    "model": "purchaseOrder",
-    "skipAll": true
-  },
   "passwordProtected": {
     "type": "boolean",
     "defaultsTo": false

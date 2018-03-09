@@ -41,6 +41,7 @@ import { SupportCase } from './SupportCaseApi'
 import { Message } from './MessageApi'
 import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
+import { ContractType } from './ContractTypeApi'
 
 export class Apis {
   constructor (params) {
@@ -85,5 +86,6 @@ export class Apis {
     this.message = new Message(params)
     this.conversation = new Conversation(params)
     this.paymentMode = new PaymentMode(params)
+    this.contractType = new ContractType(params)
   }
 }

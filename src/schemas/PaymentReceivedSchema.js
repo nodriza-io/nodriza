@@ -21,6 +21,13 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "paymentNumber": {
+    "description": "Unique idetification number",
+    "unique": true,
+    "random": 6,
+    "displayName": true,
+    "type": "string"
+  },
   "layout": {
     "type": "string",
     "html": true,
@@ -86,7 +93,6 @@ module.exports = {
     "multiple": "user"
   },
   "transactionId": {
-    "displayName": true,
     "type": "string"
   },
   "meta": {

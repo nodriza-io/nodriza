@@ -30,19 +30,18 @@ export class Service extends Request {
     })
   }
   /**
-  * GET /v1/service/elasticSearch [PRIVATE]
+  * GET /v1/service/export [PRIVATE]
   *
-  * Ami search
+  * Export collection
   *
   * @param  {Object} params
-  * - @param  {String} db * -> (In query) Database search
-  * - @param  {String} collection * -> (In query) Collection search
-  * - @param  {String} criterial * -> (In query) Criterial search
+  * - @param  {String} collection * -> (In query) Collection to export
+  * - @param  {String} ext * -> (In query) Export format csv or json
   * @param  {Function} callback
   * @return {Code} 200, 403
   */
-  elasticSearch (params, callback) {
-    let url = '/v1/service/elasticSearch'
+  export (params, callback) {
+    let url = '/v1/service/export'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
       if (err) return callback(err)
@@ -115,6 +114,23 @@ export class Service extends Request {
     let url = '/v1/service/iconSearch'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/service/import [PRIVATE]
+  *
+  * Generate a document with random data for testing proposes
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  import (body, callback) {
+    let params = {url: '/v1/service/import', body}
+    this.post(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

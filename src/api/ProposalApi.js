@@ -66,11 +66,11 @@ export class Proposal extends Request {
   /**
   * POST /v1/proposal/share [PRIVATE]
   *
-  * Send proposal to anybody else
+  * Share proposal with any email
   *
   * @param  {Object} params
-  * - @param  {String} id * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
-  * - @param  {String} email * -> (In Body)  e.g jdoen@acmeinc.com
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email * -> (In Body)  e.g john@acme.com
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */

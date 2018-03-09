@@ -41,6 +41,7 @@ import SupportCase from './SupportCaseSchema'
 import Message from './MessageSchema'
 import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
+import ContractType from './ContractTypeSchema'
 
 export class Schemas {
   constructor (params) {
@@ -85,5 +86,6 @@ export class Schemas {
     this.message = Message
     this.conversation = Conversation
     this.paymentMode = PaymentMode
+    this.contractType = ContractType
   }
 }
