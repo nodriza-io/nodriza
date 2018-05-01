@@ -1,5 +1,6 @@
 'use strict'
 
+import { Account } from './AccountApi'
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Article } from './ArticleApi'
@@ -45,6 +46,7 @@ import { ContractType } from './ContractTypeApi'
 
 export class Apis {
   constructor (params) {
+    this.account = new Account(params)
     this.app = new App(params)
     this.apparience = new Apparience(params)
     this.article = new Article(params)

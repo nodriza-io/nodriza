@@ -1,5 +1,6 @@
 'use strict'
 
+import Account from './AccountSchema'
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Article from './ArticleSchema'
@@ -45,6 +46,7 @@ import ContractType from './ContractTypeSchema'
 
 export class Schemas {
   constructor (params) {
+    this.account = Account
     this.app = App
     this.apparience = Apparience
     this.article = Article

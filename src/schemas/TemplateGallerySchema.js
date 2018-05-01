@@ -13,6 +13,18 @@ module.exports = {
     "type": "string",
     "displayName": true
   },
+  "country": {
+    "required": true,
+    "enum": [
+      "us",
+      "co",
+      "es",
+      "fr",
+      "mx",
+      "hr"
+    ],
+    "type": "string"
+  },
   "keyname": {
     "description": "Unique keyname identifier. Only alphanumeric, dash and underscore allowed",
     "required": true,
@@ -28,10 +40,6 @@ module.exports = {
     "type": "string",
     "displayName": true
   },
-  "country": {
-    "required": true,
-    "type": "string"
-  },
   "language": {
     "required": true,
     "type": "string"
@@ -40,16 +48,13 @@ module.exports = {
     "required": true,
     "type": "string",
     "enum": [
-      "invoice",
-      "contract",
       "proposal",
-      "purchaseOrder",
+      "contract",
+      "invoice",
       "paymentReceived",
-      "report",
       "article",
       "content",
-      "email",
-      "system"
+      "email"
     ]
   },
   "body": {
@@ -76,10 +81,46 @@ module.exports = {
   },
   "business": {
     "type": "string",
+    "enum": [
+      "Any",
+      "Real Estate",
+      "Construction",
+      "Consulting",
+      "Marketing",
+      "Financial",
+      "Car",
+      "Personal",
+      "Business Plans",
+      "Education",
+      "Healthcare",
+      "Legal",
+      "Manufacturing",
+      "Technology"
+    ],
+    "required": true
+  },
+  "department": {
+    "type": "string",
+    "enum": [
+      "Production",
+      "Research and Development",
+      "Sales",
+      "Purchasing",
+      "Marketing",
+      "Human Resource",
+      "Accounting and Finance",
+      "Customer Service",
+      "IT",
+      "Distribution"
+    ],
     "required": true
   },
   "category": {
     "type": "string",
+    "enum": [
+      "layout",
+      "content"
+    ],
     "required": true
   }
 }

@@ -65,6 +65,9 @@ module.exports = {
       "Lb"
     ]
   },
+  "category": {
+    "model": "category"
+  },
   "vendor": {
     "description": "Company who provide this product",
     "model": "company"

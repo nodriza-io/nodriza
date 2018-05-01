@@ -192,4 +192,18 @@ export class Service extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/service/systemAvailability [PUBLIC]
+  *
+  * Validate if system is ready
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  systemAvailability (callback) {
+    this.get('/v1/service/systemAvailability', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

@@ -13,7 +13,9 @@ module.exports = {
     "enum": [
       "proposal",
       "contract",
-      "invoice"
+      "invoice",
+      "paymentReceived",
+      "article"
     ]
   },
   "signatureId": {

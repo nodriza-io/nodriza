@@ -29,6 +29,7 @@ module.exports = {
   },
   "proposalNumber": {
     "description": "Unique proposal idetification number",
+    "required": true,
     "unique": true,
     "random": 6,
     "displayName": true,
@@ -167,5 +168,11 @@ module.exports = {
     "defaultsTo": 1,
     "min": 0,
     "max": 10
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }
