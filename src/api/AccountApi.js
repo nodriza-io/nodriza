@@ -12,15 +12,15 @@ export class Account extends Request {
     super(params)
   }
   /**
-  * GET /v1/account/getMyAccount [PRIVATE]
+  * GET /v1/account/getAccountInfo [PRIVATE]
   *
   * Returns Nodriza account details
   *
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */
-  getMyAccount (callback) {
-    this.get('/v1/account/getMyAccount', (err, data) => {
+  getAccountInfo (callback) {
+    this.get('/v1/account/getAccountInfo', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
