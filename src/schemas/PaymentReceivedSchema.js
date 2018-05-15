@@ -23,6 +23,7 @@ module.exports = {
   },
   "paymentNumber": {
     "description": "Unique idetification number",
+    "required": true,
     "unique": true,
     "random": 6,
     "displayName": true,
@@ -75,10 +76,6 @@ module.exports = {
     "type": "float",
     "defaultsTo": 0
   },
-  "tax": {
-    "type": "float",
-    "defaultsTo": 0
-  },
   "bankCharges": {
     "type": "float",
     "defaultsTo": 0
@@ -103,5 +100,11 @@ module.exports = {
     "description": "Specify if the payment received has some special observation",
     "type": "string",
     "longtext": true
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }

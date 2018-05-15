@@ -136,5 +136,11 @@ module.exports = {
   "reminders": {
     "type": "array",
     "skipAll": true
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }

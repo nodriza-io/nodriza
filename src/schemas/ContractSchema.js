@@ -31,6 +31,7 @@ module.exports = {
   },
   "contractNumber": {
     "description": "Unique contract idetification number",
+    "required": true,
     "unique": true,
     "random": 6,
     "displayName": true,
@@ -100,5 +101,11 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
   }
 }
