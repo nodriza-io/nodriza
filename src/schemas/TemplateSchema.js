@@ -56,6 +56,10 @@ module.exports = {
   },
   "category": {
     "type": "string",
+    "enum": [
+      "layout",
+      "content"
+    ],
     "required": true
   }
 }
