@@ -344,5 +344,9 @@ module.exports = {
   },
   "convertedCompany": {
     "model": "company"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
   }
 }
