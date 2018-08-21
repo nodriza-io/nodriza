@@ -26,23 +26,14 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
+  },
   "title": {
     "required": true,
     "type": "string"
-  },
-  "shortDescription": {
-    "required": true,
-    "type": "string",
-    "longtext": true
-  },
-  "category": {
-    "model": "category",
-    "mustExist": true,
-    "required": true,
-    "defaultsTo": {
-      "slug": "general",
-      "name": "General"
-    }
   },
   "layout": {
     "description": "Article layout",
@@ -56,13 +47,23 @@ module.exports = {
   },
   "content": {
     "description": "Article content.",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
     "query": {
-      "type": "article"
+      "type": "article",
+      "category": "content"
     }
+  },
+  "relatedUser": {
+    "description": "Select the user that is related with this article",
+    "model": "user",
+    "mustExist": true
+  },
+  "relatedLead": {
+    "description": "Select the lead that is related with this article",
+    "model": "lead",
+    "mustExist": true
   },
   "passwordProtected": {
     "type": "boolean",
@@ -75,5 +76,18 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "opened": {
+    "description": "How many views has the document has been opened",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
+  },
+  "viewsAlerts": {
+    "description": "Number of alerts when client open the proposal",
+    "type": "integer",
+    "defaultsTo": 1,
+    "min": 0,
+    "max": 10
   }
 }

@@ -16,11 +16,13 @@ import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
 import { Permission } from './PermissionApi'
 import { Proposal } from './ProposalApi'
+import { ProposalVersion } from './ProposalVersionApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Signature } from './SignatureApi'
+import { Stripe } from './StripeApi'
 import { TemplateGallery } from './TemplateGalleryApi'
 import { Token } from './TokenApi'
 import { User } from './UserApi'
@@ -62,11 +64,13 @@ export class Apis {
     this.payu = new Payu(params)
     this.permission = new Permission(params)
     this.proposal = new Proposal(params)
+    this.proposalVersion = new ProposalVersion(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)
     this.role = new Role(params)
     this.service = new Service(params)
     this.signature = new Signature(params)
+    this.stripe = new Stripe(params)
     this.templateGallery = new TemplateGallery(params)
     this.token = new Token(params)
     this.user = new User(params)

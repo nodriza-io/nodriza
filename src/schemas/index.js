@@ -16,11 +16,13 @@ import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
 import Permission from './PermissionSchema'
 import Proposal from './ProposalSchema'
+import ProposalVersion from './ProposalVersionSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
+import Stripe from './StripeSchema'
 import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
 import User from './UserSchema'
@@ -62,11 +64,13 @@ export class Schemas {
     this.payu = Payu
     this.permission = Permission
     this.proposal = Proposal
+    this.proposalVersion = ProposalVersion
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
     this.role = Role
     this.service = Service
     this.signature = Signature
+    this.stripe = Stripe
     this.templateGallery = TemplateGallery
     this.token = Token
     this.user = User

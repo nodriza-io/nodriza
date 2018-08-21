@@ -12,6 +12,23 @@ export class Account extends Request {
     super(params)
   }
   /**
+  * POST /v1/account/checkWS [PRIVATE]
+  *
+  * Check WS
+  *
+  * @param  {Object} params
+  * - @param  {String} userId * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  checkWS (body, callback) {
+    let params = {url: '/v1/account/checkWS', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/account/getAccountInfo [PRIVATE]
   *
   * Returns Nodriza account details

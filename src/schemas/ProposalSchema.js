@@ -174,5 +174,15 @@ module.exports = {
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
+  },
+  "proposalVersion": {
+    "skipAll": true,
+    "description": "Proposal version id",
+    "type": "string"
+  },
+  "versions": {
+    "skipAll": true,
+    "description": "Proposal versions",
+    "type": "array"
   }
 }

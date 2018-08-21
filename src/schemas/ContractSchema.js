@@ -48,7 +48,8 @@ module.exports = {
     "defaultsTo": "Draft",
     "enum": [
       "Draft",
-      "Approved",
+      "Ready",
+      "Signed",
       "Cancelled"
     ],
     "skipAll": true

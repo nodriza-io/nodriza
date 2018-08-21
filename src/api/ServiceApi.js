@@ -101,6 +101,23 @@ export class Service extends Request {
     })
   }
   /**
+  * POST /v1/service/getTrialExpiration [PUBLIC]
+  *
+  * Get trial information
+  *
+  * @param  {Object} params
+  * - @param  {String} firstName  -> (In Body)  e.g staging
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  getTrialExpiration (body, callback) {
+    let params = {url: '/v1/service/getTrialExpiration', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/service/iconSearch [PRIVATE]
   *
   * Return search results
@@ -202,6 +219,20 @@ export class Service extends Request {
   */
   systemAvailability (callback) {
     this.get('/v1/service/systemAvailability', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/version [PUBLIC]
+  *
+  * Get app version
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  version (callback) {
+    this.get('/v1/service/version', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

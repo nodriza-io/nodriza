@@ -71,5 +71,10 @@ module.exports = {
   "vendor": {
     "description": "Company who provide this product",
     "model": "company"
+  },
+  "photo": {
+    "type": "string",
+    "description": "Product photo URL",
+    "thumbnail": true
   }
 }

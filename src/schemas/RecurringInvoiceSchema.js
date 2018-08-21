@@ -87,25 +87,6 @@ module.exports = {
     "type": "json",
     "skipAll": true
   },
-  "commissionAgent": {
-    "model": "user"
-  },
-  "commissionRate": {
-    "type": "float",
-    "defaultsTo": 0
-  },
-  "commissionTax": {
-    "model": "tax"
-  },
-  "commissionPoLayout": {
-    "description": "Layout for commission purchase order",
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "purchaseOrder"
-    }
-  },
   "passwordProtected": {
     "type": "boolean",
     "defaultsTo": false

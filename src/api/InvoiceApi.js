@@ -78,6 +78,24 @@ export class Invoice extends Request {
     })
   }
   /**
+  * GET /v1/invoice/paymentAvailability [PUBLIC]
+  *
+  * Returns invoice payment availability
+  *
+  * @param  {Object} params
+  * - @param  {String} invoiceId * -> (In query) Invoice ID
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  paymentAvailability (params, callback) {
+    let url = '/v1/invoice/paymentAvailability'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/invoice/recordPayment [PRIVATE]
   *
   * Generate commission PO from invoice
