@@ -127,6 +127,14 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
+  },
   "paymentsReceived": {
     "skipAll": true,
     "type": "array",

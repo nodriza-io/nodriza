@@ -120,5 +120,9 @@ module.exports = {
   "paymentResponsibles": {
     "type": "array",
     "multiple": "user"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
   }
 }

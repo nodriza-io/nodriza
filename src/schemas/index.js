@@ -4,6 +4,7 @@ import Account from './AccountSchema'
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Article from './ArticleSchema'
+import Category from './CategorySchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import Contract from './ContractSchema'
@@ -15,6 +16,7 @@ import Lead from './LeadSchema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
 import Permission from './PermissionSchema'
+import Product from './ProductSchema'
 import Proposal from './ProposalSchema'
 import ProposalVersion from './ProposalVersionSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
@@ -36,8 +38,6 @@ import Cron from './CronSchema'
 import Log from './LogSchema'
 import Activity from './ActivitySchema'
 import Tax from './TaxSchema'
-import Category from './CategorySchema'
-import Product from './ProductSchema'
 import CronPreset from './CronPresetSchema'
 import Commission from './CommissionSchema'
 import SupportCase from './SupportCaseSchema'
@@ -52,6 +52,7 @@ export class Schemas {
     this.app = App
     this.apparience = Apparience
     this.article = Article
+    this.category = Category
     this.company = Company
     this.config = Config
     this.contract = Contract
@@ -63,6 +64,7 @@ export class Schemas {
     this.paymentReceived = PaymentReceived
     this.payu = Payu
     this.permission = Permission
+    this.product = Product
     this.proposal = Proposal
     this.proposalVersion = ProposalVersion
     this.purchaseOrder = PurchaseOrder
@@ -84,8 +86,6 @@ export class Schemas {
     this.log = Log
     this.activity = Activity
     this.tax = Tax
-    this.category = Category
-    this.product = Product
     this.cronPreset = CronPreset
     this.commission = Commission
     this.supportCase = SupportCase

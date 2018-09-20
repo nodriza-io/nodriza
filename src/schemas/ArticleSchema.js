@@ -37,12 +37,12 @@ module.exports = {
   },
   "layout": {
     "description": "Article layout",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
     "query": {
-      "type": "article"
+      "type": "article",
+      "category": "layout"
     }
   },
   "content": {
@@ -76,6 +76,14 @@ module.exports = {
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
   },
   "opened": {
     "description": "How many views has the document has been opened",

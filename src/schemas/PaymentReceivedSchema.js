@@ -38,11 +38,6 @@ module.exports = {
       "category": "layout"
     }
   },
-  "referenceNumber": {
-    "unique": true,
-    "displayName": true,
-    "type": "string"
-  },
   "title": {
     "required": true,
     "displayName": true,
@@ -106,5 +101,10 @@ module.exports = {
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
+  },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   }
 }

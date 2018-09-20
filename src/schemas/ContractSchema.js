@@ -37,11 +37,6 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "referenceNumber": {
-    "unique": true,
-    "displayName": true,
-    "type": "string"
-  },
   "status": {
     "required": true,
     "type": "string",
@@ -103,10 +98,23 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
+  },
   "signatures": {
     "description": "Array with the eSignatures IDs",
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
+  },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   }
 }

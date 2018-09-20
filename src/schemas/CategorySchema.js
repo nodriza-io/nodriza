@@ -36,9 +36,13 @@ module.exports = {
     "primaryKey": true,
     "unique": true,
     "type": "string",
-    "regex": "/^([a-z0-9_-]+)$/"
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
   },
   "parent": {
     "model": "category"
+  },
+  "disabled": {
+    "type": "boolean",
+    "defaultsTo": false
   }
 }

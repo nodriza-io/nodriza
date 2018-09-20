@@ -17,16 +17,6 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "layout": {
-    "description": "Detailed proposal proposal.",
-    "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "proposal",
-      "category": "layout"
-    }
-  },
   "proposalNumber": {
     "description": "Unique proposal idetification number",
     "required": true,
@@ -35,10 +25,15 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
-  "referenceNumber": {
-    "unique": true,
-    "displayName": true,
-    "type": "string"
+  "layout": {
+    "description": "Proposal layout.",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "proposal",
+      "category": "layout"
+    }
   },
   "title": {
     "required": true,
@@ -60,7 +55,6 @@ module.exports = {
   },
   "content": {
     "description": "Proposal content.",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
@@ -76,9 +70,9 @@ module.exports = {
     "defaultsTo": []
   },
   "numberOfPayments": {
-    "type": "integer",
+    "type": "json",
     "defaultsTo": 1,
-    "min": 1
+    "payments": true
   },
   "currency": {
     "model": "currency",
@@ -136,7 +130,20 @@ module.exports = {
     "type": "array",
     "defaultsTo": []
   },
+  "viewsAlerts": {
+    "description": "Number of alerts when client open the proposal",
+    "type": "integer",
+    "defaultsTo": 5,
+    "min": 0,
+    "max": 10
+  },
+  "alsoNotifyViewsTo": {
+    "description": "Also notify these users when someone is watching the proposal",
+    "type": "array",
+    "multiple": "user"
+  },
   "passwordProtected": {
+    "description": "Protect document with password",
     "type": "boolean",
     "defaultsTo": false
   },
@@ -144,30 +151,23 @@ module.exports = {
     "type": "string",
     "password": true
   },
-  "conferenceUrl": {
-    "type": "string",
-    "example": "https://hangouts.google.com/call/-x8KF7XdoUnTJDsDkaJgABEE",
-    "labelAction": {
-      "url": "https://hangouts.google.com/start",
-      "text": "CREATE HANGOUTS"
-    }
-  },
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
   },
   "opened": {
     "description": "How many views has the document has been opened",
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
-  },
-  "viewsAlerts": {
-    "description": "Number of alerts when client open the proposal",
-    "type": "integer",
-    "defaultsTo": 1,
-    "min": 0,
-    "max": 10
   },
   "signatures": {
     "description": "Array with the eSignatures IDs",
@@ -184,5 +184,14 @@ module.exports = {
     "skipAll": true,
     "description": "Proposal versions",
     "type": "array"
+  },
+  "unpublishProposal": {
+    "description": "Proposal won't be available after this date",
+    "type": "datetime"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   }
 }

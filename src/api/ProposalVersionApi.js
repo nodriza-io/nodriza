@@ -46,4 +46,22 @@ export class ProposalVersion extends Request {
       callback(null, data)
     })
   }
+  /**
+  * PUT /v1/proposalVersion/shareVersion [PRIVATE]
+  *
+  * Share proposal version with client
+  *
+  * @param  {Object} params
+  * - @param  {String} proposalVersionId * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {Boolean} shared * -> (In Body)  e.g true
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  shareVersion (body, callback) {
+    let params = {url: '/v1/proposalVersion/shareVersion', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

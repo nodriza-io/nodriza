@@ -169,6 +169,11 @@ module.exports = {
   "convertedCompany": {
     "model": "company"
   },
+  "specialObservations": {
+    "description": "Specify if the lead has some special observation",
+    "type": "string",
+    "longtext": "true"
+  },
   "referenceNumber": {
     "unique": true,
     "type": "string"

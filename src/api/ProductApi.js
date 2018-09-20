@@ -11,4 +11,19 @@ export class Product extends Request {
     params.model = model
     super(params)
   }
+  /**
+  * PUT /v1/product/drop [PRIVATE]
+  *
+  * Drop products database
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  drop (body, callback) {
+    let params = {url: '/v1/product/drop', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

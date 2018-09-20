@@ -237,4 +237,55 @@ export class Service extends Request {
       callback(null, data)
     })
   }
+  /**
+  * POST /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.get(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

@@ -144,5 +144,9 @@ module.exports = {
     "description": "Skype username",
     "example": "jdoe",
     "type": "string"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
   }
 }

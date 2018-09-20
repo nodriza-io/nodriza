@@ -20,7 +20,7 @@ module.exports = {
   "sku": {
     "required": true,
     "description": "Unique Stock Keeping Unit Number",
-    "unique": true,
+    "primaryKey": true,
     "random": 8,
     "displayName": true,
     "type": "string"
@@ -65,9 +65,6 @@ module.exports = {
       "Lb"
     ]
   },
-  "category": {
-    "model": "category"
-  },
   "vendor": {
     "description": "Company who provide this product",
     "model": "company"
@@ -76,5 +73,19 @@ module.exports = {
     "type": "string",
     "description": "Product photo URL",
     "thumbnail": true
+  },
+  "category": {
+    "model": "category"
+  },
+  "pricingList": {
+    "model": "category"
+  },
+  "disabled": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "partialPayment": {
+    "type": "boolean",
+    "skipAll": true
   }
 }

@@ -22,5 +22,10 @@ module.exports = {
     "required": true,
     "type": "json",
     "skipAll": true
+  },
+  "shared": {
+    "description": "Share proposal version with client",
+    "type": "boolean",
+    "skipAll": true
   }
 }

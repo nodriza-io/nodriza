@@ -47,6 +47,20 @@ export class Proposal extends Request {
     })
   }
   /**
+  * GET /v1/proposal/ref [PUBLIC]
+  *
+  * Redirect to proposal by reference number
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  ref (callback) {
+    this.get('/v1/proposal/ref', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/proposal/send [PRIVATE]
   *
   * Send proposal to client or lead

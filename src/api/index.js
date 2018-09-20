@@ -4,6 +4,7 @@ import { Account } from './AccountApi'
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Article } from './ArticleApi'
+import { Category } from './CategoryApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { Contract } from './ContractApi'
@@ -15,6 +16,7 @@ import { Lead } from './LeadApi'
 import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
 import { Permission } from './PermissionApi'
+import { Product } from './ProductApi'
 import { Proposal } from './ProposalApi'
 import { ProposalVersion } from './ProposalVersionApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
@@ -36,8 +38,6 @@ import { Cron } from './CronApi'
 import { Log } from './LogApi'
 import { Activity } from './ActivityApi'
 import { Tax } from './TaxApi'
-import { Category } from './CategoryApi'
-import { Product } from './ProductApi'
 import { CronPreset } from './CronPresetApi'
 import { Commission } from './CommissionApi'
 import { SupportCase } from './SupportCaseApi'
@@ -52,6 +52,7 @@ export class Apis {
     this.app = new App(params)
     this.apparience = new Apparience(params)
     this.article = new Article(params)
+    this.category = new Category(params)
     this.company = new Company(params)
     this.config = new Config(params)
     this.contract = new Contract(params)
@@ -63,6 +64,7 @@ export class Apis {
     this.paymentReceived = new PaymentReceived(params)
     this.payu = new Payu(params)
     this.permission = new Permission(params)
+    this.product = new Product(params)
     this.proposal = new Proposal(params)
     this.proposalVersion = new ProposalVersion(params)
     this.purchaseOrder = new PurchaseOrder(params)
@@ -84,8 +86,6 @@ export class Apis {
     this.log = new Log(params)
     this.activity = new Activity(params)
     this.tax = new Tax(params)
-    this.category = new Category(params)
-    this.product = new Product(params)
     this.cronPreset = new CronPreset(params)
     this.commission = new Commission(params)
     this.supportCase = new SupportCase(params)
