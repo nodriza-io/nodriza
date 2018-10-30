@@ -5,8 +5,10 @@ import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Article from './ArticleSchema'
 import Category from './CategorySchema'
+import Chatbot from './ChatbotSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
+import ConfirmationCode from './ConfirmationCodeSchema'
 import Contract from './ContractSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
@@ -27,6 +29,7 @@ import Signature from './SignatureSchema'
 import Stripe from './StripeSchema'
 import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
+import UrlShort from './UrlShortSchema'
 import User from './UserSchema'
 import Department from './DepartmentSchema'
 import Template from './TemplateSchema'
@@ -45,6 +48,8 @@ import Message from './MessageSchema'
 import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
 import ContractType from './ContractTypeSchema'
+import Report from './ReportSchema'
+import Snippet from './SnippetSchema'
 
 export class Schemas {
   constructor (params) {
@@ -53,8 +58,10 @@ export class Schemas {
     this.apparience = Apparience
     this.article = Article
     this.category = Category
+    this.chatbot = Chatbot
     this.company = Company
     this.config = Config
+    this.confirmationCode = ConfirmationCode
     this.contract = Contract
     this.document = Document
     this.email = Email
@@ -75,6 +82,7 @@ export class Schemas {
     this.stripe = Stripe
     this.templateGallery = TemplateGallery
     this.token = Token
+    this.urlShort = UrlShort
     this.user = User
     this.department = Department
     this.template = Template
@@ -93,5 +101,7 @@ export class Schemas {
     this.conversation = Conversation
     this.paymentMode = PaymentMode
     this.contractType = ContractType
+    this.report = Report
+    this.snippet = Snippet
   }
 }

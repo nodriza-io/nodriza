@@ -48,13 +48,17 @@ module.exports = {
     "required": true,
     "type": "string",
     "enum": [
-      "proposal",
-      "contract",
       "invoice",
+      "contract",
+      "proposal",
+      "purchaseOrder",
       "paymentReceived",
       "article",
       "content",
-      "email"
+      "email",
+      "system",
+      "report",
+      "chatbot"
     ]
   },
   "body": {
@@ -70,7 +74,12 @@ module.exports = {
     "html": true
   },
   "thumb": {
-    "description": "Rendered template example",
+    "description": "Template thumbnail",
+    "type": "string",
+    "required": true
+  },
+  "thumbCustom": {
+    "description": "Replace thumb witha custom thumb",
     "type": "string",
     "required": true
   },
@@ -119,7 +128,8 @@ module.exports = {
     "type": "string",
     "enum": [
       "layout",
-      "content"
+      "content",
+      "html"
     ],
     "required": true
   }

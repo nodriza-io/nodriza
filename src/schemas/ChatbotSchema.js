@@ -1,16 +1,46 @@
 module.exports = {
-  "proposalNumber": {
-    "description": "Unique proposal idetification number",
+  "name": {
+    "description": "Chatbot name",
+    "example": "Jane",
     "required": true,
+    "type": "string",
     "unique": true,
-    "random": 6,
-    "displayName": true,
-    "type": "string"
+    "displayName": true
   },
-  "dic": {
-    "description": "Proposal dictionary for dictionary wildcards",
-    "type": "json",
-    "skipAll": true
+  "slug": {
+    "description": "Unique slug identifier for URL. Only alphanumeric, dash and underscore allowed",
+    "example": "jane",
+    "required": true,
+    "primaryKey": true,
+    "unique": true,
+    "type": "string",
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
+  },
+  "assignedAgents": {
+    "description": "Users that are responsables for the proposals created by this bot",
+    "type": "array",
+    "required": true,
+    "multiple": "user"
+  },
+  "nextAssignedAgent": {
+    "description": "Next user who will create the proposal",
+    "model": "user",
+    "mustExist": true,
+    "required": true
+  },
+  "chatbotHtml": {
+    "description": "HTML Form",
+    "type": "string",
+    "defaultsTo": "",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "chatbot"
+    }
+  },
+  "inactive": {
+    "description": "Deactivate bot",
+    "type": "boolean"
   },
   "createdBy": {
     "required": true,
@@ -199,10 +229,6 @@ module.exports = {
   "referenceNumber": {
     "unique": true,
     "displayName": true,
-    "type": "string"
-  },
-  "source": {
-    "description": "Name of API where the document has been created programmatically",
     "type": "string"
   }
 }

@@ -71,9 +71,6 @@ module.exports = {
   "expirationDate": {
     "type": "datetime"
   },
-  "amount": {
-    "type": "float"
-  },
   "firstProfile": {
     "model": "user"
   },
@@ -86,13 +83,9 @@ module.exports = {
   "fourthProfile": {
     "model": "user"
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
-  },
-  "password": {
-    "type": "string",
-    "password": true
+  "proposal": {
+    "model": "proposal",
+    "mustExist": true
   },
   "starred": {
     "skipAll": true,
@@ -100,6 +93,10 @@ module.exports = {
   },
   "lastSeen": {
     "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "type": "long",
     "skipAll": true
   },
   "views": {

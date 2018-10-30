@@ -20,6 +20,7 @@ module.exports = {
   "sku": {
     "required": true,
     "description": "Unique Stock Keeping Unit Number",
+    "unique": true,
     "primaryKey": true,
     "random": 8,
     "displayName": true,

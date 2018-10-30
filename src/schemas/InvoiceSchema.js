@@ -131,6 +131,10 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
+  "avgTime": {
+    "type": "long",
+    "skipAll": true
+  },
   "views": {
     "type": "integer",
     "skipAll": true

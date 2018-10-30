@@ -65,20 +65,16 @@ module.exports = {
     "model": "lead",
     "mustExist": true
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
-  },
-  "password": {
-    "type": "string",
-    "password": true
-  },
   "starred": {
     "skipAll": true,
     "type": "array"
   },
   "lastSeen": {
     "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "type": "long",
     "skipAll": true
   },
   "views": {

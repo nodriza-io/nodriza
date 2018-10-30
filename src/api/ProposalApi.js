@@ -30,6 +30,26 @@ export class Proposal extends Request {
     })
   }
   /**
+  * POST /v1/proposal/generate [PRIVATE]
+  *
+  * Generate proposal
+  *
+  * @param  {Object} params
+  * - @param  {Object} lead * -> (In Body)  e.g [object Object]
+  * - @param  {Object} proposal * -> (In Body)  e.g [object Object]
+  * - @param  {Array} notifyTo  -> (In Body)  e.g [object Object]
+  * - @param  {Boolean} sendLeadNotification  -> (In Body)  e.g true
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  generate (body, callback) {
+    let params = {url: '/v1/proposal/generate', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/proposal/generateInvoice [PRIVATE]
   *
   * Generate Invoice from proposal
@@ -66,7 +86,7 @@ export class Proposal extends Request {
   * Send proposal to client or lead
   *
   * @param  {Object} params
-  * - @param  {String} proposalId * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
+  * - @param  {String} id * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */

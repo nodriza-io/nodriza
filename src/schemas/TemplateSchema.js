@@ -41,11 +41,12 @@ module.exports = {
       "proposal",
       "purchaseOrder",
       "paymentReceived",
-      "report",
       "article",
       "content",
       "email",
-      "system"
+      "system",
+      "report",
+      "chatbot"
     ]
   },
   "body": {
@@ -58,7 +59,8 @@ module.exports = {
     "type": "string",
     "enum": [
       "layout",
-      "content"
+      "content",
+      "html"
     ],
     "required": true
   }

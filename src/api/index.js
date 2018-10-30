@@ -5,8 +5,10 @@ import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Article } from './ArticleApi'
 import { Category } from './CategoryApi'
+import { Chatbot } from './ChatbotApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
+import { ConfirmationCode } from './ConfirmationCodeApi'
 import { Contract } from './ContractApi'
 import { Document } from './DocumentApi'
 import { Email } from './EmailApi'
@@ -27,6 +29,7 @@ import { Signature } from './SignatureApi'
 import { Stripe } from './StripeApi'
 import { TemplateGallery } from './TemplateGalleryApi'
 import { Token } from './TokenApi'
+import { UrlShort } from './UrlShortApi'
 import { User } from './UserApi'
 import { Department } from './DepartmentApi'
 import { Template } from './TemplateApi'
@@ -45,6 +48,8 @@ import { Message } from './MessageApi'
 import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
 import { ContractType } from './ContractTypeApi'
+import { Report } from './ReportApi'
+import { Snippet } from './SnippetApi'
 
 export class Apis {
   constructor (params) {
@@ -53,8 +58,10 @@ export class Apis {
     this.apparience = new Apparience(params)
     this.article = new Article(params)
     this.category = new Category(params)
+    this.chatbot = new Chatbot(params)
     this.company = new Company(params)
     this.config = new Config(params)
+    this.confirmationCode = new ConfirmationCode(params)
     this.contract = new Contract(params)
     this.document = new Document(params)
     this.email = new Email(params)
@@ -75,6 +82,7 @@ export class Apis {
     this.stripe = new Stripe(params)
     this.templateGallery = new TemplateGallery(params)
     this.token = new Token(params)
+    this.urlShort = new UrlShort(params)
     this.user = new User(params)
     this.department = new Department(params)
     this.template = new Template(params)
@@ -93,5 +101,7 @@ export class Apis {
     this.conversation = new Conversation(params)
     this.paymentMode = new PaymentMode(params)
     this.contractType = new ContractType(params)
+    this.report = new Report(params)
+    this.snippet = new Snippet(params)
   }
 }
