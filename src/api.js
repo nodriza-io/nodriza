@@ -2,8 +2,8 @@
 /**
  * Load apis & models schema libraries
  */
-import { Apis } from './api/'
-import { Schemas } from './schemas/'
+import { Apis } from './api/index.js'
+import { Schemas } from './schemas/index.js'
 
 import { Socket } from './socket'
 import { LocalStorage } from './localStorage'
