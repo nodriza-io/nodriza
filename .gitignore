@@ -1,5 +1,5 @@
 *.swp
-lib
+# lib
 .DS_Store
 *.log
 ._*
