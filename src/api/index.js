@@ -23,9 +23,11 @@ import { Proposal } from './ProposalApi'
 import { ProposalVersion } from './ProposalVersionApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
+import { RoleLibrary } from './RoleLibraryApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Signature } from './SignatureApi'
+import { Snippet } from './SnippetApi'
 import { Stripe } from './StripeApi'
 import { TemplateGallery } from './TemplateGalleryApi'
 import { Token } from './TokenApi'
@@ -49,7 +51,7 @@ import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
 import { ContractType } from './ContractTypeApi'
 import { Report } from './ReportApi'
-import { Snippet } from './SnippetApi'
+import { FileData } from './FileDataApi'
 
 export class Apis {
   constructor (params) {
@@ -76,9 +78,11 @@ export class Apis {
     this.proposalVersion = new ProposalVersion(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)
+    this.roleLibrary = new RoleLibrary(params)
     this.role = new Role(params)
     this.service = new Service(params)
     this.signature = new Signature(params)
+    this.snippet = new Snippet(params)
     this.stripe = new Stripe(params)
     this.templateGallery = new TemplateGallery(params)
     this.token = new Token(params)
@@ -102,6 +106,6 @@ export class Apis {
     this.paymentMode = new PaymentMode(params)
     this.contractType = new ContractType(params)
     this.report = new Report(params)
-    this.snippet = new Snippet(params)
+    this.fileData = new FileData(params)
   }
 }

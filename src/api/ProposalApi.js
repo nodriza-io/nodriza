@@ -12,6 +12,20 @@ export class Proposal extends Request {
     super(params)
   }
   /**
+  * GET /v1/proposal/calcStats [PRIVATE]
+  *
+  * Get proposals breaking points by stats
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  calcStats (callback) {
+    this.get('/v1/proposal/calcStats', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/proposal/changeStatus [PRIVATE]
   *
   * Change proposal status
@@ -111,6 +125,24 @@ export class Proposal extends Request {
   share (body, callback) {
     let params = {url: '/v1/proposal/share', body}
     this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/proposal/specialObservations [PRIVATE]
+  *
+  * Set special observations
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {String} specialObservations * -> (In Body)  e.g true
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  specialObservations (body, callback) {
+    let params = {url: '/v1/proposal/specialObservations', body}
+    this.put(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

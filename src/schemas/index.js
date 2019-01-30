@@ -23,9 +23,11 @@ import Proposal from './ProposalSchema'
 import ProposalVersion from './ProposalVersionSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
+import RoleLibrary from './RoleLibrarySchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
+import Snippet from './SnippetSchema'
 import Stripe from './StripeSchema'
 import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
@@ -49,7 +51,7 @@ import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
 import ContractType from './ContractTypeSchema'
 import Report from './ReportSchema'
-import Snippet from './SnippetSchema'
+import FileData from './FileDataSchema'
 
 export class Schemas {
   constructor (params) {
@@ -76,9 +78,11 @@ export class Schemas {
     this.proposalVersion = ProposalVersion
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
+    this.roleLibrary = RoleLibrary
     this.role = Role
     this.service = Service
     this.signature = Signature
+    this.snippet = Snippet
     this.stripe = Stripe
     this.templateGallery = TemplateGallery
     this.token = Token
@@ -102,6 +106,6 @@ export class Schemas {
     this.paymentMode = PaymentMode
     this.contractType = ContractType
     this.report = Report
-    this.snippet = Snippet
+    this.fileData = FileData
   }
 }

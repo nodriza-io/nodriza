@@ -42,4 +42,20 @@ export class Product extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/product/getSkus/{skus} [PRIVATE]
+  *
+  * Get array products by SKU
+  *
+  * @param  {Object} params
+  * - @param  {String} skus * -> (In path) Products SKU list concatenate with ','
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getSkus (params, callback) {
+    this.get('/v1/product/getSkus/' + params['skus'], (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

@@ -127,7 +127,9 @@ module.exports = {
       "Hot",
       "Warm",
       "Cold"
-    ]
+    ],
+    "defaultsTo": "Cold",
+    "skipAll": true
   },
   "expirationDate": {
     "description": "Expiration date determines when the proposal expires",
@@ -225,6 +227,16 @@ module.exports = {
   "unpublishProposal": {
     "description": "Proposal won't be available after this date",
     "type": "datetime"
+  },
+  "comparativeProposal": {
+    "description": "Make comparative proposal without total information.",
+    "defaultsTo": false,
+    "type": "boolean"
+  },
+  "specialObservations": {
+    "description": "Specify if the proposal has some special observation",
+    "type": "string",
+    "longtext": "true"
   },
   "referenceNumber": {
     "unique": true,

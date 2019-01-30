@@ -46,7 +46,15 @@ module.exports = {
     "example": "Enable access to basic system features and full access to support center module",
     "type": "string"
   },
+  "defaultPersmissions": {
+    "description": "permissions array",
+    "example": "[]",
+    "required": true,
+    "type": "array",
+    "displayName": true
+  },
   "permission": {
+    "dominant": true,
     "description": "Role permissions",
     "collection": "permission",
     "via": "role",

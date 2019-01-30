@@ -93,5 +93,10 @@ module.exports = {
     "defaultsTo": 1,
     "min": 0,
     "max": 10
+  },
+  "pdfUrl": {
+    "type": "string",
+    "description": "Article PDF URL",
+    "urlLink": true
   }
 }
