@@ -3,7 +3,7 @@
   "version": "1.0.15",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
-    "postinstall": "npm install",
+    "postinstall": "babel --presets es2015,stage-2 src --out-dir lib",
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
     "test": "nodemon test/index.test.js --exec babel-node --presets es2015,stage-2",
     "test-lib": "nodemon test/lib.test.js --exec babel-node --presets es2015,stage-2",
@@ -33,13 +33,13 @@
     "numeral": "^2.0.6",
     "pako": "^1.0.6",
     "query-string": "^5.0.0",
-    "socket.io-client": "^2.0.3"
-  },
-  "devDependencies": {
+    "socket.io-client": "^2.0.3",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-eslint": "7.2.3",
+  },
+  "devDependencies": {
     "chai": "^4.1.1",
     "eslint": "^4.4.0",
     "mocha": "^3.5.0",
