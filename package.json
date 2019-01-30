@@ -3,6 +3,7 @@
   "version": "1.0.15",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
+    "install": "npm install",
     "start": "nodemon index.js --exec babel-node --presets es2015,stage-2",
     "test": "nodemon test/index.test.js --exec babel-node --presets es2015,stage-2",
     "test-lib": "nodemon test/lib.test.js --exec babel-node --presets es2015,stage-2",

@@ -15,6 +15,6 @@ We recommend linking to a specific version number that you can update manually:
 ### NPM
 NPM is the recommended installation method when It pairs nicely with module bundlers such as [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/).
 ```javascript
-$ npm install --save https://github.com/nodriza-io/nodriza/tarball/v1.0.5
+$ npm i --save https://github.com/nodriza-io/nodriza 
 ```
 
