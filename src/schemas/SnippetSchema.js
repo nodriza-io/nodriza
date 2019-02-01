@@ -19,8 +19,8 @@ module.exports = {
     "unique": false,
     "displayName": true
   },
-  "sku": {
-    "description": "Unique sku identifier for URL. Only alphanumeric, dash and underscore allowed",
+  "slug": {
+    "description": "Unique slug identifier for URL. Only alphanumeric, dash and underscore allowed",
     "example": "pets",
     "required": true,
     "primaryKey": true,
