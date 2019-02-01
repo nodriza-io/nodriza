@@ -7,7 +7,7 @@ export class Socket extends EventEmitter {
   constructor (hostname) {
     super()
     this.url = 'https://' + hostname
-    if (!window) window = {}
+    if (!window) var window = {}
     window.status = 'offline'
     this.connect = () => {
       if (window.status === 'online') return console.log('--> User already online')
