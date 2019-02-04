@@ -116,6 +116,25 @@ export class User extends Request {
     })
   }
   /**
+  * POST /v1/user/loginChromeAgent [PRIVATE]
+  *
+  * User login Chrome Agent
+  *
+  * @param  {Object} params
+  * - @param  {String} username * -> (In Body)  e.g jprieto@nodriza.io
+  * - @param  {String} password * -> (In Body)  e.g Shox009_
+  * - @param  {String} accessToken  -> (In Body)  e.g 56a69869-bf0a-4650-98e9-fcd9680b31d5
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  loginChromeAgent (body, callback) {
+    let params = {url: '/v1/user/loginChromeAgent', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * DELETE /v1/user/logout [PUBLIC]
   *
   * User session logout
