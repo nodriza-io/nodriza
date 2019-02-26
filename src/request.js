@@ -56,7 +56,7 @@ export class Request {
         try {
           if (window) window.location.reload();
         } catch (e) {
-          console.log('e ----->', e)
+          // console.log('e ----->', e)
           return callback(error)
         }
       }
