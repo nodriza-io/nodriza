@@ -52,6 +52,7 @@ import PaymentMode from './PaymentModeSchema'
 import ContractType from './ContractTypeSchema'
 import Report from './ReportSchema'
 import FileData from './FileDataSchema'
+import Comment from './CommentSchema'
 
 export class Schemas {
   constructor (params) {
@@ -107,5 +108,6 @@ export class Schemas {
     this.contractType = ContractType
     this.report = Report
     this.fileData = FileData
+    this.comment = Comment
   }
 }

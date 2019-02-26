@@ -52,6 +52,7 @@ import { PaymentMode } from './PaymentModeApi'
 import { ContractType } from './ContractTypeApi'
 import { Report } from './ReportApi'
 import { FileData } from './FileDataApi'
+import { Comment } from './CommentApi'
 
 export class Apis {
   constructor (params) {
@@ -107,5 +108,6 @@ export class Apis {
     this.contractType = new ContractType(params)
     this.report = new Report(params)
     this.fileData = new FileData(params)
+    this.comment = new Comment(params)
   }
 }

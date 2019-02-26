@@ -116,7 +116,7 @@ export class User extends Request {
     })
   }
   /**
-  * POST /v1/user/loginChromeAgent [PRIVATE]
+  * POST /v1/user/loginChromeAgent [PUBLIC]
   *
   * User login Chrome Agent
   *

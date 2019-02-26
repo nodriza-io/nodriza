@@ -41,6 +41,17 @@ module.exports = {
   "parent": {
     "model": "category"
   },
+  "type": {
+    "description": "Category Type",
+    "example": "Pricing List",
+    "type": "string",
+    "defaultsTo": "Product",
+    "enum": [
+      "Product",
+      "Pricing List",
+      "Group"
+    ]
+  },
   "disabled": {
     "type": "boolean",
     "defaultsTo": false

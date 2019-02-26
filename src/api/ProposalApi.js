@@ -81,6 +81,20 @@ export class Proposal extends Request {
     })
   }
   /**
+  * GET /v1/proposal/getNextNumber [PRIVATE]
+  *
+  * Return next proposal number
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getNextNumber (callback) {
+    this.get('/v1/proposal/getNextNumber', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/proposal/ref [PUBLIC]
   *
   * Redirect to proposal by reference number

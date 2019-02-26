@@ -90,6 +90,13 @@ module.exports = {
   "pricingList": {
     "model": "category"
   },
+  "group": {
+    "model": "category"
+  },
+  "hidePrice": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
   "disabled": {
     "type": "boolean",
     "defaultsTo": false
@@ -97,5 +104,8 @@ module.exports = {
   "partialPayment": {
     "type": "boolean",
     "skipAll": true
+  },
+  "color": {
+    "type": "string"
   }
 }

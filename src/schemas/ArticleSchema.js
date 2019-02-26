@@ -96,7 +96,6 @@ module.exports = {
   },
   "pdfUrl": {
     "type": "string",
-    "description": "Article PDF URL",
-    "urlLink": true
+    "description": "Article PDF URL"
   }
 }

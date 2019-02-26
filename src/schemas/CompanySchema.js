@@ -74,7 +74,8 @@ module.exports = {
   },
   "taxId": {
     "description": "Identification number used for tax purposes",
-    "type": "string"
+    "type": "string",
+    "unique": true
   },
   "map": {
     "description": "Google Maps Geo Location",
