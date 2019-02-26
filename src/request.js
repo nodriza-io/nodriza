@@ -53,7 +53,11 @@ export class Request {
       const status = _.get(err, 'response.status')
       if (status === 401 && error === 'Unauthorized, invalid token.') {
         this.session.destroy()
-        if (window) window.location.reload()
+        try {
+          if (window) window.location.reload();
+        } catch (e) {
+          console.log('e ----->', e)
+        }
       }
       if (error) {
         callback(error)
