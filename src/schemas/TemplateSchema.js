@@ -46,7 +46,10 @@ module.exports = {
       "email",
       "system",
       "report",
-      "chatbot",
+      "proposalbot",
+      "articlebot",
+      "contractbot",
+      "invoicebot",
       "snippet",
       "template"
     ]

@@ -4,8 +4,8 @@ import { Account } from './AccountApi'
 import { App } from './AppApi'
 import { Apparience } from './ApparienceApi'
 import { Article } from './ArticleApi'
+import { Articlebot } from './ArticlebotApi'
 import { Category } from './CategoryApi'
-import { Chatbot } from './ChatbotApi'
 import { Company } from './CompanyApi'
 import { Config } from './ConfigApi'
 import { ConfirmationCode } from './ConfirmationCodeApi'
@@ -15,12 +15,14 @@ import { Email } from './EmailApi'
 import { Exchange } from './ExchangeApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
+import { Oauth2 } from './Oauth2Api'
 import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
 import { Permission } from './PermissionApi'
 import { Product } from './ProductApi'
 import { Proposal } from './ProposalApi'
 import { ProposalVersion } from './ProposalVersionApi'
+import { Proposalbot } from './ProposalbotApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
 import { RoleLibrary } from './RoleLibraryApi'
@@ -53,6 +55,7 @@ import { ContractType } from './ContractTypeApi'
 import { Report } from './ReportApi'
 import { FileData } from './FileDataApi'
 import { Comment } from './CommentApi'
+import { ReportPeriod } from './ReportPeriodApi'
 
 export class Apis {
   constructor (params) {
@@ -60,8 +63,8 @@ export class Apis {
     this.app = new App(params)
     this.apparience = new Apparience(params)
     this.article = new Article(params)
+    this.articlebot = new Articlebot(params)
     this.category = new Category(params)
-    this.chatbot = new Chatbot(params)
     this.company = new Company(params)
     this.config = new Config(params)
     this.confirmationCode = new ConfirmationCode(params)
@@ -71,12 +74,14 @@ export class Apis {
     this.exchange = new Exchange(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
+    this.oauth2 = new Oauth2(params)
     this.paymentReceived = new PaymentReceived(params)
     this.payu = new Payu(params)
     this.permission = new Permission(params)
     this.product = new Product(params)
     this.proposal = new Proposal(params)
     this.proposalVersion = new ProposalVersion(params)
+    this.proposalbot = new Proposalbot(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)
     this.roleLibrary = new RoleLibrary(params)
@@ -109,5 +114,6 @@ export class Apis {
     this.report = new Report(params)
     this.fileData = new FileData(params)
     this.comment = new Comment(params)
+    this.reportPeriod = new ReportPeriod(params)
   }
 }

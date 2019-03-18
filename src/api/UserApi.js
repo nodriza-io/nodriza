@@ -321,6 +321,24 @@ export class User extends Request {
     })
   }
   /**
+  * PUT /v1/user/updateRoles [PRIVATE]
+  *
+  * Update roles
+  *
+  * @param  {Object} params
+  * - @param  {String} userId * -> (In Body)  e.g 597627fdb00c530b40f26aac
+  * - @param  {Array} roleKeynames * -> (In Body)  e.g host
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  updateRoles (body, callback) {
+    let params = {url: '/v1/user/updateRoles', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/user/uploadAvatar [PRIVATE]
   *
   * Upload user avatar

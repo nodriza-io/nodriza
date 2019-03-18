@@ -115,14 +115,6 @@ module.exports = {
     "type": "array",
     "multiple": "user"
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
-  },
-  "password": {
-    "type": "string",
-    "password": true
-  },
   "starred": {
     "skipAll": true,
     "type": "array"

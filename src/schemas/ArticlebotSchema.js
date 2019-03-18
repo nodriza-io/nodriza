@@ -1,10 +1,51 @@
 module.exports = {
-  "articleNumber": {
-    "description": "Unique article idetification number",
+  "name": {
+    "description": "Chatbot name",
+    "example": "Jane",
+    "required": true,
+    "type": "string",
     "unique": true,
-    "random": 8,
-    "displayName": true,
-    "type": "string"
+    "displayName": true
+  },
+  "slug": {
+    "description": "Unique slug identifier for URL. Only alphanumeric, dash and underscore allowed",
+    "example": "jane",
+    "required": true,
+    "primaryKey": true,
+    "unique": true,
+    "type": "string",
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
+  },
+  "assignedAgents": {
+    "description": "Users that are responsables for the proposals created by this bot",
+    "type": "array",
+    "required": true,
+    "multiple": "user"
+  },
+  "nextAssignedAgent": {
+    "description": "Next user who will create the proposal",
+    "model": "user",
+    "mustExist": true,
+    "required": true
+  },
+  "selectAgentQuestion": {
+    "type": "string",
+    "description": "Select agent question text",
+    "defaultsTo": "Please select the agent that you want to serve you:"
+  },
+  "chatbotHtml": {
+    "description": "HTML Form",
+    "type": "string",
+    "defaultsTo": "",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "articlebot"
+    }
+  },
+  "inactive": {
+    "description": "Deactivate bot",
+    "type": "boolean"
   },
   "createdBy": {
     "description": "User who created the resource",
@@ -97,9 +138,5 @@ module.exports = {
   "pdfUrl": {
     "type": "string",
     "description": "Article PDF URL"
-  },
-  "source": {
-    "description": "Name of API where the document has been created programmatically",
-    "type": "string"
   }
 }

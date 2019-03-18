@@ -4,8 +4,8 @@ import Account from './AccountSchema'
 import App from './AppSchema'
 import Apparience from './ApparienceSchema'
 import Article from './ArticleSchema'
+import Articlebot from './ArticlebotSchema'
 import Category from './CategorySchema'
-import Chatbot from './ChatbotSchema'
 import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import ConfirmationCode from './ConfirmationCodeSchema'
@@ -15,12 +15,14 @@ import Email from './EmailSchema'
 import Exchange from './ExchangeSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
+import Oauth2 from './Oauth2Schema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
 import Permission from './PermissionSchema'
 import Product from './ProductSchema'
 import Proposal from './ProposalSchema'
 import ProposalVersion from './ProposalVersionSchema'
+import Proposalbot from './ProposalbotSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
 import RoleLibrary from './RoleLibrarySchema'
@@ -53,6 +55,7 @@ import ContractType from './ContractTypeSchema'
 import Report from './ReportSchema'
 import FileData from './FileDataSchema'
 import Comment from './CommentSchema'
+import ReportPeriod from './ReportPeriodSchema'
 
 export class Schemas {
   constructor (params) {
@@ -60,8 +63,8 @@ export class Schemas {
     this.app = App
     this.apparience = Apparience
     this.article = Article
+    this.articlebot = Articlebot
     this.category = Category
-    this.chatbot = Chatbot
     this.company = Company
     this.config = Config
     this.confirmationCode = ConfirmationCode
@@ -71,12 +74,14 @@ export class Schemas {
     this.exchange = Exchange
     this.invoice = Invoice
     this.lead = Lead
+    this.oauth2 = Oauth2
     this.paymentReceived = PaymentReceived
     this.payu = Payu
     this.permission = Permission
     this.product = Product
     this.proposal = Proposal
     this.proposalVersion = ProposalVersion
+    this.proposalbot = Proposalbot
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
     this.roleLibrary = RoleLibrary
@@ -109,5 +114,6 @@ export class Schemas {
     this.report = Report
     this.fileData = FileData
     this.comment = Comment
+    this.reportPeriod = ReportPeriod
   }
 }

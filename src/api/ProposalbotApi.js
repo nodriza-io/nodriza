@@ -4,17 +4,17 @@ import { Request } from '../request'
 import queryString from 'query-string'
 import _ from 'lodash'
 
-const model = 'chatbot'
+const model = 'proposalbot'
 
-export class Chatbot extends Request {
+export class Proposalbot extends Request {
   constructor (params) {
     params.model = model
     super(params)
   }
   /**
-  * POST /v1/chatbot/generate [PRIVATE]
+  * POST /v1/proposalbot/generate [PUBLIC]
   *
-  * Generate proposal from chatbot
+  * Generate proposal from proposalbot
   *
   * @param  {Object} params
   * - @param  {Object} to * -> (In Body)  e.g [object Object]
@@ -26,7 +26,7 @@ export class Chatbot extends Request {
   * @return {Code} 200, 400, 403
   */
   generate (body, callback) {
-    let params = {url: '/v1/chatbot/generate', body}
+    let params = {url: '/v1/proposalbot/generate', body}
     this.post(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
