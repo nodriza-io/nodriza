@@ -56,6 +56,8 @@ import { Report } from './ReportApi'
 import { FileData } from './FileDataApi'
 import { Comment } from './CommentApi'
 import { ReportPeriod } from './ReportPeriodApi'
+import { Backup } from './BackupApi'
+import { Trash } from './TrashApi'
 
 export class Apis {
   constructor (params) {
@@ -115,5 +117,7 @@ export class Apis {
     this.fileData = new FileData(params)
     this.comment = new Comment(params)
     this.reportPeriod = new ReportPeriod(params)
+    this.backup = new Backup(params)
+    this.trash = new Trash(params)
   }
 }

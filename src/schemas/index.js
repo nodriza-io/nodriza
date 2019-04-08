@@ -56,6 +56,8 @@ import Report from './ReportSchema'
 import FileData from './FileDataSchema'
 import Comment from './CommentSchema'
 import ReportPeriod from './ReportPeriodSchema'
+import Backup from './BackupSchema'
+import Trash from './TrashSchema'
 
 export class Schemas {
   constructor (params) {
@@ -115,5 +117,7 @@ export class Schemas {
     this.fileData = FileData
     this.comment = Comment
     this.reportPeriod = ReportPeriod
+    this.backup = Backup
+    this.trash = Trash
   }
 }

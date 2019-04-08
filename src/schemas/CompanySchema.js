@@ -13,11 +13,13 @@ module.exports = {
   },
   "createdBy": {
     "description": "User who created the resource",
+    "required": true,
     "model": "user",
     "skipAll": true
   },
   "updatedBy": {
     "description": "Last user who updated the resource",
+    "required": true,
     "model": "user",
     "skipAll": true
   },

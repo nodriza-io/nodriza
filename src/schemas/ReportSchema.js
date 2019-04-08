@@ -22,37 +22,41 @@ module.exports = {
   "title": {
     "displayName": true,
     "required": true,
-    "type": "string",
-    "skipAll": true
+    "type": "string"
   },
-  "users": {
-    "description": "Filter report by these users",
-    "type": "array",
-    "multiple": "user"
+  "specialObservations": {
+    "type": "string",
+    "longtext": "true"
   },
   "currency": {
     "description": "Filter report by this currency",
     "model": "currency",
     "noCreate": true
   },
-  "specialObservations": {
+  "country": {
+    "required": true,
     "type": "string",
-    "longtext": "true"
+    "skipAll": true
   },
-  "period": {
+  "description": {
+    "required": true,
     "type": "string",
-    "enum": [
-      "Custom",
-      "Daily",
-      "Weekly",
-      "Biweekly",
-      "Monthly",
-      "Bimestrial",
-      "Quarterly",
-      "FourMonthPeriod",
-      "Semestral",
-      "Annual"
-    ]
+    "skipAll": true
+  },
+  "layout": {
+    "description": "Report layout.",
+    "type": "string",
+    "html": true,
+    "target": "template",
+    "query": {
+      "type": "report",
+      "category": "layout"
+    }
+  },
+  "users": {
+    "description": "Filter report by these users",
+    "type": "array",
+    "multiple": "user"
   },
   "startDate": {
     "description": "Report start date",
@@ -64,21 +68,40 @@ module.exports = {
     "required": true,
     "type": "datetime"
   },
-  "reportName": {
+  "periodRange": {
+    "required": true,
     "type": "string",
-    "skipAll": true
+    "enum": [
+      "Daily",
+      "Weekly",
+      "Biweekly",
+      "Monthly",
+      "Bimestrial",
+      "Quarterly",
+      "FourMonthPeriod",
+      "Semestral",
+      "Annual"
+    ]
   },
   "days": {
     "description": "Number of days in the report",
+    "required": true,
+    "type": "integer",
+    "skipAll": true
+  },
+  "periodsCount": {
+    "description": "Number periods",
+    "required": true,
     "type": "integer",
     "skipAll": true
   },
   "periods": {
     "description": "Periods generated in the report",
+    "required": true,
     "type": "json",
     "skipAll": true
   },
-  "completed": {
+  "allPeriodsEnded": {
     "type": "boolean",
     "skipAll": true
   }

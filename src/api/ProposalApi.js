@@ -44,6 +44,24 @@ export class Proposal extends Request {
     })
   }
   /**
+  * PUT /v1/proposal/denialReason [PRIVATE]
+  *
+  * Set denial reason
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {String} denialReason * -> (In Body)  e.g true
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  denialReason (body, callback) {
+    let params = {url: '/v1/proposal/denialReason', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/proposal/generate [PRIVATE]
   *
   * Generate proposal
@@ -126,6 +144,24 @@ export class Proposal extends Request {
     })
   }
   /**
+  * PUT /v1/proposal/setRecommendations [PRIVATE]
+  *
+  * Set proposal recommendations
+  *
+  * @param  {Object} params
+  * - @param  {String} id  -> (In Body)  e.g 5ca67be618e60700b2a81d2e
+  * - @param  {Array} recommendations  -> (In Body)  e.g [object Object]
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  setRecommendations (body, callback) {
+    let params = {url: '/v1/proposal/setRecommendations', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/proposal/share [PRIVATE]
   *
   * Share proposal with any email
@@ -139,24 +175,6 @@ export class Proposal extends Request {
   share (body, callback) {
     let params = {url: '/v1/proposal/share', body}
     this.post(params, (err, data) => {
-      if (err) return callback(err)
-      callback(null, data)
-    })
-  }
-  /**
-  * PUT /v1/proposal/specialObservations [PRIVATE]
-  *
-  * Set special observations
-  *
-  * @param  {Object} params
-  * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
-  * - @param  {String} specialObservations * -> (In Body)  e.g true
-  * @param  {Function} callback
-  * @return {Code} 200, 400, 403
-  */
-  specialObservations (body, callback) {
-    let params = {url: '/v1/proposal/specialObservations', body}
-    this.put(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

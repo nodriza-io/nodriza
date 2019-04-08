@@ -12,6 +12,28 @@ export class ConfirmationCode extends Request {
     super(params)
   }
   /**
+  * GET /v1/confirmationCode/ [PUBLIC]
+  *
+  * Get code confirmation code
+  *
+  * @param  {Object} params
+  * - @param  {Integer} size  -> (In query) For digits confirmation code
+  * - @param  {String} charPreset  -> (In query) For digits confirmation code
+  * - @param  {Integer} noise  -> (In query) For digits confirmation code
+  * - @param  {Boolean} color  -> (In query) For digits confirmation code
+  * - @param  {String} background  -> (In query) For digits confirmation code
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  getCode (params, callback) {
+    let url = '/v1/confirmationCode/'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/confirmationCode/confirm/{code} [PUBLIC]
   *
   * Confirm confirmation code

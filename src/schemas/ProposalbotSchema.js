@@ -93,8 +93,6 @@ module.exports = {
     "defaultsTo": "Draft",
     "enum": [
       "Draft",
-      "Pending Authorization",
-      "Authorized",
       "Ready",
       "Approved",
       "Denied"
@@ -140,6 +138,10 @@ module.exports = {
     "description": "Expiration date determines when the proposal expires",
     "type": "datetime"
   },
+  "expectedCloseDate": {
+    "description": "Proposal Expected win/loss Date",
+    "type": "datetime"
+  },
   "relatedUser": {
     "description": "Select the user that is related with this proposal",
     "model": "user",
@@ -182,14 +184,10 @@ module.exports = {
   "viewsAlerts": {
     "description": "Number of alerts when client open the proposal",
     "type": "integer",
-    "defaultsTo": 5,
+    "defaultsTo": 10,
     "min": 0,
-    "max": 10
-  },
-  "alsoNotifyViewsTo": {
-    "description": "Also notify these users when someone is watching the proposal",
-    "type": "array",
-    "multiple": "user"
+    "max": 10,
+    "skipAll": true
   },
   "starred": {
     "skipAll": true,
@@ -238,14 +236,31 @@ module.exports = {
     "defaultsTo": false,
     "type": "boolean"
   },
+  "responsible": {
+    "description": "Proposal responsible profile",
+    "model": "user",
+    "mustExist": true
+  },
+  "alsoNotifyViewsTo": {
+    "description": "Also notify these users when someone is watching the proposal",
+    "type": "array",
+    "multiple": "user"
+  },
   "specialObservations": {
     "description": "Specify if the proposal has some special observation",
-    "type": "string",
-    "longtext": "true"
+    "type": "string"
   },
   "referenceNumber": {
     "unique": true,
     "displayName": true,
+    "type": "string"
+  },
+  "recommendations": {
+    "skipAll": true,
+    "type": "array"
+  },
+  "denialReason": {
+    "skipAll": true,
     "type": "string"
   }
 }

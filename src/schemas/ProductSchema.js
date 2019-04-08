@@ -1,10 +1,12 @@
 module.exports = {
   "createdBy": {
+    "required": true,
     "description": "User who created the resource",
     "model": "user",
     "skipAll": true
   },
   "updatedBy": {
+    "required": true,
     "description": "Last user who updated the resource",
     "model": "user",
     "skipAll": true

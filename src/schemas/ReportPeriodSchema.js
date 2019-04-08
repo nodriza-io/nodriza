@@ -1,77 +1,46 @@
 module.exports = {
-  "createdBy": {
-    "description": "User who created the resource",
-    "model": "user",
+  "uuid": {
+    "primaryKey": true,
     "required": true,
-    "skipAll": true
-  },
-  "updatedBy": {
-    "description": "Last user who updated the resource",
-    "model": "user",
-    "required": true,
-    "skipAll": true
-  },
-  "createdAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
-  "updatedAt": {
-    "type": "datetime",
-    "skipAll": true
-  },
-  "layout": {
-    "description": "Report layout.",
+    "unique": true,
     "type": "string",
-    "html": true,
-    "target": "template",
-    "query": {
-      "type": "report"
-    }
+    "skipAll": true
   },
-  "name": {
+  "title": {
     "displayName": true,
-    "type": "string"
+    "required": true,
+    "type": "string",
+    "skipAll": true
   },
   "startDate": {
     "description": "Report start date",
     "type": "datetime",
-    "required": true
+    "required": true,
+    "skipAll": true
   },
   "endDate": {
     "description": "Report end date",
     "type": "datetime",
-    "required": true
+    "required": true,
+    "skipAll": true
   },
   "days": {
     "description": "Number of days in the report",
-    "type": "integer"
-  },
-  "users": {
-    "description": "Filter report by these users",
-    "type": "array",
-    "multiple": "user"
+    "required": true,
+    "type": "integer",
+    "skipAll": true
   },
   "currency": {
-    "description": "Filter report by this currency",
-    "model": "currency",
-    "noCreate": true
-  },
-  "period": {
+    "required": true,
     "type": "string",
-    "enum": [
-      "Custom",
-      "Daily",
-      "Weekly",
-      "Biweekly",
-      "Monthly",
-      "Bimestrial",
-      "Quarterly",
-      "FourMonthPeriod",
-      "Semestral",
-      "Annual"
-    ]
+    "skipAll": true
   },
-  "completePeriod": {
+  "country": {
+    "required": true,
+    "type": "string",
+    "skipAll": true
+  },
+  "periodEnded": {
     "type": "boolean",
     "skipAll": true
   },
@@ -146,5 +115,15 @@ module.exports = {
   "deniedAvgTime": {
     "type": "long",
     "skipAll": true
+  },
+  "graphics": {
+    "type": "long",
+    "skipAll": true
+  },
+  "createdAt": {
+    "type": "datetime"
+  },
+  "updatedAt": {
+    "type": "datetime"
   }
 }
