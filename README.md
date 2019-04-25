@@ -8,7 +8,7 @@ Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.j
 ### Direct  `<script>`  Include
 We recommend linking to a specific version number that you can update manually:
 ```html
-<script src="https://s3.amazonaws.com/cdn.nodriza.io/sdk/nodriza@1.0.5/nodriza-sdk.bundle.js"></script>
+<script src="https://s3.amazonaws.com/cdn.nodriza.io/sdk/nodriza@lastest/nodriza-sdk.bundle.js"></script>
 ```
 
 

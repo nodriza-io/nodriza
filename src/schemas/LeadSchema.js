@@ -60,6 +60,11 @@ module.exports = {
     "example": "Acme",
     "type": "string"
   },
+  "taxId": {
+    "description": "Company tax id",
+    "example": "111111111",
+    "type": "string"
+  },
   "department": {
     "description": "Company department where the user belongs",
     "example": "5940200e93e326e90c636826",
