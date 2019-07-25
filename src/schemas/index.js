@@ -13,6 +13,7 @@ import Contract from './ContractSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
 import Exchange from './ExchangeSchema'
+import FileData from './FileDataSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import Oauth2 from './Oauth2Schema'
@@ -53,7 +54,6 @@ import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
 import ContractType from './ContractTypeSchema'
 import Report from './ReportSchema'
-import FileData from './FileDataSchema'
 import Comment from './CommentSchema'
 import ReportPeriod from './ReportPeriodSchema'
 import Backup from './BackupSchema'
@@ -74,6 +74,7 @@ export class Schemas {
     this.document = Document
     this.email = Email
     this.exchange = Exchange
+    this.fileData = FileData
     this.invoice = Invoice
     this.lead = Lead
     this.oauth2 = Oauth2
@@ -114,7 +115,6 @@ export class Schemas {
     this.paymentMode = PaymentMode
     this.contractType = ContractType
     this.report = Report
-    this.fileData = FileData
     this.comment = Comment
     this.reportPeriod = ReportPeriod
     this.backup = Backup

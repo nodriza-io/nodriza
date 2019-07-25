@@ -58,5 +58,13 @@ module.exports = {
   "error": {
     "type": "string",
     "skipAll": true
+  },
+  "type": {
+    "type": "string",
+    "skipAll": true,
+    "enum": [
+      "json",
+      "dump"
+    ]
   }
 }

@@ -47,6 +47,10 @@ module.exports = {
     "description": "Deactivate bot",
     "type": "boolean"
   },
+  "signatureValidatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "createdBy": {
     "required": true,
     "description": "User who created the resource",
@@ -212,6 +216,7 @@ module.exports = {
     "skipAll": true
   },
   "signatures": {
+    "dominant": true,
     "description": "Array with the eSignatures IDs",
     "type": "array",
     "defaultsTo": [],

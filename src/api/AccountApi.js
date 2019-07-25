@@ -42,4 +42,18 @@ export class Account extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/account/nonCollaborativeMode [PUBLIC]
+  *
+  * Returns Nodriza account non collaborative mode
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  nonCollaborativeMode (callback) {
+    this.get('/v1/account/nonCollaborativeMode', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

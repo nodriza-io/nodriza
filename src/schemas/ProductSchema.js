@@ -40,13 +40,19 @@ module.exports = {
   "price": {
     "required": true,
     "description": "Product Price",
-    "type": "float",
-    "currency": true
+    "type": "float"
   },
   "minimunPrice": {
     "description": "Minimun Product Price",
-    "type": "float",
-    "currency": true
+    "type": "float"
+  },
+  "minimumOrderQuantity": {
+    "description": "Minimun Product Order Quantity",
+    "type": "float"
+  },
+  "maximumOrderQuantity": {
+    "description": "Maximum Product Order Quantity",
+    "type": "float"
   },
   "currency": {
     "type": "string",
@@ -95,6 +101,9 @@ module.exports = {
   "group": {
     "model": "category"
   },
+  "type": {
+    "model": "category"
+  },
   "hidePrice": {
     "type": "boolean",
     "defaultsTo": false
@@ -109,5 +118,20 @@ module.exports = {
   },
   "color": {
     "type": "string"
+  },
+  "publicName": {
+    "type": "string"
+  },
+  "interval": {
+    "type": "string",
+    "enum": [
+      "day",
+      "week",
+      "month",
+      "year"
+    ]
+  },
+  "metadata": {
+    "type": "json"
   }
 }

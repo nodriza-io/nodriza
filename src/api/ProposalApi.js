@@ -62,6 +62,24 @@ export class Proposal extends Request {
     })
   }
   /**
+  * PUT /v1/proposal/embedComponent [PRIVATE]
+  *
+  * Set embed component
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {Object} embedComponent * -> (In Body)  e.g [object Object]
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  embedComponent (body, callback) {
+    let params = {url: '/v1/proposal/embedComponent', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/proposal/generate [PRIVATE]
   *
   * Generate proposal

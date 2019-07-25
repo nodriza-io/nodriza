@@ -76,6 +76,31 @@ module.exports = {
     "example": "57 1 673 9407",
     "type": "string"
   },
+  "country": {
+    "description": "Country name",
+    "example": "United States",
+    "type": "string"
+  },
+  "city": {
+    "description": "City name",
+    "example": "Los Angeles",
+    "type": "string"
+  },
+  "street": {
+    "description": "Street name",
+    "example": "2719 Hyperion Ave",
+    "type": "string"
+  },
+  "state": {
+    "description": "State name",
+    "example": "CA",
+    "type": "string"
+  },
+  "postal": {
+    "description": "Postal Code",
+    "type": "string",
+    "example": "90027"
+  },
   "avatars": {
     "description": "User avatar in different sizes",
     "type": "json",

@@ -19,32 +19,35 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "name": {
-    "required": true,
-    "displayName": true,
+  "key": {
     "type": "string",
-    "description": "File name",
-    "example": "ecs-black-wallpaper.jpg"
-  },
-  "fileType": {
     "required": true,
-    "displayName": true,
-    "type": "string",
-    "description": "File type",
-    "example": "image/jpeg"
+    "notEmpty": true
   },
-  "fileZise": {
-    "required": true,
-    "displayName": true,
-    "type": "number",
-    "description": "File size",
-    "example": "26896"
+  "location": {
+    "type": "string"
   },
-  "dataURL": {
-    "required": true,
-    "displayName": true,
-    "type": "string",
-    "description": "Base64 dataURL",
-    "example": "data:image/jpeg;base64,/9j/4QAYRXh..."
+  "size": {
+    "type": "integer"
+  },
+  "children": {
+    "type": "array",
+    "defaultsTo": []
+  },
+  "parent": {
+    "type": "string"
+  },
+  "isDir": {
+    "type": "boolean",
+    "defaultsTo": false
+  },
+  "md5": {
+    "type": "string"
+  },
+  "contentType": {
+    "type": "string"
+  },
+  "hash": {
+    "type": "string"
   }
 }

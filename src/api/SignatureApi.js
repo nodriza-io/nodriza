@@ -50,4 +50,40 @@ export class Signature extends Request {
       callback(null, data)
     })
   }
+  /**
+  * POST /v1/signature/sendEmailValidation [PRIVATE]
+  *
+  * Send email signature validation
+  *
+  * @param  {Object} params
+  * - @param  {String} docType * -> (In Body)  e.g proposal
+  * - @param  {String} docId * -> (In Body)  e.g 5a46ba1a7193d10146badcc0
+  * - @param  {String} email * -> (In Body)  e.g example@email.com
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  sendEmailValidation (body, callback) {
+    let params = {url: '/v1/signature/sendEmailValidation', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/signature/verifyEmail [PUBLIC]
+  *
+  * Signature validation
+  *
+  * @param  {Object} params
+  * - @param  {String} hash * -> (In Body)  e.g 78531b5c97b53e5029b5c03f9e520d5d15d1db61
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  verifyEmail (body, callback) {
+    let params = {url: '/v1/signature/verifyEmail', body}
+    this.get(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

@@ -49,6 +49,7 @@ module.exports = {
     "enum": [
       "Product",
       "Pricing List",
+      "Type",
       "Group"
     ]
   },

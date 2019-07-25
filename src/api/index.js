@@ -13,6 +13,7 @@ import { Contract } from './ContractApi'
 import { Document } from './DocumentApi'
 import { Email } from './EmailApi'
 import { Exchange } from './ExchangeApi'
+import { FileData } from './FileDataApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { Oauth2 } from './Oauth2Api'
@@ -53,7 +54,6 @@ import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
 import { ContractType } from './ContractTypeApi'
 import { Report } from './ReportApi'
-import { FileData } from './FileDataApi'
 import { Comment } from './CommentApi'
 import { ReportPeriod } from './ReportPeriodApi'
 import { Backup } from './BackupApi'
@@ -74,6 +74,7 @@ export class Apis {
     this.document = new Document(params)
     this.email = new Email(params)
     this.exchange = new Exchange(params)
+    this.fileData = new FileData(params)
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
     this.oauth2 = new Oauth2(params)
@@ -114,7 +115,6 @@ export class Apis {
     this.paymentMode = new PaymentMode(params)
     this.contractType = new ContractType(params)
     this.report = new Report(params)
-    this.fileData = new FileData(params)
     this.comment = new Comment(params)
     this.reportPeriod = new ReportPeriod(params)
     this.backup = new Backup(params)

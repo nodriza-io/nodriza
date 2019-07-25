@@ -18,9 +18,16 @@ module.exports = {
       "article"
     ]
   },
+  "signatureEmail": {
+    "type": "string"
+  },
   "signatureId": {
     "required": true,
     "type": "string"
+  },
+  "hash": {
+    "type": "string",
+    "skipAll": true
   },
   "fullName": {
     "required": true,
