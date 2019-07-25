@@ -1,3 +1,22 @@
+function onOpen(){
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu('NODRIZA')
+    .addSubMenu(ui.createMenu('Import')
+      .addItem('Leads', 'importLeads')
+      .addItem('Companies', 'importCompanies')
+      .addItem('Proposals', 'importProposals'))
+    .addSubMenu(ui.createMenu('Export')
+      .addItem('Products', 'exportProducts')
+      .addItem('Categories', 'exportCategories')
+      .addItem('Taxes', 'exportTaxes')
+      .addItem('Users', 'exportUsers')
+      .addSeparator()
+      .addItem('Custom Products Tab', 'exportCustomProductsTab'))
+     .addSeparator()
+     .addItem('About', 'about')
+    .addToUi()
+}
+
 var u = {
   getByName: function (sheet, colName, row) {
     var data = sheet.getDataRange().getValues()
@@ -29,25 +48,36 @@ var models = {
       disabled: u.isBol,
       hidePrice: u.isBol
     }
+  },
+  user: {
+    primaryKey: 'email',
+    schema: {
+    }
   }
 }
 
-var jobs = [
-  {
-    sheetName: 'Categories',
-    model: 'category',
-  },
-  {
-    sheetName: 'Taxes',
-    model: 'tax',
-  },
-  {
-    sheetName: 'Products',
-    model: 'product',
-  }
-]
+function exportCustomProductsTab () {
+  var sheetName = Browser.inputBox('Type the tab name to import in products:', '', Browser.Buttons.OK_CANCEL);
+  export([{sheetName: sheetName, model: 'product'}])
+}
 
-function export () {
+function exportProducts () {
+ export([{sheetName: 'Products', model: 'product'}])
+}
+
+function exportCategories () {
+ export([{sheetName: 'Categories', model: 'category'}])
+}
+
+function exportTaxes () {
+ export([{sheetName: 'Taxes', model: 'tax'}])
+}
+
+function exportUsers () {
+ export([{sheetName: 'Users', model: 'user'}])
+}
+
+function export (jobs) {
 
   var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
   var configSheet = activeSpreadsheet.getSheetByName("Configuration")
@@ -69,6 +99,8 @@ function export () {
     log('-----')
     log(url)
     var cols;
+    var created = 0
+    var updated = 0
     for (var i = 0; i < data.length; i++) {
       var row = data[i]
       var json = {}
@@ -88,6 +120,7 @@ function export () {
         var getUrl = url + '?' + primaryKey + '=' + json[primaryKey]
         var res = UrlFetchApp.fetch(getUrl, params)
         res = JSON.parse(res)
+        log(res)
         var params = {
           "headers": headers,
           'contentType': 'application/json',
@@ -95,17 +128,29 @@ function export () {
         }
         if (res && res.length > 0) {
           params.method = 'PUT'
-          var response = UrlFetchApp.fetch(url + json[primaryKey], params)
+          var id = (primaryKey === 'email') ? res[0].id : json[primaryKey]
+          log(id)
+          var response = UrlFetchApp.fetch(url + id, params)
+          updated++
         } else {
           params.method = 'POST'
           var response = UrlFetchApp.fetch(url, params)
+          created++
         }
       }
     } // Data loop
+    toast(created + ' created, ' + updated + ' updated of ' +  (data.length - 1) + ' records in ' + modelName + ' loaded from ' + sheetName + ' tab')
   } // Jobs Loop
 }
 
 function log (srt) {
-  Logger.log(srt);
+  Logger.log(srt)
 }
-  
+
+function toast (msg){
+  SpreadsheetApp.getActiveSpreadsheet().toast(msg, 'NODRIZA', -1);
+}
+
+function about () {
+  toast('Version 1.0 - 2019/05/06')
+}
