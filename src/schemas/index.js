@@ -26,6 +26,7 @@ import ProposalVersion from './ProposalVersionSchema'
 import Proposalbot from './ProposalbotSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
+import Report from './ReportSchema'
 import RoleLibrary from './RoleLibrarySchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
@@ -53,7 +54,6 @@ import Message from './MessageSchema'
 import Conversation from './ConversationSchema'
 import PaymentMode from './PaymentModeSchema'
 import ContractType from './ContractTypeSchema'
-import Report from './ReportSchema'
 import Comment from './CommentSchema'
 import ReportPeriod from './ReportPeriodSchema'
 import Backup from './BackupSchema'
@@ -87,6 +87,7 @@ export class Schemas {
     this.proposalbot = Proposalbot
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
+    this.report = Report
     this.roleLibrary = RoleLibrary
     this.role = Role
     this.service = Service
@@ -114,7 +115,6 @@ export class Schemas {
     this.conversation = Conversation
     this.paymentMode = PaymentMode
     this.contractType = ContractType
-    this.report = Report
     this.comment = Comment
     this.reportPeriod = ReportPeriod
     this.backup = Backup

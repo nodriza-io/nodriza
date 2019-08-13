@@ -26,6 +26,7 @@ import { ProposalVersion } from './ProposalVersionApi'
 import { Proposalbot } from './ProposalbotApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
+import { Report } from './ReportApi'
 import { RoleLibrary } from './RoleLibraryApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
@@ -53,7 +54,6 @@ import { Message } from './MessageApi'
 import { Conversation } from './ConversationApi'
 import { PaymentMode } from './PaymentModeApi'
 import { ContractType } from './ContractTypeApi'
-import { Report } from './ReportApi'
 import { Comment } from './CommentApi'
 import { ReportPeriod } from './ReportPeriodApi'
 import { Backup } from './BackupApi'
@@ -87,6 +87,7 @@ export class Apis {
     this.proposalbot = new Proposalbot(params)
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)
+    this.report = new Report(params)
     this.roleLibrary = new RoleLibrary(params)
     this.role = new Role(params)
     this.service = new Service(params)
@@ -114,7 +115,6 @@ export class Apis {
     this.conversation = new Conversation(params)
     this.paymentMode = new PaymentMode(params)
     this.contractType = new ContractType(params)
-    this.report = new Report(params)
     this.comment = new Comment(params)
     this.reportPeriod = new ReportPeriod(params)
     this.backup = new Backup(params)
