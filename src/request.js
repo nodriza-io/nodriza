@@ -7,7 +7,9 @@ import { Session } from './session'
 export class Request {
   constructor (params) {
     this.session = new Session()
-    if (params.accessToken) this.session.set({token:{accessToken:params.accessToken}})
+    const sessionAllReady = this.session.load('token.accessToken')
+    console.log('roge sessionAllReady --->', sessionAllReady)
+    if (params.accessToken && !sessionAllReady) this.session.set({token:{accessToken:params.accessToken}})
     this.axios = axios.create()
     if (params) {
       if (!params.hostname) throw new Error('Missing required key \'hostname\' in params')
