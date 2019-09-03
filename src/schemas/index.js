@@ -58,6 +58,7 @@ import Comment from './CommentSchema'
 import ReportPeriod from './ReportPeriodSchema'
 import Backup from './BackupSchema'
 import Trash from './TrashSchema'
+import LinkedAccount from './LinkedAccountSchema'
 
 export class Schemas {
   constructor (params) {
@@ -119,5 +120,6 @@ export class Schemas {
     this.reportPeriod = ReportPeriod
     this.backup = Backup
     this.trash = Trash
+    this.linkedAccount = LinkedAccount
   }
 }

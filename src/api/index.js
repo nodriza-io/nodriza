@@ -58,6 +58,7 @@ import { Comment } from './CommentApi'
 import { ReportPeriod } from './ReportPeriodApi'
 import { Backup } from './BackupApi'
 import { Trash } from './TrashApi'
+import { LinkedAccount } from './LinkedAccountApi'
 
 export class Apis {
   constructor (params) {
@@ -119,5 +120,6 @@ export class Apis {
     this.reportPeriod = new ReportPeriod(params)
     this.backup = new Backup(params)
     this.trash = new Trash(params)
+    this.linkedAccount = new LinkedAccount(params)
   }
 }
