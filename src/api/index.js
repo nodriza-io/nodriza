@@ -27,6 +27,7 @@ import { Proposalbot } from './ProposalbotApi'
 import { PurchaseOrder } from './PurchaseOrderApi'
 import { RecurringInvoice } from './RecurringInvoiceApi'
 import { Report } from './ReportApi'
+import { Reservation } from './ReservationApi'
 import { RoleLibrary } from './RoleLibraryApi'
 import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
@@ -59,6 +60,8 @@ import { ReportPeriod } from './ReportPeriodApi'
 import { Backup } from './BackupApi'
 import { Trash } from './TrashApi'
 import { LinkedAccount } from './LinkedAccountApi'
+import { Package } from './PackageApi'
+import { Calendar } from './CalendarApi'
 
 export class Apis {
   constructor (params) {
@@ -89,6 +92,7 @@ export class Apis {
     this.purchaseOrder = new PurchaseOrder(params)
     this.recurringInvoice = new RecurringInvoice(params)
     this.report = new Report(params)
+    this.reservation = new Reservation(params)
     this.roleLibrary = new RoleLibrary(params)
     this.role = new Role(params)
     this.service = new Service(params)
@@ -121,5 +125,7 @@ export class Apis {
     this.backup = new Backup(params)
     this.trash = new Trash(params)
     this.linkedAccount = new LinkedAccount(params)
+    this.package = new Package(params)
+    this.calendar = new Calendar(params)
   }
 }

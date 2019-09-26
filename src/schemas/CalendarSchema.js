@@ -19,23 +19,21 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "domain": {
-    "description": "Domain name. Only alphanumeric, dash and underscore allowed",
-    "example": "acme",
+  "keyname": {
     "required": true,
-    "primaryKey": true,
     "unique": true,
-    "type": "string",
-    "regex": "/^([a-zA-Z0-9_-]+)$/"
+    "primaryKey": true,
+    "random": 8,
+    "displayName": true,
+    "type": "string"
   },
-  "apiKey": {
-    "description": "API Key in uuid format",
+  "name": {
     "required": true,
-    "password": true,
-    "type": "string"
+    "type": "string",
+    "displayName": true
   },
-  "comment": {
-    "description": "Describe the linked account",
-    "type": "string"
+  "description": {
+    "type": "string",
+    "longtext": "true"
   }
 }

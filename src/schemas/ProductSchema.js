@@ -117,7 +117,8 @@ module.exports = {
     "skipAll": true
   },
   "color": {
-    "type": "string"
+    "type": "string",
+    "color": true
   },
   "publicName": {
     "type": "string"

@@ -19,23 +19,39 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "domain": {
-    "description": "Domain name. Only alphanumeric, dash and underscore allowed",
-    "example": "acme",
+  "calendar": {
     "required": true,
-    "primaryKey": true,
-    "unique": true,
+    "model": "calendar"
+  },
+  "relatedType": {
+    "required": true,
+    "defaultsTo": "product",
     "type": "string",
-    "regex": "/^([a-zA-Z0-9_-]+)$/"
+    "enum": [
+      "product",
+      "proposal",
+      "user"
+    ]
   },
-  "apiKey": {
-    "description": "API Key in uuid format",
+  "relatedId": {
+    "type": "string"
+  },
+  "metadata": {
+    "type": "json"
+  },
+  "title": {
     "required": true,
-    "password": true,
     "type": "string"
   },
-  "comment": {
-    "description": "Describe the linked account",
-    "type": "string"
+  "startDate": {
+    "type": "datetime",
+    "required": true
+  },
+  "endDate": {
+    "type": "datetime",
+    "required": true
+  },
+  "allDay": {
+    "type": "boolean"
   }
 }

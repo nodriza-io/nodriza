@@ -27,6 +27,7 @@ import Proposalbot from './ProposalbotSchema'
 import PurchaseOrder from './PurchaseOrderSchema'
 import RecurringInvoice from './RecurringInvoiceSchema'
 import Report from './ReportSchema'
+import Reservation from './ReservationSchema'
 import RoleLibrary from './RoleLibrarySchema'
 import Role from './RoleSchema'
 import Service from './ServiceSchema'
@@ -59,6 +60,8 @@ import ReportPeriod from './ReportPeriodSchema'
 import Backup from './BackupSchema'
 import Trash from './TrashSchema'
 import LinkedAccount from './LinkedAccountSchema'
+import Package from './PackageSchema'
+import Calendar from './CalendarSchema'
 
 export class Schemas {
   constructor (params) {
@@ -89,6 +92,7 @@ export class Schemas {
     this.purchaseOrder = PurchaseOrder
     this.recurringInvoice = RecurringInvoice
     this.report = Report
+    this.reservation = Reservation
     this.roleLibrary = RoleLibrary
     this.role = Role
     this.service = Service
@@ -121,5 +125,7 @@ export class Schemas {
     this.backup = Backup
     this.trash = Trash
     this.linkedAccount = LinkedAccount
+    this.package = Package
+    this.calendar = Calendar
   }
 }
