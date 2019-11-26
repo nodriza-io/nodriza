@@ -70,8 +70,7 @@ module.exports = {
     "description": "Company department where the user belongs",
     "example": "5940200e93e326e90c636826",
     "model": "department",
-    "mustExist": true,
-    "skipAll": true
+    "mustExist": true
   },
   "mobile": {
     "description": "User mobile number",
