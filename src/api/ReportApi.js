@@ -12,6 +12,27 @@ export class Report extends Request {
     super(params)
   }
   /**
+  * GET /v1/report/download [PRIVATE]
+  *
+  * Download report results
+  *
+  * @param  {Object} params
+  * - @param  {String} match  -> (In query) Filter results
+  * - @param  {String} range  -> (In query) Set report range
+  * - @param  {String} startDate  -> (In query) Report start date
+  * - @param  {String} endDate  -> (In query) Report end date
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  download (params, callback) {
+    let url = '/v1/report/download'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/report/ranges [PRIVATE]
   *
   * Return available ranges for reports
