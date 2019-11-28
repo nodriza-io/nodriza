@@ -8,7 +8,7 @@ export class Request {
   constructor (params) {
     this.session = new Session()
     if (params.accessToken) this.session.set({token:{accessToken:params.accessToken}})
-    this.axios = axios.create({ timeout: 7000 })
+    this.axios = axios.create()
     if (params) {
       if (!params.hostname) throw new Error('Missing required key \'hostname\' in params')
       if (!params.model) throw new Error('Missing required key \'model\' in params')
