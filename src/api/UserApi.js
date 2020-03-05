@@ -65,6 +65,24 @@ export class User extends Request {
     })
   }
   /**
+  * PUT /v1/user/changeStatus [PRIVATE]
+  *
+  * change user estatus
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email  -> (In Body)  e.g Inactive
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  changeStatus (body, callback) {
+    let params = {url: '/v1/user/changeStatus', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/user/getPermissions/{userId} [PRIVATE]
   *
   * Return an array with user permissions

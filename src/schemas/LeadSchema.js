@@ -70,7 +70,9 @@ module.exports = {
     "description": "Company department where the user belongs",
     "example": "5940200e93e326e90c636826",
     "model": "department",
-    "mustExist": true
+    "mustExist": true,
+    "required": false,
+    "defaultsTo": "Unassigned"
   },
   "mobile": {
     "description": "User mobile number",
@@ -110,11 +112,13 @@ module.exports = {
     "description": "Google Maps Geo Location",
     "type": "json",
     "map": true,
+    "skipAll": true,
     "example": {}
   },
   "address": {
     "description": "Google Maps address location",
     "type": "string",
+    "skipAll": true,
     "address": true
   },
   "country": {

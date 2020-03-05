@@ -17,6 +17,7 @@ import { FileData } from './FileDataApi'
 import { Invoice } from './InvoiceApi'
 import { Lead } from './LeadApi'
 import { Oauth2 } from './Oauth2Api'
+import { Observation } from './ObservationApi'
 import { PaymentReceived } from './PaymentReceivedApi'
 import { Payu } from './PayuApi'
 import { Permission } from './PermissionApi'
@@ -82,6 +83,7 @@ export class Apis {
     this.invoice = new Invoice(params)
     this.lead = new Lead(params)
     this.oauth2 = new Oauth2(params)
+    this.observation = new Observation(params)
     this.paymentReceived = new PaymentReceived(params)
     this.payu = new Payu(params)
     this.permission = new Permission(params)

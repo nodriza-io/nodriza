@@ -83,11 +83,13 @@ module.exports = {
     "description": "Google Maps Geo Location",
     "type": "json",
     "map": true,
+    "skipAll": true,
     "example": {}
   },
   "address": {
     "description": "Google Maps address location",
     "type": "string",
+    "skipAll": true,
     "address": true
   },
   "country": {
@@ -127,5 +129,10 @@ module.exports = {
   "referenceNumber": {
     "unique": true,
     "type": "string"
+  },
+  "specialObservations": {
+    "description": "Specify if the proposal has some special observation",
+    "type": "string",
+    "longtext": "true"
   }
 }

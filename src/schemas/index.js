@@ -17,6 +17,7 @@ import FileData from './FileDataSchema'
 import Invoice from './InvoiceSchema'
 import Lead from './LeadSchema'
 import Oauth2 from './Oauth2Schema'
+import Observation from './ObservationSchema'
 import PaymentReceived from './PaymentReceivedSchema'
 import Payu from './PayuSchema'
 import Permission from './PermissionSchema'
@@ -82,6 +83,7 @@ export class Schemas {
     this.invoice = Invoice
     this.lead = Lead
     this.oauth2 = Oauth2
+    this.observation = Observation
     this.paymentReceived = PaymentReceived
     this.payu = Payu
     this.permission = Permission

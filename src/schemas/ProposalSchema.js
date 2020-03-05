@@ -151,7 +151,7 @@ module.exports = {
     "defaultsTo": []
   },
   "viewsAlerts": {
-    "description": "Number of alerts when client open the proposal",
+    "description": "Number of alerts when client open the proposal [DEPRECATE]",
     "type": "integer",
     "defaultsTo": 10,
     "min": 0,
@@ -167,10 +167,12 @@ module.exports = {
     "skipAll": true
   },
   "avgTime": {
+    "description": "Avg time proposal views",
     "type": "float",
     "skipAll": true
   },
   "views": {
+    "description": "Proposal views counter",
     "type": "integer",
     "skipAll": true
   },
@@ -221,11 +223,13 @@ module.exports = {
     "type": "string"
   },
   "referenceNumber": {
+    "description": "ID or Reference external",
     "unique": true,
     "displayName": true,
     "type": "string"
   },
   "recommendations": {
+    "description": "Organizational comments for proposal tracing",
     "skipAll": true,
     "type": "array"
   },
@@ -237,8 +241,18 @@ module.exports = {
     "description": "Name of API where the document has been created programmatically",
     "type": "string"
   },
+  "metadata": {
+    "description": "Extent of proposal document",
+    "type": "json"
+  },
   "workingTime": {
     "timer": true,
     "type": "string"
+  },
+  "fixedExchangeRate": {
+    "description": "Proposal fixed exchange rate",
+    "type": "boolean",
+    "defaultsTo": false,
+    "skipAll": true
   }
 }

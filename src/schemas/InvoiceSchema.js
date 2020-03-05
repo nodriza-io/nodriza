@@ -146,5 +146,16 @@ module.exports = {
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
+  },
+  "commissionAgent": {
+    "model": "user",
+    "mustExist": true
+  },
+  "commissionPercent": {
+    "type": "float",
+    "defaultsTo": 0
+  },
+  "commissionPayDate": {
+    "type": "datetime"
   }
 }

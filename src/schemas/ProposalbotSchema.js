@@ -186,7 +186,7 @@ module.exports = {
     "defaultsTo": []
   },
   "viewsAlerts": {
-    "description": "Number of alerts when client open the proposal",
+    "description": "Number of alerts when client open the proposal [DEPRECATE]",
     "type": "integer",
     "defaultsTo": 10,
     "min": 0,
@@ -202,10 +202,12 @@ module.exports = {
     "skipAll": true
   },
   "avgTime": {
+    "description": "Avg time proposal views",
     "type": "float",
     "skipAll": true
   },
   "views": {
+    "description": "Proposal views counter",
     "type": "integer",
     "skipAll": true
   },
@@ -256,11 +258,13 @@ module.exports = {
     "type": "string"
   },
   "referenceNumber": {
+    "description": "ID or Reference external",
     "unique": true,
     "displayName": true,
     "type": "string"
   },
   "recommendations": {
+    "description": "Organizational comments for proposal tracing",
     "skipAll": true,
     "type": "array"
   },

@@ -131,6 +131,26 @@ export class Invoice extends Request {
     })
   }
   /**
+  * PUT /v1/invoice/setCommission [PRIVATE]
+  *
+  * Invoice set commission data
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a4d4ac4aa10f903c9d2cf2f
+  * - @param  {String} commissionAgent * -> (In Body)  e.g 5a4d4ac4aa10f903c9d2cf2f
+  * - @param  {Float} commissionPercent * -> (In Body)  e.g 12.4
+  * - @param  {String} commissionPayDate * -> (In Body)  e.g 12/18/2019
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  setCommission (body, callback) {
+    let params = {url: '/v1/invoice/setCommission', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * POST /v1/invoice/share [PRIVATE]
   *
   * Share invoice with any email
