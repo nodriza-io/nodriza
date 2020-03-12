@@ -63,6 +63,7 @@ import { Trash } from './TrashApi'
 import { LinkedAccount } from './LinkedAccountApi'
 import { Package } from './PackageApi'
 import { Calendar } from './CalendarApi'
+import { Webhook } from './WebhookApi'
 
 export class Apis {
   constructor (params) {
@@ -129,5 +130,6 @@ export class Apis {
     this.linkedAccount = new LinkedAccount(params)
     this.package = new Package(params)
     this.calendar = new Calendar(params)
+    this.webhook = new Webhook(params)
   }
 }

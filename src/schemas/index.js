@@ -63,6 +63,7 @@ import Trash from './TrashSchema'
 import LinkedAccount from './LinkedAccountSchema'
 import Package from './PackageSchema'
 import Calendar from './CalendarSchema'
+import Webhook from './WebhookSchema'
 
 export class Schemas {
   constructor (params) {
@@ -129,5 +130,6 @@ export class Schemas {
     this.linkedAccount = LinkedAccount
     this.package = Package
     this.calendar = Calendar
+    this.webhook = Webhook
   }
 }
