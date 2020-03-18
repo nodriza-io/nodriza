@@ -64,6 +64,7 @@ import { LinkedAccount } from './LinkedAccountApi'
 import { Package } from './PackageApi'
 import { Calendar } from './CalendarApi'
 import { Webhook } from './WebhookApi'
+import { HelperBuilder } from './HelperBuilderApi'
 
 export class Apis {
   constructor (params) {
@@ -131,5 +132,6 @@ export class Apis {
     this.package = new Package(params)
     this.calendar = new Calendar(params)
     this.webhook = new Webhook(params)
+    this.helperBuilder = new HelperBuilder(params)
   }
 }

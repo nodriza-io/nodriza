@@ -64,6 +64,7 @@ import LinkedAccount from './LinkedAccountSchema'
 import Package from './PackageSchema'
 import Calendar from './CalendarSchema'
 import Webhook from './WebhookSchema'
+import HelperBuilder from './HelperBuilderSchema'
 
 export class Schemas {
   constructor (params) {
@@ -131,5 +132,6 @@ export class Schemas {
     this.package = Package
     this.calendar = Calendar
     this.webhook = Webhook
+    this.helperBuilder = HelperBuilder
   }
 }
