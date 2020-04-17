@@ -3,7 +3,7 @@
 
 Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends 
 
-[Documentation](https://nodriza-io.github.io/nodriza/#/reference-webhook)
+[Documentation](https://nodriza-io.github.io/nodriza/#/guide)
 
 ## Install
 
