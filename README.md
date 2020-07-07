@@ -3,6 +3,8 @@
 
 Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends 
 
+[Documentation](https://nodriza-io.github.io/nodriza/#/guide)
+
 ## Install
 
 ### Direct  `<script>`  Include
@@ -17,4 +19,3 @@ NPM is the recommended installation method when It pairs nicely with module bund
 ```javascript
 $ npm i --save https://github.com/nodriza-io/nodriza 
 ```
-
