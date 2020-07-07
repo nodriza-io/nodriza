@@ -11,4 +11,18 @@ export class Webhook extends Request {
     params.model = model
     super(params)
   }
+  /**
+  * GET /v1/webhook/getDomainEvents/ [PRIVATE]
+  *
+  * Return an array with webhook events
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getDomainEvents (callback) {
+    this.get('/v1/webhook/getDomainEvents/', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

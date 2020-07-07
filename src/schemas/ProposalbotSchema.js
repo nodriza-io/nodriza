@@ -65,11 +65,13 @@ module.exports = {
   },
   "createdAt": {
     "type": "datetime",
-    "skipAll": true
+    "skipAll": true,
+    "index": true
   },
   "updatedAt": {
     "type": "datetime",
-    "skipAll": true
+    "skipAll": true,
+    "index": true
   },
   "statusUpdatedAt": {
     "type": "datetime",
@@ -88,7 +90,8 @@ module.exports = {
   "title": {
     "required": true,
     "displayName": true,
-    "type": "string"
+    "type": "string",
+    "index": true
   },
   "status": {
     "required": true,

@@ -39,6 +39,7 @@ import { TemplateGallery } from './TemplateGalleryApi'
 import { Token } from './TokenApi'
 import { UrlShort } from './UrlShortApi'
 import { User } from './UserApi'
+import { Webhook } from './WebhookApi'
 import { Department } from './DepartmentApi'
 import { Template } from './TemplateApi'
 import { AccessPolicy } from './AccessPolicyApi'
@@ -63,8 +64,8 @@ import { Trash } from './TrashApi'
 import { LinkedAccount } from './LinkedAccountApi'
 import { Package } from './PackageApi'
 import { Calendar } from './CalendarApi'
-import { Webhook } from './WebhookApi'
 import { HelperBuilder } from './HelperBuilderApi'
+import { Provider } from './ProviderApi'
 
 export class Apis {
   constructor (params) {
@@ -107,6 +108,7 @@ export class Apis {
     this.token = new Token(params)
     this.urlShort = new UrlShort(params)
     this.user = new User(params)
+    this.webhook = new Webhook(params)
     this.department = new Department(params)
     this.template = new Template(params)
     this.accessPolicy = new AccessPolicy(params)
@@ -131,7 +133,7 @@ export class Apis {
     this.linkedAccount = new LinkedAccount(params)
     this.package = new Package(params)
     this.calendar = new Calendar(params)
-    this.webhook = new Webhook(params)
     this.helperBuilder = new HelperBuilder(params)
+    this.provider = new Provider(params)
   }
 }

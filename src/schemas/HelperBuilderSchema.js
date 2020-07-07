@@ -1,4 +1,8 @@
 module.exports = {
+  "loaderVersion": {
+    "type": "string",
+    "skipAll": true
+  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -27,6 +31,14 @@ module.exports = {
     "displayName": true,
     "type": "string"
   },
+  "helper": {
+    "description": "Handelbars Helper Function",
+    "required": true,
+    "type": "string",
+    "longtext": "true",
+    "helperEditor": true,
+    "displayName": true
+  },
   "usage": {
     "description": "Handelbars Helper Function",
     "required": true,
@@ -42,13 +54,6 @@ module.exports = {
       "all",
       "proposal"
     ],
-    "displayName": true
-  },
-  "helper": {
-    "description": "Handelbars Helper Function",
-    "required": true,
-    "longtext": "true",
-    "type": "string",
     "displayName": true
   }
 }

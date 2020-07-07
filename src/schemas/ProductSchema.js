@@ -80,9 +80,9 @@ module.exports = {
       "Lb"
     ]
   },
-  "vendor": {
-    "description": "Company who provide this product",
-    "model": "company"
+  "provider": {
+    "description": "Provider for this product",
+    "model": "provider"
   },
   "photo": {
     "type": "string",

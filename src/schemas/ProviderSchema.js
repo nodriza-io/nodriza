@@ -23,21 +23,16 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
-  "type": {
-    "description": "Company type",
-    "example": "host",
-    "required": true,
+  "taxId": {
+    "description": "Identification number used for tax purposes",
     "type": "string",
-    "defaultsTo": "client",
-    "enum": [
-      "host",
-      "client",
-      "partner",
-      "provider"
-    ]
+    "primaryKey": true,
+    "required": true,
+    "displayName": true,
+    "unique": true
   },
   "name": {
-    "description": "Company friendly name",
+    "description": "Provider friendly name",
     "example": "Acme",
     "required": true,
     "type": "string",
@@ -55,12 +50,12 @@ module.exports = {
     "existCheck": true
   },
   "legalName": {
-    "description": "Full company name used for legal and accounting issues",
+    "description": "Full provider name used for legal and accounting issues",
     "example": "Acme Inc.",
     "type": "string"
   },
   "website": {
-    "description": "Full company website url",
+    "description": "Full provider website url",
     "example": "http://acme-inc.com",
     "type": "string"
   },
@@ -68,16 +63,6 @@ module.exports = {
     "description": "Phone number",
     "type": "string",
     "example": "+1 508-695-1212"
-  },
-  "logos": {
-    "description": "Company logo",
-    "type": "json",
-    "skipAll": true
-  },
-  "taxId": {
-    "description": "Identification number used for tax purposes",
-    "type": "string",
-    "unique": true
   },
   "map": {
     "description": "Google Maps Geo Location",
@@ -119,7 +104,7 @@ module.exports = {
     "example": "90027"
   },
   "referedBy": {
-    "description": "The user who refered this company as client",
+    "description": "The user who refered this provider",
     "model": "user"
   },
   "paymentResponsibles": {
@@ -137,15 +122,6 @@ module.exports = {
     "$filter": {
       "field": "type",
       "value": "Industry"
-    }
-  },
-  "size": {
-    "description": "Company Size",
-    "required": false,
-    "model": "category",
-    "$filter": {
-      "field": "type",
-      "value": "Size"
     }
   },
   "status": {

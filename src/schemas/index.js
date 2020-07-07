@@ -39,6 +39,7 @@ import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
 import UrlShort from './UrlShortSchema'
 import User from './UserSchema'
+import Webhook from './WebhookSchema'
 import Department from './DepartmentSchema'
 import Template from './TemplateSchema'
 import AccessPolicy from './AccessPolicySchema'
@@ -63,8 +64,8 @@ import Trash from './TrashSchema'
 import LinkedAccount from './LinkedAccountSchema'
 import Package from './PackageSchema'
 import Calendar from './CalendarSchema'
-import Webhook from './WebhookSchema'
 import HelperBuilder from './HelperBuilderSchema'
+import Provider from './ProviderSchema'
 
 export class Schemas {
   constructor (params) {
@@ -107,6 +108,7 @@ export class Schemas {
     this.token = Token
     this.urlShort = UrlShort
     this.user = User
+    this.webhook = Webhook
     this.department = Department
     this.template = Template
     this.accessPolicy = AccessPolicy
@@ -131,7 +133,7 @@ export class Schemas {
     this.linkedAccount = LinkedAccount
     this.package = Package
     this.calendar = Calendar
-    this.webhook = Webhook
     this.helperBuilder = HelperBuilder
+    this.provider = Provider
   }
 }

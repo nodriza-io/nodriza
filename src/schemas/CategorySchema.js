@@ -50,6 +50,9 @@ module.exports = {
       "Product",
       "Pricing List",
       "Type",
+      "Status",
+      "Industry",
+      "Size",
       "Group"
     ]
   },

@@ -25,8 +25,8 @@ module.exports = {
     "unique": true,
     "required": true
   },
-  "secret": {
-    "description": "Setting a webhook secret allows you to ensure that POST requests sent to the payload URL are from Nodriza.io",
+  "authorization": {
+    "description": "Setting a webhook authorization header allows you to ensure that POST requests sent to the payload URL are from Nodriza.io",
     "type": "string",
     "required": true
   },
@@ -79,6 +79,10 @@ module.exports = {
       "proposal_share",
       "proposal_starred",
       "proposal_update",
+      "snippet_create",
+      "snippet_destroy",
+      "snippet_update",
+      "snippet_updateSnippetSku",
       "user_addAllRoles",
       "user_addPermissions",
       "user_addRoles",
