@@ -131,6 +131,24 @@ export class Proposal extends Request {
     })
   }
   /**
+  * PUT /v1/proposal/makePublicVersion [PRIVATE]
+  *
+  * Make Public Version
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {String} version * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  makePublicVersion (body, callback) {
+    let params = {url: '/v1/proposal/makePublicVersion', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/proposal/ref [PUBLIC]
   *
   * Redirect to proposal by reference number
@@ -157,6 +175,24 @@ export class Proposal extends Request {
   send (body, callback) {
     let params = {url: '/v1/proposal/send', body}
     this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/proposal/setCloseDate [PRIVATE]
+  *
+  * Set proposal close date
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {Datetime} closeDate * -> (In Body)  e.g 2016-05-18T16:00:00Z
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  setCloseDate (body, callback) {
+    let params = {url: '/v1/proposal/setCloseDate', body}
+    this.put(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

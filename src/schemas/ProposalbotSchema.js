@@ -271,6 +271,10 @@ module.exports = {
     "skipAll": true,
     "type": "array"
   },
+  "closeDate": {
+    "skipAll": true,
+    "type": "datetime"
+  },
   "denialReason": {
     "skipAll": true,
     "type": "string"

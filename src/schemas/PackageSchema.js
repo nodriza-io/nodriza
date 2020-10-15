@@ -42,18 +42,22 @@ module.exports = {
     "type": "json",
     "defaultsTo": []
   },
-  "fixed": {
-    "type": "boolean",
-    "defaultsTo": true
+  "snippet": {
+    "model": "snippet",
+    "mustExist": true
   },
   "color": {
     "type": "string",
     "color": true,
     "defaultsTo": "#EEEEEE"
   },
-  "snippet": {
-    "model": "snippet",
-    "mustExist": true
+  "fixed": {
+    "type": "boolean",
+    "defaultsTo": true
+  },
+  "disableCollapse": {
+    "type": "boolean",
+    "defaultsTo": false
   },
   "disabled": {
     "type": "boolean",
