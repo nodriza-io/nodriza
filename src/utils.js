@@ -5,6 +5,9 @@ import moment from 'moment'
 import pako from 'pako'
 import _ from 'lodash'
 
+const _lang = window.localStorage.getItem('lang')
+if (_lang) moment.locale(_lang.replace(/"/g, ''))
+
 export class Utils {
   currency (val, format) {
     format = format || '$0,0.00'
