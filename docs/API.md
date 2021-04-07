@@ -1,7 +1,9 @@
 PROLIBU API REST
 ======
 
-Las API de Prolibu son una forma para que otras aplicaciones accedan mediante programación a los datos dentro de su cuenta Prolibu, de una manera simple y segura. Puede interactuar con sus datos de Prolibu a través de la interfaz de usuario y mediante un API.
+Las API son una forma para que otras aplicaciones accedan mediante programación a los datos dentro de su cuenta Prolibu, de una manera simple y segura. 
+
+Puede interactuar con sus datos de Prolibu a través de la interfaz de usuario y mediante un API.
 
 
 # Probémoslo
