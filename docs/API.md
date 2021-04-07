@@ -6,8 +6,8 @@ Las API son una forma para que otras aplicaciones accedan mediante programación
 Puede interactuar con sus datos de Prolibu a través de la interfaz de usuario y mediante un API.
 
 
-# Probémoslo estó
-----------
+# Probémoslo
+
 ### 1. Inicie sesión en su cuenta de Prolibu. 
 ### 2. Seleccione la sección Preferencias. 
 ![Api Explorer](https://s3.amazonaws.com/cdn.prolibu.com/rest-api-doc-images/Home.png)
