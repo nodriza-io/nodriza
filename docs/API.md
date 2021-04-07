@@ -14,7 +14,7 @@ Puede interactuar con sus datos de Prolibu a través de la interfaz de usuario y
 ### 3. Seleccione la sección Explorador de Api. 
 ![Api Explorer](https://s3.amazonaws.com/cdn.prolibu.com/rest-api-doc-images/Preferences.png)
 
-### 4. verá una interfaz de usuario Swagger como esta 
+### 4. Verá una interfaz de usuario Swagger como esta 
 > Para más información acerca de cómo usar la interfaz de usuario de Swagger visite este [link](https://petstore.swagger.io/#/).
 
 ![Api Explorer](https://s3.amazonaws.com/cdn.prolibu.com/rest-api-doc-images/Api-Explorer.png)
