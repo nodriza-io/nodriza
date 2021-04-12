@@ -56,7 +56,7 @@ Estos Custom Objects son implementados dentro de su cuenta Prolibu por uno de nu
 * Para más información sobre el campo *lead por favor visite el siguiente [link](https://nodriza-io.github.io/nodriza/#/reference-lead).
 * Para más información sobre el campo *agent por favor visite el siguiente [link](https://nodriza-io.github.io/nodriza/#/reference-user).
 * Para más información sobre el campo *data por favor visite el siguiente [link](https://nodriza-io.github.io/nodriza/#/reference-proposal).
-* Los campos metada para todos los modelos son abiertos por lo que usted es libre de agregar la información que considere importante a la hora de crear un registro. 
+* Los campos *metada para todos los modelos son abiertos por lo que usted es libre de agregar la información que considere importante a la hora de crear un registro. 
 * La respuesta de un Custom Object puede variar de uno  a otro dependiendo su finalidad, pero principalmente regresa la misma estructura con los elementos generados. Por ejemplo en caso de que tengamos un Custom Object para generar cotizaciones se regresarán 2 URL, una para que el agente comercial pueda visualizar el documento y otra (un short link) para ser compartida con el lead.
 
 
