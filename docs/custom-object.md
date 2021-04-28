@@ -7,6 +7,7 @@ Estos Custom Objects son implementados dentro de su cuenta Prolibu por uno de nu
 
 ```json
 {
+    "uuid": "090392-T90",
     "lead": {
         "firtsName": "Jane",
         "lastName": "Doe",  
