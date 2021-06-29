@@ -1,6 +1,15 @@
 PROLIBU WEBHOOK METRICS
 ======
-Los webhooks le permiten crear o configurar integraciones, que se suscriben a ciertos eventos en Prolibu.com. Cuando se activa uno de esos eventos, enviaremos una carga útil HTTP POST a la URL configurada del webhook. Para este caso en especial enviaremos las métricas de la propuestas cuyo estado actual sea "Ready" cada 1 hora con los datos actualizados de las interacciones del Lead o Cliente dentro de la propuesta. A continuación se presenta el cuerpo enviado por el webhook de Prolibu.com para el evento de "proposal_metrics".
+Los webhooks le permiten crear o configurar integraciones, que se suscriben a ciertos eventos en Prolibu.com. Cuando se activa uno de esos eventos, enviaremos una carga útil HTTP POST a la URL configurada del webhook. Para este caso en especial enviaremos las métricas de la propuestas cuyo estado actual sea "Ready" cada 1 hora con los datos actualizados de las interacciones del Lead o Cliente dentro de la propuesta. A continuación se presenta el cuerpo y cabeceras enviados por el webhook de Prolibu.com para el evento de "proposal_metrics".
+
+```json
+{
+  "content-length": "2404",
+  "authorization": "xxxxx-xxxx-001",
+  "content-type": "application/json",
+  "accept": "application/json"
+}
+
 
 ```json
 {
