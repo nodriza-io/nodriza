@@ -20,7 +20,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "VCPE47",
       "rating": "Cold",
       "lastSeen": "2021-03-04T16:31:10.949Z",
-      "temperature": 0.00139979836732232,
+      "CCI": 0.00139979836732232,
       "views": 1,
       "id": "60410b4062342f0332089e62"
     },
@@ -28,7 +28,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "ZBEXFT",
       "rating": "Cold",
       "lastSeen": "2021-03-04T16:43:36.134Z",
-      "temperature": 0.000907775311708679,
+      "CCI": 0.000907775311708679,
       "views": 1,
       "id": "60410e2362342f0332089e66"
     },
@@ -36,7 +36,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "E8ZNGR",
       "rating": "Cold",
       "lastSeen": "2021-03-08T22:41:14.775Z",
-      "temperature": 0,
+      "CCI": 0,
       "views": 1,
       "id": "6046a7fff76995041b3f00b2"
     },
@@ -44,7 +44,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "WS3ZRX",
       "rating": "Warm",
       "lastSeen": "2021-03-23T13:33:35.330Z",
-      "temperature": 4.978419521513438,
+      "CCI": 4.978419521513438,
       "views": 4,
       "id": "6059ee06b1fd5704f435facd"
     },
@@ -52,7 +52,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "9VCMSR",
       "rating": "Cold",
       "lastSeen": "2021-03-23T19:26:23.573Z",
-      "temperature": 20.78859756619637,
+      "CCI": 20.78859756619637,
       "views": 7,
       "id": "6059fc0e08d8080763bb6729"
     }
