@@ -52,8 +52,8 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
       "proposalNumber": "9VCMSR",
       "rating": "Cold",
       "lastSeen": "2021-03-23T19:26:23.573Z",
-      "temperature": "123",
-      "views": 20.78859756619637,
+      "temperature": 20.78859756619637,
+      "views": 7,
       "id": "6059fc0e08d8080763bb6729"
     }
   ]
