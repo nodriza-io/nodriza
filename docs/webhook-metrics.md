@@ -9,7 +9,7 @@ Los webhooks le permiten crear o configurar integraciones, que se suscriben a ci
   "content-type": "application/json",
   "accept": "application/json"
 }
-
+```
 
 ```json
 {
