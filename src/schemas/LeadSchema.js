@@ -188,5 +188,153 @@ module.exports = {
   "referenceNumber": {
     "unique": true,
     "type": "string"
+  },
+  "company": {
+    "description": "Company where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "company",
+    "mustExist": true,
+    "skipAll": true
+  },
+  "identificationNumber": {
+    "description": "User identificationNumber number",
+    "example": "80103085",
+    "type": "string"
+  },
+  "role": {
+    "description": "User to roles association",
+    "collection": "role",
+    "via": "user",
+    "skipAll": true
+  },
+  "permission": {
+    "description": "User to permission association",
+    "collection": "permission",
+    "via": "user",
+    "skipAll": true
+  },
+  "auth": {
+    "description": "Authentication type",
+    "example": "local",
+    "defaultsTo": "local",
+    "enum": [
+      "local",
+      "oauth"
+    ],
+    "skipAll": true
+  },
+  "resetPassword": {
+    "description": "Token to reset user password",
+    "type": "json",
+    "skipSearch": true,
+    "skipAll": true
+  },
+  "apps": {
+    "description": "OAuth apps with accessTokens",
+    "example": {
+      "google": {
+        "accessToken": "ya29.Glx0BB1aXg0ZvNMdriWMUHAoUTTcJODKKCyEvyMpn8skBfzFGgI_0Q4KKUZK7qXWgZiOw0fxy306ZoGwWCE5YLastKORAFNPx33gFZV6Tg32KzEDttcqm79Du0Pc0Q"
+      }
+    },
+    "defaultsTo": {},
+    "type": "json",
+    "skipAll": true
+  },
+  "home": {
+    "description": "View route to redirect user after successful login, this route is inherited from first role assigned",
+    "example": "/dashboard",
+    "type": "string",
+    "skipAll": true
+  },
+  "password": {
+    "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",
+    "example": "Shox009_",
+    "type": "string",
+    "skipUpdate": true
+  },
+  "skype": {
+    "description": "Skype username",
+    "example": "jdoe",
+    "type": "string"
+  },
+  "metadata": {
+    "description": "Extent of lead document",
+    "type": "json"
+  },
+  "readOnly": {
+    "skipAll": true,
+    "type": "boolean"
+  },
+  "type": {
+    "description": "Company type",
+    "example": "host",
+    "type": "string",
+    "defaultsTo": "client",
+    "enum": [
+      "host",
+      "client",
+      "partner",
+      "provider"
+    ]
+  },
+  "name": {
+    "description": "Company friendly name",
+    "example": "Acme",
+    "type": "string"
+  },
+  "shortname": {
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
+    "example": "acme-inc",
+    "unique": true,
+    "type": "string",
+    "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
+    "maxLength": 32,
+    "skipAll": true,
+    "existCheck": true
+  },
+  "legalName": {
+    "description": "Full company name used for legal and accounting issues",
+    "example": "Acme Inc.",
+    "type": "string"
+  },
+  "paymentResponsibles": {
+    "type": "array",
+    "multiple": "user"
+  },
+  "size": {
+    "description": "Company Size",
+    "required": false,
+    "type": "float"
+  },
+  "renewalDate": {
+    "description": "Open field for dates",
+    "type": "datetime"
+  },
+  "renewalAmount": {
+    "description": "Open field for number",
+    "type": "float"
+  },
+  "converted": {
+    "description": "True or False if lead has been converted",
+    "example": "false",
+    "type": "boolean",
+    "defaultsTo": false,
+    "skipAll": true
+  },
+  "companyShortname": {
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
+    "example": "acme-inc",
+    "type": "string",
+    "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
+    "maxLength": 32
+  },
+  "user": {
+    "description": "User where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "user",
+    "mustExist": true,
+    "skipAll": true
   }
 }

@@ -25,8 +25,7 @@ module.exports = {
     "required": true,
     "primaryKey": true,
     "unique": true,
-    "type": "string",
-    "regex": "/^([a-zA-Z0-9_-]+)$/"
+    "type": "string"
   },
   "apiKey": {
     "description": "API Key in uuid format",

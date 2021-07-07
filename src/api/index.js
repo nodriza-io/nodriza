@@ -66,6 +66,7 @@ import { Package } from './PackageApi'
 import { Calendar } from './CalendarApi'
 import { HelperBuilder } from './HelperBuilderApi'
 import { Provider } from './ProviderApi'
+import { UserActivity } from './UserActivityApi'
 
 export class Apis {
   constructor (params) {
@@ -135,5 +136,6 @@ export class Apis {
     this.calendar = new Calendar(params)
     this.helperBuilder = new HelperBuilder(params)
     this.provider = new Provider(params)
+    this.userActivity = new UserActivity(params)
   }
 }

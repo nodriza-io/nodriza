@@ -142,11 +142,7 @@ module.exports = {
   "size": {
     "description": "Company Size",
     "required": false,
-    "model": "category",
-    "$filter": {
-      "field": "type",
-      "value": "Size"
-    }
+    "type": "float"
   },
   "status": {
     "description": "Company Status",
@@ -161,5 +157,13 @@ module.exports = {
     "description": "Specify if the proposal has some special observation",
     "type": "string",
     "longtext": "true"
+  },
+  "renewalDate": {
+    "description": "Open field for dates",
+    "type": "datetime"
+  },
+  "renewalAmount": {
+    "description": "Open field for number",
+    "type": "float"
   }
 }

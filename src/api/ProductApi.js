@@ -58,4 +58,19 @@ export class Product extends Request {
       callback(null, data)
     })
   }
+  /**
+  * PUT /v1/product/sync [PUBLIC]
+  *
+  * Sync products from external database
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  sync (body, callback) {
+    let params = {url: '/v1/product/sync', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

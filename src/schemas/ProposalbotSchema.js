@@ -262,7 +262,6 @@ module.exports = {
   },
   "referenceNumber": {
     "description": "ID or Reference external",
-    "unique": true,
     "displayName": true,
     "type": "string"
   },

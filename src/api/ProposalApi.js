@@ -137,6 +137,7 @@ export class Proposal extends Request {
   *
   * @param  {Object} params
   * - @param  {String} id * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
+  * - @param  {String} versionName  -> (In Body)  e.g Proposal Apto 201
   * - @param  {String} version * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
   * @param  {Function} callback
   * @return {Code} 200, 400, 403

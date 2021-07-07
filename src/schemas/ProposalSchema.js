@@ -227,7 +227,6 @@ module.exports = {
   },
   "referenceNumber": {
     "description": "ID or Reference external",
-    "unique": true,
     "displayName": true,
     "type": "string"
   },
@@ -265,5 +264,10 @@ module.exports = {
     "type": "boolean",
     "defaultsTo": false,
     "skipAll": true
+  },
+  "temperature": {
+    "skipAll": true,
+    "type": "float",
+    "defaultsTo": 0
   }
 }

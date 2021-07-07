@@ -177,5 +177,8 @@ module.exports = {
   "referenceNumber": {
     "unique": true,
     "type": "string"
+  },
+  "metadata": {
+    "type": "json"
   }
 }

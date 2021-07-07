@@ -30,6 +30,21 @@ export class Lead extends Request {
     })
   }
   /**
+  * POST /v1/lead/createOrUpdate [PRIVATE]
+  *
+  * Lead create or update
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  createOrUpdate (body, callback) {
+    let params = {url: '/v1/lead/createOrUpdate', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/lead/starred [PRIVATE]
   *
   * Change starred status
