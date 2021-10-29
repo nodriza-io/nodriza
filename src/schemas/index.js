@@ -10,6 +10,7 @@ import Company from './CompanySchema'
 import Config from './ConfigSchema'
 import ConfirmationCode from './ConfirmationCodeSchema'
 import Contract from './ContractSchema'
+import CustomApi from './CustomApiSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
 import Exchange from './ExchangeSchema'
@@ -80,6 +81,7 @@ export class Schemas {
     this.config = Config
     this.confirmationCode = ConfirmationCode
     this.contract = Contract
+    this.customApi = CustomApi
     this.document = Document
     this.email = Email
     this.exchange = Exchange

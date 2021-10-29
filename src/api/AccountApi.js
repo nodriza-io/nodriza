@@ -43,6 +43,20 @@ export class Account extends Request {
     })
   }
   /**
+  * GET /v1/account/latePayment [PRIVATE]
+  *
+  * Returns Nodriza account payment status
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  latePayment (callback) {
+    this.get('/v1/account/latePayment', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/account/nonCollaborativeMode [PUBLIC]
   *
   * Returns Nodriza account non collaborative mode

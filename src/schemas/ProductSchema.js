@@ -123,6 +123,9 @@ module.exports = {
   "publicName": {
     "type": "string"
   },
+  "source": {
+    "type": "string"
+  },
   "interval": {
     "type": "string",
     "enum": [
