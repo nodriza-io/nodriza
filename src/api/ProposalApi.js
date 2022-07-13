@@ -12,6 +12,24 @@ export class Proposal extends Request {
     super(params)
   }
   /**
+  * PUT /v1/proposal/addNotes [PRIVATE]
+  *
+  * Add proposal notes
+  *
+  * @param  {Object} params
+  * - @param  {String} id  -> (In Body)  e.g 5ca67be618e60700b2a81d2e
+  * - @param  {Array} notes  -> (In Body)  e.g [object Object]
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  addNotes (body, callback) {
+    let params = {url: '/v1/proposal/addNotes', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/proposal/calcStats [PRIVATE]
   *
   * Get proposals breaking points by stats

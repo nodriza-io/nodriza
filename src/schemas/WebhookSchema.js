@@ -74,6 +74,7 @@ module.exports = {
       "proposalVersion_restore",
       "proposalVersion_shareVersion",
       "proposalVersion_update",
+      "proposal_addNotes",
       "proposal_changeStatus",
       "proposal_create",
       "proposal_denialReason",

@@ -68,6 +68,7 @@ import { Calendar } from './CalendarApi'
 import { HelperBuilder } from './HelperBuilderApi'
 import { Provider } from './ProviderApi'
 import { UserActivity } from './UserActivityApi'
+import { Contact } from './ContactApi'
 
 export class Apis {
   constructor (params) {
@@ -139,5 +140,6 @@ export class Apis {
     this.helperBuilder = new HelperBuilder(params)
     this.provider = new Provider(params)
     this.userActivity = new UserActivity(params)
+    this.contact = new Contact(params)
   }
 }

@@ -54,6 +54,14 @@ module.exports = {
     "description": "Maximum Product Order Quantity",
     "type": "float"
   },
+  "initialPrice": {
+    "skipAll": true,
+    "type": "float"
+  },
+  "initialCurrency": {
+    "skipAll": true,
+    "type": "string"
+  },
   "currency": {
     "type": "string",
     "model": "currency",

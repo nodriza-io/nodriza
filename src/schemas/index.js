@@ -68,6 +68,7 @@ import Calendar from './CalendarSchema'
 import HelperBuilder from './HelperBuilderSchema'
 import Provider from './ProviderSchema'
 import UserActivity from './UserActivitySchema'
+import Contact from './ContactSchema'
 
 export class Schemas {
   constructor (params) {
@@ -139,5 +140,6 @@ export class Schemas {
     this.helperBuilder = HelperBuilder
     this.provider = Provider
     this.userActivity = UserActivity
+    this.contact = Contact
   }
 }

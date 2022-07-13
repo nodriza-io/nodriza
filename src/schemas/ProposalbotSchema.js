@@ -47,6 +47,10 @@ module.exports = {
     "description": "Deactivate bot",
     "type": "boolean"
   },
+  "zapsign": {
+    "type": "json",
+    "skipAll": true
+  },
   "signatureValidatedAt": {
     "type": "datetime",
     "skipAll": true
@@ -130,6 +134,10 @@ module.exports = {
     "model": "currency",
     "noCreate": true
   },
+  "customExchangeRate": {
+    "type": "float",
+    "defaultsTo": 0
+  },
   "rating": {
     "description": "Proposal scoring status",
     "type": "string",
@@ -196,6 +204,11 @@ module.exports = {
     "max": 10,
     "skipAll": true
   },
+  "widget": {
+    "type": "json",
+    "widget": true,
+    "description": "Create dinamic snippet"
+  },
   "starred": {
     "skipAll": true,
     "type": "array"
@@ -231,6 +244,11 @@ module.exports = {
     "skipAll": true,
     "description": "Proposal version id",
     "type": "string"
+  },
+  "notes": {
+    "skipAll": true,
+    "description": "Proposal notes",
+    "type": "array"
   },
   "versions": {
     "skipAll": true,
@@ -277,5 +295,10 @@ module.exports = {
   "denialReason": {
     "skipAll": true,
     "type": "string"
+  },
+  "pdfUrl": {
+    "type": "string",
+    "description": "Article PDF URL",
+    "resource": true
   }
 }

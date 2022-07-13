@@ -43,17 +43,19 @@ export class Product extends Request {
     })
   }
   /**
-  * GET /v1/product/getSkus/{skus} [PRIVATE]
+  * GET /v1/product/getSkus/ [PRIVATE]
   *
   * Get array products by SKU
   *
   * @param  {Object} params
-  * - @param  {String} skus * -> (In path) Products SKU list concatenate with ','
+  * - @param  {String} skus * -> (In query) Products SKU list concatenate with ','
   * @param  {Function} callback
   * @return {Code} 200, 400
   */
   getSkus (params, callback) {
-    this.get('/v1/product/getSkus/' + params['skus'], (err, data) => {
+    let url = '/v1/product/getSkus/'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
