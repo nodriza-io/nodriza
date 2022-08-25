@@ -274,6 +274,11 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
+  "signers": {
+    "description": "Related signers to approved the proposal",
+    "type": "array",
+    "multiple": "lead"
+  },
   "metadata": {
     "description": "Extent of proposal document",
     "type": "json"
