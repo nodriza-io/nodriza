@@ -33,6 +33,7 @@
     "@babel/preset-env": "^7.18.10",
     "axios": "^0.16.2",
     "lodash": "^4.17.21",
+    "events": "^3.3.0",
     "moment": "^2.29.4",
     "numeral": "^2.0.6",
     "pako": "^1.0.11",
