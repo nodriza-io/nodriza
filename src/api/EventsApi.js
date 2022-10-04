@@ -30,4 +30,23 @@ export class Events extends Request {
       callback(null, data)
     })
   }
+  /**
+  * GET /v1/events/loadMore [PRIVATE]
+  *
+  * Return a paginate array of events
+  *
+  * @param  {Object} params
+  * - @param  {Number} limit * -> (In query) Register id
+  * - @param  {Number} skip * -> (In query) Doc id
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  loadMore (params, callback) {
+    let url = '/v1/events/loadMore'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
