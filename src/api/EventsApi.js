@@ -17,8 +17,8 @@ export class Events extends Request {
   * Get events by doc id
   *
   * @param  {Object} params
-  * - @param  {String}  * -> (In path) Register id
-  * - @param  {String}  * -> (In path) Doc id
+  * - @param  {String} id * -> (In query) Register id
+  * - @param  {String}  * -> (In query) Doc id
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */
