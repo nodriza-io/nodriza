@@ -189,6 +189,11 @@ module.exports = {
     "unique": true,
     "type": "string"
   },
+  "shareAgents": {
+    "description": "Share Lead with Agents",
+    "type": "array",
+    "multiple": "user"
+  },
   "company": {
     "description": "Company where the lead belongs",
     "example": "59418bcd105605cc2693a981",

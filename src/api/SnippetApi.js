@@ -12,6 +12,23 @@ export class Snippet extends Request {
     super(params)
   }
   /**
+  * POST /v1/snippet/recursiveSnippets [PRIVATE]
+  *
+  * Return an html with HTML From snippets
+  *
+  * @param  {Object} params
+  * - @param  {String} html * -> (In path) e.g support
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  recursiveSnippet (body, callback) {
+    let params = {url: '/v1/snippet/recursiveSnippets', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/snippet/updateSnippetSku [PRIVATE]
   *
   * Add sku key to snippet

@@ -13,6 +13,7 @@ import Contract from './ContractSchema'
 import CustomApi from './CustomApiSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
+import Events from './EventsSchema'
 import Exchange from './ExchangeSchema'
 import FileData from './FileDataSchema'
 import Invoice from './InvoiceSchema'
@@ -69,7 +70,6 @@ import HelperBuilder from './HelperBuilderSchema'
 import Provider from './ProviderSchema'
 import UserActivity from './UserActivitySchema'
 import Contact from './ContactSchema'
-import Events from './EventsSchema'
 
 export class Schemas {
   constructor (params) {
@@ -86,6 +86,7 @@ export class Schemas {
     this.customApi = CustomApi
     this.document = Document
     this.email = Email
+    this.events = Events
     this.exchange = Exchange
     this.fileData = FileData
     this.invoice = Invoice
@@ -142,6 +143,5 @@ export class Schemas {
     this.provider = Provider
     this.userActivity = UserActivity
     this.contact = Contact
-    this.events = Events
   }
 }

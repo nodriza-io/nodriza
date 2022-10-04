@@ -13,6 +13,7 @@ import { Contract } from './ContractApi'
 import { CustomApi } from './CustomApiApi'
 import { Document } from './DocumentApi'
 import { Email } from './EmailApi'
+import { Events } from './EventsApi'
 import { Exchange } from './ExchangeApi'
 import { FileData } from './FileDataApi'
 import { Invoice } from './InvoiceApi'
@@ -69,7 +70,6 @@ import { HelperBuilder } from './HelperBuilderApi'
 import { Provider } from './ProviderApi'
 import { UserActivity } from './UserActivityApi'
 import { Contact } from './ContactApi'
-import { Events } from './EventsApi'
 
 export class Apis {
   constructor (params) {
@@ -86,6 +86,7 @@ export class Apis {
     this.customApi = new CustomApi(params)
     this.document = new Document(params)
     this.email = new Email(params)
+    this.events = new Events(params)
     this.exchange = new Exchange(params)
     this.fileData = new FileData(params)
     this.invoice = new Invoice(params)
@@ -142,6 +143,5 @@ export class Apis {
     this.provider = new Provider(params)
     this.userActivity = new UserActivity(params)
     this.contact = new Contact(params)
-    this.events = new Events(params)
   }
 }
