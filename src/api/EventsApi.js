@@ -12,7 +12,7 @@ export class Events extends Request {
     super(params)
   }
   /**
-  * GET /v1/events/docEvents/{id}/{docId} [PRIVATE]
+  * GET /v1/events/docEvents [PRIVATE]
   *
   * Get events by doc id
   *
@@ -23,7 +23,7 @@ export class Events extends Request {
   * @return {Code} 200, 400, 403
   */
   docEvents (callback) {
-    this.get('/v1/events/docEvents/{id}/{docId}', (err, data) => {
+    this.get('/v1/events/docEvents', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
