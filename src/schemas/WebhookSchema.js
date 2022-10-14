@@ -92,7 +92,7 @@ module.exports = {
       "proposal_update",
       "snippet_create",
       "snippet_destroy",
-      "snippet_recursiveSnippet",
+      "snippet_recursiveSnippets",
       "snippet_update",
       "snippet_updateSnippetSku",
       "user_addAllRoles",

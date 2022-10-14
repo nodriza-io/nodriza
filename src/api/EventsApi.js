@@ -12,6 +12,23 @@ export class Events extends Request {
     super(params)
   }
   /**
+  * DELETE /v1/events/destroyEventAndSiblings [PRIVATE]
+  *
+  * Destroy Event And Siblings
+  *
+  * @param  {Object} params
+  * - @param  {String} docId * -> (In Body)  e.g 5a5e5c5c321c3f05a1b7fce5
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  destroyEventAndSiblings (body, callback) {
+    let params = {url: '/v1/events/destroyEventAndSiblings', body}
+    this.delete(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/events/docEvents [PRIVATE]
   *
   * Return an array with events by doc id

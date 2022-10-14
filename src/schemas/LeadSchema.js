@@ -189,8 +189,8 @@ module.exports = {
     "unique": true,
     "type": "string"
   },
-  "shareAgents": {
-    "description": "Share Lead with Agents",
+  "shareWith": {
+    "description": "Share With",
     "type": "array",
     "multiple": "user"
   },

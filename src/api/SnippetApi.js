@@ -21,7 +21,7 @@ export class Snippet extends Request {
   * @param  {Function} callback
   * @return {Code} 200, 400
   */
-  recursiveSnippet (body, callback) {
+  recursiveSnippets (body, callback) {
     let params = {url: '/v1/snippet/recursiveSnippets', body}
     this.post(params, (err, data) => {
       if (err) return callback(err)
