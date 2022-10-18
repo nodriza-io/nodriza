@@ -6,7 +6,11 @@ import { Session } from './session'
 
 export class Request {
   constructor (params) {
-    this.session = new Session()
+    if (params.sessionName) {
+      this.session = new Session({ name: _.get(params, 'sessionName') })
+    } else {
+      this.session = new Session()
+    }
     if (params.accessToken) this.session.set({token:{accessToken:params.accessToken}})
     this.axios = axios.create()
     if (params) {

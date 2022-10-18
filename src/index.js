@@ -9,6 +9,7 @@ export default class Nodriza extends Api {
   constructor (params) {
     super(params)
     if (!params || !params.hostname) throw new Error('Please define hostname -> e.g acme.nodriza.io')
+    this.sessionName = params.sessionName
     this.hostname = params.hostname
     this.session = new Session()
     this.storage = new Storage()
