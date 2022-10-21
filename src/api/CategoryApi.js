@@ -11,4 +11,19 @@ export class Category extends Request {
     params.model = model
     super(params)
   }
+  /**
+  * PUT /v1/category/drop [PRIVATE]
+  *
+  * Drop categories database
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  drop (body, callback) {
+    let params = {url: '/v1/category/drop', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

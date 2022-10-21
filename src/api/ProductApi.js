@@ -11,4 +11,68 @@ export class Product extends Request {
     params.model = model
     super(params)
   }
+  /**
+  * PUT /v1/product/drop [PRIVATE]
+  *
+  * Drop products database
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  drop (body, callback) {
+    let params = {url: '/v1/product/drop', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/product/getBySku/{sku} [PRIVATE]
+  *
+  * Get product by sku
+  *
+  * @param  {Object} params
+  * - @param  {String} sku * -> (In path) Product SKU
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getBySku (params, callback) {
+    this.get('/v1/product/getBySku/' + params['sku'], (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/product/getSkus/ [PRIVATE]
+  *
+  * Get array products by SKU
+  *
+  * @param  {Object} params
+  * - @param  {String} skus * -> (In query) Products SKU list concatenate with ','
+  * @param  {Function} callback
+  * @return {Code} 200, 400
+  */
+  getSkus (params, callback) {
+    let url = '/v1/product/getSkus/'
+    if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
+    this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/product/sync [PUBLIC]
+  *
+  * Sync products from external database
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  sync (body, callback) {
+    let params = {url: '/v1/product/sync', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }

@@ -41,11 +41,17 @@ module.exports = {
       "proposal",
       "purchaseOrder",
       "paymentReceived",
-      "report",
       "article",
       "content",
       "email",
-      "system"
+      "system",
+      "report",
+      "proposalbot",
+      "articlebot",
+      "contractbot",
+      "invoicebot",
+      "snippet",
+      "template"
     ]
   },
   "body": {
@@ -56,6 +62,11 @@ module.exports = {
   },
   "category": {
     "type": "string",
+    "enum": [
+      "layout",
+      "content",
+      "html"
+    ],
     "required": true
   }
 }

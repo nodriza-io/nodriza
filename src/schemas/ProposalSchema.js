@@ -1,24 +1,53 @@
 module.exports = {
+  "proposalNumber": {
+    "description": "Unique proposal idetification number",
+    "required": true,
+    "unique": true,
+    "random": 6,
+    "displayName": true,
+    "type": "string"
+  },
+  "dic": {
+    "description": "Proposal dictionary for dictionary wildcards",
+    "type": "json",
+    "skipAll": true
+  },
+  "zapsign": {
+    "type": "json",
+    "skipAll": true
+  },
+  "signatureValidatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "createdBy": {
+    "required": true,
     "description": "User who created the resource",
     "model": "user",
     "skipAll": true
   },
   "updatedBy": {
+    "required": true,
     "description": "Last user who updated the resource",
     "model": "user",
     "skipAll": true
   },
   "createdAt": {
     "type": "datetime",
-    "skipAll": true
+    "skipAll": true,
+    "index": true
   },
   "updatedAt": {
+    "type": "datetime",
+    "skipAll": true,
+    "index": true
+  },
+  "statusUpdatedAt": {
     "type": "datetime",
     "skipAll": true
   },
   "layout": {
-    "description": "Detailed proposal proposal.",
+    "description": "Proposal layout.",
     "type": "string",
     "html": true,
     "target": "template",
@@ -27,22 +56,11 @@ module.exports = {
       "category": "layout"
     }
   },
-  "proposalNumber": {
-    "description": "Unique proposal idetification number",
-    "unique": true,
-    "random": 6,
-    "displayName": true,
-    "type": "string"
-  },
-  "referenceNumber": {
-    "unique": true,
-    "displayName": true,
-    "type": "string"
-  },
   "title": {
     "required": true,
     "displayName": true,
-    "type": "string"
+    "type": "string",
+    "index": true
   },
   "status": {
     "required": true,
@@ -52,14 +70,12 @@ module.exports = {
     "enum": [
       "Draft",
       "Ready",
-      "Negotiation",
       "Approved",
       "Denied"
     ]
   },
   "content": {
     "description": "Proposal content.",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
@@ -75,13 +91,17 @@ module.exports = {
     "defaultsTo": []
   },
   "numberOfPayments": {
-    "type": "integer",
+    "type": "json",
     "defaultsTo": 1,
-    "min": 1
+    "payments": true
   },
   "currency": {
     "model": "currency",
     "noCreate": true
+  },
+  "customExchangeRate": {
+    "type": "float",
+    "defaultsTo": 0
   },
   "rating": {
     "description": "Proposal scoring status",
@@ -90,10 +110,16 @@ module.exports = {
       "Hot",
       "Warm",
       "Cold"
-    ]
+    ],
+    "defaultsTo": "Cold",
+    "skipAll": true
   },
   "expirationDate": {
     "description": "Expiration date determines when the proposal expires",
+    "type": "datetime"
+  },
+  "expectedCloseDate": {
+    "description": "Proposal Expected win/loss Date",
     "type": "datetime"
   },
   "relatedUser": {
@@ -135,37 +161,141 @@ module.exports = {
     "type": "array",
     "defaultsTo": []
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
+  "viewsAlerts": {
+    "description": "Number of alerts when client open the proposal [DEPRECATE]",
+    "type": "integer",
+    "defaultsTo": 10,
+    "min": 0,
+    "max": 10,
+    "skipAll": true
   },
-  "password": {
-    "type": "string",
-    "password": true
-  },
-  "conferenceUrl": {
-    "type": "string",
-    "example": "https://hangouts.google.com/call/-x8KF7XdoUnTJDsDkaJgABEE",
-    "labelAction": {
-      "url": "https://hangouts.google.com/start",
-      "text": "CREATE HANGOUTS"
-    }
+  "widget": {
+    "type": "json",
+    "widget": true,
+    "description": "Create dinamic snippet"
   },
   "starred": {
     "skipAll": true,
     "type": "array"
   },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "description": "Avg time proposal views",
+    "type": "float",
+    "skipAll": true
+  },
+  "views": {
+    "description": "Proposal views counter",
+    "type": "integer",
+    "skipAll": true
+  },
   "opened": {
-    "description": "How many views has the document has been opened",
+    "description": "Full info about document views",
     "type": "array",
     "defaultsTo": [],
     "skipAll": true
   },
-  "viewsAlerts": {
-    "description": "Number of alerts when client open the proposal",
-    "type": "integer",
-    "defaultsTo": 1,
-    "min": 0,
-    "max": 10
+  "signatures": {
+    "dominant": true,
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
+  },
+  "proposalVersion": {
+    "skipAll": true,
+    "description": "Proposal version id",
+    "type": "string"
+  },
+  "notes": {
+    "skipAll": true,
+    "description": "Proposal notes",
+    "type": "array"
+  },
+  "versions": {
+    "skipAll": true,
+    "description": "Proposal versions",
+    "type": "array"
+  },
+  "unpublishProposal": {
+    "description": "Proposal won't be available after this date",
+    "type": "datetime"
+  },
+  "comparativeProposal": {
+    "description": "Make comparative proposal without total information.",
+    "defaultsTo": false,
+    "type": "boolean"
+  },
+  "responsible": {
+    "description": "Proposal responsible profile",
+    "model": "user",
+    "mustExist": true
+  },
+  "alsoNotifyViewsTo": {
+    "description": "Also notify these users when someone is watching the proposal",
+    "type": "array",
+    "multiple": "user"
+  },
+  "specialObservations": {
+    "description": "Specify if the proposal has some special observation",
+    "type": "string"
+  },
+  "referenceNumber": {
+    "description": "ID or Reference external",
+    "displayName": true,
+    "type": "string"
+  },
+  "recommendations": {
+    "description": "Organizational comments for proposal tracing",
+    "skipAll": true,
+    "type": "array"
+  },
+  "closeDate": {
+    "skipAll": true,
+    "type": "datetime"
+  },
+  "denialReason": {
+    "skipAll": true,
+    "type": "string"
+  },
+  "pdfUrl": {
+    "type": "string",
+    "description": "Article PDF URL",
+    "resource": true
+  },
+  "source": {
+    "description": "Name of API where the document has been created programmatically",
+    "type": "string"
+  },
+  "productsSnippets": {
+    "type": "string",
+    "skipAll": true
+  },
+  "signers": {
+    "description": "Related signers to approved the proposal",
+    "type": "array",
+    "multiple": "lead"
+  },
+  "metadata": {
+    "description": "Extent of proposal document",
+    "type": "json"
+  },
+  "workingTime": {
+    "timer": true,
+    "type": "string"
+  },
+  "fixedExchangeRate": {
+    "description": "Proposal fixed exchange rate",
+    "type": "boolean",
+    "defaultsTo": false,
+    "skipAll": true
+  },
+  "temperature": {
+    "skipAll": true,
+    "type": "float",
+    "defaultsTo": 0
   }
 }

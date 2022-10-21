@@ -13,11 +13,13 @@ module.exports = {
   },
   "createdBy": {
     "description": "User who created the resource",
+    "required": true,
     "model": "user",
     "skipAll": true
   },
   "updatedBy": {
     "description": "Last user who updated the resource",
+    "required": true,
     "model": "user",
     "skipAll": true
   },
@@ -74,17 +76,20 @@ module.exports = {
   },
   "taxId": {
     "description": "Identification number used for tax purposes",
-    "type": "string"
+    "type": "string",
+    "unique": true
   },
   "map": {
     "description": "Google Maps Geo Location",
     "type": "json",
     "map": true,
+    "skipAll": true,
     "example": {}
   },
   "address": {
     "description": "Google Maps address location",
     "type": "string",
+    "skipAll": true,
     "address": true
   },
   "country": {
@@ -120,5 +125,45 @@ module.exports = {
   "paymentResponsibles": {
     "type": "array",
     "multiple": "user"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
+  },
+  "industry": {
+    "description": "Business Industry",
+    "required": false,
+    "model": "category",
+    "$filter": {
+      "field": "type",
+      "value": "Industry"
+    }
+  },
+  "size": {
+    "description": "Company Size",
+    "required": false,
+    "type": "float"
+  },
+  "status": {
+    "description": "Company Status",
+    "required": false,
+    "model": "category",
+    "$filter": {
+      "field": "type",
+      "value": "Status"
+    }
+  },
+  "specialObservations": {
+    "description": "Specify if the proposal has some special observation",
+    "type": "string",
+    "longtext": "true"
+  },
+  "renewalDate": {
+    "description": "Open field for dates",
+    "type": "datetime"
+  },
+  "renewalAmount": {
+    "description": "Open field for number",
+    "type": "float"
   }
 }

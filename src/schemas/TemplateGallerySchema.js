@@ -13,6 +13,18 @@ module.exports = {
     "type": "string",
     "displayName": true
   },
+  "country": {
+    "required": true,
+    "enum": [
+      "us",
+      "co",
+      "es",
+      "fr",
+      "mx",
+      "hr"
+    ],
+    "type": "string"
+  },
   "keyname": {
     "description": "Unique keyname identifier. Only alphanumeric, dash and underscore allowed",
     "required": true,
@@ -28,10 +40,6 @@ module.exports = {
     "type": "string",
     "displayName": true
   },
-  "country": {
-    "required": true,
-    "type": "string"
-  },
   "language": {
     "required": true,
     "type": "string"
@@ -45,11 +53,12 @@ module.exports = {
       "proposal",
       "purchaseOrder",
       "paymentReceived",
-      "report",
       "article",
       "content",
       "email",
-      "system"
+      "system",
+      "report",
+      "chatbot"
     ]
   },
   "body": {
@@ -65,7 +74,12 @@ module.exports = {
     "html": true
   },
   "thumb": {
-    "description": "Rendered template example",
+    "description": "Template thumbnail",
+    "type": "string",
+    "required": true
+  },
+  "thumbCustom": {
+    "description": "Replace thumb witha custom thumb",
     "type": "string",
     "required": true
   },
@@ -76,10 +90,47 @@ module.exports = {
   },
   "business": {
     "type": "string",
+    "enum": [
+      "Any",
+      "Real Estate",
+      "Construction",
+      "Consulting",
+      "Marketing",
+      "Financial",
+      "Car",
+      "Personal",
+      "Business Plans",
+      "Education",
+      "Healthcare",
+      "Legal",
+      "Manufacturing",
+      "Technology"
+    ],
+    "required": true
+  },
+  "department": {
+    "type": "string",
+    "enum": [
+      "Production",
+      "Research and Development",
+      "Sales",
+      "Purchasing",
+      "Marketing",
+      "Human Resource",
+      "Accounting and Finance",
+      "Customer Service",
+      "IT",
+      "Distribution"
+    ],
     "required": true
   },
   "category": {
     "type": "string",
+    "enum": [
+      "layout",
+      "content",
+      "html"
+    ],
     "required": true
   }
 }

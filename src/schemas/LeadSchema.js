@@ -48,14 +48,22 @@ module.exports = {
   "email": {
     "description": "User email",
     "example": "jdoe@acme.com",
+    "required": true,
     "unique": true,
+    "inputType": "email",
     "type": "string",
-    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
+    "regex": "/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/gim",
     "existCheck": true
   },
   "companyName": {
+    "displayName": true,
     "description": "Company friendly name",
     "example": "Acme",
+    "type": "string"
+  },
+  "taxId": {
+    "description": "Company tax id",
+    "example": "111111111",
     "type": "string"
   },
   "department": {
@@ -63,7 +71,8 @@ module.exports = {
     "example": "5940200e93e326e90c636826",
     "model": "department",
     "mustExist": true,
-    "skipAll": true
+    "required": false,
+    "defaultsTo": "Unassigned"
   },
   "mobile": {
     "description": "User mobile number",
@@ -103,11 +112,13 @@ module.exports = {
     "description": "Google Maps Geo Location",
     "type": "json",
     "map": true,
+    "skipAll": true,
     "example": {}
   },
   "address": {
     "description": "Google Maps address location",
     "type": "string",
+    "skipAll": true,
     "address": true
   },
   "country": {
@@ -136,190 +147,14 @@ module.exports = {
     "type": "string",
     "example": "90027"
   },
-  "size": {
-    "description": "Number of company employees",
-    "example": "51-200",
-    "type": "string",
-    "enum": [
-      "1-10",
-      "51-200",
-      "201-500",
-      "501-1000",
-      "11-50",
-      "5000-10000",
-      "1001-5000",
-      "10000+"
-    ]
-  },
   "industry": {
     "description": "Company industry type",
     "example": "Computer Networking",
-    "type": "string",
-    "enum": [
-      "Accounting",
-      "Alternative Medicine",
-      "Arts and Crafts",
-      "Airlines/Aviation",
-      "Alternative Dispute Resolution",
-      "Animation",
-      "Apparel & Fashion",
-      "Architecture & Planning",
-      "Automotive",
-      "Aviation & Aerospace",
-      "Banking",
-      "Biotechnology",
-      "Broadcast Media",
-      "Building Materials",
-      "Business Supplies and Equipment",
-      "Capital Markets",
-      "Chemicals",
-      "Civic & Social Organization",
-      "Civil Engineering",
-      "Commercial Real Estate",
-      "Computer & Network Security",
-      "Computer Games",
-      "Computer Hardware",
-      "Computer Networking",
-      "Computer Software",
-      "Construction",
-      "Consumer Electronics",
-      "Consumer Goods",
-      "Consumer Services",
-      "Cosmetics",
-      "Dairy",
-      "Defense & Space",
-      "Design",
-      "Education Management",
-      "E-Learning",
-      "Electrical/Electronic Manufacturing",
-      "Entertainment",
-      "Environmental Services",
-      "Events Services",
-      "Executive Office",
-      "Facilities Services",
-      "Farming",
-      "Financial Services",
-      "Fine Art",
-      "Fishery",
-      "Food & Beverages",
-      "Food Production",
-      "Fund-Raising",
-      "Furniture",
-      "Glass, Ceramics & Concrete",
-      "Government Administration",
-      "Government Relations",
-      "Graphic Design",
-      "Health, Wellness and Fitness",
-      "Higher Education",
-      "Hospital & Health Care",
-      "Hospitality",
-      "Human Resources",
-      "Import and Export",
-      "Individual & Family Services",
-      "Industrial Automation",
-      "Information Services",
-      "Information Technology and Services",
-      "Insurance",
-      "International Affairs",
-      "International Trade and Development",
-      "Internet",
-      "Investment Banking",
-      "Investment Management",
-      "Judiciary",
-      "Law Enforcement",
-      "Law Practice",
-      "Legal Services",
-      "Leisure, Travel & Tourism",
-      "Libraries",
-      "Logistics and Supply Chain",
-      "Luxury Goods & Jewelry",
-      "Machinery",
-      "Management Consulting",
-      "Maritime",
-      "Market Research",
-      "Marketing and Advertising",
-      "Mechanical or Industrial Engineering",
-      "Media Production",
-      "Medical Devices",
-      "Medical Practice",
-      "Mental Health Care",
-      "Mining & Metals",
-      "Motion Pictures and Film",
-      "Museums and Institutions",
-      "Music",
-      "Nanotechnology",
-      "Newspapers",
-      "Nonprofit Organization Management",
-      "Oil & Energy",
-      "Online Media",
-      "Outsourcing/Offshoring",
-      "Package/Freight Delivery",
-      "Packaging and Containers",
-      "Performing Arts",
-      "Pharmaceuticals",
-      "Philanthropy",
-      "Photography",
-      "Plastics",
-      "Political Organization",
-      "Primary/Secondary Education",
-      "Printing",
-      "Professional Training & Coaching",
-      "Program Development",
-      "Public Policy",
-      "Public Relations and Communications",
-      "Publishing",
-      "Ranching",
-      "Real Estate",
-      "Recreational Facilities and Services",
-      "Religious Institutions",
-      "Renewables & Environment",
-      "Research",
-      "Restaurants",
-      "Retail",
-      "Security and Investigations",
-      "Semiconductors",
-      "Shipbuilding",
-      "Sporting Goods",
-      "Sports",
-      "Staffing and Recruiting",
-      "Telecommunications",
-      "Textiles",
-      "Think Tanks",
-      "Translation and Localization",
-      "Transportation/Trucking/Railroad",
-      "Utilities",
-      "Venture Capital & Private Equity",
-      "Veterinary",
-      "Warehousing",
-      "Wholesale",
-      "Wine and Spirits",
-      "Wireless",
-      "Writing and Editing",
-      "Gambling & Casinos",
-      "Paper & Forest Products",
-      "Supermarkets",
-      "Public Safety",
-      "Tobacco",
-      "Legislative Office",
-      "Militar"
-    ]
+    "type": "string"
   },
   "source": {
     "description": "Company where the lead belongs",
-    "type": "string",
-    "enum": [
-      "Advertisement",
-      "Customer Event",
-      "Employee Referral",
-      "Google AdWords",
-      "LinkedIn",
-      "Other",
-      "Partner",
-      "Purchased List",
-      "Trade Show",
-      "Webinar",
-      "Website"
-    ]
+    "type": "string"
   },
   "rating": {
     "description": "Proposal scoring status",
@@ -344,5 +179,167 @@ module.exports = {
   },
   "convertedCompany": {
     "model": "company"
+  },
+  "specialObservations": {
+    "description": "Specify if the lead has some special observation",
+    "type": "string",
+    "longtext": "true"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
+  },
+  "shareWith": {
+    "description": "Share With",
+    "type": "array",
+    "multiple": "user"
+  },
+  "company": {
+    "description": "Company where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "company",
+    "mustExist": true,
+    "skipAll": true
+  },
+  "identificationNumber": {
+    "description": "User identificationNumber number",
+    "example": "80103085",
+    "type": "string"
+  },
+  "role": {
+    "description": "User to roles association",
+    "collection": "role",
+    "via": "user",
+    "skipAll": true
+  },
+  "permission": {
+    "description": "User to permission association",
+    "collection": "permission",
+    "via": "user",
+    "skipAll": true
+  },
+  "auth": {
+    "description": "Authentication type",
+    "example": "local",
+    "defaultsTo": "local",
+    "enum": [
+      "local",
+      "oauth"
+    ],
+    "skipAll": true
+  },
+  "resetPassword": {
+    "description": "Token to reset user password",
+    "type": "json",
+    "skipSearch": true,
+    "skipAll": true
+  },
+  "apps": {
+    "description": "OAuth apps with accessTokens",
+    "example": {
+      "google": {
+        "accessToken": "ya29.Glx0BB1aXg0ZvNMdriWMUHAoUTTcJODKKCyEvyMpn8skBfzFGgI_0Q4KKUZK7qXWgZiOw0fxy306ZoGwWCE5YLastKORAFNPx33gFZV6Tg32KzEDttcqm79Du0Pc0Q"
+      }
+    },
+    "defaultsTo": {},
+    "type": "json",
+    "skipAll": true
+  },
+  "home": {
+    "description": "View route to redirect user after successful login, this route is inherited from first role assigned",
+    "example": "/dashboard",
+    "type": "string",
+    "skipAll": true
+  },
+  "password": {
+    "description": "At least 1 numeric charter, 1 lowercase, 1 uppercase, min len 8 length",
+    "example": "Shox009_",
+    "type": "string",
+    "skipUpdate": true
+  },
+  "skype": {
+    "description": "Skype username",
+    "example": "jdoe",
+    "type": "string"
+  },
+  "metadata": {
+    "description": "Extent of lead document",
+    "type": "json"
+  },
+  "readOnly": {
+    "skipAll": true,
+    "type": "boolean"
+  },
+  "type": {
+    "description": "Company type",
+    "example": "host",
+    "type": "string",
+    "defaultsTo": "client",
+    "enum": [
+      "host",
+      "client",
+      "partner",
+      "provider"
+    ]
+  },
+  "name": {
+    "description": "Company friendly name",
+    "example": "Acme",
+    "type": "string"
+  },
+  "shortname": {
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
+    "example": "acme-inc",
+    "unique": true,
+    "type": "string",
+    "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
+    "maxLength": 32,
+    "skipAll": true,
+    "existCheck": true
+  },
+  "legalName": {
+    "description": "Full company name used for legal and accounting issues",
+    "example": "Acme Inc.",
+    "type": "string"
+  },
+  "paymentResponsibles": {
+    "type": "array",
+    "multiple": "user"
+  },
+  "size": {
+    "description": "Company Size",
+    "required": false,
+    "type": "float"
+  },
+  "renewalDate": {
+    "description": "Open field for dates",
+    "type": "datetime"
+  },
+  "renewalAmount": {
+    "description": "Open field for number",
+    "type": "float"
+  },
+  "converted": {
+    "description": "True or False if lead has been converted",
+    "example": "false",
+    "type": "boolean",
+    "defaultsTo": false,
+    "skipAll": true
+  },
+  "companyShortname": {
+    "description": "Unique shortname identifier. Only alphanumeric, dash and underscore allowed",
+    "example": "acme-inc",
+    "type": "string",
+    "regex": "/^([a-z0-9_-]+)$/",
+    "minLength": 2,
+    "maxLength": 32
+  },
+  "user": {
+    "description": "User where the lead belongs",
+    "example": "59418bcd105605cc2693a981",
+    "model": "user",
+    "mustExist": true,
+    "skipAll": true
   }
 }

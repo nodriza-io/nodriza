@@ -36,9 +36,28 @@ module.exports = {
     "primaryKey": true,
     "unique": true,
     "type": "string",
-    "regex": "/^([a-z0-9_-]+)$/"
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
   },
   "parent": {
     "model": "category"
+  },
+  "type": {
+    "description": "Category Type",
+    "example": "Pricing List",
+    "type": "string",
+    "defaultsTo": "Product",
+    "enum": [
+      "Product",
+      "Pricing List",
+      "Type",
+      "Status",
+      "Industry",
+      "Size",
+      "Group"
+    ]
+  },
+  "disabled": {
+    "type": "boolean",
+    "defaultsTo": false
   }
 }

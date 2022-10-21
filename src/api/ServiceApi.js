@@ -101,6 +101,23 @@ export class Service extends Request {
     })
   }
   /**
+  * POST /v1/service/getTrialExpiration [PUBLIC]
+  *
+  * Get trial information
+  *
+  * @param  {Object} params
+  * - @param  {String} firstName  -> (In Body)  e.g staging
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  getTrialExpiration (body, callback) {
+    let params = {url: '/v1/service/getTrialExpiration', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/service/iconSearch [PRIVATE]
   *
   * Return search results
@@ -188,6 +205,85 @@ export class Service extends Request {
     let url = '/v1/service/qr'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/systemAvailability [PUBLIC]
+  *
+  * Validate if system is ready
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  systemAvailability (callback) {
+    this.get('/v1/service/systemAvailability', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/version [PUBLIC]
+  *
+  * Get app version
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  version (callback) {
+    this.get('/v1/service/version', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/service/webhook [PUBLIC]
+  *
+  * Receive webhooks
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  webhook (body, callback) {
+    let params = {url: '/v1/service/webhook', body}
+    this.get(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })

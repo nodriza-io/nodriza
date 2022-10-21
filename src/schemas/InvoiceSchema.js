@@ -115,17 +115,21 @@ module.exports = {
     "type": "array",
     "multiple": "user"
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
-  },
-  "password": {
-    "type": "string",
-    "password": true
-  },
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "type": "long",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
   },
   "paymentsReceived": {
     "skipAll": true,
@@ -136,5 +140,22 @@ module.exports = {
   "reminders": {
     "type": "array",
     "skipAll": true
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
+  },
+  "commissionAgent": {
+    "model": "user",
+    "mustExist": true
+  },
+  "commissionPercent": {
+    "type": "float",
+    "defaultsTo": 0
+  },
+  "commissionPayDate": {
+    "type": "datetime"
   }
 }

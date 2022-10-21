@@ -9,6 +9,14 @@ module.exports = {
     "model": "user",
     "skipAll": true
   },
+  "createdAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "updatedAt": {
+    "type": "datetime",
+    "skipAll": true
+  },
   "oem": {
     "description": "Essential data required by platform",
     "example": false,
@@ -55,11 +63,5 @@ module.exports = {
     "example": "/app",
     "defaultsTo": "/app",
     "type": "string"
-  },
-  "createdAt": {
-    "type": "datetime"
-  },
-  "updatedAt": {
-    "type": "datetime"
   }
 }

@@ -2,11 +2,13 @@ module.exports = {
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
+    "required": true,
     "skipAll": true
   },
   "updatedBy": {
     "description": "Last user who updated the resource",
     "model": "user",
+    "required": true,
     "skipAll": true
   },
   "createdAt": {
@@ -35,8 +37,9 @@ module.exports = {
     "example": "jdoe@acme.com",
     "required": true,
     "unique": true,
+    "inputType": "email",
     "type": "string",
-    "regex": "/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
+    "regex": "/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/gim",
     "existCheck": true
   },
   "company": {
@@ -56,7 +59,8 @@ module.exports = {
     "example": "5940200e93e326e90c636826",
     "model": "department",
     "mustExist": true,
-    "skipAll": true
+    "required": false,
+    "defaultsTo": "Unassigned"
   },
   "identificationNumber": {
     "description": "User identificationNumber number",
@@ -72,6 +76,31 @@ module.exports = {
     "description": "Company phone number",
     "example": "57 1 673 9407",
     "type": "string"
+  },
+  "country": {
+    "description": "Country name",
+    "example": "United States",
+    "type": "string"
+  },
+  "city": {
+    "description": "City name",
+    "example": "Los Angeles",
+    "type": "string"
+  },
+  "street": {
+    "description": "Street name",
+    "example": "2719 Hyperion Ave",
+    "type": "string"
+  },
+  "state": {
+    "description": "State name",
+    "example": "CA",
+    "type": "string"
+  },
+  "postal": {
+    "description": "Postal Code",
+    "type": "string",
+    "example": "90027"
   },
   "avatars": {
     "description": "User avatar in different sizes",
@@ -144,5 +173,12 @@ module.exports = {
     "description": "Skype username",
     "example": "jdoe",
     "type": "string"
+  },
+  "referenceNumber": {
+    "unique": true,
+    "type": "string"
+  },
+  "metadata": {
+    "type": "json"
   }
 }

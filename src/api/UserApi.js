@@ -65,6 +65,24 @@ export class User extends Request {
     })
   }
   /**
+  * PUT /v1/user/changeStatus [PRIVATE]
+  *
+  * change user estatus
+  *
+  * @param  {Object} params
+  * - @param  {String} id * -> (In Body)  e.g 5a55470ce6519c07837bfa12
+  * - @param  {String} email  -> (In Body)  e.g Inactive
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  changeStatus (body, callback) {
+    let params = {url: '/v1/user/changeStatus', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * GET /v1/user/getPermissions/{userId} [PRIVATE]
   *
   * Return an array with user permissions
@@ -110,6 +128,44 @@ export class User extends Request {
   */
   login (body, callback) {
     let params = {url: '/v1/user/login', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/user/loginChromeAgent [PUBLIC]
+  *
+  * User login Chrome Agent
+  *
+  * @param  {Object} params
+  * - @param  {String} username * -> (In Body)  e.g jprieto@nodriza.io
+  * - @param  {String} password * -> (In Body)  e.g Shox009_
+  * - @param  {String} accessToken  -> (In Body)  e.g 56a69869-bf0a-4650-98e9-fcd9680b31d5
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  loginChromeAgent (body, callback) {
+    let params = {url: '/v1/user/loginChromeAgent', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * POST /v1/user/loginFromAgent [PUBLIC]
+  *
+  * User login from Agent
+  *
+  * @param  {Object} params
+  * - @param  {String} username * -> (In Body)  e.g jprieto@nodriza.io
+  * - @param  {String} password * -> (In Body)  e.g Shox009_
+  * - @param  {String} accessToken  -> (In Body)  e.g 56a69869-bf0a-4650-98e9-fcd9680b31d5
+  * @param  {Function} callback
+  * @return {Code} 200, 401
+  */
+  loginFromAgent (body, callback) {
+    let params = {url: '/v1/user/loginFromAgent', body}
     this.post(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)
@@ -296,6 +352,24 @@ export class User extends Request {
   */
   resetPassword (body, callback) {
     let params = {url: '/v1/user/resetPassword', body}
+    this.put(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * PUT /v1/user/updateRoles [PRIVATE]
+  *
+  * Update roles
+  *
+  * @param  {Object} params
+  * - @param  {String} userId * -> (In Body)  e.g 597627fdb00c530b40f26aac
+  * - @param  {Array} roleKeynames * -> (In Body)  e.g host
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  updateRoles (body, callback) {
+    let params = {url: '/v1/user/updateRoles', body}
     this.put(params, (err, data) => {
       if (err) return callback(err)
       callback(null, data)

@@ -28,8 +28,16 @@ module.exports = {
     "example": "Tax-Free",
     "required": true,
     "type": "string",
-    "unique": true,
     "displayName": true
+  },
+  "slug": {
+    "description": "Unique slug identifier. Only alphanumeric, dash and underscore allowed",
+    "example": "pets",
+    "required": true,
+    "primaryKey": true,
+    "unique": true,
+    "type": "string",
+    "regex": "/^([a-zA-Z0-9_-]+)$/"
   },
   "description": {
     "description": "Tax description",

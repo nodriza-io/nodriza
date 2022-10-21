@@ -1,4 +1,11 @@
 module.exports = {
+  "articleNumber": {
+    "description": "Unique article idetification number",
+    "unique": true,
+    "random": 8,
+    "displayName": true,
+    "type": "string"
+  },
   "createdBy": {
     "description": "User who created the resource",
     "model": "user",
@@ -19,10 +26,8 @@ module.exports = {
     "type": "datetime",
     "skipAll": true
   },
-  "articleNumber": {
-    "description": "Unique article idetification number",
+  "referenceNumber": {
     "unique": true,
-    "random": 8,
     "displayName": true,
     "type": "string"
   },
@@ -30,50 +35,71 @@ module.exports = {
     "required": true,
     "type": "string"
   },
-  "shortDescription": {
-    "required": true,
-    "type": "string",
-    "longtext": true
-  },
-  "category": {
-    "model": "category",
-    "mustExist": true,
-    "required": true,
-    "defaultsTo": {
-      "slug": "general",
-      "name": "General"
-    }
-  },
   "layout": {
     "description": "Article layout",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
     "query": {
-      "type": "article"
+      "type": "article",
+      "category": "layout"
     }
   },
   "content": {
     "description": "Article content.",
-    "required": true,
     "type": "string",
     "html": true,
     "target": "template",
     "query": {
-      "type": "article"
+      "type": "article",
+      "category": "content"
     }
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
+  "relatedUser": {
+    "description": "Select the user that is related with this article",
+    "model": "user",
+    "mustExist": true
   },
-  "password": {
-    "type": "string",
-    "password": true
+  "relatedLead": {
+    "description": "Select the lead that is related with this article",
+    "model": "lead",
+    "mustExist": true
   },
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "type": "long",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
+  },
+  "opened": {
+    "description": "How many views has the document has been opened",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
+  },
+  "viewsAlerts": {
+    "description": "Number of alerts when client open the proposal",
+    "type": "integer",
+    "defaultsTo": 1,
+    "min": 0,
+    "max": 10
+  },
+  "pdfUrl": {
+    "type": "string",
+    "description": "Article PDF URL"
+  },
+  "source": {
+    "description": "Name of API where the document has been created programmatically",
+    "type": "string"
   }
 }

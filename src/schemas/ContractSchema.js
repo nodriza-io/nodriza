@@ -31,13 +31,9 @@ module.exports = {
   },
   "contractNumber": {
     "description": "Unique contract idetification number",
+    "required": true,
     "unique": true,
     "random": 6,
-    "displayName": true,
-    "type": "string"
-  },
-  "referenceNumber": {
-    "unique": true,
     "displayName": true,
     "type": "string"
   },
@@ -47,7 +43,8 @@ module.exports = {
     "defaultsTo": "Draft",
     "enum": [
       "Draft",
-      "Approved",
+      "Ready",
+      "Signed",
       "Cancelled"
     ],
     "skipAll": true
@@ -74,9 +71,6 @@ module.exports = {
   "expirationDate": {
     "type": "datetime"
   },
-  "amount": {
-    "type": "float"
-  },
   "firstProfile": {
     "model": "user"
   },
@@ -89,16 +83,35 @@ module.exports = {
   "fourthProfile": {
     "model": "user"
   },
-  "passwordProtected": {
-    "type": "boolean",
-    "defaultsTo": false
-  },
-  "password": {
-    "type": "string",
-    "password": true
+  "proposal": {
+    "model": "proposal",
+    "mustExist": true
   },
   "starred": {
     "skipAll": true,
     "type": "array"
+  },
+  "lastSeen": {
+    "type": "datetime",
+    "skipAll": true
+  },
+  "avgTime": {
+    "type": "long",
+    "skipAll": true
+  },
+  "views": {
+    "type": "integer",
+    "skipAll": true
+  },
+  "signatures": {
+    "description": "Array with the eSignatures IDs",
+    "type": "array",
+    "defaultsTo": [],
+    "skipAll": true
+  },
+  "referenceNumber": {
+    "unique": true,
+    "displayName": true,
+    "type": "string"
   }
 }
