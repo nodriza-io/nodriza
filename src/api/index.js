@@ -13,10 +13,7 @@ import { Contract } from './ContractApi'
 import { CustomApi } from './CustomApiApi'
 import { Document } from './DocumentApi'
 import { Email } from './EmailApi'
-<<<<<<< HEAD
 import { EventsFilter } from './EventsFilterApi'
-=======
->>>>>>> 8b5fd09b1ee22aa4c9ff26a34aed00438cf7f11a
 import { Events } from './EventsApi'
 import { Exchange } from './ExchangeApi'
 import { FileData } from './FileDataApi'
