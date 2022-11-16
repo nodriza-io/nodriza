@@ -87,10 +87,7 @@ export class Schemas {
     this.customApi = CustomApi
     this.document = Document
     this.email = Email
-<<<<<<< HEAD
     this.eventsFilter = EventsFilter
-=======
->>>>>>> 8b5fd09b1ee22aa4c9ff26a34aed00438cf7f11a
     this.events = Events
     this.exchange = Exchange
     this.fileData = FileData
