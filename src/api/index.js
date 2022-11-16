@@ -87,10 +87,7 @@ export class Apis {
     this.customApi = new CustomApi(params)
     this.document = new Document(params)
     this.email = new Email(params)
-<<<<<<< HEAD
     this.eventsFilter = new EventsFilter(params)
-=======
->>>>>>> 8b5fd09b1ee22aa4c9ff26a34aed00438cf7f11a
     this.events = new Events(params)
     this.exchange = new Exchange(params)
     this.fileData = new FileData(params)
