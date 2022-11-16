@@ -7,15 +7,17 @@ export class Socket extends EventEmitter {
   constructor (hostname) {
     super()
     this.url = 'https://' + hostname
-    this.status = 'offline'
+    if (!window) var window = {}
+    window.status = 'offline'
     this.connect = () => {
-      if (this.status === 'online') return console.log('--> User already online')
+      if (window.status === 'online') return console.log('--> User already online')
       this.socketio = socketio(this.url)
+      window.socketio = this.socketio
       // console.log('--> Socket connect init...')
       this.emit('init', this.url)
       let socketId
       this.socketio.on('connect', () => {
-        this.status = 'online'
+        window.status = 'online'
         this.emit('connect')
         this.socketio.on('authenticated', (_socketId) => {
           if (socketId) this.socketio.removeAllListeners(socketId) // <-- Avoid fire multiple events
@@ -35,8 +37,9 @@ export class Socket extends EventEmitter {
         if (accessToken) this.socketio.emit('authenticate', {accessToken: session.token.accessToken})
       })
       this.socketio.on('disconnect', () => {
-        this.status = 'offline'
+        window.status = 'offline'
         this.emit('disconnect')
+        console.log('--> disconnect!')
       })
     }
   }
