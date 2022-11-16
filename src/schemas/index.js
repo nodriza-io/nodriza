@@ -13,10 +13,7 @@ import Contract from './ContractSchema'
 import CustomApi from './CustomApiSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
-<<<<<<< HEAD
 import EventsFilter from './EventsFilterSchema'
-=======
->>>>>>> 8b5fd09b1ee22aa4c9ff26a34aed00438cf7f11a
 import Events from './EventsSchema'
 import Exchange from './ExchangeSchema'
 import FileData from './FileDataSchema'
