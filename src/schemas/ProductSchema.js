@@ -42,6 +42,10 @@ module.exports = {
     "description": "Product Price",
     "type": "float"
   },
+  "margin": {
+    "description": "Product Price",
+    "type": "float"
+  },
   "minimunPrice": {
     "description": "Minimun Product Price",
     "type": "float"

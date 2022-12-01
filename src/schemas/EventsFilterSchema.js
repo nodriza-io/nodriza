@@ -6,6 +6,12 @@ module.exports = {
     "skipAll": true,
     "unique": true
   },
+  "userInfo": {
+    "description": "User Information",
+    "type": "json",
+    "skipAll": true,
+    "required": true
+  },
   "filter": {
     "description": "Notifications config",
     "type": "json",
