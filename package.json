@@ -38,7 +38,7 @@
     "numeral": "^2.0.6",
     "pako": "^1.0.11",
     "query-string": "^5.1.1",
-    "socket.io-client": "^4.5.1"
+    "socket.io-client": "^4.5.4"
   },
   "devDependencies": {
     "chai": "^4.3.6",
