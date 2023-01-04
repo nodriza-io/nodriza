@@ -71,6 +71,7 @@ import HelperBuilder from './HelperBuilderSchema'
 import Provider from './ProviderSchema'
 import UserActivity from './UserActivitySchema'
 import Contact from './ContactSchema'
+import Thing from './ThingSchema'
 
 export class Schemas {
   constructor (params) {
@@ -145,5 +146,6 @@ export class Schemas {
     this.provider = Provider
     this.userActivity = UserActivity
     this.contact = Contact
+    this.thing = Thing
   }
 }

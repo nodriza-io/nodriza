@@ -71,6 +71,7 @@ import { HelperBuilder } from './HelperBuilderApi'
 import { Provider } from './ProviderApi'
 import { UserActivity } from './UserActivityApi'
 import { Contact } from './ContactApi'
+import { Thing } from './ThingApi'
 
 export class Apis {
   constructor (params) {
@@ -145,5 +146,6 @@ export class Apis {
     this.provider = new Provider(params)
     this.userActivity = new UserActivity(params)
     this.contact = new Contact(params)
+    this.thing = new Thing(params)
   }
 }

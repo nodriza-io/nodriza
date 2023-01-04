@@ -44,7 +44,8 @@ module.exports = {
   },
   "margin": {
     "description": "Product Price",
-    "type": "float"
+    "type": "float",
+    "skipAll": true
   },
   "minimunPrice": {
     "description": "Minimun Product Price",
