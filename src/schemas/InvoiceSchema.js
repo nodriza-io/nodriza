@@ -108,8 +108,7 @@ module.exports = {
     "noCreate": true
   },
   "customExchangeRate": {
-    "type": "float",
-    "defaultsTo": 0
+    "type": "float"
   },
   "proposal": {
     "model": "proposal",
