@@ -6,7 +6,11 @@ import { Session } from './session'
 
 export class Request {
   constructor (params) {
-    this.session = new Session()
+    if (params.sessionName) {
+      this.session = new Session({ name: _.get(params, 'sessionName') })
+    } else {
+      this.session = new Session()
+    }
     if (params.accessToken) this.session.set({token:{accessToken:params.accessToken}})
     this.axios = axios.create()
     if (params) {
@@ -53,13 +57,18 @@ export class Request {
       const status = _.get(err, 'response.status')
       if (status === 401 && error === 'Unauthorized, invalid token.') {
         this.session.destroy()
-        if (window) window.location.reload()
+        try {
+          if (window) window.location.reload();
+        } catch (e) {
+          // console.log('e ----->', e)
+          return callback(error)
+        }
       }
       if (error) {
         callback(error)
       } else {
-        console.log('->>> err:', err)
-        throw new Error(err)
+        callback(err)
+        // throw new Error(err)
       }
       // callback(error || 'Unknown error ' + err.response.status)
     })

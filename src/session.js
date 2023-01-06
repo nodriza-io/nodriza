@@ -3,15 +3,16 @@ import _ from 'lodash'
 import { Storage } from './storage'
 
 export class Session extends Storage {
-  constructor () {
+  constructor (params) {
     super()
+    this.sessionName = _.get(params, 'sessionName')
   }
   /**
    * Get session
    * @return {Object}
    */
   get (key) {
-    const session = this.load('session')
+    const session = this.load(this.sessionName || 'session')
     return key ? _.get(session, key) : session
   }
   /**
@@ -19,14 +20,14 @@ export class Session extends Storage {
    * @param {Object}
    */
   set (session) {
-    this.save('session', session)
+    this.save(this.sessionName || 'session', session)
   }
   /**
    * Remove session
    * @return {[type]} [description]
    */
   destroy () {
-    this.remove('session')
+    this.remove(this.sessionName || 'session')
   }
 
   bearer () {
