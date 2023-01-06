@@ -13,7 +13,6 @@ export class Socket extends EventEmitter {
       this.socketio = io(this.url)
       window.socketio = this.socketio
       // console.log('--> Socket connect init...')
-      console.log('--> this.socketio ----->', this.socketio.emit, this.url)
       this.emit('init', this.url)
       let socketId
       this.socketio.on('connect', () => {
