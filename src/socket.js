@@ -23,6 +23,7 @@ export class Socket extends EventEmitter {
           this.socketio.removeAllListeners('everybody') // <-- Avoid fire multiple events
           socketId = _socketId
           this.emit('authenticated', socketId)
+          this.socketio.on('*', console.log)
           this.socketio.on(socketId, (event) => {
             let action = _.get(event, 'action')
             let data = _.get(event, 'data')
