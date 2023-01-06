@@ -4,9 +4,7 @@
  */
 import { Apis } from './api/index.js'
 import { Schemas } from './schemas/index.js'
-
 import { Socket } from './socket'
-import { LocalStorage } from './localStorage'
 
 export class Api extends Socket {
   constructor (params) {
