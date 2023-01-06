@@ -16,6 +16,9 @@ const _lang = window.localStorage.getItem('lang')
 if (_lang) moment.locale(_lang.replace(/"/g, ''))
 
 export class Utils {
+  isBrowser () {
+    return !(typeof window === 'undefined')
+  },
   currency (val, format) {
     format = format || '$0,0.00'
     const sym = format.slice(0, 1)

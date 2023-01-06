@@ -1,17 +1,23 @@
 'use strict'
 import _ from 'lodash'
-import socketio from 'socket.io-client'
+import { io } from 'socket.io-client'
 import EventEmitter from 'events'
+import Utils from './utils.js'
+
+const u = new Utils()
 
 export class Socket extends EventEmitter {
   constructor (hostname) {
     super()
     this.url = 'https://' + hostname
+    if (!u.isBrowser()) {
+      
+    }
     if (!window) var window = {}
     window.status = 'offline'
     this.connect = () => {
       if (window.status === 'online') return console.log('--> User already online')
-      this.socketio = socketio(this.url)
+      this.socketio = io(this.url)
       window.socketio = this.socketio
       // console.log('--> Socket connect init...')
       this.emit('init', this.url)
