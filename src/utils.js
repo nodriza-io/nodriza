@@ -1,24 +1,10 @@
 'use strict'
 import numeral from 'numeral'
 import axios from 'axios'
-import moment from 'moment'
 import pako from 'pako'
 import _ from 'lodash'
-import { LocalStorage } from './localStorage'
-
-if (typeof window === 'undefined') { // <-- Check if running in node mode
-  if (!global.window) global.window = {}
-  global.window['localStorage'] = new LocalStorage()
-  global.localStorage = new LocalStorage()
-}
-
-const _lang = window.localStorage.getItem('lang')
-if (_lang) moment.locale(_lang.replace(/"/g, ''))
 
 export class Utils {
-  isBrowser () {
-    return !(typeof window === 'undefined')
-  },
   currency (val, format) {
     format = format || '$0,0.00'
     const sym = format.slice(0, 1)

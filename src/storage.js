@@ -10,7 +10,7 @@ export class Storage {
    * @return {Null}
    */
   save (key, value) {
-    localStorage.setItem(key, JSON.stringify(value))
+    window.localStorage.setItem(key, JSON.stringify(value))
   }
   /**
    * Load saved key
@@ -22,7 +22,7 @@ export class Storage {
   load (key) {
     if (!_.isString(key)) return
     const firstKey = key.indexOf('.') !== -1 ? key.split('.')[0] : false
-    let obj = localStorage.getItem(firstKey || key)
+    let obj = window.localStorage.getItem(firstKey || key)
     obj = obj ? JSON.parse(obj) : null
     if (firstKey && !_.isEmpty(obj)) {
       const index = key.indexOf('.')
@@ -37,8 +37,8 @@ export class Storage {
    * @return {Object} -> Deleted item or if nothing was deleted
    */
   remove (key) {
-    let obj = localStorage.getItem(key)
-    localStorage.removeItem(key)
+    let obj = window.localStorage.getItem(key)
+    window.localStorage.removeItem(key)
     return obj
   }
 }

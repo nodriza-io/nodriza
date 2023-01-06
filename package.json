@@ -3,6 +3,7 @@
   "version": "1.0.15",
   "description": "Nodriza SDK for JavaScript, available for browsers and mobile devices, or Node.js backends",
   "scripts": {
+    "dev": "nodemon -w src -w example.js --exec \"npm run postinstall && node example.js\"",
     "postinstall": "babel --presets @babel/preset-env src --out-dir lib",
     "start": "nodemon index.js --exec babel-node --presets @babel/preset-env",
     "test": "nodemon test/index.test.js --exec babel-node --presets @babel/preset-env",
@@ -32,8 +33,9 @@
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.18.10",
     "axios": "^0.16.2",
-    "lodash": "^4.17.21",
     "events": "^3.3.0",
+    "localStorage": "^1.0.4",
+    "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "numeral": "^2.0.6",
     "pako": "^1.0.11",

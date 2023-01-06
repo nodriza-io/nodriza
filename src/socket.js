@@ -2,24 +2,18 @@
 import _ from 'lodash'
 import { io } from 'socket.io-client'
 import EventEmitter from 'events'
-import Utils from './utils.js'
-
-const u = new Utils()
 
 export class Socket extends EventEmitter {
   constructor (hostname) {
     super()
     this.url = 'https://' + hostname
-    if (!u.isBrowser()) {
-      
-    }
-    if (!window) var window = {}
     window.status = 'offline'
     this.connect = () => {
       if (window.status === 'online') return console.log('--> User already online')
       this.socketio = io(this.url)
       window.socketio = this.socketio
       // console.log('--> Socket connect init...')
+      console.log('--> this.socketio ----->', this.socketio.emit, this.url)
       this.emit('init', this.url)
       let socketId
       this.socketio.on('connect', () => {
@@ -40,7 +34,7 @@ export class Socket extends EventEmitter {
         })
         let session = this.session.get()
         let accessToken = _.get(session, 'token.accessToken')
-        if (accessToken) this.socketio.emit('authenticate', {accessToken: session.token.accessToken})
+        if (typeof accessToken === 'string') this.socketio.emit('authenticate', { accessToken })
       })
       this.socketio.on('disconnect', () => {
         window.status = 'offline'

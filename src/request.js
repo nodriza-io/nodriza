@@ -6,8 +6,8 @@ import { Session } from './session'
 
 export class Request {
   constructor (params) {
-    if (params.sessionName) {
-      this.session = new Session({ name: _.get(params, 'sessionName') })
+    if (typeof params.sessionName === 'string') {
+      this.session = new Session({ name: params.sessionName })
     } else {
       this.session = new Session()
     }

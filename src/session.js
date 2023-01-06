@@ -5,14 +5,15 @@ import { Storage } from './storage'
 export class Session extends Storage {
   constructor (params) {
     super()
-    this.sessionName = _.get(params, 'sessionName')
+    const customName = _.get(params, 'name')
+    this.name = customName || 'session'
   }
   /**
    * Get session
    * @return {Object}
    */
   get (key) {
-    const session = this.load(this.sessionName || 'session')
+    const session = this.load(this.name)
     return key ? _.get(session, key) : session
   }
   /**
@@ -20,14 +21,14 @@ export class Session extends Storage {
    * @param {Object}
    */
   set (session) {
-    this.save(this.sessionName || 'session', session)
+    this.save(this.name, session)
   }
   /**
    * Remove session
    * @return {[type]} [description]
    */
   destroy () {
-    this.remove(this.sessionName || 'session')
+    this.remove(this.name)
   }
 
   bearer () {
