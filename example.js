@@ -14,3 +14,4 @@ sdk.api.user.me(console.log)
 // Sample connect socket
 sdk.connect()
 sdk.socketio.on('time', console.log)
+sdk.socketio.onAny(console.log)
