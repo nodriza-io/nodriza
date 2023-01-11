@@ -10,12 +10,15 @@ export class Socket extends EventEmitter {
     window.status = 'offline'
     this.connect = () => {
       if (window.status === 'online') return console.log('--> User already online')
-      this.socketio = io(this.url)
+      this.socketio = io(this.url, {
+        secure: true,
+        transports:['websocket', 'polling']
+      })
       window.socketio = this.socketio
       // console.log('--> Socket connect init...')
       this.emit('init', this.url)
       let socketId
-      this.socketio.on('connect_error', (err) => console.log(`connect_error due to ${err.message}`, err))
+      this.socketio.on('connect_error', (err) => console.log(`connect_error due to ${err.message}`))
       this.socketio.on('connect', () => {
         window.status = 'online'
         this.emit('connect')
