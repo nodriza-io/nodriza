@@ -107,6 +107,10 @@ module.exports = {
     "model": "currency",
     "noCreate": true
   },
+  "customExchangeRate": {
+    "type": "float",
+    "defaultsTo": 0
+  },
   "proposal": {
     "model": "proposal",
     "skipAll": true
