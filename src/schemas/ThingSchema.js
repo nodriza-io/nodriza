@@ -27,11 +27,12 @@ module.exports = {
   },
   "allowConnection": {
     "type": "boolean",
-    "defaultsTo": false
+    "defaultsTo": true
   },
   "assignedTo": {
     "description": "Thing assingned to",
-    "model": "user"
+    "model": "user",
+    "required": true
   },
   "macAddress": {
     "type": "string",
@@ -45,7 +46,7 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
-  "firmwareVersion": {
+  "firmware": {
     "type": "string",
     "skipAll": true
   },
@@ -55,10 +56,6 @@ module.exports = {
   },
   "eventHandler": {
     "description": "Handelbars Helper Function",
-    "type": "string",
-    "longtext": "true"
-  },
-  "specialObservations": {
     "type": "string",
     "longtext": "true"
   },
@@ -82,5 +79,44 @@ module.exports = {
   "lastError": {
     "type": "string",
     "skipAll": true
+  },
+  "onProposalCreated": {
+    "description": "Triggers when proposal has been created",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalReady": {
+    "description": "Triggers when proposal status changed to READY!",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalApproved": {
+    "description": "Triggers when proposal status changed to APPROVED!",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalDenied": {
+    "description": "Triggers when proposal status changed to DENIED!",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalOpened": {
+    "description": "Triggers when proposal has been opened",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalWarm": {
+    "description": "Triggers when proposal rating is WARM",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "onProposalHot": {
+    "description": "Triggers when proposal rating is HOT",
+    "model": "thingTrigger",
+    "mustExist": true
+  },
+  "specialObservations": {
+    "type": "string",
+    "longtext": "true"
   }
 }

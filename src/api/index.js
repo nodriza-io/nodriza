@@ -72,6 +72,7 @@ import { Provider } from './ProviderApi'
 import { UserActivity } from './UserActivityApi'
 import { Contact } from './ContactApi'
 import { Thing } from './ThingApi'
+import { ThingTrigger } from './ThingTriggerApi'
 
 export class Apis {
   constructor (params) {
@@ -147,5 +148,6 @@ export class Apis {
     this.userActivity = new UserActivity(params)
     this.contact = new Contact(params)
     this.thing = new Thing(params)
+    this.thingTrigger = new ThingTrigger(params)
   }
 }

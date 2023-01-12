@@ -72,6 +72,7 @@ import Provider from './ProviderSchema'
 import UserActivity from './UserActivitySchema'
 import Contact from './ContactSchema'
 import Thing from './ThingSchema'
+import ThingTrigger from './ThingTriggerSchema'
 
 export class Schemas {
   constructor (params) {
@@ -147,5 +148,6 @@ export class Schemas {
     this.userActivity = UserActivity
     this.contact = Contact
     this.thing = Thing
+    this.thingTrigger = ThingTrigger
   }
 }
