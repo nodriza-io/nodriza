@@ -12,6 +12,20 @@ export class EventsFilter extends Request {
     super(params)
   }
   /**
+  * GET /v1/eventsFilter/exists [PRIVATE]
+  *
+  * Return if user have active RAF filters
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 403
+  */
+  exists (callback) {
+    this.get('/v1/eventsFilter/exists', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * PUT /v1/eventsFilter/saveFilters [PRIVATE]
   *
   * Save Filters
