@@ -31,7 +31,8 @@ module.exports = {
   },
   "assignedTo": {
     "description": "Thing assingned to",
-    "model": "user"
+    "model": "user",
+    "required": true
   },
   "macAddress": {
     "type": "string",
@@ -45,7 +46,7 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
-  "firmwareVersion": {
+  "firmware": {
     "type": "string",
     "skipAll": true
   },
@@ -55,10 +56,6 @@ module.exports = {
   },
   "eventHandler": {
     "description": "Handelbars Helper Function",
-    "type": "string",
-    "longtext": "true"
-  },
-  "specialObservations": {
     "type": "string",
     "longtext": "true"
   },
@@ -117,5 +114,9 @@ module.exports = {
     "description": "Triggers when proposal rating is HOT",
     "model": "thingTrigger",
     "mustExist": true
+  },
+  "specialObservations": {
+    "type": "string",
+    "longtext": "true"
   }
 }

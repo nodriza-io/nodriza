@@ -57,5 +57,10 @@ module.exports = {
     "type": "integer",
     "defaultsTo": 1,
     "min": 1
+  },
+  "repeatsByViews": {
+    "description": "How many repetitions",
+    "type": "boolean",
+    "defaultsTo": false
   }
 }
