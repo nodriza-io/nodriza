@@ -32,7 +32,7 @@ export class EventsFilter extends Request {
   *
   * @param  {Object} params
   * - @param  {String} user * -> (In Body)  e.g 5a6a8feb3ac1f301fddd3950
-  * - @param  {Json} filter * -> (In Body)  e.g true
+  * - @param  {Json} filter * -> (In Body)  e.g undefined
   * @param  {Function} callback
   * @return {Code} 200, 400, 403
   */
