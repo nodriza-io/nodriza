@@ -25,13 +25,18 @@ module.exports = {
     "unique": true,
     "displayName": true
   },
+  "description": {
+    "type": "string",
+    "displayName": true
+  },
   "allowConnection": {
     "type": "boolean",
     "defaultsTo": true
   },
   "assignedTo": {
     "description": "Thing assingned to",
-    "model": "user"
+    "model": "user",
+    "required": true
   },
   "macAddress": {
     "type": "string",
@@ -45,20 +50,16 @@ module.exports = {
     "type": "string",
     "skipAll": true
   },
-  "firmwareVersion": {
+  "firmware": {
     "type": "string",
     "skipAll": true
   },
-  "shadows": {
-    "type": "array",
-    "multiple": "thing"
-  },
-  "eventHandler": {
-    "description": "Handelbars Helper Function",
+  "serial": {
     "type": "string",
-    "longtext": "true"
+    "skipAll": true
   },
-  "specialObservations": {
+  "dataHandler": {
+    "description": "Data handler function",
     "type": "string",
     "longtext": "true"
   },
@@ -117,5 +118,9 @@ module.exports = {
     "description": "Triggers when proposal rating is HOT",
     "model": "thingTrigger",
     "mustExist": true
+  },
+  "specialObservations": {
+    "type": "string",
+    "longtext": "true"
   }
 }

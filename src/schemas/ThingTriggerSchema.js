@@ -26,8 +26,10 @@ module.exports = {
     "unique": true,
     "displayName": true
   },
-  "pin": {
-    "type": "integer",
+  "pins": {
+    "type": "string",
+    "description": "Separete multiple pins with comma e.g 2,5,3",
+    "regex": "/^([0-9,]+)$/",
     "required": true
   },
   "state": {
@@ -57,5 +59,10 @@ module.exports = {
     "type": "integer",
     "defaultsTo": 1,
     "min": 1
+  },
+  "repeatsByViews": {
+    "description": "How many repetitions",
+    "type": "boolean",
+    "defaultsTo": false
   }
 }
