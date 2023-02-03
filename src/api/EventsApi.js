@@ -12,6 +12,20 @@ export class Events extends Request {
     super(params)
   }
   /**
+  * GET /v1/events/allowRafPlus [PRIVATE]
+  *
+  * RAF+ has been activated
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  allowRafPlus (callback) {
+    this.get('/v1/events/allowRafPlus', (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
   * DELETE /v1/events/destroyEventAndSiblings [PRIVATE]
   *
   * Destroy Event And Siblings
@@ -43,6 +57,20 @@ export class Events extends Request {
     let url = '/v1/events/docEvents'
     if (!_.isEmpty(params)) url += '?' + queryString.stringify(params)
     this.get(url, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
+  /**
+  * GET /v1/events/getRafPlusTrialLeft [PRIVATE]
+  *
+  * Get RAF+ trial version days
+  *
+  * @param  {Function} callback
+  * @return {Code} 200, 403
+  */
+  getRafPlusTrialLeft (callback) {
+    this.get('/v1/events/getRafPlusTrialLeft', (err, data) => {
       if (err) return callback(err)
       callback(null, data)
     })
