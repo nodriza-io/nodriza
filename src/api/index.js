@@ -13,8 +13,8 @@ import { Contract } from './ContractApi'
 import { CustomApi } from './CustomApiApi'
 import { Document } from './DocumentApi'
 import { Email } from './EmailApi'
-import { EventsFilter } from './EventsFilterApi'
-import { Events } from './EventsApi'
+import { EventFilter } from './EventFilterApi'
+import { Event } from './EventApi'
 import { Exchange } from './ExchangeApi'
 import { FileData } from './FileDataApi'
 import { Invoice } from './InvoiceApi'
@@ -89,8 +89,8 @@ export class Apis {
     this.customApi = new CustomApi(params)
     this.document = new Document(params)
     this.email = new Email(params)
-    this.eventsFilter = new EventsFilter(params)
-    this.events = new Events(params)
+    this.eventFilter = new EventFilter(params)
+    this.event = new Event(params)
     this.exchange = new Exchange(params)
     this.fileData = new FileData(params)
     this.invoice = new Invoice(params)

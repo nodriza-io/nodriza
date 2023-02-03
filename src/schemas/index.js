@@ -13,8 +13,8 @@ import Contract from './ContractSchema'
 import CustomApi from './CustomApiSchema'
 import Document from './DocumentSchema'
 import Email from './EmailSchema'
-import EventsFilter from './EventsFilterSchema'
-import Events from './EventsSchema'
+import EventFilter from './EventFilterSchema'
+import Event from './EventSchema'
 import Exchange from './ExchangeSchema'
 import FileData from './FileDataSchema'
 import Invoice from './InvoiceSchema'
@@ -89,8 +89,8 @@ export class Schemas {
     this.customApi = CustomApi
     this.document = Document
     this.email = Email
-    this.eventsFilter = EventsFilter
-    this.events = Events
+    this.eventFilter = EventFilter
+    this.event = Event
     this.exchange = Exchange
     this.fileData = FileData
     this.invoice = Invoice

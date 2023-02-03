@@ -80,4 +80,21 @@ export class App extends Request {
       callback(null, data)
     })
   }
+  /**
+  * POST /v1/app/uploadScreen [PRIVATE]
+  *
+  * Upload screen to public path
+  *
+  * @param  {Object} params
+  * - @param   Body * -> (In body) Body params in JSON format
+  * @param  {Function} callback
+  * @return {Code} 200, 400, 404, 500
+  */
+  uploadScreen (body, callback) {
+    let params = {url: '/v1/app/uploadScreen', body}
+    this.post(params, (err, data) => {
+      if (err) return callback(err)
+      callback(null, data)
+    })
+  }
 }
