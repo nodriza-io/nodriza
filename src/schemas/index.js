@@ -37,6 +37,7 @@ import Role from './RoleSchema'
 import Service from './ServiceSchema'
 import Signature from './SignatureSchema'
 import Snippet from './SnippetSchema'
+import SpreadSheet from './SpreadSheetSchema'
 import Stripe from './StripeSchema'
 import TemplateGallery from './TemplateGallerySchema'
 import Token from './TokenSchema'
@@ -113,6 +114,7 @@ export class Schemas {
     this.service = Service
     this.signature = Signature
     this.snippet = Snippet
+    this.spreadSheet = SpreadSheet
     this.stripe = Stripe
     this.templateGallery = TemplateGallery
     this.token = Token

@@ -70,6 +70,7 @@ export class App extends Request {
   * @param  {Object} params
   * - @param  {String} keyname * -> (In Body)  e.g google
   * - @param  {String} accessToken * -> (In Body)  e.g xxx-xxx-xxx-xxxx
+  * - @param  {String} refreshToken  -> (In Body)  e.g xxx-xxx-xxx-xxxx
   * @param  {Function} callback
   * @return {Code} 200, 400, 404, 500
   */

@@ -71,6 +71,14 @@ module.exports = {
     "type": "url",
     "skipAll": true
   },
+  "grantType": {
+    "example": "code",
+    "type": "string"
+  },
+  "accessType": {
+    "example": "offline",
+    "type": "string"
+  },
   "userInfoUri": {
     "description": "Some Oauth2 services offers a URL where the user profile information can be requested",
     "example": "https://www.googleapis.com/oauth2/v1/userinfo?access_token=",

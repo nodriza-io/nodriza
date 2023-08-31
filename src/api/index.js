@@ -37,6 +37,7 @@ import { Role } from './RoleApi'
 import { Service } from './ServiceApi'
 import { Signature } from './SignatureApi'
 import { Snippet } from './SnippetApi'
+import { SpreadSheet } from './SpreadSheetApi'
 import { Stripe } from './StripeApi'
 import { TemplateGallery } from './TemplateGalleryApi'
 import { Token } from './TokenApi'
@@ -113,6 +114,7 @@ export class Apis {
     this.service = new Service(params)
     this.signature = new Signature(params)
     this.snippet = new Snippet(params)
+    this.spreadSheet = new SpreadSheet(params)
     this.stripe = new Stripe(params)
     this.templateGallery = new TemplateGallery(params)
     this.token = new Token(params)
